@@ -5,10 +5,10 @@
   "main": "src/index.scss",
   "scripts": {
     "test": "npm run test",
-    "dev": "sass --watch sass src/icons.scss:dist/icons.css--style compressed",
+    "dev": "sass --watch sass src/icons.scss dist/icons.css--style compressed",
     "build": "npm run build:sass && npm run build:min",
-    "build:min": "sass src/icons.scss:dist/icons.min.css --style compressed",
-    "build:sass": "sass src/icons.scss:dist/icons.css",
+    "build:min": "sass src/icons.scss dist/icons.min.css --style compressed",
+    "build:sass": "sass src/icons.scss dist/icons.css",
     "prepublishOnly": "npm run build"
   },
   "repository": {

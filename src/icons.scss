@@ -6,12 +6,14 @@ $silicon-stroke: 0.1em !default;
 	&:after {
 		box-sizing: border-box;
 	}
+	display: inline-block;
 }
 :root {
   --stroke: #{$silicon-stroke};
 }
 
 @import 'icon/search';
+@import 'icon/clipboard';
 @import 'icon/zoom-in';
 @import 'icon/zoom-out';
 @import 'icon/trash';
