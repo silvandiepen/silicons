@@ -1,0 +1,21 @@
+{
+	"silicons": [
+		"search",
+		"zoom-in",
+		"zoom-out",
+		"trash",
+		"close",
+		"burger",
+		"user",
+		"heart",
+		"location",
+		"sun",
+		"drop",
+		"device-screen",
+		"device-tv",
+		"device-laptop",
+		"device-phone",
+		"device-tablet",
+		"device-printer"
+	]
+}

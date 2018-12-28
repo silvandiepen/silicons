@@ -1,0 +1,32 @@
+{
+  "name": "silicons",
+  "version": "0.0.1",
+  "description": "css only responsive icons",
+  "main": "src/index.scss",
+  "scripts": {
+    "test": "npm run test",
+    "dev": "sass --watch sass src/icons.scss:dist/icons.css--style compressed",
+    "build": "npm run build:sass && npm run build:min",
+    "build:min": "sass src/icons.scss:dist/icons.min.css --style compressed",
+    "build:sass": "sass src/icons.scss:dist/icons.css",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silvandiepen/silicons.git"
+  },
+  "keywords": [
+    "responsive",
+    "icon",
+    "css"
+  ],
+  "author": "Sil van Diepen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/silvandiepen/silicons/issues"
+  },
+  "homepage": "https://github.com/silvandiepen/silicons#readme",
+  "devDependencies": {
+    "sass": "^1.15.2"
+  }
+}

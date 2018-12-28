@@ -1,0 +1,36 @@
+.#{$silicon-prefix}zoom-out {
+  width: 1em;
+  height: 1em;
+  border: var(--stroke, #{$silicon-stroke}) solid currentColor;
+  border-radius: 50%;
+  position: relative;
+  &:before {
+    display: block;
+    position: absolute;
+    left: 100%;
+    top: 100%;
+    width: 0.5em;
+    height: var(--stroke, #{$silicon-stroke});
+    content: "";
+    background-color: currentColor;
+    transform: translate(-0.1em, -0.1em) rotate(45deg);
+    transform-origin: 0 50%;
+  }
+  &:after {
+    width: 0.4em;
+    height: 0.4em;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: linear-gradient(
+      to bottom,
+      transparent calc(50% - var(--stroke, #{$silicon-stroke}) / 4),
+      currentColor calc(50% - var(--stroke, #{$silicon-stroke}) / 4),
+      currentColor calc(50% + var(--stroke, #{$silicon-stroke}) / 4),
+      transparent calc(50% + var(--stroke, #{$silicon-stroke}) / 4)
+    );
+  }
+}

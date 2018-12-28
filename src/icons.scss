@@ -1,0 +1,30 @@
+$silicon-prefix: 'silicon-' !default;
+$silicon-stroke: 0.1em !default; 
+[class^='#{$silicon-prefix}'] {
+	&,
+	&:before,
+	&:after {
+		box-sizing: border-box;
+	}
+}
+:root {
+  --stroke: #{$silicon-stroke};
+}
+
+@import 'icon/search';
+@import 'icon/zoom-in';
+@import 'icon/zoom-out';
+@import 'icon/trash';
+@import 'icon/close';
+@import 'icon/burger';
+@import 'icon/user';
+@import 'icon/heart';
+@import 'icon/location';
+@import 'icon/sun';
+@import 'icon/drop';
+@import 'icon/device-screen';
+@import 'icon/device-tv';
+@import 'icon/device-laptop';
+@import 'icon/device-phone';
+@import 'icon/device-tablet';
+@import 'icon/device-printer';

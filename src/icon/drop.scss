@@ -1,0 +1,24 @@
+
+.#{$silicon-prefix}drop {
+  width: 1em;
+  height: 1em;
+  border: var(--stroke, #{$silicon-stroke}) solid currentColor;
+  border-radius: 50%;
+  position: relative;
+  border-left-color: transparent;
+  transform: rotate(90deg);
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    width: 0.5em;
+    height: 0.5em;
+    border: var(--stroke, #{$silicon-stroke}) solid currentColor;
+    border-top: none;
+    border-right: none;
+    transform-origin: 100% 0;
+    transform: rotate(45deg);
+  }
+}

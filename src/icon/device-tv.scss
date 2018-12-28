@@ -1,0 +1,23 @@
+
+.#{$silicon-prefix}device-tv {
+  width: 1em;
+  height: 0.75em;
+  border: var(--stroke, #{$silicon-stroke}) solid currentColor;
+  border-radius: 0.2em;
+  position: relative;
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: calc(var(--stroke, #{$silicon-stroke}) * 3);
+    height: calc(var(--stroke, #{$silicon-stroke}) * 3);
+    position: absolute;
+    bottom: 100%;
+    border: calc(var(--stroke, #{$silicon-stroke}) / 2) solid currentColor;
+    left: 50%;
+    transform: translateX(-50%) translateY(calc(var(--stroke, #{$silicon-stroke}) * -1))
+      rotate(-45deg);
+    border-top: 0;
+    border-right: 0;
+  }
+}

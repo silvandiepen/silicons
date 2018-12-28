@@ -1,0 +1,22 @@
+
+.#{$silicon-prefix}user {
+  width: 1em;
+  height: 0.65em;
+  border: var(--stroke, #{$silicon-stroke}) solid currentColor;
+  border-radius: 0.75em 0.75em 0 0;
+  border-bottom: 0;
+  position: relative;
+  transform: translateY(0.175em);
+  &:before {
+    content: "";
+    display: block;
+    width: 0.6em;
+    height: 0.6em;
+    border: var(--stroke, #{$silicon-stroke}) solid currentColor;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    transform: translateX(-50%);
+  }
+}

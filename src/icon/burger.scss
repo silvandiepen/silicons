@@ -1,0 +1,24 @@
+.#{$silicon-prefix}burger {
+	width: 1em;
+	height: var(--stroke, #{$silicon-stroke});
+	background-color: currentColor;
+	display: block;
+	position: relative;
+	&:before,
+	&:after {
+		display: block;
+		position: absolute;
+		content: '';
+		width: 100%;
+		height: 100%;
+		background-color: currentColor;
+	}
+	&:before {
+		top: 100%;
+		transform: translateY(calc(var(--stroke, #{$silicon-stroke}) * 2));
+	}
+	&:after {
+		bottom: 100%;
+		transform: translateY(calc(var(--stroke, #{$silicon-stroke}) * -2));
+	}
+}

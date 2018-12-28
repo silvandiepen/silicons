@@ -1,0 +1,37 @@
+
+.#{$silicon-prefix}trash {
+  width: 0.75em;
+  height: 0.75em;
+  border-radius: 0 0 0.1em 0.1em;
+  border: var(--stroke, #{$silicon-stroke}) solid currentColor;
+  border-top: none;
+  position: relative;
+  transform: translateY(0.2em);
+  &:before {
+    content: "";
+    display: block;
+    width: 1em;
+    left: 50%;
+    bottom: calc(100% + var(--stroke, #{$silicon-stroke}));
+    transform: translateX(-50%);
+    display: block;
+    position: absolute;
+    background-color: currentColor;
+    height: var(--stroke, #{$silicon-stroke});
+    border: none;
+  }
+  &:after {
+    content: "";
+    display: block;
+    width: 0.2em;
+    left: 50%;
+    bottom: calc(100% + (var(--stroke, #{$silicon-stroke}) * 2));
+    transform: translateX(-50%);
+    display: block;
+    position: absolute;
+    height: 0.1em;
+    border-radius: 0.2em 0.2em 0 0;
+    border: calc(var(--stroke, #{$silicon-stroke}) / 2) solid currentColor;
+    border-bottom: none;
+  }
+}
