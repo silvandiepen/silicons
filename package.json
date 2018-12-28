@@ -9,6 +9,7 @@
     "build": "npm run build:sass && npm run build:min",
     "build:min": "sass src/icons.scss dist/icons.min.css --style compressed",
     "build:sass": "sass src/icons.scss dist/icons.css",
+    "build:css": "node ./build/sass.js",
     "prepublishOnly": "npm run build"
   },
   "repository": {
@@ -27,6 +28,7 @@
   },
   "homepage": "https://github.com/silvandiepen/silicons#readme",
   "devDependencies": {
+    "fibers": "^3.1.1",
     "sass": "^1.15.2"
   }
 }

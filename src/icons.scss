@@ -1,29 +1,24 @@
-$silicon-prefix: 'silicon-' !default;
-$silicon-stroke: 0.1em !default; 
-[class^='#{$silicon-prefix}'] {
-	&,
-	&:before,
-	&:after {
-		box-sizing: border-box;
-	}
-	display: inline-block;
-}
-:root {
-  --stroke: #{$silicon-stroke};
-}
+@import "default";
 
-@import 'icon/search';
-@import 'icon/clipboard';
-@import 'icon/zoom-in';
-@import 'icon/zoom-out';
-@import 'icon/trash';
-@import 'icon/close';
-@import 'icon/burger';
-@import 'icon/user';
-@import 'icon/heart';
-@import 'icon/location';
-@import 'icon/sun';
-@import 'icon/drop';
+@import 'icon/file-import';
+@import 'icon/file-export';
+@import 'icon/file-upload';
+@import 'icon/file-download';
+@import 'icon/battery-empty';
+@import 'icon/battery-half';
+@import 'icon/battery-full';
+@import 'icon/shape-heart';
+@import 'icon/weather-sun';
+@import 'icon/shape-drop';
+@import 'icon/ui-search';
+@import 'icon/ui-copy';
+@import 'icon/ui-zoom-in';
+@import 'icon/ui-zoom-out';
+@import 'icon/ui-trash';
+@import 'icon/ui-close';
+@import 'icon/ui-burger';
+@import 'icon/ui-user';
+@import 'icon/ui-location';
 @import 'icon/device-screen';
 @import 'icon/device-tv';
 @import 'icon/device-laptop';

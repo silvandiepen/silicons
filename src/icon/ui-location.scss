@@ -1,12 +1,12 @@
 
-.#{$silicon-prefix}location {
+.#{$silicon-prefix}ui-location {
   width: 1em;
   height: 1em;
   border: var(--stroke, #{$silicon-stroke}) solid currentColor;
   border-radius: 50%;
   position: relative;
   border-left-color: transparent;
-  // transform: rotate(-90deg);
+  transform: rotate(-90deg);
   &:before {
     content: "";
     display: block;

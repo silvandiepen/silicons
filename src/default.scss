@@ -1,0 +1,13 @@
+$silicon-prefix: 'silicon-' !default;
+$silicon-stroke: 0.1em !default; 
+[class^='#{$silicon-prefix}'] {
+	&,
+	&:before,
+	&:after {
+		box-sizing: border-box;
+	}
+	display: inline-block;
+}
+:root {
+  --stroke: #{$silicon-stroke};
+}

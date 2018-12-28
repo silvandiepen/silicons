@@ -1,0 +1,32 @@
+.#{$silicon-prefix}file-upload {
+	width: 1em;
+	height: 0.5em;
+	border: var(--stroke, #{$silicon-stroke}) solid currentColor;
+	border-top: 0;
+	position: relative;
+	&:before {
+		position: absolute;
+		content: '';
+		display: block;
+		width: calc(var(--stroke, #{$silicon-stroke}) / 2);
+		height: 0.5em;
+		bottom: 75%;
+		left: 50%;
+		transform: translateX(-50%);
+		background-color: currentColor;
+	}
+	&:after {
+		width: 0.33em;
+		height: 0.33em;
+		position: absolute;
+		content: '';
+		display: block;
+		transform-origin: 0 100%;
+		transform: rotate(135deg);
+		border: calc(var(--stroke, #{$silicon-stroke}) / 2) solid currentColor;
+		border-top: none;
+		border-right: none;
+		left: 50%;
+		bottom: calc(75% + .5em + (var(--stroke, #{$silicon-stroke}) / 2));
+	}
+}
