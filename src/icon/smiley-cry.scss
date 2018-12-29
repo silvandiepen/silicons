@@ -1,0 +1,56 @@
+@import '../default';
+
+@mixin silicon-smiley-cry($class: '#{$silicon-prefix}smiley-cry') {
+	.#{$class} {
+		position: relative;
+
+		display: inline-block;
+		box-sizing: border-box;
+		width: 1em;
+		height: 1em;
+
+		background-image: radial-gradient(closest-side, currentColor 100%, transparent),radial-gradient(closest-side, currentColor 100%, transparent);
+		background-position: left calc(50% + .15em) bottom calc(50% + .1em), right calc(50% + .15em) bottom calc(50% + .1em);
+		background-repeat: no-repeat, no-repeat; 
+		background-size: 0.2em 0.2em,0.2em 0.2em;;
+		
+		border: calc(var(--stroke, #{$silicon-stroke}) / 1) solid currentColor;
+		border-radius: 50%;
+
+		&:before,
+		&:after {
+			content: '';
+
+			position: absolute;
+			box-sizing: border-box;
+			
+		}
+
+		&:before {
+			top: 50%;
+			right: calc(50% + 0.15em);
+
+			display: block;
+			width: 0.2em;
+			height: 0.2em;
+			
+			border: calc(var(--stroke, #{$silicon-stroke}) / 2) solid currentColor;
+			border-radius: 0 50% 50% 50%;
+			
+			transform: rotate(45deg);
+		}
+		&:after {
+			top: 50%;
+			left: 50%; 
+			
+			width: 0.5em;
+			height: 0.5em;
+			
+			border: calc(var(--stroke, #{$silicon-stroke}) / 2) solid transparent;
+			border-top-color: currentColor;
+			border-radius: 50%;
+			
+			transform: translate(-50%,25%);
+		}
+	}
+}
