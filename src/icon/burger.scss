@@ -1,6 +1,6 @@
 @import '../default';
 
-@mixin silicon-ui-burger($class: '#{$silicon-prefix}ui-burger') {
+@mixin silicon-burger($class: '#{$silicon-prefix}burger') {
 	.#{$class} {
 		position: relative;
 
@@ -36,4 +36,3 @@
 		}
 	}
 }
-@include silicon-ui-burger();

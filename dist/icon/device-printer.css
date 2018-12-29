@@ -27,7 +27,7 @@
   width: 1em;
   height: 0.5em;
   border: var(--stroke, 0.1em) solid currentColor;
-  border-radius: var(--stroke) var(--stroke) 0 0;
+  border-radius: var(--stroke, 0.1em) var(--stroke, 0.1em) 0 0;
   transform: translatex(-50%);
   clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 100%, 72% 100%, 72% 50%, 28% 50%, 28% 100%);
 }

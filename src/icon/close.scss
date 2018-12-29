@@ -1,6 +1,6 @@
 @import '../default';
 
-@mixin silicon-ui-close($class: '#{$silicon-prefix}ui-close') {
+@mixin silicon-close($class: '#{$silicon-prefix}close') {
 	.#{$class} {
 		position: relative;
 
@@ -38,4 +38,3 @@
 		}
 	}
 }
-@include silicon-ui-close();

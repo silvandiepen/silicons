@@ -1,6 +1,6 @@
 @import '../default';
 
-@mixin silicon-ui-zoom-out($class: '#{$silicon-prefix}ui-zoom-out') {
+@mixin silicon-zoom-out($class: '#{$silicon-prefix}zoom-out') {
 	.#{$class} {
 		position: relative;
 
@@ -53,4 +53,3 @@
 		}
 	}
 }
-@include silicon-ui-zoom-out();

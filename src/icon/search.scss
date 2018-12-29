@@ -1,6 +1,6 @@
 @import '../default';
 
-@mixin silicon-ui-search($class: '#{$silicon-prefix}ui-search') {
+@mixin silicon-search($class: '#{$silicon-prefix}search') {
 	.#{$class} {
 		position: relative;
 
@@ -31,4 +31,3 @@
 		}
 	}
 }
-@include silicon-ui-search();

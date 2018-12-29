@@ -1,0 +1,28 @@
+.silicon-text-align-left {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: calc(var(--stroke, 0.1em) * 7);
+  border-top: var(--stroke, 0.1em) solid currentColor;
+  border-left: none;
+  border-right: none;
+  background-image: linear-gradient(to right, currentColor, currentColor);
+  background-size: 0.5em var(--stroke, 0.1em);
+  background-position: bottom left;
+  background-repeat: no-repeat;
+}
+.silicon-text-align-left:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: calc(var(--stroke, 0.1em) * 3);
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-left: none;
+  border-right: none;
+  transform: translateY(calc(-50% - var(--stroke, 0.1em) / 2));
+}

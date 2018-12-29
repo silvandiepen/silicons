@@ -9,7 +9,7 @@
 		width: 1em;
 		height: 0.5em;
 
-		border: var(--stroke, #{$silicon-stroke}) solid currentColor;
+		border: calc(var(--stroke, #{$silicon-stroke}) / 2) solid currentColor;
 		border-radius: calc(var(--stroke, #{$silicon-stroke}) * 1.5);
 
 		&:before {
@@ -32,4 +32,3 @@
 		}
 	}
 }
-@include silicon-battery-empty();

@@ -1,6 +1,6 @@
 @import '../default';
 
-@mixin silicon-ui-zoom-in($class: '#{$silicon-prefix}ui-zoom-in') {
+@mixin silicon-zoom-in($class: '#{$silicon-prefix}zoom-in') {
 	.#{$class} {
 		position: relative;
 
@@ -61,4 +61,3 @@
 		}
 	}
 }
-@include silicon-ui-zoom-in();

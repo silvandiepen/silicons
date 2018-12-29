@@ -1,47 +1,23 @@
-@import "../default";
+@import '../default';
+@import 'battery-empty';
 
 @mixin silicon-battery-half($class: '#{$silicon-prefix}battery-half') {
+	@include silicon-battery-empty(#{$class});
 	.#{$class} {
-		position: relative;
-		
-		display: inline-block;
-		box-sizing: border-box;
-		width: 1em;
-		height: 0.5em;
-
-		border: var(--stroke, #{$silicon-stroke}) solid currentColor;
-		border-radius: calc(var(--stroke, #{$silicon-stroke}) * 1.5);
-
-		&:before,
 		&:after {
-			content: '';
+			content: '';
 
 			position: absolute;
-			box-sizing: border-box;
-		}
-		
-		&:before {
-			top: 50%;
-			left: 100%;
-
-			display: block;
-			width: 0.2em;
-			height: 0.25em;
-
-			border: calc(var(--stroke, #{$silicon-stroke}) / 2) solid currentColor;
-			border-radius: 0 calc(var(--stroke, #{$silicon-stroke}) * 0.5)
-				calc(var(--stroke, #{$silicon-stroke}) * 0.5) 0;
-			transform: translateY(-50%);
-		}
-		&:after {
 			top: calc(var(--stroke, #{$silicon-stroke}) / 2);
 			left: calc(var(--stroke, #{$silicon-stroke}) / 2);
-			
+
+			display: block;
 			width: calc(50%);
 			height: calc(100% - var(--stroke, #{$silicon-stroke}));
+
+			background-color: currentColor;			
 			
-			background-color: currentColor;
+			border-radius: calc(var(--stroke, #{$silicon-stroke}) / 2);
 		}
 	}
 }
-@include silicon-battery-half();

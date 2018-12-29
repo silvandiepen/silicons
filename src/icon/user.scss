@@ -1,6 +1,6 @@
 @import '../default';
 
-@mixin silicon-ui-user($class: '#{$silicon-prefix}ui-user') {
+@mixin silicon-user($class: '#{$silicon-prefix}user') {
 	.#{$class} {
 		position: relative;
 
@@ -34,4 +34,3 @@
 		}
 	}
 }
-@include silicon-ui-user();

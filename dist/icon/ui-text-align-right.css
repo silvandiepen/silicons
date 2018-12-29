@@ -1,0 +1,14 @@
+.silicon-text-align-right {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: calc(var(--stroke, 0.1em) * 7);
+  border-top: var(--stroke, 0.1em) solid currentColor;
+  border-left: none;
+  border-right: none;
+  background-image: linear-gradient(to right, currentColor, currentColor);
+  background-size: 0.5em var(--stroke, 0.1em);
+  background-position: bottom left;
+  background-repeat: no-repeat;
+}

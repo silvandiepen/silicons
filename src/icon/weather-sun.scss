@@ -1,4 +1,4 @@
-@import "../default";
+@import '../default';
 
 @mixin silicon-weather-sun($class: '#{$silicon-prefix}weather-sun') {
 	.#{$class} {
@@ -25,7 +25,5 @@
 			0.4em -0.4em 0 calc((var(--stroke, #{$silicon-stroke}) * 1.75) * -1) currentColor,
 			0.4em 0.4em 0 calc((var(--stroke, #{$silicon-stroke}) * 1.75) * -1)
 				currentColor;
-				
 	}
 }
-@include silicon-weather-sun();

@@ -1,11 +1,11 @@
-@import "../default";
+@import '../default';
 
 @mixin silicon-device-screen($class: '#{$silicon-prefix}device-screen') {
-	.#{$class} {    
+	.#{$class} {
 		position: relative;
-    
+
 		display: inline-block;
-    box-sizing: border-box;
+		box-sizing: border-box;
 		width: 1em;
 		height: 0.75em;
 
@@ -13,14 +13,14 @@
 		border-radius: 0.2em;
 
 		&:before {
-      content: '';
-      
+			content: '';
+
 			position: absolute;
 			top: 100%;
 			left: 50%;
 
 			display: block;
-      box-sizing: border-box;
+			box-sizing: border-box;
 			width: 50%;
 			height: calc(var(--stroke, #{$silicon-stroke}) * 3);
 
@@ -36,7 +36,6 @@
 				currentColor;
 
 			transform: translateX(-50%);
-    }
+		}
 	}
 }
-@include silicon-device-screen();

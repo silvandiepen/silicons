@@ -1,6 +1,6 @@
 @import '../default';
 
-@mixin silicon-ui-trash($class: '#{$silicon-prefix}ui-trash') {
+@mixin silicon-trash($class: '#{$silicon-prefix}trash') {
 	.#{$class} {
 		position: relative;
 
@@ -50,4 +50,3 @@
 		}
 	}
 }
-@include silicon-ui-trash();

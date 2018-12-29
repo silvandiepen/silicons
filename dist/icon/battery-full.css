@@ -4,28 +4,31 @@
   box-sizing: border-box;
   width: 1em;
   height: 0.5em;
-  border: var(--stroke, 0.1em) solid currentColor;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-radius: calc(var(--stroke, 0.1em) * 1.5);
 }
-.silicon-battery-full:before, .silicon-battery-full:after {
+.silicon-battery-full:before {
   content: "";
   position: absolute;
-  box-sizing: border-box;
-}
-.silicon-battery-full:before {
   top: 50%;
   left: 100%;
   display: block;
+  box-sizing: border-box;
   width: 0.2em;
   height: 0.25em;
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-radius: 0 calc(var(--stroke, 0.1em) * 0.5) calc(var(--stroke, 0.1em) * 0.5) 0;
   transform: translateY(-50%);
 }
+
 .silicon-battery-full:after {
+  content: "";
+  position: absolute;
   top: calc(var(--stroke, 0.1em) / 2);
   left: calc(var(--stroke, 0.1em) / 2);
+  display: block;
   width: calc(100% - var(--stroke, 0.1em));
   height: calc(100% - var(--stroke, 0.1em));
   background-color: currentColor;
+  border-radius: calc(var(--stroke, 0.1em) / 2);
 }

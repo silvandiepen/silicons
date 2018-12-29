@@ -1,6 +1,6 @@
 @import '../default';
 
-@mixin silicon-ui-location($class: '#{$silicon-prefix}ui-location') {
+@mixin silicon-location($class: '#{$silicon-prefix}location') {
 	.#{$class} {
 		position: relative;
 
@@ -45,8 +45,7 @@
 
 			border-radius: 50%;
 
-			transform: translate(-50%, -50%);
+			transform: translate(50%, -50%);
 		}
 	}
 }
-@include silicon-ui-location();

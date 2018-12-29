@@ -4,7 +4,7 @@
   box-sizing: border-box;
   width: 1em;
   height: 0.5em;
-  border: var(--stroke, 0.1em) solid currentColor;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-radius: calc(var(--stroke, 0.1em) * 1.5);
 }
 .silicon-battery-empty:before {

@@ -1,6 +1,6 @@
 @import '../default';
 
-@mixin silicon-ui-copy($class: '#{$silicon-prefix}ui-copy') {
+@mixin silicon-copy($class: '#{$silicon-prefix}copy') {
 	.#{$class} {
 		position: relative;
 
@@ -15,8 +15,8 @@
 			content: '';
 
 			position: absolute;
-			top: calc(var(--stroke) * -3);
-			left: calc(var(--stroke) * -3);
+			top: calc(var(--stroke, #{$silicon-stroke}) * -3);
+			left: calc(var(--stroke, #{$silicon-stroke}) * -3);
 
 			display: block;
 			box-sizing: border-box;
@@ -29,4 +29,3 @@
 		}
 	}
 }
-@include silicon-ui-copy();
