@@ -9,14 +9,300 @@
   --stroke: 0.1em;
 }
 
-.silicon-search {
+.silicon-file-import {
+  width: 1em;
+  height: 0.75em;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-top: 0;
+  position: relative;
+  background-image: linear-gradient(to right, currentColor 33.33%, transparent 33.33%, transparent, 66.66%, currentColor 66.66%);
+  background-size: 100% var(--stroke, 0.1em);
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+.silicon-file-import:before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: calc(var(--stroke, 0.1em) / 2);
+  height: 0.5em;
+  bottom: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: currentColor;
+}
+.silicon-file-import:after {
+  width: 0.33em;
+  height: 0.33em;
+  position: absolute;
+  content: "";
+  display: block;
+  transform-origin: 0 100%;
+  transform: rotate(-45deg);
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-top: none;
+  border-right: none;
+  left: 50%;
+  bottom: calc(40% - var(--stroke, 0.1em) / 2);
+}
+
+.silicon-file-export {
+  width: 1em;
+  height: 0.75em;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-top: 0;
+  position: relative;
+  background-image: linear-gradient(to right, currentColor 33.33%, transparent 33.33%, transparent, 66.66%, currentColor 66.66%);
+  background-size: 100% var(--stroke, 0.1em);
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+.silicon-file-export:before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: calc(var(--stroke, 0.1em) / 2);
+  height: 0.5em;
+  bottom: 75%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: currentColor;
+}
+.silicon-file-export:after {
+  width: 0.33em;
+  height: 0.33em;
+  position: absolute;
+  content: "";
+  display: block;
+  transform-origin: 0 100%;
+  transform: rotate(135deg);
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-top: none;
+  border-right: none;
+  left: 50%;
+  bottom: calc(75% + .5em + (var(--stroke, 0.1em) / 2));
+}
+
+.silicon-file-upload {
+  width: 1em;
+  height: 0.5em;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-top: 0;
+  position: relative;
+}
+.silicon-file-upload:before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: calc(var(--stroke, 0.1em) / 2);
+  height: 0.5em;
+  bottom: 75%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: currentColor;
+}
+.silicon-file-upload:after {
+  width: 0.33em;
+  height: 0.33em;
+  position: absolute;
+  content: "";
+  display: block;
+  transform-origin: 0 100%;
+  transform: rotate(135deg);
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-top: none;
+  border-right: none;
+  left: 50%;
+  bottom: calc(75% + .5em + (var(--stroke, 0.1em) / 2));
+}
+
+.silicon-file-download {
+  width: 1em;
+  height: 0.5em;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-top: 0;
+  position: relative;
+}
+.silicon-file-download:before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: calc(var(--stroke, 0.1em) / 2);
+  height: 0.5em;
+  bottom: 75%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: currentColor;
+}
+.silicon-file-download:after {
+  width: 0.33em;
+  height: 0.33em;
+  position: absolute;
+  content: "";
+  display: block;
+  transform-origin: 0 100%;
+  transform: rotate(-45deg);
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-top: none;
+  border-right: none;
+  left: 50%;
+  bottom: calc(75% - var(--stroke, 0.1em) / 2);
+}
+
+.silicon-battery-empty {
+  width: 1em;
+  height: 0.5em;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: calc(var(--stroke, 0.1em) * 1.5);
+  position: absolute;
+}
+.silicon-battery-empty:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 100%;
+  height: 0.25em;
+  width: 0.2em;
+  top: 50%;
+  transform: translateY(-50%);
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-radius: 0 calc(var(--stroke, 0.1em) * .5) calc(var(--stroke, 0.1em) * .5) 0;
+}
+
+.silicon-battery-half {
+  width: 1em;
+  height: 0.5em;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: calc(var(--stroke, 0.1em) * 1.5);
+  position: absolute;
+}
+.silicon-battery-half:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 100%;
+  height: 0.25em;
+  width: 0.2em;
+  top: 50%;
+  transform: translateY(-50%);
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-radius: 0 calc(var(--stroke, 0.1em) * 0.5) calc(var(--stroke, 0.1em) * 0.5) 0;
+}
+.silicon-battery-half:after {
+  position: absolute;
+  content: "";
+  width: calc(50%);
+  height: calc(100% - var(--stroke, 0.1em));
+  position: absolute;
+  top: calc(var(--stroke, 0.1em) / 2);
+  left: calc(var(--stroke, 0.1em) / 2);
+  background-color: currentColor;
+}
+
+.silicon-battery-full {
+  width: 1em;
+  height: 0.5em;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: calc(var(--stroke, 0.1em) * 1.5);
+  position: absolute;
+}
+.silicon-battery-full:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 100%;
+  height: 0.25em;
+  width: 0.2em;
+  top: 50%;
+  transform: translateY(-50%);
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-radius: 0 calc(var(--stroke, 0.1em) * 0.5) calc(var(--stroke, 0.1em) * 0.5) 0;
+}
+.silicon-battery-full:after {
+  position: absolute;
+  content: "";
+  width: calc(100% - var(--stroke, 0.1em));
+  height: calc(100% - var(--stroke, 0.1em));
+  position: absolute;
+  top: calc(var(--stroke, 0.1em) / 2);
+  left: calc(var(--stroke, 0.1em) / 2);
+  background-color: currentColor;
+}
+
+.silicon-shape-heart {
+  position: relative;
+  width: 0.75em;
+  height: 0.75em;
+  border-left: var(--stroke, 0.1em) solid currentColor;
+  border-bottom: var(--stroke, 0.1em) solid currentColor;
+  transform: translateY(0.25em) rotate(-45deg);
+}
+.silicon-shape-heart:before {
+  content: "";
+  position: absolute;
+  top: calc(-0.5em + var(--stroke, 0.1em));
+  left: calc(var(--stroke, 0.1em) * -1);
+  width: 0.75em;
+  height: 0.5em;
+  border-radius: 0.5em 0.5em 0 0;
+  border-top: var(--stroke, 0.1em) solid currentColor;
+  border-left: var(--stroke, 0.1em) solid currentColor;
+  border-right: var(--stroke, 0.1em) solid currentColor;
+}
+.silicon-shape-heart:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc(0.5em + var(--stroke, 0.1em));
+  width: 0.5em;
+  height: 0.75em;
+  border-radius: 0 0.5em 0.5em 0;
+  border-top: var(--stroke, 0.1em) solid currentColor;
+  border-right: var(--stroke, 0.1em) solid currentColor;
+  border-bottom: var(--stroke, 0.1em) solid currentColor;
+}
+
+.silicon-weather-sun {
+  position: absolute;
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 50%;
+  border: var(--stroke, 0.1em) solid currentColor;
+  box-shadow: -0.55em 0 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor, 0.55em 0 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor, 0 -0.55em 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor, 0 0.55em 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor, -0.4em -0.4em 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor, -0.4em 0.4em 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor, 0.4em -0.4em 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor, 0.4em 0.4em 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor;
+}
+
+.silicon-shape-drop {
+  width: 1em;
+  height: 1em;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 50%;
+  position: relative;
+  border-left-color: transparent;
+  transform: rotate(90deg);
+}
+.silicon-shape-drop:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  width: 0.5em;
+  height: 0.5em;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-top: none;
+  border-right: none;
+  transform-origin: 100% 0;
+  transform: rotate(45deg);
+}
+
+.silicon-ui-search {
   width: 1em;
   height: 1em;
   border: var(--stroke, 0.1em) solid currentColor;
   border-radius: 50%;
   position: relative;
 }
-.silicon-search:before {
+.silicon-ui-search:before {
   display: block;
   position: absolute;
   left: 100%;
@@ -29,20 +315,32 @@
   transform-origin: 0 50%;
 }
 
-.silicon-clipboard {
-  width: 1em;
+.silicon-ui-copy {
+  width: 0.75em;
   height: 1em;
   border: var(--stroke, 0.1em) solid currentColor;
+  position: relative;
+}
+.silicon-ui-copy:before {
+  content: "";
+  position: absolute;
+  left: calc(var(--stroke) * -3);
+  top: calc(var(--stroke) * -3);
+  width: 0.75em;
+  height: 1em;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-bottom: none;
+  border-right: none;
 }
 
-.silicon-zoom-in {
+.silicon-ui-zoom-in {
   width: 1em;
   height: 1em;
   border: var(--stroke, 0.1em) solid currentColor;
   border-radius: 50%;
   position: relative;
 }
-.silicon-zoom-in:before {
+.silicon-ui-zoom-in:before {
   display: block;
   position: absolute;
   left: 100%;
@@ -54,7 +352,7 @@
   transform: translate(-0.1em, -0.1em) rotate(45deg);
   transform-origin: 0 50%;
 }
-.silicon-zoom-in:after {
+.silicon-ui-zoom-in:after {
   width: 0.4em;
   height: 0.4em;
   content: "";
@@ -66,14 +364,14 @@
   background-image: linear-gradient(to right, transparent calc(50% - var(--stroke, 0.1em) / 4), currentColor calc(50% - var(--stroke, 0.1em) / 4), currentColor calc(50% + var(--stroke, 0.1em) / 4), transparent calc(50% + var(--stroke, 0.1em) / 4)), linear-gradient(to bottom, transparent calc(50% - var(--stroke, 0.1em) / 4), currentColor calc(50% - var(--stroke, 0.1em) / 4), currentColor calc(50% + var(--stroke, 0.1em) / 4), transparent calc(50% + var(--stroke, 0.1em) / 4));
 }
 
-.silicon-zoom-out {
+.silicon-ui-zoom-out {
   width: 1em;
   height: 1em;
   border: var(--stroke, 0.1em) solid currentColor;
   border-radius: 50%;
   position: relative;
 }
-.silicon-zoom-out:before {
+.silicon-ui-zoom-out:before {
   display: block;
   position: absolute;
   left: 100%;
@@ -85,7 +383,7 @@
   transform: translate(-0.1em, -0.1em) rotate(45deg);
   transform-origin: 0 50%;
 }
-.silicon-zoom-out:after {
+.silicon-ui-zoom-out:after {
   width: 0.4em;
   height: 0.4em;
   content: "";
@@ -97,7 +395,7 @@
   background-image: linear-gradient(to bottom, transparent calc(50% - var(--stroke, 0.1em) / 4), currentColor calc(50% - var(--stroke, 0.1em) / 4), currentColor calc(50% + var(--stroke, 0.1em) / 4), transparent calc(50% + var(--stroke, 0.1em) / 4));
 }
 
-.silicon-trash {
+.silicon-ui-trash {
   width: 0.75em;
   height: 0.75em;
   border-radius: 0 0 0.1em 0.1em;
@@ -106,7 +404,7 @@
   position: relative;
   transform: translateY(0.2em);
 }
-.silicon-trash:before {
+.silicon-ui-trash:before {
   content: "";
   display: block;
   width: 1em;
@@ -119,7 +417,7 @@
   height: var(--stroke, 0.1em);
   border: none;
 }
-.silicon-trash:after {
+.silicon-ui-trash:after {
   content: "";
   display: block;
   width: 0.2em;
@@ -134,13 +432,13 @@
   border-bottom: none;
 }
 
-.silicon-close {
+.silicon-ui-close {
   width: 1em;
   height: 1em;
   position: relative;
   transform: rotate(45deg);
 }
-.silicon-close:before, .silicon-close:after {
+.silicon-ui-close:before, .silicon-ui-close:after {
   content: "";
   top: 50%;
   left: 50%;
@@ -150,24 +448,24 @@
   width: 100%;
   height: var(--stroke, 0.1em);
 }
-.silicon-close:before {
+.silicon-ui-close:before {
   transform: translate(-50%, -50%);
 }
-.silicon-close:before {
+.silicon-ui-close:before {
   transform: translate(-50%, -50%);
 }
-.silicon-close:after {
+.silicon-ui-close:after {
   transform: translate(-50%, -50%) rotate(90deg);
 }
 
-.silicon-burger {
+.silicon-ui-burger {
   width: 1em;
   height: var(--stroke, 0.1em);
   background-color: currentColor;
   display: block;
   position: relative;
 }
-.silicon-burger:before, .silicon-burger:after {
+.silicon-ui-burger:before, .silicon-ui-burger:after {
   display: block;
   position: absolute;
   content: "";
@@ -175,16 +473,16 @@
   height: 100%;
   background-color: currentColor;
 }
-.silicon-burger:before {
+.silicon-ui-burger:before {
   top: 100%;
   transform: translateY(calc(var(--stroke, 0.1em) * 2));
 }
-.silicon-burger:after {
+.silicon-ui-burger:after {
   bottom: 100%;
   transform: translateY(calc(var(--stroke, 0.1em) * -2));
 }
 
-.silicon-user {
+.silicon-ui-user {
   width: 1em;
   height: 0.65em;
   border: var(--stroke, 0.1em) solid currentColor;
@@ -193,7 +491,7 @@
   position: relative;
   transform: translateY(0.175em);
 }
-.silicon-user:before {
+.silicon-ui-user:before {
   content: "";
   display: block;
   width: 0.6em;
@@ -206,48 +504,16 @@
   transform: translateX(-50%);
 }
 
-.silicon-heart {
-  position: relative;
-  width: 0.75em;
-  height: 0.75em;
-  border-left: var(--stroke, 0.1em) solid currentColor;
-  border-bottom: var(--stroke, 0.1em) solid currentColor;
-  transform: translateY(0.25em) rotate(-45deg);
-}
-.silicon-heart:before {
-  content: "";
-  position: absolute;
-  top: calc(-0.5em + var(--stroke, 0.1em));
-  left: calc(var(--stroke, 0.1em) * -1);
-  width: 0.75em;
-  height: 0.5em;
-  border-radius: 0.5em 0.5em 0 0;
-  border-top: var(--stroke, 0.1em) solid currentColor;
-  border-left: var(--stroke, 0.1em) solid currentColor;
-  border-right: var(--stroke, 0.1em) solid currentColor;
-}
-.silicon-heart:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: calc(0.5em + var(--stroke, 0.1em));
-  width: 0.5em;
-  height: 0.75em;
-  border-radius: 0 0.5em 0.5em 0;
-  border-top: var(--stroke, 0.1em) solid currentColor;
-  border-right: var(--stroke, 0.1em) solid currentColor;
-  border-bottom: var(--stroke, 0.1em) solid currentColor;
-}
-
-.silicon-location {
+.silicon-ui-location {
   width: 1em;
   height: 1em;
   border: var(--stroke, 0.1em) solid currentColor;
   border-radius: 50%;
   position: relative;
   border-left-color: transparent;
+  transform: rotate(-90deg);
 }
-.silicon-location:before {
+.silicon-ui-location:before {
   content: "";
   display: block;
   position: absolute;
@@ -261,7 +527,7 @@
   transform-origin: 100% 0;
   transform: rotate(45deg);
 }
-.silicon-location:after {
+.silicon-ui-location:after {
   content: "";
   display: block;
   position: absolute;
@@ -272,39 +538,6 @@
   height: calc(var(--stroke, 0.1em) * 2);
   background-color: currentColor;
   border-radius: 50%;
-}
-
-.silicon-sun {
-  position: absolute;
-  width: 0.5em;
-  height: 0.5em;
-  border-radius: 50%;
-  border: var(--stroke, 0.1em) solid currentColor;
-  box-shadow: -0.55em 0 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor, 0.55em 0 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor, 0 -0.55em 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor, 0 0.55em 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor, -0.4em -0.4em 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor, -0.4em 0.4em 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor, 0.4em -0.4em 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor, 0.4em 0.4em 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor;
-}
-
-.silicon-drop {
-  width: 1em;
-  height: 1em;
-  border: var(--stroke, 0.1em) solid currentColor;
-  border-radius: 50%;
-  position: relative;
-  border-left-color: transparent;
-  transform: rotate(90deg);
-}
-.silicon-drop:before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 50%;
-  right: 50%;
-  width: 0.5em;
-  height: 0.5em;
-  border: var(--stroke, 0.1em) solid currentColor;
-  border-top: none;
-  border-right: none;
-  transform-origin: 100% 0;
-  transform: rotate(45deg);
 }
 
 .silicon-device-screen {
@@ -422,8 +655,42 @@
   border: var(--stroke, 0.1em) solid currentColor;
   transform: translatex(-50%);
   width: 1em;
+  border-radius: var(--stroke) var(--stroke) 0 0;
   height: 0.5em;
   clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 100%, 72% 100%, 72% 50%, 28% 50%, 28% 100%);
+}
+
+.silicon-office-paperclip {
+  --height: calc(var(--stroke, 0.1em) * 5.5);
+  height: var(--height);
+  width: 0.75em;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-left: none;
+  border-radius: 0 0.3em 0.3em 0;
+  position: relative;
+  transform: rotate(-45deg);
+}
+.silicon-office-paperclip:before, .silicon-office-paperclip:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border: var(--stroke, 0.1em) solid currentColor;
+}
+.silicon-office-paperclip:before {
+  right: 100%;
+  top: calc(var(--stroke, 0.1em) * -1);
+  width: 0.5em;
+  height: calc(var(--height) - (var(--stroke, 0.1em) * 1.5));
+  border-right: none;
+  border-radius: calc(var(--height) - (var(--stroke, 0.1em) * 1.5) / 2) 0 0 calc(var(--height) - (var(--stroke, 0.1em) * 1.5) / 2);
+}
+.silicon-office-paperclip:after {
+  left: 0;
+  bottom: calc(var(--stroke, 0.1em) / 2);
+  width: 0.5em;
+  height: calc(var(--height) - (var(--stroke, 0.1em) * 3));
+  border-left: none;
+  border-radius: 0 calc(var(--height) - (var(--stroke, 0.1em) * 3) / 2) calc(var(--height) - (var(--stroke, 0.1em) * 3) / 2) 0;
 }
 
 /*# sourceMappingURL=icons.css.map */

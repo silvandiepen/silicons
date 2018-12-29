@@ -24,6 +24,7 @@
 		"device-printer",
 		"battery-empty",
 		"battery-half",
-		"battery-full"
+		"battery-full",
+		"office-paperclip"
 	]
 }
