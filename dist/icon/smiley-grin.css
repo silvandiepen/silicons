@@ -1,0 +1,32 @@
+.silicon-smiley-grin {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  border: calc(var(--stroke, 0.1em) / 1) solid currentColor;
+  border-radius: 50%;
+}
+.silicon-smiley-grin:before, .silicon-smiley-grin:after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+}
+.silicon-smiley-grin:before {
+  bottom: 50%;
+  right: calc(50% + 0.05em);
+  width: 0.2em;
+  height: 0.2em;
+  box-shadow: 0.3em 0 0 0 currentColor;
+  background-color: currentColor;
+  border-radius: 50%;
+}
+.silicon-smiley-grin:after {
+  top: 50%;
+  left: 50%;
+  width: 0.5em;
+  height: 0.25em;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-radius: 0 0 0.5em 0.5em;
+  transform: translate(-50%, 25%);
+}

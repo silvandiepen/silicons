@@ -546,6 +546,42 @@
   transform: translateX(-50%);
 }
 
+.silicon-map {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 0.33em;
+  height: 1em;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-left-width: calc(var(--stroke, 0.1em) / 4);
+  border-right-width: calc(var(--stroke, 0.1em) / 4);
+  transform: skewY(-12deg);
+}
+.silicon-map:before, .silicon-map:after {
+  content: "";
+  position: absolute;
+  top: calc(var(--stroke, 0.1em) * -1);
+  display: block;
+  box-sizing: border-box;
+  width: 0.33em;
+  height: 1em;
+  border: var(--stroke, 0.1em) solid currentColor;
+}
+.silicon-map:before {
+  left: calc(100% + (var(--stroke, 0.1em) / 4));
+  border-left-width: calc(var(--stroke, 0.1em) / 4);
+  border-radius: 0 var(--stroke, 0.1em) var(--stroke, 0.1em) 0;
+  transform: skewY(24deg);
+  transform-origin: 0 100%;
+}
+.silicon-map:after {
+  right: calc(100% + (var(--stroke, 0.1em) / 4));
+  border-right-width: calc(var(--stroke, 0.1em) / 4);
+  border-radius: var(--stroke, 0.1em) 0 0 var(--stroke, 0.1em);
+  transform: skewY(24deg);
+  transform-origin: 100% 0;
+}
+
 .silicon-text-align-justify {
   position: relative;
   display: inline-block;
@@ -881,6 +917,254 @@
   height: calc(var(--height) - (var(--stroke, 0.1em) * 3));
   border-left: none;
   border-radius: 0 calc(var(--height) - (var(--stroke, 0.1em) * 3) / 2) calc(var(--height) - (var(--stroke, 0.1em) * 3) / 2) 0;
+}
+
+.silicon-smiley-angry {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  border: calc(var(--stroke, 0.1em) / 1) solid currentColor;
+  border-radius: 50%;
+}
+.silicon-smiley-angry:before, .silicon-smiley-angry:after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+}
+.silicon-smiley-angry:before {
+  bottom: 50%;
+  right: calc(50% + 0.05em);
+  width: 0.2em;
+  height: 0.1em;
+  box-shadow: 0.3em 0 0 0 currentColor;
+  background-color: currentColor;
+  border-radius: 0 0 0.1em 0.1em;
+}
+.silicon-smiley-angry:after {
+  top: 50%;
+  left: 50%;
+  width: 0.5em;
+  height: 0.5em;
+  border: calc(var(--stroke, 0.1em) / 2) solid transparent;
+  border-top-color: currentColor;
+  border-radius: 50%;
+  transform: translate(-50%, 25%);
+}
+
+.silicon-smiley-cry {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  background-image: radial-gradient(closest-side, currentColor 100%, transparent), radial-gradient(closest-side, currentColor 100%, transparent);
+  background-position: left calc(50% + .15em) bottom calc(50% + .1em), right calc(50% + .15em) bottom calc(50% + .1em);
+  background-repeat: no-repeat, no-repeat;
+  background-size: 0.2em 0.2em, 0.2em 0.2em;
+  border: calc(var(--stroke, 0.1em) / 1) solid currentColor;
+  border-radius: 50%;
+}
+.silicon-smiley-cry:before, .silicon-smiley-cry:after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+}
+.silicon-smiley-cry:before {
+  top: 50%;
+  right: calc(50% + 0.15em);
+  display: block;
+  width: 0.2em;
+  height: 0.2em;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-radius: 0 50% 50% 50%;
+  transform: rotate(45deg);
+}
+.silicon-smiley-cry:after {
+  top: 50%;
+  left: 50%;
+  width: 0.5em;
+  height: 0.5em;
+  border: calc(var(--stroke, 0.1em) / 2) solid transparent;
+  border-top-color: currentColor;
+  border-radius: 50%;
+  transform: translate(-50%, 25%);
+}
+
+.silicon-smiley-grin {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  border: calc(var(--stroke, 0.1em) / 1) solid currentColor;
+  border-radius: 50%;
+}
+.silicon-smiley-grin:before, .silicon-smiley-grin:after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+}
+.silicon-smiley-grin:before {
+  bottom: 50%;
+  right: calc(50% + 0.05em);
+  width: 0.2em;
+  height: 0.2em;
+  box-shadow: 0.3em 0 0 0 currentColor;
+  background-color: currentColor;
+  border-radius: 50%;
+}
+.silicon-smiley-grin:after {
+  top: 50%;
+  left: 50%;
+  width: 0.5em;
+  height: 0.25em;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-radius: 0 0 0.5em 0.5em;
+  transform: translate(-50%, 25%);
+}
+
+.silicon-smiley-happy {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  border: calc(var(--stroke, 0.1em) / 1) solid currentColor;
+  border-radius: 50%;
+}
+.silicon-smiley-happy:before, .silicon-smiley-happy:after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+}
+.silicon-smiley-happy:before {
+  bottom: 50%;
+  right: calc(50% + 0.05em);
+  width: 0.2em;
+  height: 0.2em;
+  box-shadow: 0.3em 0 0 0 currentColor;
+  background-color: currentColor;
+  border-radius: 50%;
+}
+.silicon-smiley-happy:after {
+  top: 50%;
+  left: 50%;
+  width: 0.5em;
+  height: 0.5em;
+  border: calc(var(--stroke, 0.1em) / 2) solid transparent;
+  border-bottom-color: currentColor;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.silicon-smiley-sad {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  border: calc(var(--stroke, 0.1em) / 1) solid currentColor;
+  border-radius: 50%;
+}
+.silicon-smiley-sad:before, .silicon-smiley-sad:after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+}
+.silicon-smiley-sad:before {
+  bottom: 50%;
+  right: calc(50% + 0.05em);
+  width: 0.2em;
+  height: 0.2em;
+  box-shadow: 0.3em 0 0 0 currentColor;
+  background-color: currentColor;
+  border-radius: 50%;
+}
+.silicon-smiley-sad:after {
+  top: 50%;
+  left: 50%;
+  width: 0.5em;
+  height: 0.5em;
+  border: calc(var(--stroke, 0.1em) / 2) solid transparent;
+  border-top-color: currentColor;
+  border-radius: 50%;
+  transform: translate(-50%, 25%);
+}
+
+.silicon-smiley-wink {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  background-image: linear-gradient(to right, currentColor, currentColor);
+  background-position: left calc(50% + .15em) bottom calc(50% + .1em);
+  background-repeat: no-repeat;
+  background-size: 0.2em 0.05em;
+  border: calc(var(--stroke, 0.1em) / 1) solid currentColor;
+  border-radius: 50%;
+}
+.silicon-smiley-wink:before, .silicon-smiley-wink:after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+}
+.silicon-smiley-wink:before {
+  bottom: 50%;
+  right: calc(50% + 0.05em);
+  width: 0.2em;
+  height: 0.2em;
+  background-color: currentColor;
+  border-radius: 50%;
+}
+.silicon-smiley-wink:after {
+  top: 50%;
+  left: 50%;
+  width: 0.5em;
+  height: 0.5em;
+  border: calc(var(--stroke, 0.1em) / 2) solid transparent;
+  border-bottom-color: currentColor;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.silicon-wifi {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: calc(var(--stroke, 0.1em) * 7);
+  height: calc(var(--stroke, 0.1em) * 7);
+  border: calc(var(--stroke, 0.1em) * 1.5) solid currentColor;
+  border-bottom: none;
+  border-left: none;
+  border-radius: 0 calc(var(--stroke, 0.1em) * 8) 0 0;
+  transform: rotate(-45deg);
+}
+.silicon-wifi:before, .silicon-wifi:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  box-sizing: border-box;
+}
+.silicon-wifi:before {
+  width: calc(var(--stroke, 0.1em) * 4.25);
+  height: calc(var(--stroke, 0.1em) * 4.25);
+  border: calc(var(--stroke, 0.1em) * 1.5) solid currentColor;
+  border-bottom: none;
+  border-left: none;
+  border-radius: 0 calc(var(--stroke, 0.1em) * 4.25) 0 0;
+}
+.silicon-wifi:after {
+  width: calc(var(--stroke, 0.1em) * 1.5);
+  height: calc(var(--stroke, 0.1em) * 1.5);
+  border: calc(var(--stroke, 0.1em) * 1.5) solid currentColor;
+  border-bottom: none;
+  border-left: none;
+  border-radius: 0 calc(var(--stroke, 0.1em) * 1.5) 0 0;
 }
 
 /*# sourceMappingURL=icons.css.map */

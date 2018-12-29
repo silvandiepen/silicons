@@ -1,0 +1,35 @@
+.silicon-map {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 0.33em;
+  height: 1em;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-left-width: calc(var(--stroke, 0.1em) / 4);
+  border-right-width: calc(var(--stroke, 0.1em) / 4);
+  transform: skewY(-12deg);
+}
+.silicon-map:before, .silicon-map:after {
+  content: "";
+  position: absolute;
+  top: calc(var(--stroke, 0.1em) * -1);
+  display: block;
+  box-sizing: border-box;
+  width: 0.33em;
+  height: 1em;
+  border: var(--stroke, 0.1em) solid currentColor;
+}
+.silicon-map:before {
+  left: calc(100% + (var(--stroke, 0.1em) / 4));
+  border-left-width: calc(var(--stroke, 0.1em) / 4);
+  border-radius: 0 var(--stroke, 0.1em) var(--stroke, 0.1em) 0;
+  transform: skewY(24deg);
+  transform-origin: 0 100%;
+}
+.silicon-map:after {
+  right: calc(100% + (var(--stroke, 0.1em) / 4));
+  border-right-width: calc(var(--stroke, 0.1em) / 4);
+  border-radius: var(--stroke, 0.1em) 0 0 var(--stroke, 0.1em);
+  transform: skewY(24deg);
+  transform-origin: 100% 0;
+}
