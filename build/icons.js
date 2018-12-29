@@ -21,26 +21,60 @@ function doSass(file) {
 	);
 }
 
-function makeJson(items) {
+function makeFiles(items) {
 	let iconList = {};
+	let mixins = '';
+	let includes = '@import \'mixins\'; \n';
+	
 	for (var i = 0; i < items.length; i++) {
 		if (items[i].indexOf('.scss') > 0) {
-			items[i] = items[i].replace('.scss', '');
+			let iconname = items[i].replace('.scss', '');
+			items[i] = iconname;
+			mixins = mixins + `\n @import 'icon/${iconname}';`;
+			includes = includes + `@include silicon-${iconname}(); \n`;
 		}
 	}
 	iconList.silicons = items;
-	
-	fs.writeFile(path.join('./dist/','icons.json'), JSON.stringify(iconList), (err) => {
-		if (err) throw err;
-		console.log(`icons.json is created`);
-	});
+
+	// JSON
+	fs.writeFile(
+		path.join('./dist/', 'icons.json'),
+		JSON.stringify(iconList),
+		(err) => {
+			if (err) throw err;
+			console.log(`icons.json is created`);
+		}
+	);
+
+	// MIXINS
+
+	fs.writeFile(
+		path.join('./src/', 'mixins.scss'),
+		mixins,
+		(err) => {
+			if (err) throw err;
+			console.log(`mixins file is created`);
+		}
+	);
+
+	//
+	fs.writeFile(
+		path.join('./src/', 'icons.scss'),
+		includes,
+		(err) => {
+			if (err) throw err;
+			console.log(`icons file is created`);
+		}
+	);
 }
 
 fs.readdir(src, function(err, items) {
+
+	makeFiles(items);
+	
 	items.forEach(function(item) {
 		if (item.indexOf('.scss') > 0) {
 			doSass(item.replace('.scss', ''));
 		}
 	});
-	makeJson(items);
 });
