@@ -1,0 +1,63 @@
+@import '../default';
+
+@mixin silicon-volume-high($class: '#{$silicon-prefix}volume-high') {
+	.#{$class} {
+		position: relative;
+
+		display: inline-block;
+		box-sizing: border-box;
+		width: calc(var(--stroke, #{$silicon-stroke}) * 7);
+		height: calc(var(--stroke, #{$silicon-stroke}) * 7);
+
+		background-image: 
+			radial-gradient(
+				at bottom left,
+				transparent calc(50% - (var(--stroke, #{$silicon-stroke}) / 2)),
+				currentColor calc(50% - (var(--stroke, #{$silicon-stroke}) / 2)),
+				currentColor 50%,
+				transparent 50%
+			);
+
+		border: calc(var(--stroke, #{$silicon-stroke}) * 1) solid currentColor;
+		border-bottom: none;
+		border-left: none;
+		border-radius: 0 calc(var(--stroke, #{$silicon-stroke}) * 8) 0 0;
+
+		transform: rotate(45deg);
+
+		&:before,
+		&:after {
+			content: '';
+
+			position: absolute;
+
+			display: block;
+			box-sizing: border-box;
+		}
+		&:before {
+			left: 0;
+			bottom: 0;
+
+			width: calc(var(--stroke, #{$silicon-stroke}) * 3);
+			height: calc(var(--stroke, #{$silicon-stroke}) * 3);
+
+			background-color: currentColor;
+
+			border: calc(var(--stroke, #{$silicon-stroke}) * 1.5) solid currentColor;
+			border-bottom: none;
+			border-left: none;
+			border-radius: 0 calc(var(--stroke, #{$silicon-stroke}) * 4.25) 0 0;
+		}
+		&:after {
+			left: calc(var(--stroke, #{$silicon-stroke}) * -0.5);
+			bottom: calc(var(--stroke, #{$silicon-stroke}) * -0.5);
+
+			width: calc(var(--stroke, #{$silicon-stroke}) * 2.5);
+			height: calc(var(--stroke, #{$silicon-stroke}) * 2.5);
+
+			background-color: currentColor;
+
+			transform: rotate(-45deg);
+		}
+	}
+}
