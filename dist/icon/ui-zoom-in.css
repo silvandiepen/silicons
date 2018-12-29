@@ -1,0 +1,35 @@
+.silicon-ui-zoom-in {
+  display: inline-block;
+  --stroke: 0.1em;
+  position: relative;
+  width: 1em;
+  height: 1em;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 50%;
+}
+.silicon-ui-zoom-in, .silicon-ui-zoom-in:before, .silicon-ui-zoom-in:after {
+  box-sizing: border-box;
+}
+.silicon-ui-zoom-in:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  display: block;
+  width: 0.5em;
+  height: var(--stroke, 0.1em);
+  background-color: currentColor;
+  transform: translate(-0.1em, -0.1em) rotate(45deg);
+  transform-origin: 0 50%;
+}
+.silicon-ui-zoom-in:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 0.4em;
+  height: 0.4em;
+  background-image: linear-gradient(to right, transparent calc(50% - var(--stroke, 0.1em) / 4), currentColor calc(50% - var(--stroke, 0.1em) / 4), currentColor calc(50% + var(--stroke, 0.1em) / 4), transparent calc(50% + var(--stroke, 0.1em) / 4)), linear-gradient(to bottom, transparent calc(50% - var(--stroke, 0.1em) / 4), currentColor calc(50% - var(--stroke, 0.1em) / 4), currentColor calc(50% + var(--stroke, 0.1em) / 4), transparent calc(50% + var(--stroke, 0.1em) / 4));
+  transform: translate(-50%, -50%);
+}

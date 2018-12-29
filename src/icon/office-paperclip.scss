@@ -1,35 +1,58 @@
+@import "../default";
 
-.#{$silicon-prefix}office-paperclip {
-	--height: calc(var(--stroke, #{$silicon-stroke}) * 5.5);
-	height: var(--height);
-	width: 0.75em;
-	border: var(--stroke, #{$silicon-stroke}) solid currentColor;
-	border-left: none;
-	border-radius: 0 .3em .3em 0;
-	position: relative;
-	transform: rotate(-45deg);
-	&:before,
-	&:after {
-		content: '';
-		display: block;
-		position: absolute;
+@mixin silicon-office-paperclip($class: '#{$silicon-prefix}office-paperclip') {
+	.#{$class} {
+		@include silicon-default-settings();
+		
+		--height: calc(var(--stroke, #{$silicon-stroke}) * 5.5);
+		position: relative;
+
+		width: 0.75em;
+		height: var(--height);
+
 		border: var(--stroke, #{$silicon-stroke}) solid currentColor;
-	}
-	&:before {
-		right: 100%;
-		top: calc(var(--stroke, #{$silicon-stroke}) * -1);
-		width: 0.5em;
-		height: calc(var(--height) - (var(--stroke, #{$silicon-stroke}) * 1.5));
-		border-right: none;
-		border-radius: calc(var(--height) - (var(--stroke, #{$silicon-stroke}) * 1.5) / 2) 0 0 calc(var(--height) - (var(--stroke, #{$silicon-stroke}) * 1.5) / 2);
-	}
-	&:after {
-		left: 0;
-		bottom: calc(var(--stroke, #{$silicon-stroke}) / 2);
-		// top: calc(var(--stroke, #{$silicon-stroke}) * -1);
-		width: 0.5em;
-		height: calc(var(--height) - (var(--stroke, #{$silicon-stroke}) * 3));
 		border-left: none;
-		border-radius: 0 calc(var(--height) - (var(--stroke, #{$silicon-stroke}) * 3) / 2) calc(var(--height) - (var(--stroke, #{$silicon-stroke}) * 3) / 2) 0;
+		border-radius: 0 0.3em 0.3em 0;
+
+		transform: rotate(-45deg);
+
+		&:before,
+		&:after {
+			content: '';
+
+			position: absolute;
+
+			display: block;
+
+			border: var(--stroke, #{$silicon-stroke}) solid currentColor;
+		}
+
+		&:before {
+			top: calc(var(--stroke, #{$silicon-stroke}) * -1);
+			right: 100%;
+
+			width: 0.5em;
+			height: calc(var(--height) - (var(--stroke, #{$silicon-stroke}) * 1.5));
+
+			border-right: none;
+			border-radius: calc(
+					var(--height) - (var(--stroke, #{$silicon-stroke}) * 1.5) / 2
+				)
+				0 0 calc(var(--height) - (var(--stroke, #{$silicon-stroke}) * 1.5) / 2);
+		}
+
+		&:after {
+			bottom: calc(var(--stroke, #{$silicon-stroke}) / 2);
+			left: 0;
+
+			width: 0.5em;
+			height: calc(var(--height) - (var(--stroke, #{$silicon-stroke}) * 3));
+
+			border-left: none;
+			border-radius: 0
+				calc(var(--height) - (var(--stroke, #{$silicon-stroke}) * 3) / 2)
+				calc(var(--height) - (var(--stroke, #{$silicon-stroke}) * 3) / 2) 0;
+		}
 	}
 }
+@include silicon-office-paperclip();

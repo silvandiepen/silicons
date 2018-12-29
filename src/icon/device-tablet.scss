@@ -1,19 +1,31 @@
+@import "../default";
 
-.#{$silicon-prefix}device-tablet {
-  height: 0.7em;
-  width: 1em;
-  border: var(--stroke, #{$silicon-stroke}) solid currentColor;
-  border-radius: 0.1em;
-  position: relative;
-  background-image: radial-gradient(
-      circle closest-side,
-      currentColor 70%,
-      transparent 70%
-    )
-    linear-gradient(to bottom, currentColor, currentColor);
-  background-repeat: no-repeat, no-repeat;
-  background-size: calc(var(--stroke, #{$silicon-stroke}) * 1.5) calc(var(--stroke, #{$silicon-stroke}) * 1.5),
-    calc(var(--stroke, #{$silicon-stroke}) * 1.5) calc(var(--stroke, #{$silicon-stroke}) * 3);
-  background-position: bottom calc(var(--stroke, #{$silicon-stroke}) / 2) left 50%,
-    top calc(var(--stroke, #{$silicon-stroke}) / 2) left 50%;
+@mixin silicon-device-tablet($class: '#{$silicon-prefix}device-tablet') {
+	.#{$class} {
+		@include silicon-default-settings();
+		
+		position: relative;
+
+		width: 1em;
+		height: 0.7em;
+
+		background-image: radial-gradient(
+				circle closest-side,
+				currentColor 70%,
+				transparent 70%
+			)
+			linear-gradient(to bottom, currentColor, currentColor);
+		background-repeat: no-repeat, no-repeat;
+		background-position: bottom calc(var(--stroke, #{$silicon-stroke}) / 2) left
+				50%,
+			top calc(var(--stroke, #{$silicon-stroke}) / 2) left 50%;
+		background-size: calc(var(--stroke, #{$silicon-stroke}) * 1.5)
+				calc(var(--stroke, #{$silicon-stroke}) * 1.5),
+			calc(var(--stroke, #{$silicon-stroke}) * 1.5)
+				calc(var(--stroke, #{$silicon-stroke}) * 3);
+
+		border: var(--stroke, #{$silicon-stroke}) solid currentColor;
+		border-radius: 0.1em;
+	}
 }
+@include silicon-device-tablet();

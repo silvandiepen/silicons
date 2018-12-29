@@ -1,0 +1,37 @@
+.silicon-office-paperclip {
+  display: inline-block;
+  --stroke: 0.1em;
+  --height: calc(var(--stroke, 0.1em) * 5.5);
+  position: relative;
+  width: 0.75em;
+  height: var(--height);
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-left: none;
+  border-radius: 0 0.3em 0.3em 0;
+  transform: rotate(-45deg);
+}
+.silicon-office-paperclip, .silicon-office-paperclip:before, .silicon-office-paperclip:after {
+  box-sizing: border-box;
+}
+.silicon-office-paperclip:before, .silicon-office-paperclip:after {
+  content: "";
+  position: absolute;
+  display: block;
+  border: var(--stroke, 0.1em) solid currentColor;
+}
+.silicon-office-paperclip:before {
+  top: calc(var(--stroke, 0.1em) * -1);
+  right: 100%;
+  width: 0.5em;
+  height: calc(var(--height) - (var(--stroke, 0.1em) * 1.5));
+  border-right: none;
+  border-radius: calc( 					var(--height) - (var(--stroke, 0.1em) * 1.5) / 2 				) 0 0 calc(var(--height) - (var(--stroke, 0.1em) * 1.5) / 2);
+}
+.silicon-office-paperclip:after {
+  bottom: calc(var(--stroke, 0.1em) / 2);
+  left: 0;
+  width: 0.5em;
+  height: calc(var(--height) - (var(--stroke, 0.1em) * 3));
+  border-left: none;
+  border-radius: 0 calc(var(--height) - (var(--stroke, 0.1em) * 3) / 2) calc(var(--height) - (var(--stroke, 0.1em) * 3) / 2) 0;
+}

@@ -1,0 +1,41 @@
+.silicon-file-import {
+  display: inline-block;
+  --stroke: 0.1em;
+  position: relative;
+  width: 1em;
+  height: 0.75em;
+  background-image: linear-gradient(to right, currentColor 33.33%, transparent 33.33%, transparent, 66.66%, currentColor 66.66%);
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 100% var(--stroke, 0.1em);
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-top: 0;
+}
+.silicon-file-import, .silicon-file-import:before, .silicon-file-import:after {
+  box-sizing: border-box;
+}
+.silicon-file-import:before {
+  content: "";
+  position: absolute;
+  bottom: 40%;
+  left: 50%;
+  display: block;
+  width: calc(var(--stroke, 0.1em) / 2);
+  height: 0.5em;
+  background-color: currentColor;
+  transform: translateX(-50%);
+}
+.silicon-file-import:after {
+  content: "";
+  position: absolute;
+  bottom: calc(40% - var(--stroke, 0.1em) / 2);
+  left: 50%;
+  display: block;
+  width: 0.33em;
+  height: 0.33em;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-top: none;
+  border-right: none;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}

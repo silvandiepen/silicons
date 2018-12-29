@@ -1,0 +1,37 @@
+.silicon-shape-heart {
+  display: inline-block;
+  --stroke: 0.1em;
+  position: relative;
+  width: 0.75em;
+  height: 0.75em;
+  border-bottom: var(--stroke, 0.1em) solid currentColor;
+  border-left: var(--stroke, 0.1em) solid currentColor;
+  transform: translateY(0.25em) rotate(-45deg);
+}
+.silicon-shape-heart, .silicon-shape-heart:before, .silicon-shape-heart:after {
+  box-sizing: border-box;
+}
+.silicon-shape-heart:before {
+  content: "";
+  position: absolute;
+  top: calc(-0.5em + var(--stroke, 0.1em));
+  left: calc(var(--stroke, 0.1em) * -1);
+  width: 0.75em;
+  height: 0.5em;
+  border-top: var(--stroke, 0.1em) solid currentColor;
+  border-right: var(--stroke, 0.1em) solid currentColor;
+  border-left: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 0.5em 0.5em 0 0;
+}
+.silicon-shape-heart:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc(0.5em + var(--stroke, 0.1em));
+  width: 0.5em;
+  height: 0.75em;
+  border-top: var(--stroke, 0.1em) solid currentColor;
+  border-right: var(--stroke, 0.1em) solid currentColor;
+  border-bottom: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 0 0.5em 0.5em 0;
+}

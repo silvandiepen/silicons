@@ -1,16 +1,30 @@
+@import "../default";
 
-.#{$silicon-prefix}weather-sun {
-  position: absolute;
-  width: 0.5em;
-  height: 0.5em;
-  border-radius: 50%;
-  border: var(--stroke, #{$silicon-stroke}) solid currentColor;
-  box-shadow: -0.55em 0 0 calc((var(--stroke, #{$silicon-stroke}) * 1.75) * -1) currentColor,
-    0.55em 0 0 calc((var(--stroke, #{$silicon-stroke}) * 1.75) * -1) currentColor,
-    0 -0.55em 0 calc((var(--stroke, #{$silicon-stroke}) * 1.75) * -1) currentColor,
-    0 0.55em 0 calc((var(--stroke, #{$silicon-stroke}) * 1.75) * -1) currentColor,
-    -0.4em -0.4em 0 calc((var(--stroke, #{$silicon-stroke}) * 1.75) * -1) currentColor,
-    -0.4em 0.4em 0 calc((var(--stroke, #{$silicon-stroke}) * 1.75) * -1) currentColor,
-    0.4em -0.4em 0 calc((var(--stroke, #{$silicon-stroke}) * 1.75) * -1) currentColor,
-    0.4em 0.4em 0 calc((var(--stroke, #{$silicon-stroke}) * 1.75) * -1) currentColor;
+@mixin silicon-weather-sun($class: '#{$silicon-prefix}weather-sun') {
+	.#{$class} {
+		@include silicon-default-settings();
+		
+		position: absolute;
+
+		width: 0.5em;
+		height: 0.5em;
+
+		border: var(--stroke, #{$silicon-stroke}) solid currentColor;
+		border-radius: 50%;
+
+		box-shadow: -0.55em 0 0
+				calc((var(--stroke, #{$silicon-stroke}) * 1.75) * -1) currentColor,
+			0.55em 0 0 calc((var(--stroke, #{$silicon-stroke}) * 1.75) * -1)
+				currentColor,
+			0 -0.55em 0 calc((var(--stroke, #{$silicon-stroke}) * 1.75) * -1) currentColor,
+			0 0.55em 0 calc((var(--stroke, #{$silicon-stroke}) * 1.75) * -1)
+				currentColor,
+			-0.4em -0.4em 0 calc((var(--stroke, #{$silicon-stroke}) * 1.75) * -1)
+				currentColor,
+			-0.4em 0.4em 0 calc((var(--stroke, #{$silicon-stroke}) * 1.75) * -1) currentColor,
+			0.4em -0.4em 0 calc((var(--stroke, #{$silicon-stroke}) * 1.75) * -1) currentColor,
+			0.4em 0.4em 0 calc((var(--stroke, #{$silicon-stroke}) * 1.75) * -1)
+				currentColor;
+	}
 }
+@include silicon-weather-sun();

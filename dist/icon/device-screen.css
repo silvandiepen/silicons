@@ -1,0 +1,24 @@
+.silicon-device-screen {
+  display: inline-block;
+  --stroke: 0.1em;
+  position: relative;
+  width: 1em;
+  height: 0.75em;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 0.2em;
+}
+.silicon-device-screen, .silicon-device-screen:before, .silicon-device-screen:after {
+  box-sizing: border-box;
+}
+.silicon-device-screen:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  display: block;
+  width: 50%;
+  height: calc(var(--stroke, 0.1em) * 3);
+  background-image: linear-gradient(to right, transparent calc(50% - var(--stroke, 0.1em) / 4), currentColor calc(50% - var(--stroke, 0.1em) / 4), currentColor calc(50% + var(--stroke, 0.1em) / 4), transparent calc(50% + var(--stroke, 0.1em) / 4));
+  border-bottom: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  transform: translateX(-50%);
+}

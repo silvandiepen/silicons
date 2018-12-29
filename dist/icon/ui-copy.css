@@ -1,0 +1,22 @@
+.silicon-ui-copy {
+  display: inline-block;
+  --stroke: 0.1em;
+  position: relative;
+  width: 0.75em;
+  height: 1em;
+  border: var(--stroke, 0.1em) solid currentColor;
+}
+.silicon-ui-copy, .silicon-ui-copy:before, .silicon-ui-copy:after {
+  box-sizing: border-box;
+}
+.silicon-ui-copy:before {
+  content: "";
+  position: absolute;
+  top: calc(var(--stroke) * -3);
+  left: calc(var(--stroke) * -3);
+  width: 0.75em;
+  height: 1em;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-right: none;
+  border-bottom: none;
+}

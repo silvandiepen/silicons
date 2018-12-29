@@ -1,36 +1,55 @@
+@import "../default";
 
-.#{$silicon-prefix}ui-location {
-  width: 1em;
-  height: 1em;
-  border: var(--stroke, #{$silicon-stroke}) solid currentColor;
-  border-radius: 50%;
-  position: relative;
-  border-left-color: transparent;
-  transform: rotate(-90deg);
-  &:before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 50%;
-    right: 50%;
-    width: 0.5em;
-    height: 0.5em;
-    border: var(--stroke, #{$silicon-stroke}) solid currentColor;
-    border-top: none;
-    border-right: none;
-    transform-origin: 100% 0;
-    transform: rotate(45deg);
-  }
-  &:after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: calc(var(--stroke, #{$silicon-stroke}) * 2);
-    height: calc(var(--stroke, #{$silicon-stroke}) * 2);
-    background-color: currentColor;
-    border-radius: 50%;
-  }
+@mixin silicon-ui-location($class: '#{$silicon-prefix}ui-location') {
+	.#{$class} {
+    @include silicon-default-settings();
+    
+		position: relative;
+
+		width: 1em;
+		height: 1em;
+
+		border: var(--stroke, #{$silicon-stroke}) solid currentColor;
+		border-left-color: transparent;
+		border-radius: 50%;
+
+		transform: rotate(-90deg);
+
+		&:before {
+			content: '';
+
+			position: absolute;
+			top: 50%;
+			right: 50%;
+
+			display: block;
+			width: 0.5em;
+			height: 0.5em;
+
+			border: var(--stroke, #{$silicon-stroke}) solid currentColor;
+			border-top: none;
+			border-right: none;
+
+			transform: rotate(45deg);
+			transform-origin: 100% 0;
+		}
+		&:after {
+			content: '';
+
+			position: absolute;
+			top: 50%;
+			left: 50%;
+
+			display: block;
+			width: calc(var(--stroke, #{$silicon-stroke}) * 2);
+			height: calc(var(--stroke, #{$silicon-stroke}) * 2);
+
+			background-color: currentColor;
+
+			border-radius: 50%;
+
+			transform: translate(-50%, -50%);
+		}
+	}
 }
+@include silicon-ui-location();

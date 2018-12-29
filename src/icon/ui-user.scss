@@ -1,22 +1,36 @@
+@import "../default";
 
-.#{$silicon-prefix}ui-user {
-  width: 1em;
-  height: 0.65em;
-  border: var(--stroke, #{$silicon-stroke}) solid currentColor;
-  border-radius: 0.75em 0.75em 0 0;
-  border-bottom: 0;
-  position: relative;
-  transform: translateY(0.175em);
-  &:before {
-    content: "";
-    display: block;
-    width: 0.6em;
-    height: 0.6em;
-    border: var(--stroke, #{$silicon-stroke}) solid currentColor;
-    border-radius: 50%;
-    position: absolute;
-    left: 50%;
-    bottom: 100%;
-    transform: translateX(-50%);
-  }
+@mixin silicon-ui-user($class: '#{$silicon-prefix}ui-user') {
+	.#{$class} {
+    @include silicon-default-settings();
+    
+		position: relative;
+
+		width: 1em;
+		height: 0.65em;
+
+		border: var(--stroke, #{$silicon-stroke}) solid currentColor;
+		border-bottom: 0;
+		border-radius: 0.75em 0.75em 0 0;
+
+		transform: translateY(0.175em);
+
+		&:before {
+			content: '';
+
+			position: absolute;
+			bottom: 100%;
+			left: 50%;
+
+			display: block;
+			width: 0.6em;
+			height: 0.6em;
+
+			border: var(--stroke, #{$silicon-stroke}) solid currentColor;
+			border-radius: 50%;
+
+			transform: translateX(-50%);
+		}
+	}
 }
+@include silicon-ui-user();

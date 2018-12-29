@@ -1,27 +1,40 @@
+@import "../default";
 
-.#{$silicon-prefix}device-screen {
-  width: 1em;
-  height: 0.75em;
-  border: var(--stroke, #{$silicon-stroke}) solid currentColor;
-  border-radius: 0.2em;
-  position: relative;
-  &:before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 50%;
-    height: calc(var(--stroke, #{$silicon-stroke}) * 3);
-    position: absolute;
-    top: 100%;
-    border-bottom: calc(var(--stroke, #{$silicon-stroke}) / 2) solid currentColor;
-    left: 50%;
-    transform: translateX(-50%);
-    background-image: linear-gradient(
-      to right,
-      transparent calc(50% - var(--stroke, #{$silicon-stroke}) / 4),
-      currentColor calc(50% - var(--stroke, #{$silicon-stroke}) / 4),
-      currentColor calc(50% + var(--stroke, #{$silicon-stroke}) / 4),
-      transparent calc(50% + var(--stroke, #{$silicon-stroke}) / 4)
-    );
-  }
+@mixin silicon-device-screen($class: '#{$silicon-prefix}device-screen') {
+	.#{$class} {
+    @include silicon-default-settings();
+    
+		position: relative;
+
+		width: 1em;
+		height: 0.75em;
+
+		border: var(--stroke, #{$silicon-stroke}) solid currentColor;
+		border-radius: 0.2em;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 100%;
+			left: 50%;
+
+			display: block;
+			width: 50%;
+			height: calc(var(--stroke, #{$silicon-stroke}) * 3);
+
+			background-image: linear-gradient(
+				to right,
+				transparent calc(50% - var(--stroke, #{$silicon-stroke}) / 4),
+				currentColor calc(50% - var(--stroke, #{$silicon-stroke}) / 4),
+				currentColor calc(50% + var(--stroke, #{$silicon-stroke}) / 4),
+				transparent calc(50% + var(--stroke, #{$silicon-stroke}) / 4)
+			);
+
+			border-bottom: calc(var(--stroke, #{$silicon-stroke}) / 2) solid
+				currentColor;
+
+			transform: translateX(-50%);
+		}
+	}
 }
+@include silicon-device-screen();

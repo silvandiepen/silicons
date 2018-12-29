@@ -1,39 +1,55 @@
-.#{$silicon-prefix}device-printer {
-	width: 0.5em;
-	height: 0.5em;
-	border: calc(var(--stroke, #{$silicon-stroke}) / 2) solid currentColor;
-	position: relative;
-	&:after {
-		content: '';
-		display: block;
-		position: absolute;
-		left: 50%;
-		bottom: calc(100% + (var(--stroke, #{$silicon-stroke}) * 2));
-		transform: translateX(-50%);
+@import "../default";
+
+@mixin silicon-device-printer($class: '#{$silicon-prefix}device-printer') {
+	.#{$class} {
+		@include silicon-default-settings();
+		
+		position: relative;
+
 		width: 0.5em;
-		height: 0.25em;
-		border: calc(var(--stroke, #{$silicon-stroke}) / 2) solid currentColor;
-	}
-	&:before {
-		content: '';
-		display: block;
-		position: absolute;
-		left: 50%;
-		top: -0.25em;
-		border: var(--stroke, #{$silicon-stroke}) solid currentColor;
-		transform: translatex(-50%);
-		width: 1em;
-		border-radius: var(--stroke) var(--stroke) 0 0;
 		height: 0.5em;
-		clip-path: polygon(
-			0% 100%,
-			0% 0%,
-			100% 0%,
-			100% 100%,
-			72% 100%,
-			72% 50%,
-			28% 50%,
-			28% 100%
-		);
+
+		border: calc(var(--stroke, #{$silicon-stroke}) / 2) solid currentColor;
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: calc(100% + (var(--stroke, #{$silicon-stroke}) * 2));
+			left: 50%;
+		
+			display: block;
+			width: 0.5em;
+			height: 0.25em;
+
+			border: calc(var(--stroke, #{$silicon-stroke}) / 2) solid currentColor;
+
+			transform: translateX(-50%);
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			top: -0.25em;
+			left: 50%;
+
+			display: block;
+			width: 1em;
+			height: 0.5em;
+
+			border: var(--stroke, #{$silicon-stroke}) solid currentColor;
+			border-radius: var(--stroke) var(--stroke) 0 0;
+		
+			transform: translatex(-50%);
+			
+			clip-path: polygon(
+				0% 100%,
+				0% 0%,
+				100% 0%,
+				100% 100%,
+				72% 100%,
+				72% 50%,
+				28% 50%,
+				28% 100%
+			);
+		}
 	}
 }
+@include silicon-device-printer();

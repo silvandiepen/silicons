@@ -1,0 +1,25 @@
+.silicon-device-tv {
+  display: inline-block;
+  --stroke: 0.1em;
+  position: relative;
+  width: 1em;
+  height: 0.75em;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 0.2em;
+}
+.silicon-device-tv, .silicon-device-tv:before, .silicon-device-tv:after {
+  box-sizing: border-box;
+}
+.silicon-device-tv:before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  display: block;
+  width: calc(var(--stroke, 0.1em) * 3);
+  height: calc(var(--stroke, 0.1em) * 3);
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-top: 0;
+  border-right: 0;
+  transform: translateX(-50%) translateY(calc(var(--stroke, 0.1em) * -1)) rotate(-45deg);
+}

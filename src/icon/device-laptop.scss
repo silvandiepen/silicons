@@ -1,22 +1,32 @@
+@import "../default";
 
-.#{$silicon-prefix}device-laptop {
-  width: 1em;
-  height: 0.6em;
-  border: var(--stroke, #{$silicon-stroke}) solid currentColor;
-  border-radius: 0.1em 0.1em 0 0;
-  position: relative;
-  border-bottom: 0;
-  &:before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 1.2em;
-    height: calc(var(--stroke, #{$silicon-stroke}) * 2);
-    position: absolute;
-    top: calc(100%);
-    border: calc(var(--stroke, #{$silicon-stroke}) /2) solid currentColor;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 0 0 0.2em 0.2em;
-  }
+@mixin silicon-device-laptop($class: '#{$silicon-prefix}device-laptop') {
+	.#{$class} {
+		@include silicon-default-settings();
+		position: relative;
+
+		width: 1em;
+		height: 0.6em;
+
+		border: var(--stroke, #{$silicon-stroke}) solid currentColor;
+		border-bottom: 0;
+		border-radius: 0.1em 0.1em 0 0;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: calc(100%);
+			left: 50%;
+
+			display: block;
+			width: 1.2em;
+			height: calc(var(--stroke, #{$silicon-stroke}) * 2);
+
+			border: calc(var(--stroke, #{$silicon-stroke}) / 2) solid currentColor;
+			border-radius: 0 0 0.2em 0.2em;
+
+			transform: translateX(-50%);
+		}
+	}
 }
+@include silicon-device-laptop();

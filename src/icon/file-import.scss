@@ -1,36 +1,61 @@
-.#{$silicon-prefix}file-import {
-	width: 1em;
-	height: .75em;
-	border: var(--stroke, #{$silicon-stroke}) solid currentColor;
-	border-top: 0;
-	position: relative;
-	background-image: linear-gradient(to right, currentColor 33.33%, transparent 33.33%, transparent, 66.66%, currentColor 66.66%);
-	background-size: 100% var(--stroke, #{$silicon-stroke});
-	background-position: top left;
-	background-repeat: no-repeat;
-	&:before {
-		position: absolute;
-		content: '';
-		display: block;
-		width: calc(var(--stroke, #{$silicon-stroke}) / 2);
-		height: 0.5em;
-		bottom: 40%;
-		left: 50%;
-		transform: translateX(-50%);
-		background-color: currentColor;
-	}
-	&:after {
-		width: 0.33em;
-		height: 0.33em;
-		position: absolute;
-		content: '';
-		display: block;
-		transform-origin: 0 100%;
-		transform: rotate(-45deg);
-		border: calc(var(--stroke, #{$silicon-stroke}) / 2) solid currentColor;
-		border-top: none;
-		border-right: none;
-		left: 50%;
-		bottom: calc(40% - var(--stroke, #{$silicon-stroke}) / 2);
+@import "../default";
+
+@mixin silicon-file-import($class: '#{$silicon-prefix}file-import') {
+	.#{$class} {
+		@include silicon-default-settings();
+		
+		position: relative;
+
+		width: 1em;
+		height: 0.75em;
+
+		background-image: linear-gradient(
+			to right,
+			currentColor 33.33%,
+			transparent 33.33%,
+			transparent,
+			66.66%,
+			currentColor 66.66%
+		);
+		background-repeat: no-repeat;
+		background-position: top left;
+		background-size: 100% var(--stroke, #{$silicon-stroke});
+
+		border: var(--stroke, #{$silicon-stroke}) solid currentColor;
+		border-top: 0;
+
+		&:before {
+			content: '';
+
+			position: absolute;
+			bottom: 40%;
+			left: 50%;
+
+			display: block;
+			width: calc(var(--stroke, #{$silicon-stroke}) / 2);
+			height: 0.5em;
+
+			background-color: currentColor;
+			transform: translateX(-50%);
+		}
+		&:after {
+			content: '';
+
+			position: absolute;
+			bottom: calc(40% - var(--stroke, #{$silicon-stroke}) / 2);
+			left: 50%;
+
+			display: block;
+			width: 0.33em;
+			height: 0.33em;
+
+			border: calc(var(--stroke, #{$silicon-stroke}) / 2) solid currentColor;
+			border-top: none;
+			border-right: none;
+
+			transform: rotate(-45deg);
+			transform-origin: 0 100%;
+		}
 	}
 }
+@include silicon-file-import();

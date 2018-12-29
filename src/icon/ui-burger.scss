@@ -1,24 +1,39 @@
-.#{$silicon-prefix}ui-burger {
-	width: 1em;
-	height: var(--stroke, #{$silicon-stroke});
-	background-color: currentColor;
-	display: block;
-	position: relative;
-	&:before,
-	&:after {
+@import "../default";
+
+@mixin silicon-ui-burger($class: '#{$silicon-prefix}ui-burger') {
+	.#{$class} {
+		@include silicon-default-settings();
+		
+		position: relative;
+
 		display: block;
-		position: absolute;
-		content: '';
-		width: 100%;
-		height: 100%;
+		width: 1em;
+		height: var(--stroke, #{$silicon-stroke});
+
 		background-color: currentColor;
-	}
-	&:before {
-		top: 100%;
-		transform: translateY(calc(var(--stroke, #{$silicon-stroke}) * 2));
-	}
-	&:after {
-		bottom: 100%;
-		transform: translateY(calc(var(--stroke, #{$silicon-stroke}) * -2));
+
+		&:before,
+		&:after {
+			content: '';
+
+			position: absolute;
+
+			display: block;
+			width: 100%;
+			height: 100%;
+
+			background-color: currentColor;
+		}
+		&:before {
+			top: 100%;
+
+			transform: translateY(calc(var(--stroke, #{$silicon-stroke}) * 2));
+		}
+		&:after {
+			bottom: 100%;
+
+			transform: translateY(calc(var(--stroke, #{$silicon-stroke}) * -2));
+		}
 	}
 }
+@include silicon-ui-burger();

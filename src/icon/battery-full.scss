@@ -1,30 +1,42 @@
-.#{$silicon-prefix}battery-full {
-	width: 1em;
-	height: 0.5em;
-	border: var(--stroke, #{$silicon-stroke}) solid currentColor;
-	border-radius: calc(var(--stroke, #{$silicon-stroke}) * 1.5);
-	position: absolute;
-	&:before {
-		content: '';
-		display: block;
-		position: absolute;
-		left: 100%;
-		height: 0.25em;
-		width: 0.2em;
-		top: 50%;
-		transform: translateY(-50%);
-		border: calc(var(--stroke, #{$silicon-stroke}) / 2) solid currentColor;
-		border-radius: 0 calc(var(--stroke, #{$silicon-stroke}) * 0.5)
-			calc(var(--stroke, #{$silicon-stroke}) * 0.5) 0;
-	}
-	&:after {
-		position: absolute;
-		content: '';
-		width: calc(100% - var(--stroke, #{$silicon-stroke}));
-		height: calc(100% - var(--stroke, #{$silicon-stroke}));
-		position: absolute;
-		top: calc(var(--stroke, #{$silicon-stroke}) / 2);
-		left: calc(var(--stroke, #{$silicon-stroke}) / 2);
-		background-color: currentColor;
+@import "../default";
+
+@mixin silicon-battery-full($class: '#{$silicon-prefix}battery-full') {
+	.#{$class} {
+		@include silicon-default-settings();
+		position: relative;
+		width: 1em;
+		height: 0.5em;
+
+		border: var(--stroke, #{$silicon-stroke}) solid currentColor;
+		border-radius: calc(var(--stroke, #{$silicon-stroke}) * 1.5);
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 100%;
+
+			display: block;
+			width: 0.2em;
+			height: 0.25em;
+
+			border: calc(var(--stroke, #{$silicon-stroke}) / 2) solid currentColor;
+			border-radius: 0 calc(var(--stroke, #{$silicon-stroke}) * 0.5)
+				calc(var(--stroke, #{$silicon-stroke}) * 0.5) 0;
+			transform: translateY(-50%);
+		}
+		&:after {
+			content: '';
+
+			position: absolute;
+			top: calc(var(--stroke, #{$silicon-stroke}) / 2);
+			left: calc(var(--stroke, #{$silicon-stroke}) / 2);
+
+			width: calc(100% - var(--stroke, #{$silicon-stroke}));
+			height: calc(100% - var(--stroke, #{$silicon-stroke}));
+
+			background-color: currentColor;
+		}
 	}
 }
+@include silicon-battery-full();

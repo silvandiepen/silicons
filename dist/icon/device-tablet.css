@@ -1,0 +1,16 @@
+.silicon-device-tablet {
+  display: inline-block;
+  --stroke: 0.1em;
+  position: relative;
+  width: 1em;
+  height: 0.7em;
+  background-image: radial-gradient(circle closest-side, currentColor 70%, transparent 70%) linear-gradient(to bottom, currentColor, currentColor);
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom calc(var(--stroke, 0.1em) / 2) left 50%, top calc(var(--stroke, 0.1em) / 2) left 50%;
+  background-size: calc(var(--stroke, 0.1em) * 1.5) calc(var(--stroke, 0.1em) * 1.5), calc(var(--stroke, 0.1em) * 1.5) calc(var(--stroke, 0.1em) * 3);
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 0.1em;
+}
+.silicon-device-tablet, .silicon-device-tablet:before, .silicon-device-tablet:after {
+  box-sizing: border-box;
+}

@@ -1,0 +1,33 @@
+.silicon-battery-half {
+  display: inline-block;
+  --stroke: 0.1em;
+  position: relative;
+  width: 1em;
+  height: 0.5em;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: calc(var(--stroke, 0.1em) * 1.5);
+}
+.silicon-battery-half, .silicon-battery-half:before, .silicon-battery-half:after {
+  box-sizing: border-box;
+}
+.silicon-battery-half:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  display: block;
+  width: 0.2em;
+  height: 0.25em;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-radius: 0 calc(var(--stroke, 0.1em) * 0.5) calc(var(--stroke, 0.1em) * 0.5) 0;
+  transform: translateY(-50%);
+}
+.silicon-battery-half:after {
+  content: "";
+  position: absolute;
+  top: calc(var(--stroke, 0.1em) / 2);
+  left: calc(var(--stroke, 0.1em) / 2);
+  width: calc(50%);
+  height: calc(100% - var(--stroke, 0.1em));
+  background-color: currentColor;
+}

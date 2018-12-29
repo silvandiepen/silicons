@@ -1,0 +1,28 @@
+.silicon-shape-drop {
+  display: inline-block;
+  --stroke: 0.1em;
+  position: relative;
+  width: 1em;
+  height: 1em;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-left-color: transparent;
+  border-radius: 50%;
+  transform: rotate(90deg);
+}
+.silicon-shape-drop, .silicon-shape-drop:before, .silicon-shape-drop:after {
+  box-sizing: border-box;
+}
+.silicon-shape-drop:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  display: block;
+  width: 0.5em;
+  height: 0.5em;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-top: none;
+  border-right: none;
+  transform: rotate(45deg);
+  transform-origin: 100% 0;
+}

@@ -1,17 +1,29 @@
-.#{$silicon-prefix}ui-copy {
-	width: 0.75em;
-	height: 1em;
-	border: var(--stroke, #{$silicon-stroke}) solid currentColor;
-	position: relative;
-	&:before {
-		content: '';
-		position: absolute;
-		left: calc(var(--stroke) * -3);
-		top: calc(var(--stroke) * -3);
+@import "../default";
+
+@mixin silicon-ui-copy($class: '#{$silicon-prefix}ui-copy') {
+	.#{$class} {
+		@include silicon-default-settings();
+		
+		position: relative;
 		width: 0.75em;
 		height: 1em;
+
 		border: var(--stroke, #{$silicon-stroke}) solid currentColor;
-		border-bottom: none;
-		border-right: none;
+
+		&:before {
+			content: '';
+
+			position: absolute;
+			top: calc(var(--stroke) * -3);
+			left: calc(var(--stroke) * -3);
+
+			width: 0.75em;
+			height: 1em;
+
+			border: var(--stroke, #{$silicon-stroke}) solid currentColor;
+			border-right: none;
+			border-bottom: none;
+		}
 	}
 }
+@include silicon-ui-copy();

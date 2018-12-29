@@ -1,26 +1,39 @@
-.#{$silicon-prefix}ui-close {
-  width: 1em;
-  height: 1em;
-  position: relative;
-  transform: rotate(45deg);
-  &:before,
-  &:after {
-    content: "";
-    top: 50%;
-    left: 50%;
-    display: block;
-    position: absolute;
-    background-color: currentColor;
-    width: 100%;
-    height: var(--stroke, #{$silicon-stroke});
-  }
-  &:before {
-    transform: translate(-50%, -50%);
-  }
-  &:before {
-    transform: translate(-50%, -50%);
-  }
-  &:after {
-    transform: translate(-50%, -50%) rotate(90deg);
-  }
+@import "../default";
+
+@mixin silicon-ui-close($class: '#{$silicon-prefix}ui-close') {
+	.#{$class} {
+    @include silicon-default-settings();
+    
+		position: relative;
+
+		width: 1em;
+		height: 1em;
+
+		transform: rotate(45deg);
+
+		&:before,
+		&:after {
+			content: '';
+
+			position: absolute;
+			top: 50%;
+			left: 50%;
+
+			display: block;
+			width: 100%;
+
+			height: var(--stroke, #{$silicon-stroke});
+			background-color: currentColor;
+		}
+		&:before {
+			transform: translate(-50%, -50%);
+		}
+		&:before {
+			transform: translate(-50%, -50%);
+		}
+		&:after {
+			transform: translate(-50%, -50%) rotate(90deg);
+		}
+	}
 }
+@include silicon-ui-close();

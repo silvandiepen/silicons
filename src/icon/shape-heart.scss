@@ -1,33 +1,49 @@
+@import "../default";
 
-.#{$silicon-prefix}shape-heart {
-  position: relative;
-  width: 0.75em;
-  height: 0.75em;
-  border-left: var(--stroke, #{$silicon-stroke}) solid currentColor;
-  border-bottom: var(--stroke, #{$silicon-stroke}) solid currentColor;
-  transform: translateY(0.25em) rotate(-45deg);
-  &:before {
-    content: "";
-    position: absolute;
-    top: calc(-0.5em + var(--stroke, #{$silicon-stroke}));
-    left: calc(var(--stroke, #{$silicon-stroke}) * -1);
-    width: 0.75em;
-    height: 0.5em;
-    border-radius: 0.5em 0.5em 0 0;
-    border-top: var(--stroke, #{$silicon-stroke}) solid currentColor;
-    border-left: var(--stroke, #{$silicon-stroke}) solid currentColor;
-    border-right: var(--stroke, #{$silicon-stroke}) solid currentColor;
-  }
-  &:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: calc(0.5em + var(--stroke, #{$silicon-stroke}));
-    width: 0.5em;
-    height: 0.75em;
-    border-radius: 0 0.5em 0.5em 0;
-    border-top: var(--stroke, #{$silicon-stroke}) solid currentColor;
-    border-right: var(--stroke, #{$silicon-stroke}) solid currentColor;
-    border-bottom: var(--stroke, #{$silicon-stroke}) solid currentColor;
-  }
+@mixin silicon-shape-heart($class: '#{$silicon-prefix}shape-heart') {
+	.#{$class} {
+    @include silicon-default-settings();
+    
+		position: relative;
+
+		width: 0.75em;
+		height: 0.75em;
+
+		border-bottom: var(--stroke, #{$silicon-stroke}) solid currentColor;
+		border-left: var(--stroke, #{$silicon-stroke}) solid currentColor;
+
+		transform: translateY(0.25em) rotate(-45deg);
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: calc(-0.5em + var(--stroke, #{$silicon-stroke}));
+			left: calc(var(--stroke, #{$silicon-stroke}) * -1);
+
+			width: 0.75em;
+			height: 0.5em;
+
+			border-top: var(--stroke, #{$silicon-stroke}) solid currentColor;
+			border-right: var(--stroke, #{$silicon-stroke}) solid currentColor;
+			border-left: var(--stroke, #{$silicon-stroke}) solid currentColor;
+			border-radius: 0.5em 0.5em 0 0;
+		}
+
+		&:after {
+			content: '';
+
+			position: absolute;
+			top: 0;
+			left: calc(0.5em + var(--stroke, #{$silicon-stroke}));
+
+			width: 0.5em;
+			height: 0.75em;
+
+			border-top: var(--stroke, #{$silicon-stroke}) solid currentColor;
+			border-right: var(--stroke, #{$silicon-stroke}) solid currentColor;
+			border-bottom: var(--stroke, #{$silicon-stroke}) solid currentColor;
+			border-radius: 0 0.5em 0.5em 0;
+		}
+	}
 }
+@include silicon-shape-heart();

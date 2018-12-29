@@ -1,0 +1,35 @@
+.silicon-device-printer {
+  display: inline-block;
+  --stroke: 0.1em;
+  position: relative;
+  width: 0.5em;
+  height: 0.5em;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+}
+.silicon-device-printer, .silicon-device-printer:before, .silicon-device-printer:after {
+  box-sizing: border-box;
+}
+.silicon-device-printer:after {
+  content: "";
+  position: absolute;
+  bottom: calc(100% + (var(--stroke, 0.1em) * 2));
+  left: 50%;
+  display: block;
+  width: 0.5em;
+  height: 0.25em;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  transform: translateX(-50%);
+}
+.silicon-device-printer:before {
+  content: "";
+  position: absolute;
+  top: -0.25em;
+  left: 50%;
+  display: block;
+  width: 1em;
+  height: 0.5em;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: var(--stroke) var(--stroke) 0 0;
+  transform: translatex(-50%);
+  clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 100%, 72% 100%, 72% 50%, 28% 50%, 28% 100%);
+}

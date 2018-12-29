@@ -1,0 +1,24 @@
+.silicon-ui-search {
+  display: inline-block;
+  --stroke: 0.1em;
+  position: relative;
+  width: 1em;
+  height: 1em;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 50%;
+}
+.silicon-ui-search, .silicon-ui-search:before, .silicon-ui-search:after {
+  box-sizing: border-box;
+}
+.silicon-ui-search:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  display: block;
+  width: 0.5em;
+  height: var(--stroke, 0.1em);
+  background-color: currentColor;
+  transform: translate(-0.1em, -0.1em) rotate(45deg);
+  transform-origin: 0 50%;
+}

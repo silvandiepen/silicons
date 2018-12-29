@@ -6,11 +6,12 @@
   "scripts": {
     "test": "npm run test",
     "dev": "sass --watch sass src/icons.scss dist/icons.css--style compressed",
-    "build": "npm run build:sass && npm run build:min",
+    "build": "npm run build:sass && npm run build:min && npm run build:icons",
     "build:min": "sass src/icons.scss dist/icons.min.css --style compressed",
     "build:sass": "sass src/icons.scss dist/icons.css",
-    "build:css": "node ./build/sass.js",
-    "prepublishOnly": "npm run build"
+    "build:icons": "node ./build/icons.js",
+    "prepublishOnly": "npm run stylelint && npm run build",
+    "stylelint": "stylelint src/**/*.scss"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,9 @@
   "homepage": "https://github.com/silvandiepen/silicons#readme",
   "devDependencies": {
     "fibers": "^3.1.1",
-    "sass": "^1.15.2"
+    "sass": "^1.15.2",
+    "stylelint": "^9.9.0",
+    "stylelint-config-rational-order": "0.0.2",
+    "stylelint-order": "^2.0.0"
   }
 }

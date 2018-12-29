@@ -1,0 +1,39 @@
+.silicon-ui-trash {
+  display: inline-block;
+  --stroke: 0.1em;
+  position: relative;
+  width: 0.75em;
+  height: 0.75em;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-top: none;
+  border-radius: 0 0 0.1em 0.1em;
+  transform: translateY(0.2em);
+}
+.silicon-ui-trash, .silicon-ui-trash:before, .silicon-ui-trash:after {
+  box-sizing: border-box;
+}
+.silicon-ui-trash:before {
+  content: "";
+  position: absolute;
+  bottom: calc(100% + var(--stroke, 0.1em));
+  left: 50%;
+  display: block;
+  width: 1em;
+  height: var(--stroke, 0.1em);
+  background-color: currentColor;
+  border: none;
+  transform: translateX(-50%);
+}
+.silicon-ui-trash:after {
+  content: "";
+  position: absolute;
+  bottom: calc(100% + (var(--stroke, 0.1em) * 2));
+  left: 50%;
+  display: block;
+  width: 0.2em;
+  height: 0.1em;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-bottom: none;
+  border-radius: 0.2em 0.2em 0 0;
+  transform: translateX(-50%);
+}

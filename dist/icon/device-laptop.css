@@ -1,0 +1,25 @@
+.silicon-device-laptop {
+  display: inline-block;
+  --stroke: 0.1em;
+  position: relative;
+  width: 1em;
+  height: 0.6em;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-bottom: 0;
+  border-radius: 0.1em 0.1em 0 0;
+}
+.silicon-device-laptop, .silicon-device-laptop:before, .silicon-device-laptop:after {
+  box-sizing: border-box;
+}
+.silicon-device-laptop:before {
+  content: "";
+  position: absolute;
+  top: calc(100%);
+  left: 50%;
+  display: block;
+  width: 1.2em;
+  height: calc(var(--stroke, 0.1em) * 2);
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-radius: 0 0 0.2em 0.2em;
+  transform: translateX(-50%);
+}
