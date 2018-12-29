@@ -1,9 +1,7 @@
 @import "../default";
 
 @mixin silicon-shape-heart($class: '#{$silicon-prefix}shape-heart') {
-	.#{$class} {
-    @include silicon-default-settings();
-    
+	.#{$class} {    
 		position: relative;
 
 		width: 0.75em;
@@ -43,7 +41,8 @@
 			border-right: var(--stroke, #{$silicon-stroke}) solid currentColor;
 			border-bottom: var(--stroke, #{$silicon-stroke}) solid currentColor;
 			border-radius: 0 0.5em 0.5em 0;
-		}
+    }
+    @include silicon-default-settings();
 	}
 }
 @include silicon-shape-heart();

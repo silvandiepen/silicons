@@ -2,7 +2,6 @@
 
 @mixin silicon-battery-full($class: '#{$silicon-prefix}battery-full') {
 	.#{$class} {
-		@include silicon-default-settings();
 		position: relative;
 		width: 1em;
 		height: 0.5em;
@@ -37,6 +36,7 @@
 
 			background-color: currentColor;
 		}
+		@include silicon-default-settings();
 	}
 }
 @include silicon-battery-full();

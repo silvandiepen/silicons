@@ -1,9 +1,7 @@
-@import "../default";
+@import '../default';
 
 @mixin silicon-ui-location($class: '#{$silicon-prefix}ui-location') {
 	.#{$class} {
-    @include silicon-default-settings();
-    
 		position: relative;
 
 		width: 1em;
@@ -50,6 +48,7 @@
 
 			transform: translate(-50%, -50%);
 		}
+		@include silicon-default-settings();
 	}
 }
 @include silicon-ui-location();

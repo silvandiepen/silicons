@@ -2,7 +2,6 @@
 
 @mixin silicon-device-laptop($class: '#{$silicon-prefix}device-laptop') {
 	.#{$class} {
-		@include silicon-default-settings();
 		position: relative;
 
 		width: 1em;
@@ -27,6 +26,7 @@
 
 			transform: translateX(-50%);
 		}
+		@include silicon-default-settings();
 	}
 }
 @include silicon-device-laptop();

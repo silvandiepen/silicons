@@ -2,7 +2,6 @@
 
 @mixin silicon-battery-empty($class: '#{$silicon-prefix}battery-empty') {
 	.#{$class} {
-		@include silicon-default-settings();
 		position: relative;
 		
 		width: 1em;
@@ -28,6 +27,7 @@
 
 			transform: translateY(-50%);
 		}
+		@include silicon-default-settings();
 	}
 }
 @include silicon-battery-empty();

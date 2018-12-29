@@ -1,9 +1,7 @@
-@import "../default";
+@import '../default';
 
 @mixin silicon-ui-zoom-in($class: '#{$silicon-prefix}ui-zoom-in') {
 	.#{$class} {
-    @include silicon-default-settings();
-    
 		position: relative;
 		width: 1em;
 		height: 1em;
@@ -56,6 +54,8 @@
 
 			transform: translate(-50%, -50%);
 		}
+
+		@include silicon-default-settings();
 	}
 }
 @include silicon-ui-zoom-in();

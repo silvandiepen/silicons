@@ -1,9 +1,7 @@
 @import "../default";
 
 @mixin silicon-file-upload($class: '#{$silicon-prefix}file-upload') {
-	.#{$class} {
-		@include silicon-default-settings();
-		
+	.#{$class} {		
 		position: relative;
 
 		width: 1em;
@@ -45,6 +43,7 @@
 			transform: rotate(135deg);
 			transform-origin: 0 100%;
 		}
+		@include silicon-default-settings();
 	}
 }
 @include silicon-file-upload();

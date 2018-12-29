@@ -1,9 +1,7 @@
-@import "../default";
+@import '../default';
 
 @mixin silicon-ui-user($class: '#{$silicon-prefix}ui-user') {
 	.#{$class} {
-    @include silicon-default-settings();
-    
 		position: relative;
 
 		width: 1em;
@@ -31,6 +29,8 @@
 
 			transform: translateX(-50%);
 		}
+
+		@include silicon-default-settings();
 	}
 }
 @include silicon-ui-user();

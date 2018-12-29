@@ -1,9 +1,7 @@
-@import "../default";
+@import '../default';
 
 @mixin silicon-ui-burger($class: '#{$silicon-prefix}ui-burger') {
 	.#{$class} {
-		@include silicon-default-settings();
-		
 		position: relative;
 
 		display: block;
@@ -34,6 +32,7 @@
 
 			transform: translateY(calc(var(--stroke, #{$silicon-stroke}) * -2));
 		}
+		@include silicon-default-settings();
 	}
 }
 @include silicon-ui-burger();

@@ -1,9 +1,7 @@
 @import "../default";
 
 @mixin silicon-device-screen($class: '#{$silicon-prefix}device-screen') {
-	.#{$class} {
-    @include silicon-default-settings();
-    
+	.#{$class} {    
 		position: relative;
 
 		width: 1em;
@@ -34,7 +32,8 @@
 				currentColor;
 
 			transform: translateX(-50%);
-		}
+    }
+    @include silicon-default-settings();
 	}
 }
 @include silicon-device-screen();

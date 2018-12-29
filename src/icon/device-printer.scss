@@ -2,8 +2,6 @@
 
 @mixin silicon-device-printer($class: '#{$silicon-prefix}device-printer') {
 	.#{$class} {
-		@include silicon-default-settings();
-		
 		position: relative;
 
 		width: 0.5em;
@@ -50,6 +48,7 @@
 				28% 100%
 			);
 		}
+		@include silicon-default-settings();
 	}
 }
 @include silicon-device-printer();

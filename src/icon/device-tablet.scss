@@ -1,9 +1,7 @@
 @import "../default";
 
 @mixin silicon-device-tablet($class: '#{$silicon-prefix}device-tablet') {
-	.#{$class} {
-		@include silicon-default-settings();
-		
+	.#{$class} {		
 		position: relative;
 
 		width: 1em;
@@ -27,5 +25,6 @@
 		border: var(--stroke, #{$silicon-stroke}) solid currentColor;
 		border-radius: 0.1em;
 	}
+	@include silicon-default-settings();
 }
 @include silicon-device-tablet();

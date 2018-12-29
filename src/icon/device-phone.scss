@@ -2,7 +2,6 @@
 
 @mixin silicon-device-phone($class: '#{$silicon-prefix}device-phone') {
 	.#{$class} {
-		@include silicon-default-settings();
     position: relative;
     
 		width: 0.7em;
@@ -25,6 +24,7 @@
 
 		border: var(--stroke, #{$silicon-stroke}) solid currentColor;
 		border-radius: 0.1em;
-	}
+  }
+  @include silicon-default-settings();
 }
 @include silicon-device-phone();

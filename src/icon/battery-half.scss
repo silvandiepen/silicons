@@ -2,7 +2,6 @@
 
 @mixin silicon-battery-half($class: '#{$silicon-prefix}battery-half') {
 	.#{$class} {
-		@include silicon-default-settings();
 		position: relative;
 
 		width: 1em;
@@ -38,6 +37,7 @@
 			
 			background-color: currentColor;
 		}
+		@include silicon-default-settings();
 	}
 }
 @include silicon-battery-half();

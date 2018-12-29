@@ -2,8 +2,6 @@
 
 @mixin silicon-shape-drop($class: '#{$silicon-prefix}shape-drop') {
 	.#{$class} {
-    @include silicon-default-settings();
-    
 		position: relative;
 
 		width: 1em;
@@ -32,7 +30,8 @@
 
 			transform: rotate(45deg);
 			transform-origin: 100% 0;
-		}
+    }
+    @include silicon-default-settings();
 	}
 }
 @include silicon-shape-drop();

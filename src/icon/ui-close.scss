@@ -1,9 +1,7 @@
-@import "../default";
+@import '../default';
 
 @mixin silicon-ui-close($class: '#{$silicon-prefix}ui-close') {
 	.#{$class} {
-    @include silicon-default-settings();
-    
 		position: relative;
 
 		width: 1em;
@@ -34,6 +32,7 @@
 		&:after {
 			transform: translate(-50%, -50%) rotate(90deg);
 		}
+		@include silicon-default-settings();
 	}
 }
 @include silicon-ui-close();
