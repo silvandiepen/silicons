@@ -1,7 +1,7 @@
 .silicon-file-export {
-  display: inline-block;
-  --stroke: 0.1em;
   position: relative;
+  display: inline-block;
+  box-sizing: border-box;
   width: 1em;
   height: 0.75em;
   background-image: linear-gradient(to right, currentColor 33.33%, transparent 33.33%, transparent, 66.66%, currentColor 66.66%);
@@ -11,12 +11,12 @@
   border: var(--stroke, 0.1em) solid currentColor;
   border-top: 0;
 }
-.silicon-file-export, .silicon-file-export:before, .silicon-file-export:after {
+.silicon-file-export:before, .silicon-file-export:after {
+  content: "";
+  position: absolute;
   box-sizing: border-box;
 }
 .silicon-file-export:before {
-  content: "";
-  position: absolute;
   bottom: 75%;
   left: 50%;
   display: block;
@@ -26,8 +26,6 @@
   transform: translateX(-50%);
 }
 .silicon-file-export:after {
-  content: "";
-  position: absolute;
   bottom: calc(75% + 0.5em + (var(--stroke, 0.1em) / 2));
   left: 50%;
   display: block;

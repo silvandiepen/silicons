@@ -4,16 +4,23 @@
 	.#{$class} {		
 		position: relative;
 
+		display: inline-block;
+		box-sizing: border-box;
 		width: 1em;
 		height: 0.5em;
 
 		border: var(--stroke, #{$silicon-stroke}) solid currentColor;
 		border-top: 0;
 
-		&:before {
+		&:before,
+		&:after {
 			content: '';
 
 			position: absolute;
+			box-sizing: border-box;
+		}
+		
+		&:before {
 			bottom: 75%;
 			left: 50%;
 
@@ -27,9 +34,6 @@
 		}
 
 		&:after {
-			content: '';
-
-			position: absolute;
 			bottom: calc(75% - var(--stroke, #{$silicon-stroke}) / 2);
 			left: 50%;
 
@@ -43,7 +47,6 @@
 			transform: rotate(-45deg);
 			transform-origin: 0 100%;
 		}
-		@include silicon-default-settings();
 	}
 }
 @include silicon-file-download();

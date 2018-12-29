@@ -4,6 +4,8 @@
 	.#{$class} {    
 		position: relative;
 
+		display: inline-block;
+    box-sizing: border-box;
 		width: 0.75em;
 		height: 0.75em;
 
@@ -11,10 +13,13 @@
 		border-left: var(--stroke, #{$silicon-stroke}) solid currentColor;
 
 		transform: translateY(0.25em) rotate(-45deg);
-
-		&:before {
-			content: '';
+    &:before, &:after{
+      content: '';
+      
 			position: absolute;
+      box-sizing: border-box;
+    }
+		&:before {
 			top: calc(-0.5em + var(--stroke, #{$silicon-stroke}));
 			left: calc(var(--stroke, #{$silicon-stroke}) * -1);
 
@@ -28,9 +33,6 @@
 		}
 
 		&:after {
-			content: '';
-
-			position: absolute;
 			top: 0;
 			left: calc(0.5em + var(--stroke, #{$silicon-stroke}));
 
@@ -42,7 +44,6 @@
 			border-bottom: var(--stroke, #{$silicon-stroke}) solid currentColor;
 			border-radius: 0 0.5em 0.5em 0;
     }
-    @include silicon-default-settings();
 	}
 }
 @include silicon-shape-heart();

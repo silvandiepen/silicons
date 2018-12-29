@@ -1,7 +1,7 @@
 .silicon-ui-user {
-  display: inline-block;
-  --stroke: 0.1em;
   position: relative;
+  display: inline-block;
+  box-sizing: border-box;
   width: 1em;
   height: 0.65em;
   border: var(--stroke, 0.1em) solid currentColor;
@@ -9,15 +9,13 @@
   border-radius: 0.75em 0.75em 0 0;
   transform: translateY(0.175em);
 }
-.silicon-ui-user, .silicon-ui-user:before, .silicon-ui-user:after {
-  box-sizing: border-box;
-}
 .silicon-ui-user:before {
   content: "";
   position: absolute;
   bottom: 100%;
   left: 50%;
   display: block;
+  box-sizing: border-box;
   width: 0.6em;
   height: 0.6em;
   border: var(--stroke, 0.1em) solid currentColor;

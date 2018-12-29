@@ -1,9 +1,11 @@
-@import "../default";
+@import '../default';
 
 @mixin silicon-battery-empty($class: '#{$silicon-prefix}battery-empty') {
 	.#{$class} {
 		position: relative;
-		
+
+		display: inline-block;
+		box-sizing: border-box;
 		width: 1em;
 		height: 0.5em;
 
@@ -12,22 +14,22 @@
 
 		&:before {
 			content: '';
-			
+
 			position: absolute;
 			top: 50%;
 			left: 100%;
-			
+
 			display: block;
+			box-sizing: border-box;
 			width: 0.2em;
 			height: 0.25em;
-			
+
 			border: calc(var(--stroke, #{$silicon-stroke}) / 2) solid currentColor;
 			border-radius: 0 calc(var(--stroke, #{$silicon-stroke}) * 0.5)
 				calc(var(--stroke, #{$silicon-stroke}) * 0.5) 0;
 
 			transform: translateY(-50%);
 		}
-		@include silicon-default-settings();
 	}
 }
 @include silicon-battery-empty();

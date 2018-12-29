@@ -4,6 +4,8 @@
 	.#{$class} {
 		position: relative;
 
+		display: inline-block;
+    box-sizing: border-box;
 		width: 1em;
 		height: 0.6em;
 
@@ -12,12 +14,14 @@
 		border-radius: 0.1em 0.1em 0 0;
 
 		&:before {
-			content: '';
-			position: absolute;
+      content: '';
+      
+      position: absolute;
 			top: calc(100%);
 			left: 50%;
 
 			display: block;
+      box-sizing: border-box;
 			width: 1.2em;
 			height: calc(var(--stroke, #{$silicon-stroke}) * 2);
 
@@ -26,7 +30,6 @@
 
 			transform: translateX(-50%);
 		}
-		@include silicon-default-settings();
 	}
 }
 @include silicon-device-laptop();

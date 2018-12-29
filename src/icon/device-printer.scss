@@ -1,19 +1,28 @@
-@import "../default";
+@import '../default';
 
 @mixin silicon-device-printer($class: '#{$silicon-prefix}device-printer') {
 	.#{$class} {
 		position: relative;
 
+		display: inline-block;
+		box-sizing: border-box;
 		width: 0.5em;
 		height: 0.5em;
 
 		border: calc(var(--stroke, #{$silicon-stroke}) / 2) solid currentColor;
+
+		&:before,
 		&:after {
 			content: '';
+
 			position: absolute;
+			box-sizing: border-box;
+		}
+
+		&:after {
 			bottom: calc(100% + (var(--stroke, #{$silicon-stroke}) * 2));
 			left: 50%;
-		
+
 			display: block;
 			width: 0.5em;
 			height: 0.25em;
@@ -23,8 +32,6 @@
 			transform: translateX(-50%);
 		}
 		&:before {
-			content: '';
-			position: absolute;
 			top: -0.25em;
 			left: 50%;
 
@@ -34,9 +41,9 @@
 
 			border: var(--stroke, #{$silicon-stroke}) solid currentColor;
 			border-radius: var(--stroke) var(--stroke) 0 0;
-		
+
 			transform: translatex(-50%);
-			
+
 			clip-path: polygon(
 				0% 100%,
 				0% 0%,
@@ -48,7 +55,6 @@
 				28% 100%
 			);
 		}
-		@include silicon-default-settings();
 	}
 }
 @include silicon-device-printer();

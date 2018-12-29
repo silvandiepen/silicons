@@ -1,17 +1,17 @@
 .silicon-device-printer {
-  display: inline-block;
-  --stroke: 0.1em;
   position: relative;
+  display: inline-block;
+  box-sizing: border-box;
   width: 0.5em;
   height: 0.5em;
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
 }
-.silicon-device-printer, .silicon-device-printer:before, .silicon-device-printer:after {
+.silicon-device-printer:before, .silicon-device-printer:after {
+  content: "";
+  position: absolute;
   box-sizing: border-box;
 }
 .silicon-device-printer:after {
-  content: "";
-  position: absolute;
   bottom: calc(100% + (var(--stroke, 0.1em) * 2));
   left: 50%;
   display: block;
@@ -21,8 +21,6 @@
   transform: translateX(-50%);
 }
 .silicon-device-printer:before {
-  content: "";
-  position: absolute;
   top: -0.25em;
   left: 50%;
   display: block;

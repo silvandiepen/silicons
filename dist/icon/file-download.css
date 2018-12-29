@@ -1,18 +1,18 @@
 .silicon-file-download {
-  display: inline-block;
-  --stroke: 0.1em;
   position: relative;
+  display: inline-block;
+  box-sizing: border-box;
   width: 1em;
   height: 0.5em;
   border: var(--stroke, 0.1em) solid currentColor;
   border-top: 0;
 }
-.silicon-file-download, .silicon-file-download:before, .silicon-file-download:after {
+.silicon-file-download:before, .silicon-file-download:after {
+  content: "";
+  position: absolute;
   box-sizing: border-box;
 }
 .silicon-file-download:before {
-  content: "";
-  position: absolute;
   bottom: 75%;
   left: 50%;
   display: block;
@@ -22,8 +22,6 @@
   transform: translateX(-50%);
 }
 .silicon-file-download:after {
-  content: "";
-  position: absolute;
   bottom: calc(75% - var(--stroke, 0.1em) / 2);
   left: 50%;
   display: block;

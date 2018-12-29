@@ -1,7 +1,7 @@
 .silicon-ui-location {
-  display: inline-block;
-  --stroke: 0.1em;
   position: relative;
+  display: inline-block;
+  box-sizing: border-box;
   width: 1em;
   height: 1em;
   border: var(--stroke, 0.1em) solid currentColor;
@@ -9,15 +9,15 @@
   border-radius: 50%;
   transform: rotate(-90deg);
 }
-.silicon-ui-location, .silicon-ui-location:before, .silicon-ui-location:after {
-  box-sizing: border-box;
-}
-.silicon-ui-location:before {
+.silicon-ui-location:before, .silicon-ui-location:after {
   content: "";
   position: absolute;
   top: 50%;
   right: 50%;
   display: block;
+  box-sizing: border-box;
+}
+.silicon-ui-location:before {
   width: 0.5em;
   height: 0.5em;
   border: var(--stroke, 0.1em) solid currentColor;
@@ -27,11 +27,6 @@
   transform-origin: 100% 0;
 }
 .silicon-ui-location:after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  display: block;
   width: calc(var(--stroke, 0.1em) * 2);
   height: calc(var(--stroke, 0.1em) * 2);
   background-color: currentColor;

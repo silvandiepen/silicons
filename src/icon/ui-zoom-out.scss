@@ -4,16 +4,23 @@
 	.#{$class} {
 		position: relative;
 
+		display: inline-block;
+    box-sizing: border-box;
 		width: 1em;
 		height: 1em;
 
 		border: var(--stroke, #{$silicon-stroke}) solid currentColor;
 		border-radius: 50%;
 
-		&:before {
+		&:before,
+		&:after {
 			content: '';
 
 			position: absolute;
+			box-sizing: border-box;
+		}
+
+		&:before {
 			top: 100%;
 			left: 100%;
 
@@ -27,9 +34,6 @@
 			transform-origin: 0 50%;
 		}
 		&:after {
-			content: '';
-
-			position: absolute;
 			top: 50%;
 			left: 50%;
 
@@ -47,8 +51,6 @@
 
 			transform: translate(-50%, -50%);
 		}
-
-		@include silicon-default-settings();
 	}
 }
 @include silicon-ui-zoom-out();

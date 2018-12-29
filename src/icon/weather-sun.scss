@@ -2,9 +2,10 @@
 
 @mixin silicon-weather-sun($class: '#{$silicon-prefix}weather-sun') {
 	.#{$class} {
-		
-		position: absolute;
+		position: relative;
 
+		display: inline-block;
+		box-sizing: border-box;
 		width: 0.5em;
 		height: 0.5em;
 
@@ -25,7 +26,6 @@
 			0.4em 0.4em 0 calc((var(--stroke, #{$silicon-stroke}) * 1.75) * -1)
 				currentColor;
 				
-		@include silicon-default-settings();
 	}
 }
 @include silicon-weather-sun();

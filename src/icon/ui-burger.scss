@@ -4,7 +4,8 @@
 	.#{$class} {
 		position: relative;
 
-		display: block;
+		display: inline-block;
+		box-sizing: border-box;
 		width: 1em;
 		height: var(--stroke, #{$silicon-stroke});
 
@@ -17,6 +18,7 @@
 			position: absolute;
 
 			display: block;
+			box-sizing: border-box;
 			width: 100%;
 			height: 100%;
 
@@ -32,7 +34,6 @@
 
 			transform: translateY(calc(var(--stroke, #{$silicon-stroke}) * -2));
 		}
-		@include silicon-default-settings();
 	}
 }
 @include silicon-ui-burger();

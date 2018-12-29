@@ -1,13 +1,10 @@
 .silicon-ui-close {
-  display: inline-block;
-  --stroke: 0.1em;
   position: relative;
+  display: inline-block;
+  box-sizing: border-box;
   width: 1em;
   height: 1em;
   transform: rotate(45deg);
-}
-.silicon-ui-close, .silicon-ui-close:before, .silicon-ui-close:after {
-  box-sizing: border-box;
 }
 .silicon-ui-close:before, .silicon-ui-close:after {
   content: "";
@@ -15,6 +12,7 @@
   top: 50%;
   left: 50%;
   display: block;
+  box-sizing: border-box;
   width: 100%;
   height: var(--stroke, 0.1em);
   background-color: currentColor;

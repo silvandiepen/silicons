@@ -5,6 +5,8 @@
 		--height: calc(var(--stroke, #{$silicon-stroke}) * 5.5);
 		position: relative;
 
+		display: inline-block;
+		box-sizing: border-box;
 		width: 0.75em;
 		height: var(--height);
 
@@ -19,8 +21,9 @@
 			content: '';
 
 			position: absolute;
-
+			
 			display: block;
+			box-sizing: border-box;
 
 			border: var(--stroke, #{$silicon-stroke}) solid currentColor;
 		}
@@ -51,7 +54,6 @@
 				calc(var(--height) - (var(--stroke, #{$silicon-stroke}) * 3) / 2)
 				calc(var(--height) - (var(--stroke, #{$silicon-stroke}) * 3) / 2) 0;
 		}
-    @include silicon-default-settings();
 	}
 }
 @include silicon-office-paperclip();

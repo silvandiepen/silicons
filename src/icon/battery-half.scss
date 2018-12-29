@@ -3,16 +3,24 @@
 @mixin silicon-battery-half($class: '#{$silicon-prefix}battery-half') {
 	.#{$class} {
 		position: relative;
-
+		
+		display: inline-block;
+		box-sizing: border-box;
 		width: 1em;
 		height: 0.5em;
 
 		border: var(--stroke, #{$silicon-stroke}) solid currentColor;
 		border-radius: calc(var(--stroke, #{$silicon-stroke}) * 1.5);
 
-		&:before {
+		&:before,
+		&:after {
 			content: '';
+
 			position: absolute;
+			box-sizing: border-box;
+		}
+		
+		&:before {
 			top: 50%;
 			left: 100%;
 
@@ -26,9 +34,6 @@
 			transform: translateY(-50%);
 		}
 		&:after {
-			content: '';
-			
-			position: absolute;
 			top: calc(var(--stroke, #{$silicon-stroke}) / 2);
 			left: calc(var(--stroke, #{$silicon-stroke}) / 2);
 			
@@ -37,7 +42,6 @@
 			
 			background-color: currentColor;
 		}
-		@include silicon-default-settings();
 	}
 }
 @include silicon-battery-half();

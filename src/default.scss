@@ -1,11 +1,2 @@
 $silicon-prefix: 'silicon-' !default;
 $silicon-stroke: 0.1em !default; 
-@mixin silicon-default-settings(){
-	&,
-	&:before,
-	&:after {
-		box-sizing: border-box;
-	}
-	display: inline-block;
-  --stroke: #{$silicon-stroke};
-}

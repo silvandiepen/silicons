@@ -4,6 +4,8 @@
 	.#{$class} {
 		position: relative;
 
+		display: inline-block;
+    box-sizing: border-box;
 		width: 0.75em;
 		height: 0.75em;
 
@@ -12,42 +14,40 @@
 		border-radius: 0 0 0.1em 0.1em;
 
 		transform: translateY(0.2em);
-
+    
+    &:before, &:after{
+      content: '';
+      
+      position: absolute;
+      
+			display: block;
+      box-sizing: border-box;
+      
+			transform: translateX(-50%);
+    }
+    
 		&:before {
-			content: '';
-
-			position: absolute;
 			bottom: calc(100% + var(--stroke, #{$silicon-stroke}));
 			left: 50%;
 
-			display: block;
 			width: 1em;
 			height: var(--stroke, #{$silicon-stroke});
 
 			background-color: currentColor;
 
 			border: none;
-
-			transform: translateX(-50%);
 		}
 		&:after {
-			content: '';
-
-			position: absolute;
 			bottom: calc(100% + (var(--stroke, #{$silicon-stroke}) * 2));
 			left: 50%;
 
-			display: block;
 			width: 0.2em;
 			height: 0.1em;
 
 			border: calc(var(--stroke, #{$silicon-stroke}) / 2) solid currentColor;
 			border-bottom: none;
 			border-radius: 0.2em 0.2em 0 0;
-
-			transform: translateX(-50%);
 		}
-		@include silicon-default-settings();
 	}
 }
 @include silicon-ui-trash();

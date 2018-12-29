@@ -1,18 +1,18 @@
 .silicon-battery-full {
-  display: inline-block;
-  --stroke: 0.1em;
   position: relative;
+  display: inline-block;
+  box-sizing: border-box;
   width: 1em;
   height: 0.5em;
   border: var(--stroke, 0.1em) solid currentColor;
   border-radius: calc(var(--stroke, 0.1em) * 1.5);
 }
-.silicon-battery-full, .silicon-battery-full:before, .silicon-battery-full:after {
+.silicon-battery-full:before, .silicon-battery-full:after {
+  content: "";
+  position: absolute;
   box-sizing: border-box;
 }
 .silicon-battery-full:before {
-  content: "";
-  position: absolute;
   top: 50%;
   left: 100%;
   display: block;
@@ -23,8 +23,6 @@
   transform: translateY(-50%);
 }
 .silicon-battery-full:after {
-  content: "";
-  position: absolute;
   top: calc(var(--stroke, 0.1em) / 2);
   left: calc(var(--stroke, 0.1em) / 2);
   width: calc(100% - var(--stroke, 0.1em));

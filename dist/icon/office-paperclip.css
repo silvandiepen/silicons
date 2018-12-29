@@ -1,8 +1,8 @@
 .silicon-office-paperclip {
-  display: inline-block;
-  --stroke: 0.1em;
   --height: calc(var(--stroke, 0.1em) * 5.5);
   position: relative;
+  display: inline-block;
+  box-sizing: border-box;
   width: 0.75em;
   height: var(--height);
   border: var(--stroke, 0.1em) solid currentColor;
@@ -10,13 +10,11 @@
   border-radius: 0 0.3em 0.3em 0;
   transform: rotate(-45deg);
 }
-.silicon-office-paperclip, .silicon-office-paperclip:before, .silicon-office-paperclip:after {
-  box-sizing: border-box;
-}
 .silicon-office-paperclip:before, .silicon-office-paperclip:after {
   content: "";
   position: absolute;
   display: block;
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
 }
 .silicon-office-paperclip:before {

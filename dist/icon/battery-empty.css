@@ -1,14 +1,11 @@
 .silicon-battery-empty {
-  display: inline-block;
-  --stroke: 0.1em;
   position: relative;
+  display: inline-block;
+  box-sizing: border-box;
   width: 1em;
   height: 0.5em;
   border: var(--stroke, 0.1em) solid currentColor;
   border-radius: calc(var(--stroke, 0.1em) * 1.5);
-}
-.silicon-battery-empty, .silicon-battery-empty:before, .silicon-battery-empty:after {
-  box-sizing: border-box;
 }
 .silicon-battery-empty:before {
   content: "";
@@ -16,6 +13,7 @@
   top: 50%;
   left: 100%;
   display: block;
+  box-sizing: border-box;
   width: 0.2em;
   height: 0.25em;
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;

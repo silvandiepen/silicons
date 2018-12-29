@@ -4,6 +4,8 @@
 	.#{$class} {		
 		position: relative;
 
+		display: inline-block;
+		box-sizing: border-box;
 		width: 1em;
 		height: 0.7em;
 
@@ -25,6 +27,5 @@
 		border: var(--stroke, #{$silicon-stroke}) solid currentColor;
 		border-radius: 0.1em;
 	}
-	@include silicon-default-settings();
 }
 @include silicon-device-tablet();

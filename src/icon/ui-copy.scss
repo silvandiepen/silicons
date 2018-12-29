@@ -4,6 +4,8 @@
 	.#{$class} {
 		position: relative;
 
+		display: inline-block;
+		box-sizing: border-box;
 		width: 0.75em;
 		height: 1em;
 
@@ -16,6 +18,8 @@
 			top: calc(var(--stroke) * -3);
 			left: calc(var(--stroke) * -3);
 
+			display: block;
+			box-sizing: border-box;
 			width: 0.75em;
 			height: 1em;
 
@@ -23,7 +27,6 @@
 			border-right: none;
 			border-bottom: none;
 		}
-		@include silicon-default-settings();
 	}
 }
 @include silicon-ui-copy();
