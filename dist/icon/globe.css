@@ -1,0 +1,21 @@
+.silicon-globe {
+  /* position */
+  position: relative;
+  /* size */
+  display: inline-flex;
+  box-sizing: border-box;
+  width: 1em;
+  height: 0.8em;
+  justify-content: center;
+  /* border */
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 50%;
+}
+.silicon-globe:before {
+  content: "";
+  /* size */
+  width: 100%;
+  height: 50%;
+  /* border */
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+}

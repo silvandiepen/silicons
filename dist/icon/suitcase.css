@@ -5,23 +5,55 @@
   display: inline-block;
   box-sizing: border-box;
   width: 1em;
-  height: 0.5em;
+  height: 0.75em;
   /* border */
+  border: var(--stroke, 0.1em) solid currentColor;
   border-radius: var(--stroke, 0.1em);
 }
-.silicon-suitcase:before {
+.silicon-suitcase:before, .silicon-suitcase:after {
   content: "";
   /* position */
   position: absolute;
-  top: 0;
   left: 50%;
   /* size */
   display: block;
   box-sizing: border-box;
-  width: 0.5em;
-  height: 100%;
   /* border */
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+}
+.silicon-suitcase:before {
+  /* position */
+  top: calc(var(--stroke, 0.1em) * -1);
+  /* size */
+  height: calc(100% + var(--stroke, 0.1em) * 2);
+  width: 0.5em;
+  /* border */
+  border-top: none;
+  border-bottom: none;
   /* transform */
   transform: translateX(-50%);
+}
+.silicon-suitcase:after {
+  /* position */
+  bottom: calc(100% + var(--stroke, 0.1em));
+  /* size */
+  height: 0.125em;
+  width: 0.3em;
+  /* border */
+  border-bottom: none;
+  border-radius: 0.25em 0.25em 0 0;
+  /* transform */
+  transform: translateX(-50%);
+}
+.silicon-suitcase.colored {
+  /* text */
+  color: var(--dark-brown,#87683f);
+  /* background */
+  background-color: var(--brown,#aa834f);
+}
+.silicon-suitcase.colored:before {
+  color: var(--gray,#7f7f7f);
+}
+.silicon-suitcase.colored:after {
+  color: var(--dark,#303030);
 }

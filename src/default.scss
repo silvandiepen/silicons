@@ -13,6 +13,7 @@ $silicons-color-dark-blue: unquote('var(--dark-blue,#{darken(#1eb3e0,10%)})');
 $silicons-color-red: unquote('var(--red,#eb0f33)');
 $silicons-color-dark-red: unquote('var(--dark-red,#{darken(#eb0f33, 10%)})');
 $silicons-color-brown: unquote('var(--brown,#aa834f)');
+$silicons-color-dark-brown: unquote('var(--dark-brown,#{darken(#aa834f, 10%)})');
 $silicons-color-beige: unquote('var(--beige,#{lighten(#aa834f, 20%)})');
 $silicons-color-yellow: unquote('var(--yellow,#f5c505)');
 $silicons-color-orange: unquote('var(--orange,#f6790b)');

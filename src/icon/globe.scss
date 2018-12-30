@@ -1,0 +1,29 @@
+@import '../default';
+
+@mixin silicon-globe($class: '#{$silicon-prefix}globe') {
+	.#{$class} {
+		/* position */
+		position: relative;
+
+		/* size */
+		display: inline-flex;
+		box-sizing: border-box;
+		width: 1em;
+		height: .8em;
+		justify-content: center;
+
+		/* border */
+		border: var(--stroke, #{$silicon-stroke}) solid currentColor;
+		border-radius: 50%;
+
+		&:before {
+			content: '';
+			/* size */
+			width: 100%;
+			height: 50%;
+
+			/* border */
+			border: calc(var(--stroke, #{$silicon-stroke}) / 2) solid currentColor;
+		}
+	}
+}
