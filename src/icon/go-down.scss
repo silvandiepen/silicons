@@ -1,0 +1,10 @@
+@import '../default';
+@import 'go-right';
+
+@mixin silicon-go-down($class: '#{$silicon-prefix}go-down') {
+	@include silicon-go-right($class);
+	.#{$class} {
+		/* position */
+		transform: rotate(90deg);
+	}
+}

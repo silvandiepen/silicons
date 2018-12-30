@@ -1,12 +1,12 @@
 @import 'mixins'; 
-@include silicon-arrow-down(); 
+@include silicon-arrow-basic-down(); 
+@include silicon-arrow-basic-left(); 
+@include silicon-arrow-basic-right(); 
+@include silicon-arrow-basic-up(); 
 @include silicon-arrow-filled-down(); 
 @include silicon-arrow-filled-left(); 
 @include silicon-arrow-filled-right(); 
 @include silicon-arrow-filled-up(); 
-@include silicon-arrow-left(); 
-@include silicon-arrow-right(); 
-@include silicon-arrow-up(); 
 @include silicon-battery-25(); 
 @include silicon-battery-50(); 
 @include silicon-battery-75(); 
@@ -27,6 +27,10 @@
 @include silicon-file-import(); 
 @include silicon-file-upload(); 
 @include silicon-globe(); 
+@include silicon-go-down(); 
+@include silicon-go-left(); 
+@include silicon-go-right(); 
+@include silicon-go-up(); 
 @include silicon-location(); 
 @include silicon-mail(); 
 @include silicon-map(); 

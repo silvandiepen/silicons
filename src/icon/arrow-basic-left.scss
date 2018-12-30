@@ -1,0 +1,9 @@
+@import '../default';
+@import 'arrow-basic-right';
+
+@mixin silicon-arrow-basic-left($class: '#{$silicon-prefix}arrow-basic-left') {
+	@include silicon-arrow-basic-right($class);
+	.#{$class} {
+		
+	}
+}

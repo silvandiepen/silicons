@@ -1,0 +1,33 @@
+.silicon-arrow-basic-down {
+  /* position */
+  position: relative;
+  /* size */
+  display: block;
+  width: 1em;
+  height: var(--stroke, 0.1em);
+  /* background  */
+  background-color: currentColor;
+}
+.silicon-arrow-basic-down:before {
+  content: "";
+  /* size */
+  position: absolute;
+  top: calc(var(--stroke, 0.1em) * 0.5);
+  right: calc(var(--stroke, 0.1em) * -0.5);
+  /* size */
+  display: block;
+  width: 0.3em;
+  height: 0.3em;
+  /* border */
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-bottom: none;
+  border-left: none;
+  /* transform */
+  transform: rotate(45deg);
+  transform-origin: 100% 0;
+}
+
+.silicon-arrow-basic-down {
+  /* position */
+  transform: rotate(90deg);
+}

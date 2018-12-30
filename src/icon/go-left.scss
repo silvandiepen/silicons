@@ -1,0 +1,9 @@
+@import '../default';
+@import 'go-right';
+
+@mixin silicon-go-left($class: '#{$silicon-prefix}go-left') {
+	@include silicon-go-right($class);
+	.#{$class} {
+		
+	}
+}

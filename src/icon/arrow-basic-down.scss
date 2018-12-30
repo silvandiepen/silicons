@@ -1,0 +1,10 @@
+@import '../default';
+@import 'arrow-basic-right';
+
+@mixin silicon-arrow-basic-down($class: '#{$silicon-prefix}arrow-basic-down') {
+	@include silicon-arrow-basic-right($class);
+	.#{$class} {
+		/* position */
+		transform: rotate(90deg);
+	}
+}

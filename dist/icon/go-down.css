@@ -1,0 +1,14 @@
+.silicon-go-down {
+  /* position */
+  position: relative;
+  /* size */
+  display: block;
+  width: 0.5em;
+  height: 0.5em;
+  border: var(--stroke, 0.1em) solid currentColor;
+}
+
+.silicon-go-down {
+  /* position */
+  transform: rotate(90deg);
+}

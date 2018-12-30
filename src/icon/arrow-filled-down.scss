@@ -1,5 +1,5 @@
 @import '../default';
-@import 'arrow-right';
+@import 'arrow-filled-right';
 
 @mixin silicon-arrow-filled-down($class: '#{$silicon-prefix}arrow-filled-down') {
 	@include silicon-arrow-filled-right($class);

@@ -1,0 +1,15 @@
+@import '../default';
+
+@mixin silicon-go-right($class: '#{$silicon-prefix}go-right') {
+	.#{$class} {
+		/* position */
+		position: relative;
+
+		/* size */
+		display: block;
+		width: .5em;
+		height: .5em;
+		
+		border: var(--stroke, #{$silicon-stroke}) solid currentColor;
+	}
+}
