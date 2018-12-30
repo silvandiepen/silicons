@@ -1,0 +1,33 @@
+.silicon-reload {
+  /* position */
+  position: relative;
+  /* size */
+  display: block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-left-color: transparent;
+  /* border */
+  border-radius: 50%;
+  /* transform */
+  transform: rotate(22.5deg);
+}
+.silicon-reload:before, .silicon-reload:after {
+  content: "";
+  /* position */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* size */
+  display: block;
+  box-sizing: border-box;
+  width: calc(var(--stroke, 0.1em) * 3);
+  height: calc(var(--stroke, 0.1em) * 3);
+  /* border */
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-bottom: none;
+  border-left: none;
+  /* transform */
+  transform: translate(25%, 75%) rotate(22.5deg);
+}
