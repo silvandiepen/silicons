@@ -15,7 +15,7 @@
 		overflow: hidden;
 		
 		/* border */
-		border: var(--stroke, #{$silicon-stroke}) solid red;
+		border: var(--stroke, #{$silicon-stroke}) solid currentColor;
 		border-radius: var(--stroke, #{$silicon-stroke});
 		
 		
@@ -25,10 +25,10 @@
 
 			/* position */
 			position: absolute;
-			bottom: 100%;
 			left: 50%;
 
 			/* display */
+			display: block;
 			width: .6em;
 			height: .6em;
 

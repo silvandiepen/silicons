@@ -9,16 +9,16 @@
   /* overflow */
   overflow: hidden;
   /* border */
-  border: var(--stroke, 0.1em) solid red;
+  border: var(--stroke, 0.1em) solid currentColor;
   border-radius: var(--stroke, 0.1em);
 }
 .silicon-mail:after {
   content: "";
   /* position */
   position: absolute;
-  bottom: 100%;
   left: 50%;
   /* display */
+  display: block;
   width: 0.6em;
   height: 0.6em;
   /* border */

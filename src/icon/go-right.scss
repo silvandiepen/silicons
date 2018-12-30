@@ -7,9 +7,32 @@
 
 		/* size */
 		display: block;
-		width: .5em;
-		height: .5em;
-		
-		border: var(--stroke, #{$silicon-stroke}) solid currentColor;
+		width: 0.5em;
+		height: 1em;
+
+		overflow: hidden;
+
+		&:before {
+			content: '';
+
+			/* position */
+			position: absolute;
+			top: 50%;
+			right: 0;
+
+			/* size */
+			display: block;
+			width: calc(0.5em - (var(--stroke, #{$silicon-stroke}) / 2));
+			height: calc(0.5em - (var(--stroke, #{$silicon-stroke}) / 2));
+
+			/* border */
+			border: var(--stroke, #{$silicon-stroke}) solid currentColor;
+			border-bottom: none;
+			border-left: none;
+
+			/* transform */
+			transform: rotate(45deg);
+			transform-origin: 100% 0;
+		}
 	}
 }

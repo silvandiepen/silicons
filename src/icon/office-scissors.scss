@@ -1,0 +1,8 @@
+@import '../default';
+
+@mixin silicon-office-scissors($class: '#{$silicon-prefix}office-scissors') {
+	.#{$class} {
+		/* position */
+		position: relative;
+	}
+}

@@ -1200,8 +1200,26 @@
   /* size */
   display: block;
   width: 0.5em;
-  height: 0.5em;
+  height: 1em;
+  overflow: hidden;
+}
+.silicon-go-down:before {
+  content: "";
+  /* position */
+  position: absolute;
+  top: 50%;
+  right: 0;
+  /* size */
+  display: block;
+  width: calc(0.5em - (var(--stroke, 0.1em) / 2));
+  height: calc(0.5em - (var(--stroke, 0.1em) / 2));
+  /* border */
   border: var(--stroke, 0.1em) solid currentColor;
+  border-bottom: none;
+  border-left: none;
+  /* transform */
+  transform: rotate(45deg);
+  transform-origin: 100% 0;
 }
 
 .silicon-go-down {
@@ -1215,8 +1233,26 @@
   /* size */
   display: block;
   width: 0.5em;
-  height: 0.5em;
+  height: 1em;
+  overflow: hidden;
+}
+.silicon-go-left:before {
+  content: "";
+  /* position */
+  position: absolute;
+  top: 50%;
+  right: 0;
+  /* size */
+  display: block;
+  width: calc(0.5em - (var(--stroke, 0.1em) / 2));
+  height: calc(0.5em - (var(--stroke, 0.1em) / 2));
+  /* border */
   border: var(--stroke, 0.1em) solid currentColor;
+  border-bottom: none;
+  border-left: none;
+  /* transform */
+  transform: rotate(45deg);
+  transform-origin: 100% 0;
 }
 
 .silicon-go-right {
@@ -1225,8 +1261,26 @@
   /* size */
   display: block;
   width: 0.5em;
-  height: 0.5em;
+  height: 1em;
+  overflow: hidden;
+}
+.silicon-go-right:before {
+  content: "";
+  /* position */
+  position: absolute;
+  top: 50%;
+  right: 0;
+  /* size */
+  display: block;
+  width: calc(0.5em - (var(--stroke, 0.1em) / 2));
+  height: calc(0.5em - (var(--stroke, 0.1em) / 2));
+  /* border */
   border: var(--stroke, 0.1em) solid currentColor;
+  border-bottom: none;
+  border-left: none;
+  /* transform */
+  transform: rotate(45deg);
+  transform-origin: 100% 0;
 }
 
 .silicon-go-up {
@@ -1235,8 +1289,26 @@
   /* size */
   display: block;
   width: 0.5em;
-  height: 0.5em;
+  height: 1em;
+  overflow: hidden;
+}
+.silicon-go-up:before {
+  content: "";
+  /* position */
+  position: absolute;
+  top: 50%;
+  right: 0;
+  /* size */
+  display: block;
+  width: calc(0.5em - (var(--stroke, 0.1em) / 2));
+  height: calc(0.5em - (var(--stroke, 0.1em) / 2));
+  /* border */
   border: var(--stroke, 0.1em) solid currentColor;
+  border-bottom: none;
+  border-left: none;
+  /* transform */
+  transform: rotate(45deg);
+  transform-origin: 100% 0;
 }
 
 .silicon-go-up {
@@ -1301,16 +1373,16 @@
   /* overflow */
   overflow: hidden;
   /* border */
-  border: var(--stroke, 0.1em) solid red;
+  border: var(--stroke, 0.1em) solid currentColor;
   border-radius: var(--stroke, 0.1em);
 }
 .silicon-mail:after {
   content: "";
   /* position */
   position: absolute;
-  bottom: 100%;
   left: 50%;
   /* display */
+  display: block;
   width: 0.6em;
   height: 0.6em;
   /* border */
@@ -1442,6 +1514,11 @@
   border-radius: 0 calc(var(--height) - (var(--stroke, 0.1em) * 3) / 2) calc(var(--height) - (var(--stroke, 0.1em) * 3) / 2) 0;
 }
 
+.silicon-office-scissors {
+  /* position */
+  position: relative;
+}
+
 .silicon-picture {
   /* position */
   position: relative;
@@ -1511,28 +1588,48 @@
   position: relative;
   /* size */
   display: block;
+  box-sizing: border-box;
   width: 1em;
   height: 1em;
-  height: var(--stroke, 0.1em);
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  /* border */
+  border-radius: 50%;
+  /* transform */
+  transform: rotate(-22.5deg);
+}
+.silicon-refresh:before, .silicon-refresh:after {
+  content: "";
+  /* position */
+  position: absolute;
+  /* size */
+  display: block;
+  box-sizing: border-box;
+  width: calc(var(--stroke, 0.1em) * 3);
+  height: calc(var(--stroke, 0.1em) * 3);
   /* border */
   border: var(--stroke, 0.1em) solid currentColor;
 }
 .silicon-refresh:before {
-  content: "";
-  /* size */
-  position: absolute;
-  top: calc(var(--stroke, 0.1em) * 0.5);
-  right: calc(var(--stroke, 0.1em) * -0.5);
-  /* size */
-  display: block;
-  width: 0;
-  height: 0;
-  border: 0.15em solid currentColor;
-  border-bottom-color: transparent;
-  border-left-color: transparent;
+  /* position */
+  top: 50%;
+  left: 50%;
+  /* border */
+  border-bottom: none;
+  border-left: none;
   /* transform */
-  transform: rotate(45deg);
-  transform-origin: 100% 0;
+  transform: translate(25%, 75%) rotate(22.5deg);
+}
+.silicon-refresh:after {
+  /* position */
+  bottom: 50%;
+  right: 50%;
+  /* border */
+  border-top: none;
+  border-right: none;
+  /* transform */
+  transform: translate(-25%, -75%) rotate(22.5deg);
 }
 
 .silicon-search {
