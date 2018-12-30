@@ -8,8 +8,8 @@
 		/* size */
 		display: inline-block;
     box-sizing: border-box;
-		width: 1em;
-		height: 1em;
+		width: .9em;
+		height: .9em;
 		
 		/* border */
 		border: var(--stroke, #{$silicon-stroke}) solid currentColor;
