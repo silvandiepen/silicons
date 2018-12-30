@@ -1,0 +1,50 @@
+@import '../default';
+
+@mixin silicon-mail($class: '#{$silicon-prefix}mail') {
+	.#{$class} {
+		/* position */
+		position: relative;
+
+		/* size */
+		display: inline-block;
+		box-sizing: border-box;
+		width: 1em;
+		height: .5em;
+
+		/* border */
+		border: var(--stroke, #{$silicon-stroke}) solid currentColor;
+		border-radius: var(--stroke, #{$silicon-stroke});
+		
+		/* overflow */
+		overflow: hidden;
+		
+		&:after {
+			content: '';
+
+			/* position */
+			position: absolute;
+			bottom: 100%;
+			left: 50%;
+
+			/* display */
+			width: .6em;
+			height: .6em;
+
+			/* border */
+			border: calc(var(--stroke, #{$silicon-stroke}) / 2) solid currentColor;
+			border-radius: var(--stroke, #{$silicon-stroke});
+			
+			/* trasnform */
+			transform: rotate(45deg);
+			transform-origin: 50% 50%;
+		}
+		
+		&.colored{
+			/* text */
+			color: $silicons-color-dark-gray;
+			
+			/* background */
+			background-color: $silicons-color-white;
+		}
+	}
+}

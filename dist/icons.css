@@ -988,6 +988,43 @@
   color: var(--black,#101010);
 }
 
+.silicon-mail {
+  /* position */
+  position: relative;
+  /* size */
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 0.5em;
+  /* border */
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: var(--stroke, 0.1em);
+  /* overflow */
+  overflow: hidden;
+}
+.silicon-mail:after {
+  content: "";
+  /* position */
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  /* display */
+  width: 0.6em;
+  height: 0.6em;
+  /* border */
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-radius: var(--stroke, 0.1em);
+  /* trasnform */
+  transform: rotate(45deg);
+  transform-origin: 50% 50%;
+}
+.silicon-mail.colored {
+  /* text */
+  color: var(--gray,#444444);
+  /* background */
+  background-color: var(--white,#ffffff);
+}
+
 .silicon-map {
   /* position */
   position: relative;
@@ -1109,21 +1146,23 @@
   /* size */
   display: inline-block;
   box-sizing: border-box;
-  width: 0.8em;
-  height: 0.8em;
+  width: 1em;
+  height: 1em;
   /* border */
   border: var(--stroke, 0.1em) solid currentColor;
   border-radius: var(--stroke, 0.1em);
+  /* overflow */
+  overflow: hidden;
 }
 .silicon-picture:before {
   content: "";
   /* position */
   position: absolute;
-  left: 0.2em;
-  top: 0.2em;
+  left: 0.1em;
+  top: 0.1em;
   /* display */
-  width: 0.2em;
-  height: 0.2em;
+  width: 0.1em;
+  height: 0.1em;
   /* border */
   border-radius: 50%;
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
@@ -1133,22 +1172,36 @@
   /* position */
   position: absolute;
   left: 0.25em;
-  top: 0.25em;
+  top: 0.5em;
   /* display */
-  width: 0.75em;
-  height: 0.75em;
+  width: 0.6em;
+  height: 0.6em;
   /* border */
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
-  border-radius: var(--stroke, 0.1em);
+  border-radius: var(--stroke, 0.1em) 0 0 0;
   /* trasnform */
   transform: rotate(45deg);
   transform-origin: 50% 50%;
 }
 .silicon-picture.colored {
   /* text */
-  color: var(--dark,#303030);
+  color: var(--dark-brown,#87683f);
   /* background */
-  background-color: var(--blue,#1eb3e0);
+  background-color: var(--light-blue,#61caea);
+}
+.silicon-picture.colored:before {
+  /* text */
+  color: var(--yellow,#f5c505);
+  /* background */
+  background-color: var(--yellow,#f5c505);
+  /* shadow */
+  box-shadow: 0 0 0.2em 0 var(--white,#ffffff);
+}
+.silicon-picture.colored:after {
+  /* text */
+  color: var(--dark-green,#0c964d);
+  /* background */
+  background-color: var(--green,#10c565);
 }
 
 .silicon-search {
