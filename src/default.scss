@@ -19,7 +19,3 @@ $color-orange: unquote('var(--orange,#f6790b)');
 $color-pink: unquote('var(--pink,#ca1387)');
 $color-purple: unquote('var(--purple,#7329b1)');
 $color-turquoise: unquote('var(--turquoise,#3feac3)');
-
-.colored {
-	filter: drop-shadow(.1em .1em 10px rgba(black, .1));
-}
