@@ -682,6 +682,39 @@
   opacity: 0.5;
 }
 
+.silicon-device-camera {
+  /* position */
+  position: relative;
+  /* size */
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 0.75em;
+  /* border */
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: var(--stroke, 0.1em);
+}
+.silicon-device-camera:before, .silicon-device-camera:after {
+  content: "";
+  /* position */
+  position: absolute;
+  /* size */
+  display: block-block;
+  box-sizing: border-box;
+  /* border */
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+}
+.silicon-device-camera:before {
+  /* position */
+  left: 50%;
+  top: 50%;
+  /* size */
+  width: 0.5em;
+  height: 0.5em;
+  /* transform */
+  transform: translate(-50%, -50%);
+}
+
 .silicon-device-laptop {
   /* position */
   position: relative;
@@ -1517,6 +1550,45 @@
 .silicon-office-scissors {
   /* position */
   position: relative;
+  width: 1em;
+  height: 1em;
+  /* background */
+  background-image: radial-gradient(closest-side, transparent 50%, currentColor 50%, currentColor 100%, transparent), radial-gradient(closest-side, transparent 50%, currentColor 50%, currentColor 100%, transparent);
+  background-repeat: no-repeat, no-repeat;
+  background-position: 0.65em bottom, 0.15em bottom;
+  background-size: 0.2em 0.25em, 0.2em 0.25em;
+  /* transform */
+  transform: rotate(45deg);
+}
+.silicon-office-scissors:before, .silicon-office-scissors:after {
+  content: "";
+  /* position */
+  position: absolute;
+  top: -0.05em;
+  /* size */
+  display: block;
+  height: 1em;
+  width: var(--stroke, 0.1em);
+  /* background */
+  background-color: currentColor;
+  /* transform */
+  transform-origin: 50% 50%;
+}
+.silicon-office-scissors:before {
+  /* position */
+  right: 50%;
+  /* border */
+  border-radius: 0.1em 0 0 120%;
+  /* transform */
+  transform: rotate(-22.5deg);
+}
+.silicon-office-scissors:after {
+  /* position */
+  left: 50%;
+  /* border */
+  border-radius: 0 0.1em 120% 0;
+  /* transform */
+  transform: rotate(22.5deg);
 }
 
 .silicon-picture {
@@ -1641,11 +1713,11 @@
   width: 1em;
   height: 1em;
   border: var(--stroke, 0.1em) solid currentColor;
-  border-left-color: transparent;
+  border-right-color: transparent;
   /* border */
   border-radius: 50%;
   /* transform */
-  transform: rotate(22.5deg);
+  transform: rotate(180deg) scale(-1, 1);
 }
 .silicon-reload:before, .silicon-reload:after {
   content: "";
