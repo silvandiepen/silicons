@@ -12,7 +12,7 @@
 			/* position */
 			top: 50%;
 			left: 0;
-			
+
 			/* size */
 			width: 0.05em;
 			height: 0.2em;
@@ -21,7 +21,7 @@
 			border-radius: 0 0.05em 0.05em 0;
 
 			/* transform */
-			transform: translateY(-50%,0);
+			transform: translate(0, -50%);
 		}
 	}
 }

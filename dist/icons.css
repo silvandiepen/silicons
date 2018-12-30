@@ -354,8 +354,26 @@
   /* size */
   display: inline-block;
   box-sizing: border-box;
-  width: 1em;
+  width: 1.25em;
+  height: 0.5em;
+  /* overflow */
+  overflow: hidden;
+}
+.silicon-code:before {
+  content: "";
+  /* position */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* size */
+  display: block;
+  box-sizing: border-box;
+  width: 0.75em;
   height: 0.75em;
+  /* border */
+  border: var(--stroke, 0.1em) solid currentColor;
+  /* transform */
+  transform: translate(-50%, -50%) rotate(45deg);
 }
 
 .silicon-copy {
@@ -643,7 +661,7 @@
   /* border */
   border-radius: 0 0.05em 0.05em 0;
   /* transform */
-  transform: translateY(-50%, 0);
+  transform: translate(0, -50%);
 }
 
 .silicon-device-tv {
@@ -1536,6 +1554,34 @@
   background-image: inherit, inear-gradient(to right, currentColor, currentColor);
   background-position: inherit, left calc(50% + .15em) bottom calc(50% + .1em);
   background-size: inherit, 0.2em 0.05em;
+}
+
+.silicon-suitcase {
+  /* position */
+  position: relative;
+  /* size */
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 0.5em;
+  /* border */
+  border-radius: var(--stroke, 0.1em);
+}
+.silicon-suitcase:before {
+  content: "";
+  /* position */
+  position: absolute;
+  top: 0;
+  left: 50%;
+  /* size */
+  display: block;
+  box-sizing: border-box;
+  width: 0.5em;
+  height: 100%;
+  /* border */
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  /* transform */
+  transform: translateX(-50%);
 }
 
 .silicon-text-align-center {

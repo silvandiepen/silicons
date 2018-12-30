@@ -51,5 +51,5 @@
   /* border */
   border-radius: 0 0.05em 0.05em 0;
   /* transform */
-  transform: translateY(-50%, 0);
+  transform: translate(0, -50%);
 }
