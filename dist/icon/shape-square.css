@@ -4,16 +4,14 @@
   /* size */
   display: inline-block;
   box-sizing: border-box;
-  width: 0.75em;
-  height: 0.75em;
+  width: 0.8em;
+  height: 0.8em;
   /* border */
   border: var(--stroke, 0.1em) solid currentColor;
-  /* transform */
-  transform: translate(0.125em, 0.125em);
 }
 .silicon-shape-square.colored {
   /* text */
-  color: var(--black,#101010);
+  color: var(--purple,#7329b1);
   /* background */
   background-color: var(--purple,#7329b1);
 }

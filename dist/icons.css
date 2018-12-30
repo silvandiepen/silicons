@@ -348,6 +348,16 @@
   transform: translate(-50%, -50%) rotate(90deg);
 }
 
+.silicon-code {
+  /* position */
+  position: relative;
+  /* size */
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 0.75em;
+}
+
 .silicon-copy {
   /* position */
   position: relative;
@@ -633,7 +643,7 @@
   /* border */
   border-radius: 0 0.05em 0.05em 0;
   /* transform */
-  transform: translateY(0, -50%) rotate(-90deg);
+  transform: translateY(-50%, 0);
 }
 
 .silicon-device-tv {
@@ -1045,17 +1055,17 @@
   /* size */
   display: inline-block;
   box-sizing: border-box;
-  width: 1em;
-  height: 1em;
+  width: 0.9em;
+  height: 0.9em;
   /* border */
   border: var(--stroke, 0.1em) solid currentColor;
   border-radius: 50%;
 }
 .silicon-shape-circle.colored {
   /* text */
-  color: var(--black,#101010);
+  color: var(--turquoise,#3feac3);
   /* background */
-  background-color: var(--purple,#7329b1);
+  background-color: var(--turquoise,#3feac3);
 }
 
 .silicon-shape-drop {
@@ -1119,16 +1129,14 @@
   /* size */
   display: inline-block;
   box-sizing: border-box;
-  width: 0.75em;
-  height: 0.75em;
+  width: 0.8em;
+  height: 0.8em;
   /* border */
   border: var(--stroke, 0.1em) solid currentColor;
-  /* transform */
-  transform: translate(0.125em, 0.125em);
 }
 .silicon-shape-square.colored {
   /* text */
-  color: var(--black,#101010);
+  color: var(--purple,#7329b1);
   /* background */
   background-color: var(--purple,#7329b1);
 }
