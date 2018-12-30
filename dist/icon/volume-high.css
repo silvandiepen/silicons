@@ -2,14 +2,11 @@
   position: relative;
   display: inline-block;
   box-sizing: border-box;
-  width: calc(var(--stroke, 0.1em) * 7);
-  height: calc(var(--stroke, 0.1em) * 7);
-  background-image: radial-gradient(at bottom left, transparent calc(50% - (var(--stroke, 0.1em) / 2)), currentColor calc(50% - (var(--stroke, 0.1em) / 2)), currentColor 50%, transparent 50%);
-  border: calc(var(--stroke, 0.1em) * 1) solid currentColor;
+  width: 1em;
+  height: 1em;
   border-bottom: none;
   border-left: none;
-  border-radius: 0 calc(var(--stroke, 0.1em) * 8) 0 0;
-  transform: rotate(45deg);
+  transform: translateX(25%) rotate(45deg);
 }
 .silicon-volume-high:before, .silicon-volume-high:after {
   content: "";
@@ -18,21 +15,24 @@
   box-sizing: border-box;
 }
 .silicon-volume-high:before {
-  left: 0;
-  bottom: 0;
-  width: calc(var(--stroke, 0.1em) * 3);
-  height: calc(var(--stroke, 0.1em) * 3);
-  background-color: currentColor;
-  border: calc(var(--stroke, 0.1em) * 1.5) solid currentColor;
-  border-bottom: none;
-  border-left: none;
-  border-radius: 0 calc(var(--stroke, 0.1em) * 4.25) 0 0;
+  left: calc(var(--stroke, 0.1em) * -1.5);
+  bottom: calc(var(--stroke, 0.1em) * -1.5);
+  width: 0;
+  height: 0;
+  border: calc(var(--stroke, 0.1em) * 3) solid currentColor;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-radius: var(--stroke, 0.1em);
 }
 .silicon-volume-high:after {
-  left: calc(var(--stroke, 0.1em) * -0.5);
-  bottom: calc(var(--stroke, 0.1em) * -0.5);
-  width: calc(var(--stroke, 0.1em) * 2.5);
-  height: calc(var(--stroke, 0.1em) * 2.5);
+  left: calc(var(--stroke, 0.1em) * -2);
+  bottom: calc(var(--stroke, 0.1em) * -2);
+  width: calc(var(--stroke, 0.1em) * 4);
+  height: calc(var(--stroke, 0.1em) * 4);
   background-color: currentColor;
   transform: rotate(-45deg);
+}
+
+.silicon-volume-high {
+  background-image: radial-gradient(at bottom left, transparent calc(35% - var(--stroke, 0.05em)), currentColor calc(35% - var(--stroke, 0.05em)), currentColor 35%, transparent 35%), radial-gradient(at bottom left, transparent calc(50% - var(--stroke, 0.05em)), currentColor calc(50% - var(--stroke, 0.05em)), currentColor 50%, transparent 50%), radial-gradient(at bottom left, transparent calc(65% - var(--stroke, 0.05em)), currentColor calc(65% - var(--stroke, 0.05em)), currentColor 65%, transparent 65%);
 }

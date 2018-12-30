@@ -1,7 +1,9 @@
 @import 'mixins'; 
+@include silicon-battery-25(); 
+@include silicon-battery-50(); 
+@include silicon-battery-75(); 
 @include silicon-battery-empty(); 
 @include silicon-battery-full(); 
-@include silicon-battery-half(); 
 @include silicon-burger(); 
 @include silicon-close(); 
 @include silicon-copy(); 
@@ -34,7 +36,8 @@
 @include silicon-trash(); 
 @include silicon-user(); 
 @include silicon-volume-high(); 
-@include silicon-volume-mid(); 
+@include silicon-volume-low(); 
+@include silicon-volume-medium(); 
 @include silicon-volume-mute(); 
 @include silicon-volume-off(); 
 @include silicon-weather-sun(); 

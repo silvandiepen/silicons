@@ -20,3 +20,13 @@
   border-radius: 0 calc(var(--stroke, 0.1em) * 0.5) calc(var(--stroke, 0.1em) * 0.5) 0;
   transform: translateY(-50%);
 }
+.silicon-battery-empty.colored {
+  color: black;
+  background-color: white;
+}
+.silicon-battery-empty.colored:before {
+  background-color: white;
+}
+.silicon-battery-empty.colored:after {
+  background-color: var(--red, red);
+}

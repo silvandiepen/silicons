@@ -2,36 +2,46 @@
 
 @mixin silicon-burger($class: '#{$silicon-prefix}burger') {
 	.#{$class} {
+		/* position */
 		position: relative;
 
+		/* size */
 		display: inline-block;
 		box-sizing: border-box;
 		width: 1em;
 		height: var(--stroke, #{$silicon-stroke});
 
+		/* background */
 		background-color: currentColor;
 
 		&:before,
 		&:after {
 			content: '';
 
+			/* position */
 			position: absolute;
 
+			/* size */
 			display: block;
 			box-sizing: border-box;
 			width: 100%;
 			height: 100%;
 
+			/* background */
 			background-color: currentColor;
 		}
 		&:before {
+			/* position */
 			top: 100%;
 
+			/* transform */
 			transform: translateY(calc(var(--stroke, #{$silicon-stroke}) * 2));
 		}
 		&:after {
+			/* position */
 			bottom: 100%;
 
+			/* transform */
 			transform: translateY(calc(var(--stroke, #{$silicon-stroke}) * -2));
 		}
 	}

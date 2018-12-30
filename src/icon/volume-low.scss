@@ -1,0 +1,15 @@
+@import '../default';
+@import 'volume-off';
+
+@mixin silicon-volume-low($class: '#{$silicon-prefix}volume-low') {
+	@include silicon-volume-off($class);
+	.#{$class} {
+		background-image: radial-gradient(
+			at bottom left,
+			transparent calc(35% - var(--stroke, #{$silicon-stroke / 2})),
+			currentColor calc(35% - var(--stroke, #{$silicon-stroke / 2})),
+			currentColor 35%,
+			transparent 35%
+		);
+	}
+}

@@ -1,23 +1,454 @@
-.silicon-file-import {
+.silicon-battery-25 {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 0.5em;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-radius: calc(var(--stroke, 0.1em) * 1.5);
+}
+.silicon-battery-25:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  display: block;
+  box-sizing: border-box;
+  width: 0.2em;
+  height: 0.25em;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-radius: 0 calc(var(--stroke, 0.1em) * 0.5) calc(var(--stroke, 0.1em) * 0.5) 0;
+  transform: translateY(-50%);
+}
+.silicon-battery-25.colored {
+  color: black;
+  background-color: white;
+}
+.silicon-battery-25.colored:before {
+  background-color: white;
+}
+.silicon-battery-25.colored:after {
+  background-color: var(--red, red);
+}
+
+.silicon-battery-25:after {
+  content: "\8";
+  position: absolute;
+  top: calc(var(--stroke, 0.1em) / 2);
+  left: calc(var(--stroke, 0.1em) / 2);
+  display: block;
+  width: calc(25%);
+  height: calc(100% - var(--stroke, 0.1em));
+  background-color: currentColor;
+  border-radius: calc(var(--stroke, 0.1em) / 2);
+}
+.silicon-battery-25.colored:after {
+  background-color: var(--red, red);
+}
+
+.silicon-battery-50 {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 0.5em;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-radius: calc(var(--stroke, 0.1em) * 1.5);
+}
+.silicon-battery-50:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  display: block;
+  box-sizing: border-box;
+  width: 0.2em;
+  height: 0.25em;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-radius: 0 calc(var(--stroke, 0.1em) * 0.5) calc(var(--stroke, 0.1em) * 0.5) 0;
+  transform: translateY(-50%);
+}
+.silicon-battery-50.colored {
+  color: black;
+  background-color: white;
+}
+.silicon-battery-50.colored:before {
+  background-color: white;
+}
+.silicon-battery-50.colored:after {
+  background-color: var(--red, red);
+}
+
+.silicon-battery-50:after {
+  content: "\8";
+  position: absolute;
+  top: calc(var(--stroke, 0.1em) / 2);
+  left: calc(var(--stroke, 0.1em) / 2);
+  display: block;
+  width: calc(50%);
+  height: calc(100% - var(--stroke, 0.1em));
+  background-color: currentColor;
+  border-radius: calc(var(--stroke, 0.1em) / 2);
+}
+.silicon-battery-50.colored:after {
+  background-color: var(--orange, orange);
+}
+
+.silicon-battery-75 {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 0.5em;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-radius: calc(var(--stroke, 0.1em) * 1.5);
+}
+.silicon-battery-75:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  display: block;
+  box-sizing: border-box;
+  width: 0.2em;
+  height: 0.25em;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-radius: 0 calc(var(--stroke, 0.1em) * 0.5) calc(var(--stroke, 0.1em) * 0.5) 0;
+  transform: translateY(-50%);
+}
+.silicon-battery-75.colored {
+  color: black;
+  background-color: white;
+}
+.silicon-battery-75.colored:before {
+  background-color: white;
+}
+.silicon-battery-75.colored:after {
+  background-color: var(--red, red);
+}
+
+.silicon-battery-75:after {
+  content: "\8";
+  position: absolute;
+  top: calc(var(--stroke, 0.1em) / 2);
+  left: calc(var(--stroke, 0.1em) / 2);
+  display: block;
+  width: calc(75%);
+  height: calc(100% - var(--stroke, 0.1em));
+  background-color: currentColor;
+  border-radius: calc(var(--stroke, 0.1em) / 2);
+}
+.silicon-battery-75.colored:after {
+  background-color: var(--green, lightgreen);
+}
+
+.silicon-battery-empty {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 0.5em;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-radius: calc(var(--stroke, 0.1em) * 1.5);
+}
+.silicon-battery-empty:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  display: block;
+  box-sizing: border-box;
+  width: 0.2em;
+  height: 0.25em;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-radius: 0 calc(var(--stroke, 0.1em) * 0.5) calc(var(--stroke, 0.1em) * 0.5) 0;
+  transform: translateY(-50%);
+}
+.silicon-battery-empty.colored {
+  color: black;
+  background-color: white;
+}
+.silicon-battery-empty.colored:before {
+  background-color: white;
+}
+.silicon-battery-empty.colored:after {
+  background-color: var(--red, red);
+}
+
+.silicon-battery-full {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 0.5em;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-radius: calc(var(--stroke, 0.1em) * 1.5);
+}
+.silicon-battery-full:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  display: block;
+  box-sizing: border-box;
+  width: 0.2em;
+  height: 0.25em;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-radius: 0 calc(var(--stroke, 0.1em) * 0.5) calc(var(--stroke, 0.1em) * 0.5) 0;
+  transform: translateY(-50%);
+}
+.silicon-battery-full.colored {
+  color: black;
+  background-color: white;
+}
+.silicon-battery-full.colored:before {
+  background-color: white;
+}
+.silicon-battery-full.colored:after {
+  background-color: var(--red, red);
+}
+
+.silicon-battery-full:after {
+  content: "";
+  position: absolute;
+  top: calc(var(--stroke, 0.1em) / 2);
+  left: calc(var(--stroke, 0.1em) / 2);
+  display: block;
+  width: calc(100% - var(--stroke, 0.1em));
+  height: calc(100% - var(--stroke, 0.1em));
+  background-color: currentColor;
+  border-radius: calc(var(--stroke, 0.1em) / 2);
+}
+.silicon-battery-full.colored:after {
+  background-color: var(--green, lightgreen);
+}
+
+.silicon-burger {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: var(--stroke, 0.1em);
+  background-color: currentColor;
+}
+.silicon-burger:before, .silicon-burger:after {
+  content: "";
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  background-color: currentColor;
+}
+.silicon-burger:before {
+  top: 100%;
+  transform: translateY(calc(var(--stroke, 0.1em) * 2));
+}
+.silicon-burger:after {
+  bottom: 100%;
+  transform: translateY(calc(var(--stroke, 0.1em) * -2));
+}
+
+.silicon-close {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  transform: rotate(45deg);
+}
+.silicon-close:before, .silicon-close:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: var(--stroke, 0.1em);
+  background-color: currentColor;
+}
+.silicon-close:before {
+  transform: translate(-50%, -50%);
+}
+.silicon-close:before {
+  transform: translate(-50%, -50%);
+}
+.silicon-close:after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.silicon-copy {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 0.75em;
+  height: 1em;
+  border: var(--stroke, 0.1em) solid currentColor;
+}
+.silicon-copy:before {
+  content: "";
+  position: absolute;
+  top: calc(var(--stroke, 0.1em) * -3);
+  left: calc(var(--stroke, 0.1em) * -3);
+  display: block;
+  box-sizing: border-box;
+  width: 0.75em;
+  height: 1em;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-right: none;
+  border-bottom: none;
+}
+
+.silicon-device-laptop {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 0.6em;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-bottom: 0;
+  border-radius: 0.1em 0.1em 0 0;
+}
+.silicon-device-laptop:before {
+  content: "";
+  position: absolute;
+  top: calc(100%);
+  left: 50%;
+  display: block;
+  box-sizing: border-box;
+  width: 1.2em;
+  height: calc(var(--stroke, 0.1em) * 2);
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-radius: 0 0 0.2em 0.2em;
+  transform: translateX(-50%);
+}
+
+.silicon-device-phone {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 0.7em;
+  height: 1em;
+  background-image: radial-gradient(circle closest-side, currentColor 70%, transparent 70%) linear-gradient(to bottom, currentColor, currentColor);
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom calc(var(--stroke, 0.1em) / 2) left 50%, top calc(var(--stroke, 0.1em) / 2) left 50%;
+  background-size: calc(var(--stroke, 0.1em) * 1.5) calc(var(--stroke, 0.1em) * 1.5), calc(var(--stroke, 0.1em) * 1.5) calc(var(--stroke, 0.1em) * 3);
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 0.1em;
+}
+
+.silicon-device-printer {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 0.5em;
+  height: 0.5em;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+}
+.silicon-device-printer:before, .silicon-device-printer:after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+}
+.silicon-device-printer:after {
+  bottom: calc(100% + (var(--stroke, 0.1em) * 2));
+  left: 50%;
+  display: block;
+  width: 0.5em;
+  height: 0.25em;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  transform: translateX(-50%);
+}
+.silicon-device-printer:before {
+  top: -0.25em;
+  left: 50%;
+  display: block;
+  width: 1em;
+  height: 0.5em;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: var(--stroke, 0.1em) var(--stroke, 0.1em) 0 0;
+  transform: translatex(-50%);
+  clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 100%, 72% 100%, 72% 50%, 28% 50%, 28% 100%);
+}
+
+.silicon-device-screen {
   position: relative;
   display: inline-block;
   box-sizing: border-box;
   width: 1em;
   height: 0.75em;
-  background-image: linear-gradient(to right, currentColor 33.33%, transparent 33.33%, transparent, 66.66%, currentColor 66.66%);
-  background-repeat: no-repeat;
-  background-position: top left;
-  background-size: 100% var(--stroke, 0.1em);
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 0.2em;
+}
+.silicon-device-screen:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  display: block;
+  box-sizing: border-box;
+  width: 50%;
+  height: calc(var(--stroke, 0.1em) * 3);
+  background-image: linear-gradient(to right, transparent calc(50% - var(--stroke, 0.1em) / 4), currentColor calc(50% - var(--stroke, 0.1em) / 4), currentColor calc(50% + var(--stroke, 0.1em) / 4), transparent calc(50% + var(--stroke, 0.1em) / 4));
+  border-bottom: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  transform: translateX(-50%);
+}
+
+.silicon-device-tablet {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 0.7em;
+  background-image: radial-gradient(circle closest-side, currentColor 70%, transparent 70%) linear-gradient(to bottom, currentColor, currentColor);
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom calc(var(--stroke, 0.1em) / 2) left 50%, top calc(var(--stroke, 0.1em) / 2) left 50%;
+  background-size: calc(var(--stroke, 0.1em) * 1.5) calc(var(--stroke, 0.1em) * 1.5), calc(var(--stroke, 0.1em) * 1.5) calc(var(--stroke, 0.1em) * 3);
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 0.1em;
+}
+
+.silicon-device-tv {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 0.75em;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 0.2em;
+}
+.silicon-device-tv:before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  display: block;
+  box-sizing: border-box;
+  width: calc(var(--stroke, 0.1em) * 3);
+  height: calc(var(--stroke, 0.1em) * 3);
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-top: 0;
+  border-right: 0;
+  transform: translateX(-50%) translateY(calc(var(--stroke, 0.1em) * -1)) rotate(-45deg);
+}
+
+.silicon-file-download {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 0.5em;
   border: var(--stroke, 0.1em) solid currentColor;
   border-top: 0;
 }
-.silicon-file-import:before, .silicon-file-import:after {
+.silicon-file-download:before, .silicon-file-download:after {
   content: "";
   position: absolute;
   box-sizing: border-box;
 }
-.silicon-file-import:before {
-  bottom: 40%;
+.silicon-file-download:before {
+  bottom: 75%;
   left: 50%;
   display: block;
   width: calc(var(--stroke, 0.1em) / 2);
@@ -25,8 +456,8 @@
   background-color: currentColor;
   transform: translateX(-50%);
 }
-.silicon-file-import:after {
-  bottom: calc(40% - var(--stroke, 0.1em) / 2);
+.silicon-file-download:after {
+  bottom: calc(75% - var(--stroke, 0.1em) / 2);
   left: 50%;
   display: block;
   width: 0.33em;
@@ -78,6 +509,46 @@
   transform-origin: 0 100%;
 }
 
+.silicon-file-import {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 0.75em;
+  background-image: linear-gradient(to right, currentColor 33.33%, transparent 33.33%, transparent, 66.66%, currentColor 66.66%);
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 100% var(--stroke, 0.1em);
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-top: 0;
+}
+.silicon-file-import:before, .silicon-file-import:after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+}
+.silicon-file-import:before {
+  bottom: 40%;
+  left: 50%;
+  display: block;
+  width: calc(var(--stroke, 0.1em) / 2);
+  height: 0.5em;
+  background-color: currentColor;
+  transform: translateX(-50%);
+}
+.silicon-file-import:after {
+  bottom: calc(40% - var(--stroke, 0.1em) / 2);
+  left: 50%;
+  display: block;
+  width: 0.33em;
+  height: 0.33em;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-top: none;
+  border-right: none;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+
 .silicon-file-upload {
   position: relative;
   display: inline-block;
@@ -114,133 +585,150 @@
   transform-origin: 0 100%;
 }
 
-.silicon-file-download {
+.silicon-location {
   position: relative;
   display: inline-block;
   box-sizing: border-box;
   width: 1em;
+  height: 1em;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-left-color: transparent;
+  border-radius: 50%;
+  transform: rotate(-90deg);
+}
+.silicon-location:before, .silicon-location:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  display: block;
+  box-sizing: border-box;
+}
+.silicon-location:before {
+  width: 0.5em;
   height: 0.5em;
   border: var(--stroke, 0.1em) solid currentColor;
-  border-top: 0;
-}
-.silicon-file-download:before, .silicon-file-download:after {
-  content: "";
-  position: absolute;
-  box-sizing: border-box;
-}
-.silicon-file-download:before {
-  bottom: 75%;
-  left: 50%;
-  display: block;
-  width: calc(var(--stroke, 0.1em) / 2);
-  height: 0.5em;
-  background-color: currentColor;
-  transform: translateX(-50%);
-}
-.silicon-file-download:after {
-  bottom: calc(75% - var(--stroke, 0.1em) / 2);
-  left: 50%;
-  display: block;
-  width: 0.33em;
-  height: 0.33em;
-  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-top: none;
   border-right: none;
-  transform: rotate(-45deg);
+  transform: rotate(45deg);
+  transform-origin: 100% 0;
+}
+.silicon-location:after {
+  width: calc(var(--stroke, 0.1em) * 2);
+  height: calc(var(--stroke, 0.1em) * 2);
+  background-color: currentColor;
+  border-radius: 50%;
+  transform: translate(50%, -50%);
+}
+
+.silicon-map {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 0.33em;
+  height: 1em;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-left-width: calc(var(--stroke, 0.1em) / 4);
+  border-right-width: calc(var(--stroke, 0.1em) / 4);
+  transform: skewY(-12deg);
+}
+.silicon-map:before, .silicon-map:after {
+  content: "";
+  position: absolute;
+  top: calc(var(--stroke, 0.1em) * -1);
+  display: block;
+  box-sizing: border-box;
+  width: 0.33em;
+  height: 1em;
+  border: var(--stroke, 0.1em) solid currentColor;
+}
+.silicon-map:before {
+  left: calc(100% + (var(--stroke, 0.1em) / 4));
+  border-left-width: calc(var(--stroke, 0.1em) / 4);
+  border-radius: 0 var(--stroke, 0.1em) var(--stroke, 0.1em) 0;
+  transform: skewY(24deg);
   transform-origin: 0 100%;
 }
+.silicon-map:after {
+  right: calc(100% + (var(--stroke, 0.1em) / 4));
+  border-right-width: calc(var(--stroke, 0.1em) / 4);
+  border-radius: var(--stroke, 0.1em) 0 0 var(--stroke, 0.1em);
+  transform: skewY(24deg);
+  transform-origin: 100% 0;
+}
 
-.silicon-battery-empty {
+.silicon-office-paperclip {
+  --height: calc(var(--stroke, 0.1em) * 5.5);
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 0.75em;
+  height: var(--height);
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-left: none;
+  border-radius: 0 0.3em 0.3em 0;
+  transform: rotate(-45deg);
+}
+.silicon-office-paperclip:before, .silicon-office-paperclip:after {
+  content: "";
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+}
+.silicon-office-paperclip:before {
+  top: calc(var(--stroke, 0.1em) * -1);
+  right: 100%;
+  width: 0.5em;
+  height: calc(var(--height) - (var(--stroke, 0.1em) * 1.5));
+  border-right: none;
+  border-radius: calc( 					var(--height) - (var(--stroke, 0.1em) * 1.5) / 2 				) 0 0 calc(var(--height) - (var(--stroke, 0.1em) * 1.5) / 2);
+}
+.silicon-office-paperclip:after {
+  bottom: calc(var(--stroke, 0.1em) / 2);
+  left: 0;
+  width: 0.5em;
+  height: calc(var(--height) - (var(--stroke, 0.1em) * 3));
+  border-left: none;
+  border-radius: 0 calc(var(--height) - (var(--stroke, 0.1em) * 3) / 2) calc(var(--height) - (var(--stroke, 0.1em) * 3) / 2) 0;
+}
+
+.silicon-search {
   position: relative;
   display: inline-block;
   box-sizing: border-box;
   width: 1em;
-  height: 0.5em;
-  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
-  border-radius: calc(var(--stroke, 0.1em) * 1.5);
+  height: 1em;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 50%;
 }
-.silicon-battery-empty:before {
+.silicon-search:before {
   content: "";
   position: absolute;
-  top: 50%;
+  top: 100%;
   left: 100%;
   display: block;
   box-sizing: border-box;
-  width: 0.2em;
-  height: 0.25em;
-  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
-  border-radius: 0 calc(var(--stroke, 0.1em) * 0.5) calc(var(--stroke, 0.1em) * 0.5) 0;
-  transform: translateY(-50%);
-}
-
-.silicon-battery-half {
-  position: relative;
-  display: inline-block;
-  box-sizing: border-box;
-  width: 1em;
-  height: 0.5em;
-  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
-  border-radius: calc(var(--stroke, 0.1em) * 1.5);
-}
-.silicon-battery-half:before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 100%;
-  display: block;
-  box-sizing: border-box;
-  width: 0.2em;
-  height: 0.25em;
-  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
-  border-radius: 0 calc(var(--stroke, 0.1em) * 0.5) calc(var(--stroke, 0.1em) * 0.5) 0;
-  transform: translateY(-50%);
-}
-
-.silicon-battery-half:after {
-  content: "\8";
-  position: absolute;
-  top: calc(var(--stroke, 0.1em) / 2);
-  left: calc(var(--stroke, 0.1em) / 2);
-  display: block;
-  width: calc(50%);
-  height: calc(100% - var(--stroke, 0.1em));
+  width: 0.5em;
+  height: var(--stroke, 0.1em);
   background-color: currentColor;
-  border-radius: calc(var(--stroke, 0.1em) / 2);
+  transform: translate(-0.1em, -0.1em) rotate(45deg);
+  transform-origin: 0 50%;
 }
 
-.silicon-battery-full {
+.silicon-shape-drop {
   position: relative;
   display: inline-block;
   box-sizing: border-box;
   width: 1em;
-  height: 0.5em;
-  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
-  border-radius: calc(var(--stroke, 0.1em) * 1.5);
+  height: 1em;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 50% 0 50% 50%;
+  transform: rotate(-45deg);
 }
-.silicon-battery-full:before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 100%;
-  display: block;
-  box-sizing: border-box;
-  width: 0.2em;
-  height: 0.25em;
-  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
-  border-radius: 0 calc(var(--stroke, 0.1em) * 0.5) calc(var(--stroke, 0.1em) * 0.5) 0;
-  transform: translateY(-50%);
-}
-
-.silicon-battery-full:after {
-  content: "";
-  position: absolute;
-  top: calc(var(--stroke, 0.1em) / 2);
-  left: calc(var(--stroke, 0.1em) / 2);
-  display: block;
-  width: calc(100% - var(--stroke, 0.1em));
-  height: calc(100% - var(--stroke, 0.1em));
-  background-color: currentColor;
-  border-radius: calc(var(--stroke, 0.1em) / 2);
+.silicon-shape-drop.colored {
+  color: #9999ff;
+  background-color: #ccccff;
 }
 
 .silicon-shape-heart {
@@ -279,307 +767,266 @@
   border-radius: 0 0.5em 0.5em 0;
 }
 
-.silicon-weather-sun {
-  position: relative;
-  display: inline-block;
-  box-sizing: border-box;
-  width: 0.5em;
-  height: 0.5em;
-  border: var(--stroke, 0.1em) solid currentColor;
-  border-radius: 50%;
-  box-shadow: -0.55em 0 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor, 0.55em 0 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor, 0 -0.55em 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor, 0 0.55em 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor, -0.4em -0.4em 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor, -0.4em 0.4em 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor, 0.4em -0.4em 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor, 0.4em 0.4em 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor;
-}
-
-.silicon-shape-drop {
+.silicon-smiley-angry {
   position: relative;
   display: inline-block;
   box-sizing: border-box;
   width: 1em;
   height: 1em;
-  border: var(--stroke, 0.1em) solid currentColor;
-  border-left-color: transparent;
-  border-radius: 50%;
-  transform: rotate(90deg);
-}
-.silicon-shape-drop:before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 50%;
-  display: block;
-  box-sizing: border-box;
-  width: 0.5em;
-  height: 0.5em;
-  border: var(--stroke, 0.1em) solid currentColor;
-  border-top: none;
-  border-right: none;
-  transform: rotate(45deg);
-  transform-origin: 100% 0;
-}
-
-.silicon-search {
-  position: relative;
-  display: inline-block;
-  box-sizing: border-box;
-  width: 1em;
-  height: 1em;
-  border: var(--stroke, 0.1em) solid currentColor;
+  border: calc(var(--stroke, 0.1em) / 1) solid currentColor;
   border-radius: 50%;
 }
-.silicon-search:before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 100%;
-  display: block;
-  box-sizing: border-box;
-  width: 0.5em;
-  height: var(--stroke, 0.1em);
-  background-color: currentColor;
-  transform: translate(-0.1em, -0.1em) rotate(45deg);
-  transform-origin: 0 50%;
-}
-
-.silicon-copy {
-  position: relative;
-  display: inline-block;
-  box-sizing: border-box;
-  width: 0.75em;
-  height: 1em;
-  border: var(--stroke, 0.1em) solid currentColor;
-}
-.silicon-copy:before {
-  content: "";
-  position: absolute;
-  top: calc(var(--stroke, 0.1em) * -3);
-  left: calc(var(--stroke, 0.1em) * -3);
-  display: block;
-  box-sizing: border-box;
-  width: 0.75em;
-  height: 1em;
-  border: var(--stroke, 0.1em) solid currentColor;
-  border-right: none;
-  border-bottom: none;
-}
-
-.silicon-zoom-in {
-  position: relative;
-  display: inline-block;
-  box-sizing: border-box;
-  width: 1em;
-  height: 1em;
-  border: var(--stroke, 0.1em) solid currentColor;
-  border-radius: 50%;
-}
-.silicon-zoom-in:before, .silicon-zoom-in:after {
+.silicon-smiley-angry:before, .silicon-smiley-angry:after {
   content: "";
   position: absolute;
   box-sizing: border-box;
 }
-.silicon-zoom-in:before {
-  top: 100%;
-  left: 100%;
-  display: block;
-  width: 0.5em;
-  height: var(--stroke, 0.1em);
-  background-color: currentColor;
-  transform: translate(-0.1em, -0.1em) rotate(45deg);
-  transform-origin: 0 50%;
-}
-.silicon-zoom-in:after {
-  top: 50%;
-  left: 50%;
-  display: block;
-  width: 0.4em;
-  height: 0.4em;
-  background-image: linear-gradient(to right, transparent calc(50% - var(--stroke, 0.1em) / 4), currentColor calc(50% - var(--stroke, 0.1em) / 4), currentColor calc(50% + var(--stroke, 0.1em) / 4), transparent calc(50% + var(--stroke, 0.1em) / 4)), linear-gradient(to bottom, transparent calc(50% - var(--stroke, 0.1em) / 4), currentColor calc(50% - var(--stroke, 0.1em) / 4), currentColor calc(50% + var(--stroke, 0.1em) / 4), transparent calc(50% + var(--stroke, 0.1em) / 4));
-  transform: translate(-50%, -50%);
-}
-
-.silicon-zoom-out {
-  position: relative;
-  display: inline-block;
-  box-sizing: border-box;
-  width: 1em;
-  height: 1em;
-  border: var(--stroke, 0.1em) solid currentColor;
-  border-radius: 50%;
-}
-.silicon-zoom-out:before, .silicon-zoom-out:after {
-  content: "";
-  position: absolute;
-  box-sizing: border-box;
-}
-.silicon-zoom-out:before {
-  top: 100%;
-  left: 100%;
-  display: block;
-  width: 0.5em;
-  height: var(--stroke, 0.1em);
-  background-color: currentColor;
-  transform: translate(-0.1em, -0.1em) rotate(45deg);
-  transform-origin: 0 50%;
-}
-.silicon-zoom-out:after {
-  top: 50%;
-  left: 50%;
-  display: block;
-  width: 0.4em;
-  height: 0.4em;
-  background-image: linear-gradient(to bottom, transparent calc(50% - var(--stroke, 0.1em) / 4), currentColor calc(50% - var(--stroke, 0.1em) / 4), currentColor calc(50% + var(--stroke, 0.1em) / 4), transparent calc(50% + var(--stroke, 0.1em) / 4));
-  transform: translate(-50%, -50%);
-}
-
-.silicon-trash {
-  position: relative;
-  display: inline-block;
-  box-sizing: border-box;
-  width: 0.75em;
-  height: 0.75em;
-  border: var(--stroke, 0.1em) solid currentColor;
-  border-top: none;
-  border-radius: 0 0 0.1em 0.1em;
-  transform: translateY(0.2em);
-}
-.silicon-trash:before, .silicon-trash:after {
-  content: "";
-  position: absolute;
-  display: block;
-  box-sizing: border-box;
-  transform: translateX(-50%);
-}
-.silicon-trash:before {
-  bottom: calc(100% + var(--stroke, 0.1em));
-  left: 50%;
-  width: 1em;
-  height: var(--stroke, 0.1em);
-  background-color: currentColor;
-  border: none;
-}
-.silicon-trash:after {
-  bottom: calc(100% + (var(--stroke, 0.1em) * 2));
-  left: 50%;
+.silicon-smiley-angry:before {
+  bottom: 50%;
+  right: calc(50% + 0.05em);
   width: 0.2em;
   height: 0.1em;
-  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
-  border-bottom: none;
-  border-radius: 0.2em 0.2em 0 0;
+  box-shadow: 0.3em 0 0 0 currentColor;
+  background-color: currentColor;
+  border-radius: 0 0 0.1em 0.1em;
 }
-
-.silicon-close {
-  position: relative;
-  display: inline-block;
-  box-sizing: border-box;
-  width: 1em;
-  height: 1em;
-  transform: rotate(45deg);
-}
-.silicon-close:before, .silicon-close:after {
-  content: "";
-  position: absolute;
+.silicon-smiley-angry:after {
   top: 50%;
   left: 50%;
-  display: block;
-  box-sizing: border-box;
-  width: 100%;
-  height: var(--stroke, 0.1em);
-  background-color: currentColor;
-}
-.silicon-close:before {
-  transform: translate(-50%, -50%);
-}
-.silicon-close:before {
-  transform: translate(-50%, -50%);
-}
-.silicon-close:after {
-  transform: translate(-50%, -50%) rotate(90deg);
+  width: 0.5em;
+  height: 0.5em;
+  border: calc(var(--stroke, 0.1em) / 2) solid transparent;
+  border-top-color: currentColor;
+  border-radius: 50%;
+  transform: translate(-50%, 25%);
 }
 
-.silicon-burger {
+.silicon-smiley-cry {
   position: relative;
   display: inline-block;
   box-sizing: border-box;
   width: 1em;
-  height: var(--stroke, 0.1em);
-  background-color: currentColor;
+  height: 1em;
+  background-image: radial-gradient(closest-side, currentColor 100%, transparent), radial-gradient(closest-side, currentColor 100%, transparent);
+  background-position: left calc(50% + 0.15em) bottom calc(50% + 0.1em), right calc(50% + 0.15em) bottom calc(50% + 0.1em);
+  background-repeat: no-repeat, no-repeat;
+  background-size: 0.2em 0.2em, 0.2em 0.2em;
+  border: calc(var(--stroke, 0.1em) / 1) solid currentColor;
+  border-radius: 50%;
 }
-.silicon-burger:before, .silicon-burger:after {
+.silicon-smiley-cry:before, .silicon-smiley-cry:after {
   content: "";
   position: absolute;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
-  height: 100%;
+}
+.silicon-smiley-cry:before {
+  top: 50%;
+  right: calc(50% + 0.15em);
+  display: block;
+  width: 0.2em;
+  height: 0.2em;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-radius: 0 50% 50% 50%;
+  transform: rotate(45deg);
+}
+.silicon-smiley-cry:after {
+  top: 50%;
+  left: 50%;
+  width: 0.5em;
+  height: 0.5em;
+  border: calc(var(--stroke, 0.1em) / 2) solid transparent;
+  border-top-color: currentColor;
+  border-radius: 50%;
+  transform: translate(-50%, 25%);
+}
+.silicon-smiley-cry.colored {
+  color: #dcb104;
+  background-color: #f5c505;
+  background-image: radial-gradient(closest-side, black 50%, white 50%, white 100%, transparent), radial-gradient(closest-side, black 50%, white 50%, white 100%, transparent);
+}
+.silicon-smiley-cry.colored:before {
+  color: #6666ff;
+  background-color: #9999ff;
+}
+.silicon-smiley-cry.colored:after {
+  color: black;
+}
+
+.silicon-smiley-grin {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  background-image: radial-gradient(closest-side, currentColor 100%, transparent), radial-gradient(closest-side, currentColor 100%, transparent);
+  background-position: left calc(50% + 0.15em) bottom calc(50% + 0.1em), right calc(50% + 0.15em) bottom calc(50% + 0.1em);
+  background-repeat: no-repeat, no-repeat;
+  background-size: 0.2em 0.2em, 0.2em 0.2em;
+  border: calc(var(--stroke, 0.1em) / 1) solid currentColor;
+  border-radius: 50%;
+}
+.silicon-smiley-grin:after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+  top: 50%;
+  left: 50%;
+  width: 0.5em;
+  height: 0.25em;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-radius: 0 0 0.5em 0.5em;
+  transform: translate(-50%, 25%);
+}
+.silicon-smiley-grin.colored {
+  color: #dcb104;
+  background-color: #f5c505;
+  background-image: radial-gradient(closest-side, black 50%, white 50%, white 100%, transparent), radial-gradient(closest-side, black 50%, white 50%, white 100%, transparent);
+}
+.silicon-smiley-grin.colored:after {
+  color: black;
+  background-color: white;
+}
+
+.silicon-smiley-happy {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  background-image: radial-gradient(closest-side, currentColor 100%, transparent), radial-gradient(closest-side, currentColor 100%, transparent);
+  background-position: left calc(50% + 0.15em) bottom calc(50% + 0.1em), right calc(50% + 0.15em) bottom calc(50% + 0.1em);
+  background-repeat: no-repeat, no-repeat;
+  background-size: 0.2em 0.2em, 0.2em 0.2em;
+  border: calc(var(--stroke, 0.1em) / 1) solid currentColor;
+  border-radius: 50%;
+}
+.silicon-smiley-happy:before, .silicon-smiley-happy:after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+}
+.silicon-smiley-happy:after {
+  top: 50%;
+  left: 50%;
+  width: 0.5em;
+  height: 0.5em;
+  border: calc(var(--stroke, 0.1em) / 2) solid transparent;
+  border-bottom-color: currentColor;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.silicon-smiley-happy.colored {
+  color: #dcb104;
+  background-color: #f5c505;
+  background-image: radial-gradient(closest-side, black 50%, white 50%, white 100%, transparent), radial-gradient(closest-side, black 50%, white 50%, white 100%, transparent);
+}
+.silicon-smiley-happy.colored:after {
+  color: black;
+}
+
+.silicon-smiley-sad {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  background-image: radial-gradient(closest-side, currentColor 100%, transparent), radial-gradient(closest-side, currentColor 100%, transparent);
+  background-position: left calc(50% + 0.15em) bottom calc(50% + 0.1em), right calc(50% + 0.15em) bottom calc(50% + 0.1em);
+  background-repeat: no-repeat, no-repeat;
+  background-size: 0.2em 0.2em, 0.2em 0.2em;
+  border: calc(var(--stroke, 0.1em) / 1) solid currentColor;
+  border-radius: 50%;
+}
+.silicon-smiley-sad:after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+  top: 50%;
+  left: 50%;
+  width: 0.5em;
+  height: 0.5em;
+  border: calc(var(--stroke, 0.1em) / 2) solid transparent;
+  border-top-color: currentColor;
+  border-radius: 50%;
+  transform: translate(-50%, 25%);
+}
+.silicon-smiley-sad.colored {
+  color: #dcb104;
+  background-color: #f5c505;
+  background-image: radial-gradient(closest-side, black 50%, white 50%, white 100%, transparent), radial-gradient(closest-side, black 50%, white 50%, white 100%, transparent);
+}
+.silicon-smiley-sad.colored:after {
+  color: black;
+}
+
+.silicon-smiley-wink {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  background-image: linear-gradient(to right, currentColor, currentColor);
+  background-position: left calc(50% + .15em) bottom calc(50% + .1em);
+  background-repeat: no-repeat;
+  background-size: 0.2em 0.05em;
+  border: calc(var(--stroke, 0.1em) / 1) solid currentColor;
+  border-radius: 50%;
+}
+.silicon-smiley-wink:before, .silicon-smiley-wink:after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+}
+.silicon-smiley-wink:before {
+  bottom: 50%;
+  right: calc(50% + 0.05em);
+  width: 0.2em;
+  height: 0.2em;
   background-color: currentColor;
+  border-radius: 50%;
 }
-.silicon-burger:before {
-  top: 100%;
-  transform: translateY(calc(var(--stroke, 0.1em) * 2));
+.silicon-smiley-wink:after {
+  top: 50%;
+  left: 50%;
+  width: 0.5em;
+  height: 0.5em;
+  border: calc(var(--stroke, 0.1em) / 2) solid transparent;
+  border-bottom-color: currentColor;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
 }
-.silicon-burger:after {
-  bottom: 100%;
+
+.silicon-text-align-center {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: calc(var(--stroke, 0.1em) * 3);
+  border-top: var(--stroke, 0.1em) solid currentColor;
+  border-left: none;
+  border-right: none;
+  background-image: linear-gradient(to right, currentColor, currentColor);
+  background-size: 0.75em var(--stroke, 0.1em);
+  background-position: bottom center;
+  background-repeat: no-repeat;
   transform: translateY(calc(var(--stroke, 0.1em) * -2));
 }
-
-.silicon-user {
-  position: relative;
-  display: inline-block;
-  box-sizing: border-box;
-  width: 1em;
-  height: 0.65em;
-  border: var(--stroke, 0.1em) solid currentColor;
-  border-bottom: 0;
-  border-radius: 0.75em 0.75em 0 0;
-  transform: translateY(0.175em);
-}
-.silicon-user:before {
+.silicon-text-align-center:before {
   content: "";
   position: absolute;
-  bottom: 100%;
-  left: 50%;
+  top: calc(var(--stroke, 0.1em) * 3);
+  left: 0;
   display: block;
   box-sizing: border-box;
-  width: 0.6em;
-  height: 0.6em;
-  border: var(--stroke, 0.1em) solid currentColor;
-  border-radius: 50%;
-  transform: translateX(-50%);
-}
-
-.silicon-map {
-  position: relative;
-  display: inline-block;
-  box-sizing: border-box;
-  width: 0.33em;
-  height: 1em;
-  border: var(--stroke, 0.1em) solid currentColor;
-  border-left-width: calc(var(--stroke, 0.1em) / 4);
-  border-right-width: calc(var(--stroke, 0.1em) / 4);
-  transform: skewY(-12deg);
-}
-.silicon-map:before, .silicon-map:after {
-  content: "";
-  position: absolute;
-  top: calc(var(--stroke, 0.1em) * -1);
-  display: block;
-  box-sizing: border-box;
-  width: 0.33em;
-  height: 1em;
-  border: var(--stroke, 0.1em) solid currentColor;
-}
-.silicon-map:before {
-  left: calc(100% + (var(--stroke, 0.1em) / 4));
-  border-left-width: calc(var(--stroke, 0.1em) / 4);
-  border-radius: 0 var(--stroke, 0.1em) var(--stroke, 0.1em) 0;
-  transform: skewY(24deg);
-  transform-origin: 0 100%;
-}
-.silicon-map:after {
-  right: calc(100% + (var(--stroke, 0.1em) / 4));
-  border-right-width: calc(var(--stroke, 0.1em) / 4);
-  border-radius: var(--stroke, 0.1em) 0 0 var(--stroke, 0.1em);
-  transform: skewY(24deg);
-  transform-origin: 100% 0;
+  width: 100%;
+  height: calc(var(--stroke, 0.1em) * 3);
+  border-top: var(--stroke, 0.1em) solid currentColor;
+  border-left: none;
+  border-right: none;
+  background-image: linear-gradient(to right, currentColor, currentColor);
+  background-size: 0.5em var(--stroke, 0.1em);
+  background-position: bottom center;
+  background-repeat: no-repeat;
 }
 
 .silicon-text-align-justify {
@@ -681,453 +1128,267 @@
   background-repeat: no-repeat;
 }
 
-.silicon-text-align-center {
+.silicon-trash {
   position: relative;
   display: inline-block;
   box-sizing: border-box;
-  width: 1em;
-  height: calc(var(--stroke, 0.1em) * 3);
-  border-top: var(--stroke, 0.1em) solid currentColor;
-  border-left: none;
-  border-right: none;
-  background-image: linear-gradient(to right, currentColor, currentColor);
-  background-size: 0.75em var(--stroke, 0.1em);
-  background-position: bottom center;
-  background-repeat: no-repeat;
-  transform: translateY(calc(var(--stroke, 0.1em) * -2));
-}
-.silicon-text-align-center:before {
-  content: "";
-  position: absolute;
-  top: calc(var(--stroke, 0.1em) * 3);
-  left: 0;
-  display: block;
-  box-sizing: border-box;
-  width: 100%;
-  height: calc(var(--stroke, 0.1em) * 3);
-  border-top: var(--stroke, 0.1em) solid currentColor;
-  border-left: none;
-  border-right: none;
-  background-image: linear-gradient(to right, currentColor, currentColor);
-  background-size: 0.5em var(--stroke, 0.1em);
-  background-position: bottom center;
-  background-repeat: no-repeat;
-}
-
-.silicon-location {
-  position: relative;
-  display: inline-block;
-  box-sizing: border-box;
-  width: 1em;
-  height: 1em;
-  border: var(--stroke, 0.1em) solid currentColor;
-  border-left-color: transparent;
-  border-radius: 50%;
-  transform: rotate(-90deg);
-}
-.silicon-location:before, .silicon-location:after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 50%;
-  display: block;
-  box-sizing: border-box;
-}
-.silicon-location:before {
-  width: 0.5em;
-  height: 0.5em;
+  width: 0.75em;
+  height: 0.75em;
   border: var(--stroke, 0.1em) solid currentColor;
   border-top: none;
-  border-right: none;
-  transform: rotate(45deg);
-  transform-origin: 100% 0;
+  border-radius: 0 0 0.1em 0.1em;
+  transform: translateY(0.2em);
 }
-.silicon-location:after {
-  width: calc(var(--stroke, 0.1em) * 2);
-  height: calc(var(--stroke, 0.1em) * 2);
-  background-color: currentColor;
-  border-radius: 50%;
-  transform: translate(50%, -50%);
-}
-
-.silicon-device-screen {
-  position: relative;
-  display: inline-block;
-  box-sizing: border-box;
-  width: 1em;
-  height: 0.75em;
-  border: var(--stroke, 0.1em) solid currentColor;
-  border-radius: 0.2em;
-}
-.silicon-device-screen:before {
+.silicon-trash:before, .silicon-trash:after {
   content: "";
   position: absolute;
-  top: 100%;
-  left: 50%;
   display: block;
   box-sizing: border-box;
-  width: 50%;
-  height: calc(var(--stroke, 0.1em) * 3);
-  background-image: linear-gradient(to right, transparent calc(50% - var(--stroke, 0.1em) / 4), currentColor calc(50% - var(--stroke, 0.1em) / 4), currentColor calc(50% + var(--stroke, 0.1em) / 4), transparent calc(50% + var(--stroke, 0.1em) / 4));
-  border-bottom: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   transform: translateX(-50%);
 }
+.silicon-trash:before {
+  bottom: calc(100% + var(--stroke, 0.1em));
+  left: 50%;
+  width: 1em;
+  height: var(--stroke, 0.1em);
+  background-color: currentColor;
+  border: none;
+}
+.silicon-trash:after {
+  bottom: calc(100% + (var(--stroke, 0.1em) * 2));
+  left: 50%;
+  width: 0.2em;
+  height: 0.1em;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-bottom: none;
+  border-radius: 0.2em 0.2em 0 0;
+}
 
-.silicon-device-tv {
+.silicon-user {
   position: relative;
   display: inline-block;
   box-sizing: border-box;
   width: 1em;
-  height: 0.75em;
+  height: 0.65em;
   border: var(--stroke, 0.1em) solid currentColor;
-  border-radius: 0.2em;
+  border-bottom: 0;
+  border-radius: 0.75em 0.75em 0 0;
+  transform: translateY(0.175em);
 }
-.silicon-device-tv:before {
+.silicon-user:before {
   content: "";
   position: absolute;
   bottom: 100%;
   left: 50%;
   display: block;
   box-sizing: border-box;
-  width: calc(var(--stroke, 0.1em) * 3);
-  height: calc(var(--stroke, 0.1em) * 3);
-  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
-  border-top: 0;
-  border-right: 0;
-  transform: translateX(-50%) translateY(calc(var(--stroke, 0.1em) * -1)) rotate(-45deg);
-}
-
-.silicon-device-laptop {
-  position: relative;
-  display: inline-block;
-  box-sizing: border-box;
-  width: 1em;
+  width: 0.6em;
   height: 0.6em;
   border: var(--stroke, 0.1em) solid currentColor;
-  border-bottom: 0;
-  border-radius: 0.1em 0.1em 0 0;
-}
-.silicon-device-laptop:before {
-  content: "";
-  position: absolute;
-  top: calc(100%);
-  left: 50%;
-  display: block;
-  box-sizing: border-box;
-  width: 1.2em;
-  height: calc(var(--stroke, 0.1em) * 2);
-  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
-  border-radius: 0 0 0.2em 0.2em;
+  border-radius: 50%;
   transform: translateX(-50%);
 }
 
-.silicon-device-phone {
+.silicon-volume-high {
   position: relative;
   display: inline-block;
   box-sizing: border-box;
-  width: 0.7em;
+  width: 1em;
   height: 1em;
-  background-image: radial-gradient(circle closest-side, currentColor 70%, transparent 70%) linear-gradient(to bottom, currentColor, currentColor);
-  background-repeat: no-repeat, no-repeat;
-  background-position: bottom calc(var(--stroke, 0.1em) / 2) left 50%, top calc(var(--stroke, 0.1em) / 2) left 50%;
-  background-size: calc(var(--stroke, 0.1em) * 1.5) calc(var(--stroke, 0.1em) * 1.5), calc(var(--stroke, 0.1em) * 1.5) calc(var(--stroke, 0.1em) * 3);
-  border: var(--stroke, 0.1em) solid currentColor;
-  border-radius: 0.1em;
+  border-bottom: none;
+  border-left: none;
+  transform: translateX(25%) rotate(45deg);
 }
-
-.silicon-device-tablet {
-  position: relative;
-  display: inline-block;
-  box-sizing: border-box;
-  width: 1em;
-  height: 0.7em;
-  background-image: radial-gradient(circle closest-side, currentColor 70%, transparent 70%) linear-gradient(to bottom, currentColor, currentColor);
-  background-repeat: no-repeat, no-repeat;
-  background-position: bottom calc(var(--stroke, 0.1em) / 2) left 50%, top calc(var(--stroke, 0.1em) / 2) left 50%;
-  background-size: calc(var(--stroke, 0.1em) * 1.5) calc(var(--stroke, 0.1em) * 1.5), calc(var(--stroke, 0.1em) * 1.5) calc(var(--stroke, 0.1em) * 3);
-  border: var(--stroke, 0.1em) solid currentColor;
-  border-radius: 0.1em;
-}
-
-.silicon-device-printer {
-  position: relative;
-  display: inline-block;
-  box-sizing: border-box;
-  width: 0.5em;
-  height: 0.5em;
-  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
-}
-.silicon-device-printer:before, .silicon-device-printer:after {
+.silicon-volume-high:before, .silicon-volume-high:after {
   content: "";
   position: absolute;
+  display: block;
   box-sizing: border-box;
 }
-.silicon-device-printer:after {
-  bottom: calc(100% + (var(--stroke, 0.1em) * 2));
-  left: 50%;
-  display: block;
-  width: 0.5em;
-  height: 0.25em;
-  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
-  transform: translateX(-50%);
+.silicon-volume-high:before {
+  left: calc(var(--stroke, 0.1em) * -1.5);
+  bottom: calc(var(--stroke, 0.1em) * -1.5);
+  width: 0;
+  height: 0;
+  border: calc(var(--stroke, 0.1em) * 3) solid currentColor;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-radius: var(--stroke, 0.1em);
 }
-.silicon-device-printer:before {
-  top: -0.25em;
-  left: 50%;
-  display: block;
-  width: 1em;
-  height: 0.5em;
-  border: var(--stroke, 0.1em) solid currentColor;
-  border-radius: var(--stroke, 0.1em) var(--stroke, 0.1em) 0 0;
-  transform: translatex(-50%);
-  clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 100%, 72% 100%, 72% 50%, 28% 50%, 28% 100%);
-}
-
-.silicon-office-paperclip {
-  --height: calc(var(--stroke, 0.1em) * 5.5);
-  position: relative;
-  display: inline-block;
-  box-sizing: border-box;
-  width: 0.75em;
-  height: var(--height);
-  border: var(--stroke, 0.1em) solid currentColor;
-  border-left: none;
-  border-radius: 0 0.3em 0.3em 0;
+.silicon-volume-high:after {
+  left: calc(var(--stroke, 0.1em) * -2);
+  bottom: calc(var(--stroke, 0.1em) * -2);
+  width: calc(var(--stroke, 0.1em) * 4);
+  height: calc(var(--stroke, 0.1em) * 4);
+  background-color: currentColor;
   transform: rotate(-45deg);
 }
-.silicon-office-paperclip:before, .silicon-office-paperclip:after {
-  content: "";
-  position: absolute;
-  display: block;
+
+.silicon-volume-high {
+  background-image: radial-gradient(at bottom left, transparent calc(35% - var(--stroke, 0.05em)), currentColor calc(35% - var(--stroke, 0.05em)), currentColor 35%, transparent 35%), radial-gradient(at bottom left, transparent calc(50% - var(--stroke, 0.05em)), currentColor calc(50% - var(--stroke, 0.05em)), currentColor 50%, transparent 50%), radial-gradient(at bottom left, transparent calc(65% - var(--stroke, 0.05em)), currentColor calc(65% - var(--stroke, 0.05em)), currentColor 65%, transparent 65%);
+}
+
+.silicon-volume-low {
+  position: relative;
+  display: inline-block;
   box-sizing: border-box;
-  border: var(--stroke, 0.1em) solid currentColor;
-}
-.silicon-office-paperclip:before {
-  top: calc(var(--stroke, 0.1em) * -1);
-  right: 100%;
-  width: 0.5em;
-  height: calc(var(--height) - (var(--stroke, 0.1em) * 1.5));
-  border-right: none;
-  border-radius: calc( 					var(--height) - (var(--stroke, 0.1em) * 1.5) / 2 				) 0 0 calc(var(--height) - (var(--stroke, 0.1em) * 1.5) / 2);
-}
-.silicon-office-paperclip:after {
-  bottom: calc(var(--stroke, 0.1em) / 2);
-  left: 0;
-  width: 0.5em;
-  height: calc(var(--height) - (var(--stroke, 0.1em) * 3));
+  width: 1em;
+  height: 1em;
+  border-bottom: none;
   border-left: none;
-  border-radius: 0 calc(var(--height) - (var(--stroke, 0.1em) * 3) / 2) calc(var(--height) - (var(--stroke, 0.1em) * 3) / 2) 0;
+  transform: translateX(25%) rotate(45deg);
 }
-
-.silicon-smiley-angry {
-  position: relative;
-  display: inline-block;
-  box-sizing: border-box;
-  width: 1em;
-  height: 1em;
-  border: calc(var(--stroke, 0.1em) / 1) solid currentColor;
-  border-radius: 50%;
-}
-.silicon-smiley-angry:before, .silicon-smiley-angry:after {
+.silicon-volume-low:before, .silicon-volume-low:after {
   content: "";
   position: absolute;
-  box-sizing: border-box;
-}
-.silicon-smiley-angry:before {
-  bottom: 50%;
-  right: calc(50% + 0.05em);
-  width: 0.2em;
-  height: 0.1em;
-  box-shadow: 0.3em 0 0 0 currentColor;
-  background-color: currentColor;
-  border-radius: 0 0 0.1em 0.1em;
-}
-.silicon-smiley-angry:after {
-  top: 50%;
-  left: 50%;
-  width: 0.5em;
-  height: 0.5em;
-  border: calc(var(--stroke, 0.1em) / 2) solid transparent;
-  border-top-color: currentColor;
-  border-radius: 50%;
-  transform: translate(-50%, 25%);
-}
-
-.silicon-smiley-cry {
-  position: relative;
-  display: inline-block;
-  box-sizing: border-box;
-  width: 1em;
-  height: 1em;
-  background-image: radial-gradient(closest-side, currentColor 100%, transparent), radial-gradient(closest-side, currentColor 100%, transparent);
-  background-position: left calc(50% + .15em) bottom calc(50% + .1em), right calc(50% + .15em) bottom calc(50% + .1em);
-  background-repeat: no-repeat, no-repeat;
-  background-size: 0.2em 0.2em, 0.2em 0.2em;
-  border: calc(var(--stroke, 0.1em) / 1) solid currentColor;
-  border-radius: 50%;
-}
-.silicon-smiley-cry:before, .silicon-smiley-cry:after {
-  content: "";
-  position: absolute;
-  box-sizing: border-box;
-}
-.silicon-smiley-cry:before {
-  top: 50%;
-  right: calc(50% + 0.15em);
   display: block;
-  width: 0.2em;
-  height: 0.2em;
-  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
-  border-radius: 0 50% 50% 50%;
-  transform: rotate(45deg);
+  box-sizing: border-box;
 }
-.silicon-smiley-cry:after {
-  top: 50%;
-  left: 50%;
-  width: 0.5em;
-  height: 0.5em;
-  border: calc(var(--stroke, 0.1em) / 2) solid transparent;
-  border-top-color: currentColor;
-  border-radius: 50%;
-  transform: translate(-50%, 25%);
+.silicon-volume-low:before {
+  left: calc(var(--stroke, 0.1em) * -1.5);
+  bottom: calc(var(--stroke, 0.1em) * -1.5);
+  width: 0;
+  height: 0;
+  border: calc(var(--stroke, 0.1em) * 3) solid currentColor;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-radius: var(--stroke, 0.1em);
+}
+.silicon-volume-low:after {
+  left: calc(var(--stroke, 0.1em) * -2);
+  bottom: calc(var(--stroke, 0.1em) * -2);
+  width: calc(var(--stroke, 0.1em) * 4);
+  height: calc(var(--stroke, 0.1em) * 4);
+  background-color: currentColor;
+  transform: rotate(-45deg);
 }
 
-.silicon-smiley-grin {
+.silicon-volume-low {
+  background-image: radial-gradient(at bottom left, transparent calc(35% - var(--stroke, 0.05em)), currentColor calc(35% - var(--stroke, 0.05em)), currentColor 35%, transparent 35%);
+}
+
+.silicon-volume-medium {
   position: relative;
   display: inline-block;
   box-sizing: border-box;
   width: 1em;
   height: 1em;
-  border: calc(var(--stroke, 0.1em) / 1) solid currentColor;
-  border-radius: 50%;
+  border-bottom: none;
+  border-left: none;
+  transform: translateX(25%) rotate(45deg);
 }
-.silicon-smiley-grin:before, .silicon-smiley-grin:after {
+.silicon-volume-medium:before, .silicon-volume-medium:after {
   content: "";
   position: absolute;
+  display: block;
   box-sizing: border-box;
 }
-.silicon-smiley-grin:before {
-  bottom: 50%;
-  right: calc(50% + 0.05em);
-  width: 0.2em;
-  height: 0.2em;
-  box-shadow: 0.3em 0 0 0 currentColor;
-  background-color: currentColor;
-  border-radius: 50%;
+.silicon-volume-medium:before {
+  left: calc(var(--stroke, 0.1em) * -1.5);
+  bottom: calc(var(--stroke, 0.1em) * -1.5);
+  width: 0;
+  height: 0;
+  border: calc(var(--stroke, 0.1em) * 3) solid currentColor;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-radius: var(--stroke, 0.1em);
 }
-.silicon-smiley-grin:after {
-  top: 50%;
-  left: 50%;
-  width: 0.5em;
-  height: 0.25em;
-  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
-  border-radius: 0 0 0.5em 0.5em;
-  transform: translate(-50%, 25%);
+.silicon-volume-medium:after {
+  left: calc(var(--stroke, 0.1em) * -2);
+  bottom: calc(var(--stroke, 0.1em) * -2);
+  width: calc(var(--stroke, 0.1em) * 4);
+  height: calc(var(--stroke, 0.1em) * 4);
+  background-color: currentColor;
+  transform: rotate(-45deg);
 }
 
-.silicon-smiley-happy {
+.silicon-volume-medium {
+  background-image: radial-gradient(at bottom left, transparent calc(35% - var(--stroke, 0.05em)), currentColor calc(35% - var(--stroke, 0.05em)), currentColor 35%, transparent 35%), radial-gradient(at bottom left, transparent calc(50% - var(--stroke, 0.05em)), currentColor calc(50% - var(--stroke, 0.05em)), currentColor 50%, transparent 50%);
+}
+
+.silicon-volume-mute {
   position: relative;
   display: inline-block;
   box-sizing: border-box;
   width: 1em;
   height: 1em;
-  border: calc(var(--stroke, 0.1em) / 1) solid currentColor;
-  border-radius: 50%;
+  border-bottom: none;
+  border-left: none;
+  transform: translateX(25%) rotate(45deg);
 }
-.silicon-smiley-happy:before, .silicon-smiley-happy:after {
+.silicon-volume-mute:before, .silicon-volume-mute:after {
   content: "";
   position: absolute;
+  display: block;
   box-sizing: border-box;
 }
-.silicon-smiley-happy:before {
-  bottom: 50%;
-  right: calc(50% + 0.05em);
-  width: 0.2em;
-  height: 0.2em;
-  box-shadow: 0.3em 0 0 0 currentColor;
-  background-color: currentColor;
-  border-radius: 50%;
+.silicon-volume-mute:before {
+  left: calc(var(--stroke, 0.1em) * -1.5);
+  bottom: calc(var(--stroke, 0.1em) * -1.5);
+  width: 0;
+  height: 0;
+  border: calc(var(--stroke, 0.1em) * 3) solid currentColor;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-radius: var(--stroke, 0.1em);
 }
-.silicon-smiley-happy:after {
-  top: 50%;
-  left: 50%;
-  width: 0.5em;
-  height: 0.5em;
-  border: calc(var(--stroke, 0.1em) / 2) solid transparent;
-  border-bottom-color: currentColor;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
+.silicon-volume-mute:after {
+  left: calc(var(--stroke, 0.1em) * -2);
+  bottom: calc(var(--stroke, 0.1em) * -2);
+  width: calc(var(--stroke, 0.1em) * 4);
+  height: calc(var(--stroke, 0.1em) * 4);
+  background-color: currentColor;
+  transform: rotate(-45deg);
 }
 
-.silicon-smiley-sad {
+.silicon-volume-mute {
+  background-image: radial-gradient(at bottom left, transparent calc(35% - var(--stroke, 0.05em)), currentColor calc(35% - var(--stroke, 0.05em)), currentColor 35%, transparent 35%), radial-gradient(at bottom left, transparent calc(50% - var(--stroke, 0.05em)), currentColor calc(50% - var(--stroke, 0.05em)), currentColor 50%, transparent 50%), radial-gradient(at bottom left, transparent calc(65% - var(--stroke, 0.05em)), currentColor calc(65% - var(--stroke, 0.05em)), currentColor 65%, transparent 65%);
+}
+
+.silicon-volume-off {
   position: relative;
   display: inline-block;
   box-sizing: border-box;
   width: 1em;
   height: 1em;
-  border: calc(var(--stroke, 0.1em) / 1) solid currentColor;
-  border-radius: 50%;
+  border-bottom: none;
+  border-left: none;
+  transform: translateX(25%) rotate(45deg);
 }
-.silicon-smiley-sad:before, .silicon-smiley-sad:after {
+.silicon-volume-off:before, .silicon-volume-off:after {
   content: "";
   position: absolute;
+  display: block;
   box-sizing: border-box;
 }
-.silicon-smiley-sad:before {
-  bottom: 50%;
-  right: calc(50% + 0.05em);
-  width: 0.2em;
-  height: 0.2em;
-  box-shadow: 0.3em 0 0 0 currentColor;
-  background-color: currentColor;
-  border-radius: 50%;
+.silicon-volume-off:before {
+  left: calc(var(--stroke, 0.1em) * -1.5);
+  bottom: calc(var(--stroke, 0.1em) * -1.5);
+  width: 0;
+  height: 0;
+  border: calc(var(--stroke, 0.1em) * 3) solid currentColor;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-radius: var(--stroke, 0.1em);
 }
-.silicon-smiley-sad:after {
-  top: 50%;
-  left: 50%;
-  width: 0.5em;
-  height: 0.5em;
-  border: calc(var(--stroke, 0.1em) / 2) solid transparent;
-  border-top-color: currentColor;
-  border-radius: 50%;
-  transform: translate(-50%, 25%);
+.silicon-volume-off:after {
+  left: calc(var(--stroke, 0.1em) * -2);
+  bottom: calc(var(--stroke, 0.1em) * -2);
+  width: calc(var(--stroke, 0.1em) * 4);
+  height: calc(var(--stroke, 0.1em) * 4);
+  background-color: currentColor;
+  transform: rotate(-45deg);
 }
 
-.silicon-smiley-wink {
+.silicon-weather-sun {
   position: relative;
   display: inline-block;
   box-sizing: border-box;
-  width: 1em;
-  height: 1em;
-  background-image: linear-gradient(to right, currentColor, currentColor);
-  background-position: left calc(50% + .15em) bottom calc(50% + .1em);
-  background-repeat: no-repeat;
-  background-size: 0.2em 0.05em;
-  border: calc(var(--stroke, 0.1em) / 1) solid currentColor;
-  border-radius: 50%;
-}
-.silicon-smiley-wink:before, .silicon-smiley-wink:after {
-  content: "";
-  position: absolute;
-  box-sizing: border-box;
-}
-.silicon-smiley-wink:before {
-  bottom: 50%;
-  right: calc(50% + 0.05em);
-  width: 0.2em;
-  height: 0.2em;
-  background-color: currentColor;
-  border-radius: 50%;
-}
-.silicon-smiley-wink:after {
-  top: 50%;
-  left: 50%;
   width: 0.5em;
   height: 0.5em;
-  border: calc(var(--stroke, 0.1em) / 2) solid transparent;
-  border-bottom-color: currentColor;
+  border: var(--stroke, 0.1em) solid currentColor;
   border-radius: 50%;
-  transform: translate(-50%, -50%);
+  box-shadow: -0.55em 0 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor, 0.55em 0 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor, 0 -0.55em 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor, 0 0.55em 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor, -0.4em -0.4em 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor, -0.4em 0.4em 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor, 0.4em -0.4em 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor, 0.4em 0.4em 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor;
 }
 
 .silicon-wifi {
@@ -1165,6 +1426,74 @@
   border-bottom: none;
   border-left: none;
   border-radius: 0 calc(var(--stroke, 0.1em) * 1.5) 0 0;
+}
+
+.silicon-zoom-in {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 50%;
+}
+.silicon-zoom-in:before, .silicon-zoom-in:after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+}
+.silicon-zoom-in:before {
+  top: 100%;
+  left: 100%;
+  display: block;
+  width: 0.5em;
+  height: var(--stroke, 0.1em);
+  background-color: currentColor;
+  transform: translate(-0.1em, -0.1em) rotate(45deg);
+  transform-origin: 0 50%;
+}
+.silicon-zoom-in:after {
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 0.4em;
+  height: 0.4em;
+  background-image: linear-gradient(to right, transparent calc(50% - var(--stroke, 0.1em) / 4), currentColor calc(50% - var(--stroke, 0.1em) / 4), currentColor calc(50% + var(--stroke, 0.1em) / 4), transparent calc(50% + var(--stroke, 0.1em) / 4)), linear-gradient(to bottom, transparent calc(50% - var(--stroke, 0.1em) / 4), currentColor calc(50% - var(--stroke, 0.1em) / 4), currentColor calc(50% + var(--stroke, 0.1em) / 4), transparent calc(50% + var(--stroke, 0.1em) / 4));
+  transform: translate(-50%, -50%);
+}
+
+.silicon-zoom-out {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 50%;
+}
+.silicon-zoom-out:before, .silicon-zoom-out:after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+}
+.silicon-zoom-out:before {
+  top: 100%;
+  left: 100%;
+  display: block;
+  width: 0.5em;
+  height: var(--stroke, 0.1em);
+  background-color: currentColor;
+  transform: translate(-0.1em, -0.1em) rotate(45deg);
+  transform-origin: 0 50%;
+}
+.silicon-zoom-out:after {
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 0.4em;
+  height: 0.4em;
+  background-image: linear-gradient(to bottom, transparent calc(50% - var(--stroke, 0.1em) / 4), currentColor calc(50% - var(--stroke, 0.1em) / 4), currentColor calc(50% + var(--stroke, 0.1em) / 4), transparent calc(50% + var(--stroke, 0.1em) / 4));
+  transform: translate(-50%, -50%);
 }
 
 /*# sourceMappingURL=icons.css.map */

@@ -5,22 +5,10 @@
   width: 1em;
   height: 1em;
   border: var(--stroke, 0.1em) solid currentColor;
-  border-left-color: transparent;
-  border-radius: 50%;
-  transform: rotate(90deg);
+  border-radius: 50% 0 50% 50%;
+  transform: rotate(-45deg);
 }
-.silicon-shape-drop:before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 50%;
-  display: block;
-  box-sizing: border-box;
-  width: 0.5em;
-  height: 0.5em;
-  border: var(--stroke, 0.1em) solid currentColor;
-  border-top: none;
-  border-right: none;
-  transform: rotate(45deg);
-  transform-origin: 100% 0;
+.silicon-shape-drop.colored {
+  color: #9999ff;
+  background-color: #ccccff;
 }

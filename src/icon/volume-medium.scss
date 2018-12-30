@@ -1,7 +1,7 @@
 @import '../default';
 @import 'volume-off';
 
-@mixin silicon-volume-high($class: '#{$silicon-prefix}volume-high') {
+@mixin silicon-volume-medium($class: '#{$silicon-prefix}volume-medium') {
 	@include silicon-volume-off($class);
 	.#{$class} {
 		background-image: radial-gradient(
@@ -17,13 +17,6 @@
 				currentColor calc(50% - var(--stroke, #{$silicon-stroke / 2})),
 				currentColor 50%,
 				transparent 50%
-			),
-			radial-gradient(
-				at bottom left,
-				transparent calc(65% - var(--stroke, #{$silicon-stroke / 2})),
-				currentColor calc(65% - var(--stroke, #{$silicon-stroke / 2})),
-				currentColor 65%,
-				transparent 65%
 			);
 	}
 }

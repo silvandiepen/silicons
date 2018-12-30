@@ -1,34 +1,60 @@
-@import "../default";
+@import '../default';
 
 @mixin silicon-device-laptop($class: '#{$silicon-prefix}device-laptop') {
 	.#{$class} {
+		/* position */
 		position: relative;
 
+		/* size */
 		display: inline-block;
-    box-sizing: border-box;
+		box-sizing: border-box;
 		width: 1em;
 		height: 0.6em;
 
+		/* border */
 		border: var(--stroke, #{$silicon-stroke}) solid currentColor;
 		border-bottom: 0;
 		border-radius: 0.1em 0.1em 0 0;
 
 		&:before {
-      content: '';
-      
-      position: absolute;
+			content: '';
+
+			/* position */
+			position: absolute;
 			top: calc(100%);
 			left: 50%;
 
+			/* size */
 			display: block;
-      box-sizing: border-box;
+			box-sizing: border-box;
 			width: 1.2em;
 			height: calc(var(--stroke, #{$silicon-stroke}) * 2);
 
+			/* border */
 			border: calc(var(--stroke, #{$silicon-stroke}) / 2) solid currentColor;
 			border-radius: 0 0 0.2em 0.2em;
 
+			/* transform */
 			transform: translateX(-50%);
+		}
+
+		&.colored {
+			/* text */
+			color: $color-dark;
+
+			/* background */
+			background-color: $color-blue;
+			background-image: linear-gradient(
+				-70deg,
+				transparent 40%,
+				var(--white-02, rgba(255, 255, 255, 0.2)) 40%,
+				var(--white-02, rgba(255, 255, 255, 0.2)) 60%,
+				transparent 60%
+			);
+			&:before {
+				/* background */
+				background-color: $color-gray;
+			}
 		}
 	}
 }

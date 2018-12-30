@@ -1,23 +1,33 @@
 @import '../default';
 @import 'battery-empty';
 
-@mixin silicon-battery-half($class: '#{$silicon-prefix}battery-half') {
+@mixin silicon-battery-75($class: '#{$silicon-prefix}battery-75') {
 	@include silicon-battery-empty(#{$class});
 	.#{$class} {
 		&:after {
 			content: '';
 
+			/* position */
 			position: absolute;
 			top: calc(var(--stroke, #{$silicon-stroke}) / 2);
 			left: calc(var(--stroke, #{$silicon-stroke}) / 2);
 
+			/* size */
 			display: block;
-			width: calc(50%);
+			width: calc(75%);
 			height: calc(100% - var(--stroke, #{$silicon-stroke}));
 
+			/* background */
 			background-color: currentColor;			
 			
+			/* border */
 			border-radius: calc(var(--stroke, #{$silicon-stroke}) / 2);
+		}
+		&.colored{
+			&:after{
+				/* background */
+				background-color:$color-green;
+			}
 		}
 	}
 }

@@ -2,34 +2,45 @@
 
 @mixin silicon-device-tv($class: '#{$silicon-prefix}device-tv') {
 	.#{$class} {
+		/* position */ 
 		position: relative;
 
+		/* size */ 
 		display: inline-block;
-    box-sizing: border-box;
+		box-sizing: border-box;
 		width: 1em;
 		height: 0.75em;
 
+		/* border */ 
 		border: var(--stroke, #{$silicon-stroke}) solid currentColor;
 		border-radius: 0.2em;
 
 		&:before {
 			content: '';
 
+		/* position */ 
 			position: absolute;
 			bottom: 100%;
 			left: 50%;
 
+		/* size */ 
 			display: block;
 			box-sizing: border-box;
 			width: calc(var(--stroke, #{$silicon-stroke}) * 3);
 			height: calc(var(--stroke, #{$silicon-stroke}) * 3);
 
+		/* border */ 
 			border: calc(var(--stroke, #{$silicon-stroke}) / 2) solid currentColor;
 			border-top: 0;
 			border-right: 0;
 
+		/* transform */ 
 			transform: translateX(-50%)
 				translateY(calc(var(--stroke, #{$silicon-stroke}) * -1)) rotate(-45deg);
+		}
+		.colored {
+			/* background */ 
+			background-image: $color-purple;
 		}
 	}
 }

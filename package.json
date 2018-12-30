@@ -6,7 +6,7 @@
   "scripts": {
     "test": "npm run test",
     "dev": "sass --watch sass src/icons.scss dist/icons.css--style compressed",
-    "build": "npm run build:sass && npm run build:min && npm run build:icons",
+    "build": " npm run build:icons && npm run build:sass && npm run build:min",
     "build:min": "sass src/icons.scss dist/icons.min.css --style compressed",
     "build:sass": "sass src/icons.scss dist/icons.css",
     "build:icons": "node ./build/icons.js",

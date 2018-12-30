@@ -2,30 +2,72 @@
 
 @mixin silicon-copy($class: '#{$silicon-prefix}copy') {
 	.#{$class} {
+		/* position */
 		position: relative;
+		z-index: 1;
 
+		/* size */
 		display: inline-block;
 		box-sizing: border-box;
 		width: 0.75em;
 		height: 1em;
 
-		border: var(--stroke, #{$silicon-stroke}) solid currentColor;
-
-		&:before {
+		&:before,
+		&:after {
 			content: '';
 
+			/* position */
 			position: absolute;
-			top: calc(var(--stroke, #{$silicon-stroke}) * -3);
-			left: calc(var(--stroke, #{$silicon-stroke}) * -3);
 
+			/* size */
 			display: block;
 			box-sizing: border-box;
 			width: 0.75em;
 			height: 1em;
 
+			/* border */
 			border: var(--stroke, #{$silicon-stroke}) solid currentColor;
+		}
+
+		&:before {
+			/* position */
+			top: calc(var(--stroke, #{$silicon-stroke}) * -2);
+			left: calc(var(--stroke, #{$silicon-stroke}) * -2);
+			z-index: -1;
+
+			/* border */
 			border-right: none;
 			border-bottom: none;
+		}
+
+		&:after {
+			/* position */
+			top: 0;
+			left: 0;
+			z-index: 1;
+		}
+
+		&.colored {
+			&:before,&:after {
+				/* text */
+				color: $color-black;
+				
+				/* background */
+				background-color: white;
+
+				/* border */
+				border: calc(var(--stroke, #{$silicon-stroke}) / 2) solid currentColor;
+			}
+			&:before{
+				/* text */
+				color: $color-gray;
+				
+				/* background */
+				background-color: $color-white;
+				
+				/* opacity */
+				opacity: .5;
+			}
 		}
 	}
 }

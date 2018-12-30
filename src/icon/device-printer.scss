@@ -2,58 +2,90 @@
 
 @mixin silicon-device-printer($class: '#{$silicon-prefix}device-printer') {
 	.#{$class} {
+		/* position */
 		position: relative;
 
+		/* size */
 		display: inline-block;
 		box-sizing: border-box;
 		width: 0.5em;
 		height: 0.5em;
 
+		/* border */
 		border: calc(var(--stroke, #{$silicon-stroke}) / 2) solid currentColor;
 
 		&:before,
 		&:after {
 			content: '';
 
+			/* position */
 			position: absolute;
 			box-sizing: border-box;
 		}
 
 		&:after {
-			bottom: calc(100% + (var(--stroke, #{$silicon-stroke}) * 2));
+			/* position */
+			bottom: calc(100% + (var(--stroke, #{$silicon-stroke}) * 2.5));
 			left: 50%;
 
+			/* size */
 			display: block;
 			width: 0.5em;
-			height: 0.25em;
+			height: 0.1em;
 
+			/* border */
 			border: calc(var(--stroke, #{$silicon-stroke}) / 2) solid currentColor;
+			border-bottom: none;
 
+			/* transform */
 			transform: translateX(-50%);
 		}
 		&:before {
+			/* position */
 			top: -0.25em;
 			left: 50%;
 
+			/* sisze */
 			display: block;
 			width: 1em;
 			height: 0.5em;
 
+			/* border */
 			border: var(--stroke, #{$silicon-stroke}) solid currentColor;
-			border-radius: var(--stroke, #{$silicon-stroke}) var(--stroke, #{$silicon-stroke}) 0 0;
+			border-radius: var(--stroke, #{$silicon-stroke})
+				var(--stroke, #{$silicon-stroke}) 0 0;
 
+			/* transform */
 			transform: translatex(-50%);
 
+			/* paths */
 			clip-path: polygon(
 				0% 100%,
 				0% 0%,
 				100% 0%,
 				100% 100%,
-				72% 100%,
-				72% 50%,
-				28% 50%,
-				28% 100%
+				74% 100%,
+				74% 50%,
+				26% 50%,
+				26% 100%
 			);
+		}
+		&.colored {
+			&,
+			&:after {
+				/* text */
+				color: $color-gray;
+				
+				/* background */
+				background-color: $color-white;
+			}
+			&:before {
+				/* text */
+				color: $color-black;
+				
+				/* background */
+				background-color: $color-dark;
+			}
 		}
 	}
 }

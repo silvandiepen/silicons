@@ -58,5 +58,11 @@
 			transform: rotate(-45deg);
 			transform-origin: 0 100%;
 		}
+		&.colored{
+			color: $color-dark;
+			&:before,&:after{
+				color: $color-green;
+			}
+		}
 	}
 }

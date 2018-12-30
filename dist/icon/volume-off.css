@@ -2,35 +2,33 @@
   position: relative;
   display: inline-block;
   box-sizing: border-box;
-  width: calc(var(--stroke, 0.1em) * 7);
-  height: calc(var(--stroke, 0.1em) * 7);
-  border: calc(var(--stroke, 0.1em) * 1.5) solid currentColor;
+  width: 1em;
+  height: 1em;
   border-bottom: none;
   border-left: none;
-  border-radius: 0 calc(var(--stroke, 0.1em) * 8) 0 0;
-  transform: rotate(-45deg);
+  transform: translateX(25%) rotate(45deg);
 }
 .silicon-volume-off:before, .silicon-volume-off:after {
   content: "";
   position: absolute;
-  left: 0;
-  bottom: 0;
   display: block;
   box-sizing: border-box;
 }
 .silicon-volume-off:before {
-  width: calc(var(--stroke, 0.1em) * 4.25);
-  height: calc(var(--stroke, 0.1em) * 4.25);
-  border: calc(var(--stroke, 0.1em) * 1.5) solid currentColor;
-  border-bottom: none;
-  border-left: none;
-  border-radius: 0 calc(var(--stroke, 0.1em) * 4.25) 0 0;
+  left: calc(var(--stroke, 0.1em) * -1.5);
+  bottom: calc(var(--stroke, 0.1em) * -1.5);
+  width: 0;
+  height: 0;
+  border: calc(var(--stroke, 0.1em) * 3) solid currentColor;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-radius: var(--stroke, 0.1em);
 }
 .silicon-volume-off:after {
-  width: calc(var(--stroke, 0.1em) * 1.5);
-  height: calc(var(--stroke, 0.1em) * 1.5);
-  border: calc(var(--stroke, 0.1em) * 1.5) solid currentColor;
-  border-bottom: none;
-  border-left: none;
-  border-radius: 0 calc(var(--stroke, 0.1em) * 1.5) 0 0;
+  left: calc(var(--stroke, 0.1em) * -2);
+  bottom: calc(var(--stroke, 0.1em) * -2);
+  width: calc(var(--stroke, 0.1em) * 4);
+  height: calc(var(--stroke, 0.1em) * 4);
+  background-color: currentColor;
+  transform: rotate(-45deg);
 }

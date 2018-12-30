@@ -4,24 +4,17 @@
   box-sizing: border-box;
   width: 1em;
   height: 1em;
+  background-image: radial-gradient(closest-side, currentColor 100%, transparent), radial-gradient(closest-side, currentColor 100%, transparent);
+  background-position: left calc(50% + 0.15em) bottom calc(50% + 0.1em), right calc(50% + 0.15em) bottom calc(50% + 0.1em);
+  background-repeat: no-repeat, no-repeat;
+  background-size: 0.2em 0.2em, 0.2em 0.2em;
   border: calc(var(--stroke, 0.1em) / 1) solid currentColor;
   border-radius: 50%;
 }
-.silicon-smiley-grin:before, .silicon-smiley-grin:after {
+.silicon-smiley-grin:after {
   content: "";
   position: absolute;
   box-sizing: border-box;
-}
-.silicon-smiley-grin:before {
-  bottom: 50%;
-  right: calc(50% + 0.05em);
-  width: 0.2em;
-  height: 0.2em;
-  box-shadow: 0.3em 0 0 0 currentColor;
-  background-color: currentColor;
-  border-radius: 50%;
-}
-.silicon-smiley-grin:after {
   top: 50%;
   left: 50%;
   width: 0.5em;
@@ -29,4 +22,13 @@
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-radius: 0 0 0.5em 0.5em;
   transform: translate(-50%, 25%);
+}
+.silicon-smiley-grin.colored {
+  color: #dcb104;
+  background-color: #f5c505;
+  background-image: radial-gradient(closest-side, black 50%, white 50%, white 100%, transparent), radial-gradient(closest-side, black 50%, white 50%, white 100%, transparent);
+}
+.silicon-smiley-grin.colored:after {
+  color: black;
+  background-color: white;
 }

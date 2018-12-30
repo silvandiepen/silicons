@@ -1,4 +1,4 @@
-.silicon-battery-full {
+.silicon-battery-50 {
   position: relative;
   display: inline-block;
   box-sizing: border-box;
@@ -7,7 +7,7 @@
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-radius: calc(var(--stroke, 0.1em) * 1.5);
 }
-.silicon-battery-full:before {
+.silicon-battery-50:before {
   content: "";
   position: absolute;
   top: 50%;
@@ -20,28 +20,28 @@
   border-radius: 0 calc(var(--stroke, 0.1em) * 0.5) calc(var(--stroke, 0.1em) * 0.5) 0;
   transform: translateY(-50%);
 }
-.silicon-battery-full.colored {
+.silicon-battery-50.colored {
   color: black;
   background-color: white;
 }
-.silicon-battery-full.colored:before {
+.silicon-battery-50.colored:before {
   background-color: white;
 }
-.silicon-battery-full.colored:after {
+.silicon-battery-50.colored:after {
   background-color: var(--red, red);
 }
 
-.silicon-battery-full:after {
-  content: "";
+.silicon-battery-50:after {
+  content: "\8";
   position: absolute;
   top: calc(var(--stroke, 0.1em) / 2);
   left: calc(var(--stroke, 0.1em) / 2);
   display: block;
-  width: calc(100% - var(--stroke, 0.1em));
+  width: calc(50%);
   height: calc(100% - var(--stroke, 0.1em));
   background-color: currentColor;
   border-radius: calc(var(--stroke, 0.1em) / 2);
 }
-.silicon-battery-full.colored:after {
-  background-color: var(--green, lightgreen);
+.silicon-battery-50.colored:after {
+  background-color: var(--orange, orange);
 }

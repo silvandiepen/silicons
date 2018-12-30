@@ -1,30 +1,27 @@
-@import "../default";
+@import '../default';
+@import 'device-phone';
 
 @mixin silicon-device-tablet($class: '#{$silicon-prefix}device-tablet') {
-	.#{$class} {		
-		position: relative;
-
-		display: inline-block;
-		box-sizing: border-box;
+	@include silicon-device-phone($class);
+	.#{$class} {
+		/* size */
 		width: 1em;
-		height: 0.7em;
+		height: 0.6em;
 
-		background-image: radial-gradient(
-				circle closest-side,
-				currentColor 70%,
-				transparent 70%
-			)
-			linear-gradient(to bottom, currentColor, currentColor);
-		background-repeat: no-repeat, no-repeat;
-		background-position: bottom calc(var(--stroke, #{$silicon-stroke}) / 2) left
-				50%,
-			top calc(var(--stroke, #{$silicon-stroke}) / 2) left 50%;
-		background-size: calc(var(--stroke, #{$silicon-stroke}) * 1.5)
-				calc(var(--stroke, #{$silicon-stroke}) * 1.5),
-			calc(var(--stroke, #{$silicon-stroke}) * 1.5)
-				calc(var(--stroke, #{$silicon-stroke}) * 3);
+		&:before {
+			/* position */
+			top: 50%;
+			left: 0;
+			
+			/* size */
+			width: 0.05em;
+			height: 0.2em;
 
-		border: var(--stroke, #{$silicon-stroke}) solid currentColor;
-		border-radius: 0.1em;
+			/* border */
+			border-radius: 0 0.05em 0.05em 0;
+
+			/* transform */
+			transform: translateY(0, -50%) rotate(-90deg);
+		}
 	}
 }

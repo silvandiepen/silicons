@@ -47,5 +47,11 @@
 			transform: rotate(135deg);
 			transform-origin: 0 100%;
 		}
+		&.colored{
+			color: $color-dark;
+			&:before,&:after{
+				color: $color-green;
+			}
+		}
 	}
 }

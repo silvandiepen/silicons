@@ -5,8 +5,7 @@
 			"custom-properties",
 			"dollar-variables",
 			"declarations",
-			"rules",
-			"at-rules"
+			"rules"
 		],
 	},
 	"extends": [

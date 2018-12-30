@@ -1,56 +1,46 @@
 @import '../default';
+@import 'smiley-happy';
 
 @mixin silicon-smiley-cry($class: '#{$silicon-prefix}smiley-cry') {
+	@include silicon-smiley-happy($class);
 	.#{$class} {
-		position: relative;
-
-		display: inline-block;
-		box-sizing: border-box;
-		width: 1em;
-		height: 1em;
-
-		background-image: radial-gradient(closest-side, currentColor 100%, transparent),radial-gradient(closest-side, currentColor 100%, transparent);
-		background-position: left calc(50% + .15em) bottom calc(50% + .1em), right calc(50% + .15em) bottom calc(50% + .1em);
-		background-repeat: no-repeat, no-repeat; 
-		background-size: 0.2em 0.2em,0.2em 0.2em;;
-		
-		border: calc(var(--stroke, #{$silicon-stroke}) / 1) solid currentColor;
-		border-radius: 50%;
-
-		&:before,
-		&:after {
+		&:before {
 			content: '';
 
+			/* position */
 			position: absolute;
-			box-sizing: border-box;
-			
-		}
-
-		&:before {
 			top: 50%;
 			right: calc(50% + 0.15em);
 
+			/* size */
 			display: block;
+			box-sizing: border-box;
 			width: 0.2em;
 			height: 0.2em;
-			
+
+			/* border */
 			border: calc(var(--stroke, #{$silicon-stroke}) / 2) solid currentColor;
 			border-radius: 0 50% 50% 50%;
-			
+
+			/* transform */
 			transform: rotate(45deg);
 		}
 		&:after {
-			top: 50%;
-			left: 50%; 
-			
-			width: 0.5em;
-			height: 0.5em;
-			
-			border: calc(var(--stroke, #{$silicon-stroke}) / 2) solid transparent;
+			/* border */
 			border-top-color: currentColor;
-			border-radius: 50%;
-			
-			transform: translate(-50%,25%);
+			border-bottom-color: transparent;
+
+			/* transform */
+			transform: translate(-50%, 25%);
+		}
+		&.colored {
+			&:before {
+				/* text */
+				color: lighten(blue, 20%);
+				
+				/* background */
+				background-color: lighten(blue, 30%);
+			}
 		}
 	}
 }

@@ -1,50 +1,56 @@
 @import '../default';
+@import 'smiley-happy';
 
 @mixin silicon-smiley-angry($class: '#{$silicon-prefix}smiley-angry') {
+	@include silicon-smiley-happy($class);
 	.#{$class} {
-		position: relative;
-
-		display: inline-block;
-		box-sizing: border-box;
-		width: 1em;
-		height: 1em;
-
-		border: calc(var(--stroke, #{$silicon-stroke}) / 1) solid currentColor;
-		border-radius: 50%;
-
+		background-image: none;
 		&:before,
 		&:after {
 			content: '';
-
+			
+			/* position */
 			position: absolute;
 			box-sizing: border-box;
 		}
 
 		&:before {
-			bottom: 50%;
+			/* position */
 			right: calc(50% + 0.05em);
-
+			bottom: 50%;
+			
+			/* size */
 			width: 0.2em;
 			height: 0.1em;
-
-			box-shadow: 0.3em 0 0 0 currentColor;
-
+			
+			/* background */
 			background-color: currentColor;
-
-			border-radius: 0 0 .1em .1em;
+			
+			/* border */
+			border-radius: 0 0 0.1em 0.1em;
+			
+			/* box */
+			box-shadow: 0.3em 0 0 0 currentColor;
 		}
 		&:after {
-			top: 50%;
-			left: 50%; 
-			
-			width: 0.5em;
-			height: 0.5em;
-			
-			border: calc(var(--stroke, #{$silicon-stroke}) / 2) solid transparent;
+			/* border */
 			border-top-color: currentColor;
-			border-radius: 50%;
+			border-bottom-color: transparent;
 			
-			transform: translate(-50%,25%);
+			/* transform */
+			transform: translate(-50%, 25%);
+		}
+		&.colored {
+			&:before {
+				/* position */
+				bottom: calc(50% + 0.1em);
+				
+				/* text */
+				color: $color-yellow;
+				
+				/* border */
+				border-radius: 0.1em 0.1em 0 0;
+			}
 		}
 	}
 }

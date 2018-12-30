@@ -13,16 +13,16 @@
 		border-bottom: none;
 		border-left: none;
 		border-radius: 0 calc(var(--stroke, #{$silicon-stroke}) * 8) 0 0;
-		
+
 		transform: rotate(-45deg);
 
 		&:before,
 		&:after {
-			content: "";
-			
+			content: '';
+
 			position: absolute;
-			left: 0;
 			bottom: 0;
+			left: 0;
 
 			display: block;
 			box-sizing: border-box;
@@ -30,8 +30,8 @@
 		&:before {
 			width: calc(var(--stroke, #{$silicon-stroke}) * 4.25);
 			height: calc(var(--stroke, #{$silicon-stroke}) * 4.25);
-			
-			border: calc(var(--stroke, #{$silicon-stroke}) * 1.5)  solid currentColor;
+
+			border: calc(var(--stroke, #{$silicon-stroke}) * 1.5) solid currentColor;
 			border-bottom: none;
 			border-left: none;
 			border-radius: 0 calc(var(--stroke, #{$silicon-stroke}) * 4.25) 0 0;
@@ -39,11 +39,14 @@
 		&:after {
 			width: calc(var(--stroke, #{$silicon-stroke}) * 1.5);
 			height: calc(var(--stroke, #{$silicon-stroke}) * 1.5);
-			
+
 			border: calc(var(--stroke, #{$silicon-stroke}) * 1.5) solid currentColor;
 			border-bottom: none;
 			border-left: none;
 			border-radius: 0 calc(var(--stroke, #{$silicon-stroke}) * 1.5) 0 0;
+		}
+		&.colored {
+			color: $color-blue;
 		}
 	}
 }

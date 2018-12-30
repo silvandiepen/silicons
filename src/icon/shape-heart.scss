@@ -46,5 +46,11 @@
 			border-bottom: var(--stroke, #{$silicon-stroke}) solid currentColor;
 			border-radius: 0 0.5em 0.5em 0;
     }
+		&.colored {
+			&,&:after,&:before{
+			color: $color-dark-red;
+			background-color: $color-red;
+			}
+		}
 	}
 }

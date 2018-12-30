@@ -1,47 +1,17 @@
 @import '../default';
+@import 'text-align-left';
 
 @mixin silicon-text-align-center(
 	$class: '#{$silicon-prefix}text-align-center'
 ) {
+	@include silicon-text-align-left($class);
 	.#{$class} {
-		position: relative;
-
-		display: inline-block;
-		box-sizing: border-box;
-		width: 1em;
-		height: calc(var(--stroke, #{$silicon-stroke}) * 3);
-
-		border-top: var(--stroke, #{$silicon-stroke}) solid currentColor;
-		border-left: none;
-		border-right: none;
-		
-		background-image: linear-gradient(to right, currentColor, currentColor);
-		background-size: 0.75em var(--stroke, #{$silicon-stroke});
+		/* background */
 		background-position: bottom center;
-		background-repeat: no-repeat;
-		
-		transform: translateY(calc(var(--stroke, #{$silicon-stroke}) * -2));
 		
 		&:before {
-			content: '';
-
-			position: absolute;
-			top:  calc(var(--stroke, #{$silicon-stroke}) * 3);
-			left: 0;
-
-			display: block;
-			box-sizing: border-box;
-			width: 100%;
-			height: calc(var(--stroke, #{$silicon-stroke}) * 3);
-
-			border-top: var(--stroke, #{$silicon-stroke}) solid currentColor;
-			border-left: none;
-			border-right: none;
-			
-			background-image: linear-gradient(to right, currentColor, currentColor);
-			background-size: 0.5em var(--stroke, #{$silicon-stroke});
+			/* background */
 			background-position: bottom center;
-			background-repeat: no-repeat;
 		}
 	}
 }

@@ -2,52 +2,91 @@
 
 @mixin silicon-map($class: '#{$silicon-prefix}map') {
 	.#{$class} {
+		/* position */
 		position: relative;
 
+		/* size */
 		display: inline-block;
 		box-sizing: border-box;
 		width: 0.33em;
 		height: 1em;
 
+		/* border */
 		border: var(--stroke, #{$silicon-stroke}) solid currentColor;
-		border-left-width: calc(var(--stroke, #{$silicon-stroke}) / 4);
 		border-right-width: calc(var(--stroke, #{$silicon-stroke}) / 4);
-		// border-radius: 0 0.3em 0.3em 0;
+		border-left-width: calc(var(--stroke, #{$silicon-stroke}) / 4);
 
+		/* transform */
 		transform: skewY(-12deg);
 
 		&:before,
 		&:after {
 			content: '';
 
+			/* position */
 			position: absolute;
 			top: calc(var(--stroke, #{$silicon-stroke}) * -1);
 
+			/* size */
 			display: block;
 			box-sizing: border-box;
 			width: 0.33em;
 			height: 1em;
 
+			/* border */
 			border: var(--stroke, #{$silicon-stroke}) solid currentColor;
 		}
 		&:before {
+			/* position */
 			left: calc(100% + (var(--stroke, #{$silicon-stroke}) / 4));
 
+			/* border */
 			border-left-width: calc(var(--stroke, #{$silicon-stroke}) / 4);
 			border-radius: 0 var(--stroke, #{$silicon-stroke})
 				var(--stroke, #{$silicon-stroke}) 0;
 
+			/* transform */
 			transform: skewY(24deg);
 			transform-origin: 0 100%;
 		}
 		&:after {
+			/* position */
 			right: calc(100% + (var(--stroke, #{$silicon-stroke}) / 4));
 
+			/* border */
 			border-right-width: calc(var(--stroke, #{$silicon-stroke}) / 4);
 			border-radius: var(--stroke, #{$silicon-stroke}) 0 0
 				var(--stroke, #{$silicon-stroke});
+
+			/* transform */
 			transform: skewY(24deg);
 			transform-origin: 100% 0;
+		}
+		&.colored {
+			&,
+			&:after,
+			&:before {
+				/* text */
+				color: $color-blue;
+
+				/* background */
+				background-color: $color-light-blue;
+				background-image: radial-gradient(
+					$color-green 40%,
+					$color-beige 50%,
+					transparent 60%
+				);
+				background-position: center center;
+				background-size: 1em 1em;
+			}
+			&:before {
+				/* background */
+				background-position: right center;
+			}
+			&:after {
+				/* background */
+				background-position: left center;
+			}
 		}
 	}
 }

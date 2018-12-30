@@ -1,53 +1,12 @@
 @import '../default';
+@import 'smiley-happy';
 
 @mixin silicon-smiley-wink($class: '#{$silicon-prefix}smiley-wink') {
+	@include silicon-smiley-happy($class);
 	.#{$class} {
-		position: relative;
-
-		display: inline-block;
-		box-sizing: border-box;
-		width: 1em;
-		height: 1em;
-		
-		background-image: linear-gradient(to right, currentColor, currentColor);
-		background-position: left calc(50% + .15em) bottom calc(50% + .1em);
-		background-repeat: no-repeat; 
-		background-size: 0.2em 0.05em;
-
-		border: calc(var(--stroke, #{$silicon-stroke}) / 1) solid currentColor;
-		border-radius: 50%;
-
-		&:before,
-		&:after {
-			content: '';
-
-			position: absolute;
-			box-sizing: border-box;
-		}
-
-		&:before {
-			bottom: 50%;
-			right: calc(50% + 0.05em);
-
-			width: 0.2em;
-			height: 0.2em;
-
-			background-color: currentColor;
-
-			border-radius: 50%;
-		}
-		&:after {
-			top: 50%;
-			left: 50%;
-
-			width: 0.5em;
-			height: 0.5em;
-
-			border: calc(var(--stroke, #{$silicon-stroke}) / 2) solid transparent;
-			border-bottom-color: currentColor;
-			border-radius: 50%;
-
-			transform: translate(-50%, -50%);
-		}
+		/* bacmground */
+		background-image: inherit, inear-gradient(to right, currentColor, currentColor);
+		background-position: inherit, left calc(50% + .15em) bottom calc(50% + .1em);
+		background-size: inherit, 0.2em 0.05em;
 	}
 }

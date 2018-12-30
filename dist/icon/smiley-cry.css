@@ -5,7 +5,7 @@
   width: 1em;
   height: 1em;
   background-image: radial-gradient(closest-side, currentColor 100%, transparent), radial-gradient(closest-side, currentColor 100%, transparent);
-  background-position: left calc(50% + .15em) bottom calc(50% + .1em), right calc(50% + .15em) bottom calc(50% + .1em);
+  background-position: left calc(50% + 0.15em) bottom calc(50% + 0.1em), right calc(50% + 0.15em) bottom calc(50% + 0.1em);
   background-repeat: no-repeat, no-repeat;
   background-size: 0.2em 0.2em, 0.2em 0.2em;
   border: calc(var(--stroke, 0.1em) / 1) solid currentColor;
@@ -35,4 +35,16 @@
   border-top-color: currentColor;
   border-radius: 50%;
   transform: translate(-50%, 25%);
+}
+.silicon-smiley-cry.colored {
+  color: #dcb104;
+  background-color: #f5c505;
+  background-image: radial-gradient(closest-side, black 50%, white 50%, white 100%, transparent), radial-gradient(closest-side, black 50%, white 50%, white 100%, transparent);
+}
+.silicon-smiley-cry.colored:before {
+  color: #6666ff;
+  background-color: #9999ff;
+}
+.silicon-smiley-cry.colored:after {
+  color: black;
 }

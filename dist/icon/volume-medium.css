@@ -1,4 +1,4 @@
-.silicon-volume-mute {
+.silicon-volume-medium {
   position: relative;
   display: inline-block;
   box-sizing: border-box;
@@ -8,13 +8,13 @@
   border-left: none;
   transform: translateX(25%) rotate(45deg);
 }
-.silicon-volume-mute:before, .silicon-volume-mute:after {
+.silicon-volume-medium:before, .silicon-volume-medium:after {
   content: "";
   position: absolute;
   display: block;
   box-sizing: border-box;
 }
-.silicon-volume-mute:before {
+.silicon-volume-medium:before {
   left: calc(var(--stroke, 0.1em) * -1.5);
   bottom: calc(var(--stroke, 0.1em) * -1.5);
   width: 0;
@@ -24,7 +24,7 @@
   border-right-color: transparent;
   border-radius: var(--stroke, 0.1em);
 }
-.silicon-volume-mute:after {
+.silicon-volume-medium:after {
   left: calc(var(--stroke, 0.1em) * -2);
   bottom: calc(var(--stroke, 0.1em) * -2);
   width: calc(var(--stroke, 0.1em) * 4);
@@ -33,6 +33,6 @@
   transform: rotate(-45deg);
 }
 
-.silicon-volume-mute {
-  background-image: radial-gradient(at bottom left, transparent calc(35% - var(--stroke, 0.05em)), currentColor calc(35% - var(--stroke, 0.05em)), currentColor 35%, transparent 35%), radial-gradient(at bottom left, transparent calc(50% - var(--stroke, 0.05em)), currentColor calc(50% - var(--stroke, 0.05em)), currentColor 50%, transparent 50%), radial-gradient(at bottom left, transparent calc(65% - var(--stroke, 0.05em)), currentColor calc(65% - var(--stroke, 0.05em)), currentColor 65%, transparent 65%);
+.silicon-volume-medium {
+  background-image: radial-gradient(at bottom left, transparent calc(35% - var(--stroke, 0.05em)), currentColor calc(35% - var(--stroke, 0.05em)), currentColor 35%, transparent 35%), radial-gradient(at bottom left, transparent calc(50% - var(--stroke, 0.05em)), currentColor calc(50% - var(--stroke, 0.05em)), currentColor 50%, transparent 50%);
 }

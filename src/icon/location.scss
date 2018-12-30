@@ -10,12 +10,11 @@
 		height: 1em;
 
 		border: var(--stroke, #{$silicon-stroke}) solid currentColor;
-		border-left-color: transparent;
-		border-radius: 50%;
+		border-radius: 50% 50% 0 50%;
 
-		transform: rotate(-90deg);
+		transform: rotate(45deg);
 
-    &:before, &:after{
+    &:after{
       content: '';
       
 			position: absolute;
@@ -24,21 +23,7 @@
       
 			display: block;
       box-sizing: border-box;
-    }
-    
-		&:before {
-			width: 0.5em;
-			height: 0.5em;
-
-			border: var(--stroke, #{$silicon-stroke}) solid currentColor;
-			border-top: none;
-			border-right: none;
-
-			transform: rotate(45deg);
-			transform-origin: 100% 0;
-		}
-		&:after {
-			width: calc(var(--stroke, #{$silicon-stroke}) * 2);
+    	width: calc(var(--stroke, #{$silicon-stroke}) * 2);
 			height: calc(var(--stroke, #{$silicon-stroke}) * 2);
 
 			background-color: currentColor;
@@ -46,6 +31,15 @@
 			border-radius: 50%;
 
 			transform: translate(50%, -50%);
+		}
+		&.colored{
+			color: $color-dark-red;
+			background-color: $color-red;
+			&:after{
+				width: calc(var(--stroke, #{$silicon-stroke}) * 3);
+				height: calc(var(--stroke, #{$silicon-stroke}) * 3);
+				color: $color-black;
+			}
 		}
 	}
 }

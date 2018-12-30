@@ -1,49 +1,32 @@
 @import '../default';
+@import 'smiley-happy';
 
 @mixin silicon-smiley-grin($class: '#{$silicon-prefix}smiley-grin') {
+	@include silicon-smiley-happy($class);
 	.#{$class} {
-		position: relative;
-
-		display: inline-block;
-		box-sizing: border-box;
-		width: 1em;
-		height: 1em;
-
-		border: calc(var(--stroke, #{$silicon-stroke}) / 1) solid currentColor;
-		border-radius: 50%;
-
-		&:before,
 		&:after {
 			content: '';
 
-			position: absolute;
-			box-sizing: border-box;
-		}
-
-		&:before {
-			bottom: 50%;
-			right: calc(50% + 0.05em);
-
-			width: 0.2em;
-			height: 0.2em;
-
-			box-shadow: 0.3em 0 0 0 currentColor;
-
-			background-color: currentColor;
-
-			border-radius: 50%;
-		}
-		&:after {
-			top: 50%;
-			left: 50%;
-
+			/* size */
 			width: 0.5em;
 			height: 0.25em;
 
+			/* border */
 			border: calc(var(--stroke, #{$silicon-stroke}) / 2) solid currentColor;
-			border-radius: 0 0 .5em .5em;
+			border-radius: 0 0 0.5em 0.5em;
 
+			/* transform */
 			transform: translate(-50%, 25%);
+		}
+
+		&.colored {
+			&:after {
+				/* text */
+				color: black;
+				
+				/* background */
+				background-color: white;
+			}
 		}
 	}
 }
