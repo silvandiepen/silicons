@@ -1,0 +1,47 @@
+.silicon-picture {
+  /* position */
+  position: relative;
+  /* size */
+  display: inline-block;
+  box-sizing: border-box;
+  width: 0.8em;
+  height: 0.8em;
+  /* border */
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: var(--stroke, 0.1em);
+}
+.silicon-picture:before {
+  content: "";
+  /* position */
+  position: absolute;
+  left: 0.2em;
+  top: 0.2em;
+  /* display */
+  width: 0.2em;
+  height: 0.2em;
+  /* border */
+  border-radius: 50%;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+}
+.silicon-picture:after {
+  content: "";
+  /* position */
+  position: absolute;
+  left: 0.25em;
+  top: 0.25em;
+  /* display */
+  width: 0.75em;
+  height: 0.75em;
+  /* border */
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-radius: var(--stroke, 0.1em);
+  /* trasnform */
+  transform: rotate(45deg);
+  transform-origin: 50% 50%;
+}
+.silicon-picture.colored {
+  /* text */
+  color: var(--dark,#303030);
+  /* background */
+  background-color: var(--blue,#1eb3e0);
+}

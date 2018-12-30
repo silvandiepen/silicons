@@ -13,9 +13,40 @@
 }
 .silicon-globe:before {
   content: "";
+  /* position */
+  margin-top: calc(var(--stroke, 0.1em) * -0.5);
   /* size */
+  width: 60%;
+  height: 100%;
+  /* border */
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-radius: 50%;
+}
+.silicon-globe:after {
+  content: "";
+  /* position */
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* size */
+  display: block;
   width: 100%;
-  height: 50%;
+  height: 100%;
+  /* background */
+  background-image: linear-gradient(to right, currentColor, currentColor), linear-gradient(to right, currentColor, currentColor);
+  background-repeat: no-repeat, no-repeat;
+  background-position: center center, center center;
+  background-size: calc(var(--stroke, 0.1em) / 2) 100%, 100% calc(var(--stroke, 0.1em) / 2);
+}
+.silicon-globe.colored {
+  /* text */
+  color: var(--dark,#303030);
+  /* background */
+  background-color: var(--light-blue,#61caea);
+  background-image: radial-gradient(var(--green,#10c565) 50%, transparent 50%), radial-gradient(var(--green,#10c565) 50%, transparent 50%), radial-gradient(var(--green,#10c565) 50%, transparent 50%), radial-gradient(var(--white,#ffffff) 50%, transparent 50%), radial-gradient(var(--white,#ffffff) 50%, transparent 50%);
+  background-position: center center, left -0.25em center, right -0.25em center, center top -0.15em, center bottom -0.15em;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+  background-size: 0.5em 0.5em, 0.5em 0.5em, 0.5em 0.5em, 0.75em 0.25em, 0.75em 0.25em;
   /* border */
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
 }
