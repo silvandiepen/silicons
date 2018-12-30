@@ -1,0 +1,25 @@
+@import '../default';
+
+@mixin silicon-shape-square($class: '#{$silicon-prefix}shape-square') {
+	.#{$class} {
+		/* position */
+		position: relative;
+
+		/* size */
+		display: inline-block;
+		box-sizing: border-box;
+		width: 0.75em;
+		height: 0.75em;
+
+		/* border */
+		border: var(--stroke, #{$silicon-stroke}) solid currentColor;
+
+		&.colored {
+			/* text */
+			color: $silicons-color-purple;
+
+			/* background */
+			background-color: $silicons-color-purple;
+		}
+	}
+}

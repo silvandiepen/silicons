@@ -1,0 +1,19 @@
+.silicon-shape-square {
+  /* position */
+  position: relative;
+  /* size */
+  display: inline-block;
+  box-sizing: border-box;
+  width: 0.75em;
+  height: 0.75em;
+  /* border */
+  border: var(--stroke, 0.1em) solid currentColor;
+  /* transform */
+  transform: translate(0.125em, 0.125em);
+}
+.silicon-shape-square.colored {
+  /* text */
+  color: var(--black,#101010);
+  /* background */
+  background-color: var(--purple,#7329b1);
+}

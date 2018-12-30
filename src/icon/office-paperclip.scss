@@ -57,11 +57,11 @@
 			bottom: calc(var(--stroke, #{$silicon-stroke}) / 2);
 			left: 0;
 
-		/* size */
+			/* size */
 			width: 0.5em;
 			height: calc(var(--height) - (var(--stroke, #{$silicon-stroke}) * 3));
 
-		/* border */
+			/* border */
 			border-left: none;
 			border-radius: 0
 				calc(var(--height) - (var(--stroke, #{$silicon-stroke}) * 3) / 2)

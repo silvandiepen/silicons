@@ -1039,6 +1039,25 @@
   transform-origin: 0 50%;
 }
 
+.silicon-shape-circle {
+  /* position */
+  position: relative;
+  /* size */
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  /* border */
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 50%;
+}
+.silicon-shape-circle.colored {
+  /* text */
+  color: var(--black,#101010);
+  /* background */
+  background-color: var(--purple,#7329b1);
+}
+
 .silicon-shape-drop {
   position: relative;
   display: inline-block;
@@ -1092,6 +1111,26 @@
 .silicon-shape-heart.colored, .silicon-shape-heart.colored:after, .silicon-shape-heart.colored:before {
   color: var(--dark-red,#bb0c29);
   background-color: var(--red,#eb0f33);
+}
+
+.silicon-shape-square {
+  /* position */
+  position: relative;
+  /* size */
+  display: inline-block;
+  box-sizing: border-box;
+  width: 0.75em;
+  height: 0.75em;
+  /* border */
+  border: var(--stroke, 0.1em) solid currentColor;
+  /* transform */
+  transform: translate(0.125em, 0.125em);
+}
+.silicon-shape-square.colored {
+  /* text */
+  color: var(--black,#101010);
+  /* background */
+  background-color: var(--purple,#7329b1);
 }
 
 .silicon-smiley-angry {

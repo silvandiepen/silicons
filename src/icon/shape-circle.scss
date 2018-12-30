@@ -1,0 +1,26 @@
+@import "../default";
+
+@mixin silicon-shape-circle($class: '#{$silicon-prefix}shape-circle') {
+	.#{$class} {
+		/* position */
+		position: relative;
+
+		/* size */
+		display: inline-block;
+    box-sizing: border-box;
+		width: 1em;
+		height: 1em;
+		
+		/* border */
+		border: var(--stroke, #{$silicon-stroke}) solid currentColor;
+		border-radius: 50%;
+		
+		&.colored{
+			/* text */
+			color: $silicons-color-turquoise;
+			
+			/* background */
+			background-color: $silicons-color-turquoise; 
+		}
+	}
+}

@@ -1,0 +1,14 @@
+@import '../default';
+
+@mixin silicon-code($class: '#{$silicon-prefix}code') {
+	.#{$class} {
+		/* position */
+		position: relative;
+
+		/* size */
+		display: inline-block;
+    box-sizing: border-box;
+		width: 1em;
+		height: .75em;
+	}
+}
