@@ -5,9 +5,9 @@
   display: inline-block;
   box-sizing: border-box;
   width: 1em;
-  height: 0.5em;
+  height: 0.75em;
   /* border */
-  border: var(--stroke, 0.1em) solid currentColor;
+  border: var(--stroke, 0.1em) solid red;
   border-radius: var(--stroke, 0.1em);
   /* overflow */
   overflow: hidden;
@@ -25,7 +25,7 @@
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-radius: var(--stroke, 0.1em);
   /* trasnform */
-  transform: rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
   transform-origin: 50% 50%;
 }
 .silicon-mail.colored {

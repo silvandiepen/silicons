@@ -1,0 +1,35 @@
+@import '../default';
+
+@mixin silicon-arrow-right($class: '#{$silicon-prefix}arrow-right') {
+	.#{$class} {
+		/* size */
+		display: block;
+		width: 1em;
+		height: var(--stroke, #{$silicon-stroke});
+
+		/* position */
+		background-color: currentColor;
+
+		&:before {
+			content: '';
+
+			/* size */
+			position: absolute;
+			right: 0;
+			top: calc(var(--stroke, #{$silicon-stroke}) * 0.5);
+
+			/* size */
+			display: block;
+			width: 0.5em;
+			height: 0.5em;
+
+			border: var(--stroke, #{$silicon-stroke}) solid currentColor;
+			border-left: none;
+			border-bottom: 0;
+
+			/* transform */
+			transform: rotate(-45deg);
+			transform-origin: 100% 0;
+		}
+	}
+}

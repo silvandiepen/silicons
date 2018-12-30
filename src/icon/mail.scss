@@ -9,14 +9,15 @@
 		display: inline-block;
 		box-sizing: border-box;
 		width: 1em;
-		height: .5em;
+		height: .75em;
 
 		/* border */
-		border: var(--stroke, #{$silicon-stroke}) solid currentColor;
+		border: var(--stroke, #{$silicon-stroke}) solid red;
 		border-radius: var(--stroke, #{$silicon-stroke});
 		
 		/* overflow */
 		overflow: hidden;
+		
 		
 		&:after {
 			content: '';
@@ -35,7 +36,7 @@
 			border-radius: var(--stroke, #{$silicon-stroke});
 			
 			/* trasnform */
-			transform: rotate(45deg);
+			transform: translate(-50%,-50%) rotate(45deg);
 			transform-origin: 50% 50%;
 		}
 		

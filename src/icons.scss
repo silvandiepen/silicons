@@ -1,4 +1,8 @@
 @import 'mixins'; 
+@include silicon-arrow-down(); 
+@include silicon-arrow-left(); 
+@include silicon-arrow-right(); 
+@include silicon-arrow-up(); 
 @include silicon-battery-25(); 
 @include silicon-battery-50(); 
 @include silicon-battery-75(); 

@@ -1,3 +1,117 @@
+.silicon-arrow-down {
+  /* size */
+  display: block;
+  width: 1em;
+  height: var(--stroke, 0.1em);
+  /* position */
+  background-color: currentColor;
+}
+.silicon-arrow-down:before {
+  content: "";
+  /* size */
+  position: absolute;
+  right: 0;
+  top: calc(var(--stroke, 0.1em) * 0.5);
+  /* size */
+  display: block;
+  width: 0.5em;
+  height: 0.5em;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-left: none;
+  border-bottom: 0;
+  /* transform */
+  transform: rotate(-45deg);
+  transform-origin: 100% 0;
+}
+
+.silicon-arrow-down {
+  /* position */
+  transform: rotate(90deg);
+}
+
+.silicon-arrow-left {
+  /* size */
+  display: block;
+  width: 1em;
+  height: var(--stroke, 0.1em);
+  /* position */
+  background-color: currentColor;
+}
+.silicon-arrow-left:before {
+  content: "";
+  /* size */
+  position: absolute;
+  right: 0;
+  top: calc(var(--stroke, 0.1em) * 0.5);
+  /* size */
+  display: block;
+  width: 0.5em;
+  height: 0.5em;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-left: none;
+  border-bottom: 0;
+  /* transform */
+  transform: rotate(-45deg);
+  transform-origin: 100% 0;
+}
+
+.silicon-arrow-right {
+  /* size */
+  display: block;
+  width: 1em;
+  height: var(--stroke, 0.1em);
+  /* position */
+  background-color: currentColor;
+}
+.silicon-arrow-right:before {
+  content: "";
+  /* size */
+  position: absolute;
+  right: 0;
+  top: calc(var(--stroke, 0.1em) * 0.5);
+  /* size */
+  display: block;
+  width: 0.5em;
+  height: 0.5em;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-left: none;
+  border-bottom: 0;
+  /* transform */
+  transform: rotate(-45deg);
+  transform-origin: 100% 0;
+}
+
+.silicon-arrow-up {
+  /* size */
+  display: block;
+  width: 1em;
+  height: var(--stroke, 0.1em);
+  /* position */
+  background-color: currentColor;
+}
+.silicon-arrow-up:before {
+  content: "";
+  /* size */
+  position: absolute;
+  right: 0;
+  top: calc(var(--stroke, 0.1em) * 0.5);
+  /* size */
+  display: block;
+  width: 0.5em;
+  height: 0.5em;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-left: none;
+  border-bottom: 0;
+  /* transform */
+  transform: rotate(-45deg);
+  transform-origin: 100% 0;
+}
+
+.silicon-arrow-up {
+  /* position */
+  transform: rotate(-90deg);
+}
+
 .silicon-battery-25 {
   /* position */
   position: relative;
@@ -995,9 +1109,9 @@
   display: inline-block;
   box-sizing: border-box;
   width: 1em;
-  height: 0.5em;
+  height: 0.75em;
   /* border */
-  border: var(--stroke, 0.1em) solid currentColor;
+  border: var(--stroke, 0.1em) solid red;
   border-radius: var(--stroke, 0.1em);
   /* overflow */
   overflow: hidden;
@@ -1015,7 +1129,7 @@
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-radius: var(--stroke, 0.1em);
   /* trasnform */
-  transform: rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
   transform-origin: 50% 50%;
 }
 .silicon-mail.colored {
