@@ -33,12 +33,12 @@
 			transform: translate(50%, -50%);
 		}
 		&.colored{
-			color: $color-dark-red;
-			background-color: $color-red;
+			color: $silicons-color-dark-red;
+			background-color: $silicons-color-red;
 			&:after{
 				width: calc(var(--stroke, #{$silicon-stroke}) * 3);
 				height: calc(var(--stroke, #{$silicon-stroke}) * 3);
-				color: $color-black;
+				color: $silicons-color-black;
 			}
 		}
 	}

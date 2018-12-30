@@ -48,8 +48,8 @@
     }
 		&.colored {
 			&,&:after,&:before{
-			color: $color-dark-red;
-			background-color: $color-red;
+			color: $silicons-color-dark-red;
+			background-color: $silicons-color-red;
 			}
 		}
 	}

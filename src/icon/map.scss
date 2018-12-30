@@ -67,13 +67,13 @@
 			&:after,
 			&:before {
 				/* text */
-				color: $color-blue;
+				color: $silicons-color-blue;
 
 				/* background */
-				background-color: $color-light-blue;
+				background-color: $silicons-color-light-blue;
 				background-image: radial-gradient(
-					$color-green 40%,
-					$color-beige 50%,
+					$silicons-color-green 40%,
+					$silicons-color-beige 50%,
 					transparent 60%
 				);
 				background-position: center center;

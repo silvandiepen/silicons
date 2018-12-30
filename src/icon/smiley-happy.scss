@@ -54,28 +54,28 @@
 		}
 		&.colored {
 			/* text */
-			color: $color-yellow;
+			color: $silicons-color-yellow;
 			
 			/* background */
-			background-color: $color-yellow;
+			background-color: $silicons-color-yellow;
 			background-image: radial-gradient(
 					closest-side,
-					$color-black 50%,
-					$color-white 50%,
-					$color-white 100%,
+					$silicons-color-black 50%,
+					$silicons-color-white 50%,
+					$silicons-color-white 100%,
 					transparent
 				),
 				radial-gradient(
 					closest-side,
-					$color-black 50%,
-					$color-white 50%,
-					$color-white 100%,
+					$silicons-color-black 50%,
+					$silicons-color-white 50%,
+					$silicons-color-white 100%,
 					transparent
 				);
 
 			&:after {
 				/* text */
-				color: $color-black;
+				color: $silicons-color-black;
 			}
 		}
 	}

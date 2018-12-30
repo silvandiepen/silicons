@@ -62,10 +62,10 @@
 		}
 		&.colored{
 			/* text */ 
-			color: $color-dark;
+			color: $silicons-color-dark;
 			&:before,&:after{
 				/* text */ 
-				color: $color-blue;
+				color: $silicons-color-blue;
 			}
 		}
 	}

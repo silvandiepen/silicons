@@ -48,10 +48,10 @@
 			transform: rotate(-45deg);
 		}
 		&.colored {
-			color: $color-gray;
+			color: $silicons-color-gray;
 			&:after,
 			&:before {
-				color: $color-blue;
+				color: $silicons-color-blue;
 			}
 		}
 	}

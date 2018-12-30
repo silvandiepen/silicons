@@ -48,9 +48,9 @@
 			transform-origin: 0 100%;
 		}
 		&.colored{
-			color: $color-dark;
+			color: $silicons-color-dark;
 			&:before,&:after{
-				color: $color-green;
+				color: $silicons-color-green;
 			}
 		}
 	}

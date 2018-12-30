@@ -46,7 +46,7 @@
 			border-radius: 0 calc(var(--stroke, #{$silicon-stroke}) * 1.5) 0 0;
 		}
 		&.colored {
-			color: $color-blue;
+			color: $silicons-color-blue;
 		}
 	}
 }
