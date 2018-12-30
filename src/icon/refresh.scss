@@ -1,6 +1,6 @@
 @import '../default';
 
-@mixin silicon-arrow-right($class: '#{$silicon-prefix}arrow-right') {
+@mixin silicon-refresh($class: '#{$silicon-prefix}refresh') {
 	.#{$class} {
 		/* position */
 		position: relative;
@@ -8,10 +8,11 @@
 		/* size */
 		display: block;
 		width: 1em;
+		height: 1em;
 		height: var(--stroke, #{$silicon-stroke});
 
-		/* background  */
-		background-color: currentColor;
+		/* border */
+		border: var(--stroke, #{$silicon-stroke}) solid currentColor;
 
 		&:before {
 			content: '';
@@ -23,13 +24,12 @@
 
 			/* size */
 			display: block;
-			width: 0.3em;
-			height: 0.3em;
+			width: 0;
+			height: 0;
 
-			/* border */
-			border: var(--stroke, #{$silicon-stroke}) solid currentColor;
-			border-bottom: none;
-			border-left: none;
+			border: 0.15em solid currentColor;
+			border-bottom-color: transparent;
+			border-left-color: transparent;
 
 			/* transform */
 			transform: rotate(45deg);

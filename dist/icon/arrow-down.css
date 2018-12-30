@@ -5,22 +5,23 @@
   display: block;
   width: 1em;
   height: var(--stroke, 0.1em);
-  /* position */
+  /* background  */
   background-color: currentColor;
 }
 .silicon-arrow-down:before {
   content: "";
   /* size */
   position: absolute;
-  right: calc(var(--stroke, 0.1em) * -0.5);
   top: calc(var(--stroke, 0.1em) * 0.5);
+  right: calc(var(--stroke, 0.1em) * -0.5);
   /* size */
   display: block;
   width: 0.3em;
   height: 0.3em;
+  /* border */
   border: var(--stroke, 0.1em) solid currentColor;
+  border-bottom: none;
   border-left: none;
-  border-bottom: 0;
   /* transform */
   transform: rotate(45deg);
   transform-origin: 100% 0;

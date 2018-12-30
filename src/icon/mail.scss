@@ -11,12 +11,13 @@
 		width: 1em;
 		height: .75em;
 
+		/* overflow */
+		overflow: hidden;
+		
 		/* border */
 		border: var(--stroke, #{$silicon-stroke}) solid red;
 		border-radius: var(--stroke, #{$silicon-stroke});
 		
-		/* overflow */
-		overflow: hidden;
 		
 		
 		&:after {

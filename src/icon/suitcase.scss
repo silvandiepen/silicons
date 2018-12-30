@@ -35,8 +35,8 @@
 			top: calc(var(--stroke, #{$silicon-stroke}) * -1);
 
 			/* size */
-			height:  calc(100% + var(--stroke, #{$silicon-stroke}) * 2);
 			width: 0.5em;
+			height: calc(100% + var(--stroke, #{$silicon-stroke}) * 2);
 
 			/* border */
 			border-top: none;
@@ -51,8 +51,8 @@
 			bottom: calc(100% + var(--stroke, #{$silicon-stroke}));
 
 			/* size */
-			height: 0.125em;
 			width: 0.3em;
+			height: 0.125em;
 
 			/* border */
 			border-bottom: none;
@@ -61,17 +61,17 @@
 			/* transform */
 			transform: translateX(-50%);
 		}
-		&.colored{
+		&.colored {
 			/* text */
 			color: $silicons-color-dark-brown;
-			
+
 			/* background */
 			background-color: $silicons-color-brown;
-			
-			&:before{
+
+			&:before {
 				color: $silicons-color-gray;
 			}
-			&:after{
+			&:after {
 				color: $silicons-color-dark;
 			}
 		}

@@ -6,11 +6,11 @@
   box-sizing: border-box;
   width: 1em;
   height: 0.75em;
+  /* overflow */
+  overflow: hidden;
   /* border */
   border: var(--stroke, 0.1em) solid red;
   border-radius: var(--stroke, 0.1em);
-  /* overflow */
-  overflow: hidden;
 }
 .silicon-mail:after {
   content: "";

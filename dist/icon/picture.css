@@ -6,31 +6,31 @@
   box-sizing: border-box;
   width: 1em;
   height: 1em;
+  /* overflow */
+  overflow: hidden;
   /* border */
   border: var(--stroke, 0.1em) solid currentColor;
   border-radius: var(--stroke, 0.1em);
-  /* overflow */
-  overflow: hidden;
 }
 .silicon-picture:before {
   content: "";
   /* position */
   position: absolute;
-  left: 0.1em;
   top: 0.1em;
+  left: 0.1em;
   /* display */
   width: 0.1em;
   height: 0.1em;
   /* border */
-  border-radius: 50%;
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-radius: 50%;
 }
 .silicon-picture:after {
   content: "";
   /* position */
   position: absolute;
-  left: 0.25em;
   top: 0.5em;
+  left: 0.25em;
   /* display */
   width: 0.6em;
   height: 0.6em;

@@ -1,16 +1,18 @@
 @import '../default';
 
-@mixin silicon-arrow-filled-right($class: '#{$silicon-prefix}arrow-filled-right') {
+@mixin silicon-arrow-filled-right(
+	$class: '#{$silicon-prefix}arrow-filled-right'
+) {
 	.#{$class} {
 		/* position */
 		position: relative;
-		
+
 		/* size */
 		display: block;
 		width: 1em;
 		height: var(--stroke, #{$silicon-stroke});
 
-		/* position */
+		/* background */
 		background-color: currentColor;
 
 		&:before {
@@ -18,17 +20,18 @@
 
 			/* size */
 			position: absolute;
-			right: calc(var(--stroke, #{$silicon-stroke}) * -0.5);
 			top: calc(var(--stroke, #{$silicon-stroke}) * 0.5);
+			right: calc(var(--stroke, #{$silicon-stroke}) * -0.5);
 
 			/* size */
 			display: block;
 			width: 0;
 			height: 0;
 
-			border: 0.3em solid currentColor;
-			border-left-color: transparent;
+			/* border */
+			border: 0.15em solid currentColor;
 			border-bottom-color: transparent;
+			border-left-color: transparent;
 
 			/* transform */
 			transform: rotate(45deg);

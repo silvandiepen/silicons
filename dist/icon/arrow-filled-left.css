@@ -5,22 +5,23 @@
   display: block;
   width: 1em;
   height: var(--stroke, 0.1em);
-  /* position */
+  /* background */
   background-color: currentColor;
 }
 .silicon-arrow-filled-left:before {
   content: "";
   /* size */
   position: absolute;
-  right: calc(var(--stroke, 0.1em) * -0.5);
   top: calc(var(--stroke, 0.1em) * 0.5);
+  right: calc(var(--stroke, 0.1em) * -0.5);
   /* size */
   display: block;
   width: 0;
   height: 0;
-  border: 0.3em solid currentColor;
-  border-left-color: transparent;
+  /* border */
+  border: 0.15em solid currentColor;
   border-bottom-color: transparent;
+  border-left-color: transparent;
   /* transform */
   transform: rotate(45deg);
   transform-origin: 100% 0;
