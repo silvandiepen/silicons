@@ -1,5 +1,9 @@
 @import 'mixins'; 
 @include silicon-arrow-down(); 
+@include silicon-arrow-filled-down(); 
+@include silicon-arrow-filled-left(); 
+@include silicon-arrow-filled-right(); 
+@include silicon-arrow-filled-up(); 
 @include silicon-arrow-left(); 
 @include silicon-arrow-right(); 
 @include silicon-arrow-up(); 

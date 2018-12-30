@@ -1,4 +1,6 @@
 .silicon-arrow-down {
+  /* position */
+  position: relative;
   /* size */
   display: block;
   width: 1em;
@@ -10,17 +12,17 @@
   content: "";
   /* size */
   position: absolute;
-  right: 0;
+  right: calc(var(--stroke, 0.1em) * -0.5);
   top: calc(var(--stroke, 0.1em) * 0.5);
   /* size */
   display: block;
-  width: 0.5em;
-  height: 0.5em;
+  width: 0.3em;
+  height: 0.3em;
   border: var(--stroke, 0.1em) solid currentColor;
   border-left: none;
   border-bottom: 0;
   /* transform */
-  transform: rotate(-45deg);
+  transform: rotate(45deg);
   transform-origin: 100% 0;
 }
 
@@ -29,7 +31,131 @@
   transform: rotate(90deg);
 }
 
+.silicon-arrow-filled-down {
+  /* position */
+  position: relative;
+  /* size */
+  display: block;
+  width: 1em;
+  height: var(--stroke, 0.1em);
+  /* position */
+  background-color: currentColor;
+}
+.silicon-arrow-filled-down:before {
+  content: "";
+  /* size */
+  position: absolute;
+  right: calc(var(--stroke, 0.1em) * -0.5);
+  top: calc(var(--stroke, 0.1em) * 0.5);
+  /* size */
+  display: block;
+  width: 0;
+  height: 0;
+  border: 0.3em solid currentColor;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  /* transform */
+  transform: rotate(45deg);
+  transform-origin: 100% 0;
+}
+
+.silicon-arrow-filled-down {
+  /* position */
+  transform: rotate(90deg);
+}
+
+.silicon-arrow-filled-left {
+  /* position */
+  position: relative;
+  /* size */
+  display: block;
+  width: 1em;
+  height: var(--stroke, 0.1em);
+  /* position */
+  background-color: currentColor;
+}
+.silicon-arrow-filled-left:before {
+  content: "";
+  /* size */
+  position: absolute;
+  right: calc(var(--stroke, 0.1em) * -0.5);
+  top: calc(var(--stroke, 0.1em) * 0.5);
+  /* size */
+  display: block;
+  width: 0;
+  height: 0;
+  border: 0.3em solid currentColor;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  /* transform */
+  transform: rotate(45deg);
+  transform-origin: 100% 0;
+}
+
+.silicon-arrow-filled-right {
+  /* position */
+  position: relative;
+  /* size */
+  display: block;
+  width: 1em;
+  height: var(--stroke, 0.1em);
+  /* position */
+  background-color: currentColor;
+}
+.silicon-arrow-filled-right:before {
+  content: "";
+  /* size */
+  position: absolute;
+  right: calc(var(--stroke, 0.1em) * -0.5);
+  top: calc(var(--stroke, 0.1em) * 0.5);
+  /* size */
+  display: block;
+  width: 0;
+  height: 0;
+  border: 0.3em solid currentColor;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  /* transform */
+  transform: rotate(45deg);
+  transform-origin: 100% 0;
+}
+
+.silicon-arrow-filled-up {
+  /* position */
+  position: relative;
+  /* size */
+  display: block;
+  width: 1em;
+  height: var(--stroke, 0.1em);
+  /* position */
+  background-color: currentColor;
+}
+.silicon-arrow-filled-up:before {
+  content: "";
+  /* size */
+  position: absolute;
+  right: calc(var(--stroke, 0.1em) * -0.5);
+  top: calc(var(--stroke, 0.1em) * 0.5);
+  /* size */
+  display: block;
+  width: 0;
+  height: 0;
+  border: 0.3em solid currentColor;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  /* transform */
+  transform: rotate(45deg);
+  transform-origin: 100% 0;
+}
+
+.silicon-arrow-filled-up {
+  /* position */
+  transform: rotate(-90deg);
+}
+
 .silicon-arrow-left {
+  /* position */
+  position: relative;
   /* size */
   display: block;
   width: 1em;
@@ -41,21 +167,23 @@
   content: "";
   /* size */
   position: absolute;
-  right: 0;
+  right: calc(var(--stroke, 0.1em) * -0.5);
   top: calc(var(--stroke, 0.1em) * 0.5);
   /* size */
   display: block;
-  width: 0.5em;
-  height: 0.5em;
+  width: 0.3em;
+  height: 0.3em;
   border: var(--stroke, 0.1em) solid currentColor;
   border-left: none;
   border-bottom: 0;
   /* transform */
-  transform: rotate(-45deg);
+  transform: rotate(45deg);
   transform-origin: 100% 0;
 }
 
 .silicon-arrow-right {
+  /* position */
+  position: relative;
   /* size */
   display: block;
   width: 1em;
@@ -67,21 +195,23 @@
   content: "";
   /* size */
   position: absolute;
-  right: 0;
+  right: calc(var(--stroke, 0.1em) * -0.5);
   top: calc(var(--stroke, 0.1em) * 0.5);
   /* size */
   display: block;
-  width: 0.5em;
-  height: 0.5em;
+  width: 0.3em;
+  height: 0.3em;
   border: var(--stroke, 0.1em) solid currentColor;
   border-left: none;
   border-bottom: 0;
   /* transform */
-  transform: rotate(-45deg);
+  transform: rotate(45deg);
   transform-origin: 100% 0;
 }
 
 .silicon-arrow-up {
+  /* position */
+  position: relative;
   /* size */
   display: block;
   width: 1em;
@@ -93,17 +223,17 @@
   content: "";
   /* size */
   position: absolute;
-  right: 0;
+  right: calc(var(--stroke, 0.1em) * -0.5);
   top: calc(var(--stroke, 0.1em) * 0.5);
   /* size */
   display: block;
-  width: 0.5em;
-  height: 0.5em;
+  width: 0.3em;
+  height: 0.3em;
   border: var(--stroke, 0.1em) solid currentColor;
   border-left: none;
   border-bottom: 0;
   /* transform */
-  transform: rotate(-45deg);
+  transform: rotate(45deg);
   transform-origin: 100% 0;
 }
 

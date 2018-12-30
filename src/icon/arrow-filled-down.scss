@@ -1,0 +1,10 @@
+@import '../default';
+@import 'arrow-right';
+
+@mixin silicon-arrow-filled-down($class: '#{$silicon-prefix}arrow-filled-down') {
+	@include silicon-arrow-filled-right($class);
+	.#{$class} {
+		/* position */
+		transform: rotate(90deg);
+	}
+}

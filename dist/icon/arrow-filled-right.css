@@ -1,4 +1,4 @@
-.silicon-arrow-down {
+.silicon-arrow-filled-right {
   /* position */
   position: relative;
   /* size */
@@ -8,7 +8,7 @@
   /* position */
   background-color: currentColor;
 }
-.silicon-arrow-down:before {
+.silicon-arrow-filled-right:before {
   content: "";
   /* size */
   position: absolute;
@@ -16,17 +16,12 @@
   top: calc(var(--stroke, 0.1em) * 0.5);
   /* size */
   display: block;
-  width: 0.3em;
-  height: 0.3em;
-  border: var(--stroke, 0.1em) solid currentColor;
-  border-left: none;
-  border-bottom: 0;
+  width: 0;
+  height: 0;
+  border: 0.3em solid currentColor;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
   /* transform */
   transform: rotate(45deg);
   transform-origin: 100% 0;
-}
-
-.silicon-arrow-down {
-  /* position */
-  transform: rotate(90deg);
 }

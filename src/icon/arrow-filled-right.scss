@@ -1,6 +1,6 @@
 @import '../default';
 
-@mixin silicon-arrow-right($class: '#{$silicon-prefix}arrow-right') {
+@mixin silicon-arrow-filled-right($class: '#{$silicon-prefix}arrow-filled-right') {
 	.#{$class} {
 		/* position */
 		position: relative;
@@ -23,12 +23,12 @@
 
 			/* size */
 			display: block;
-			width: 0.3em;
-			height: 0.3em;
+			width: 0;
+			height: 0;
 
-			border: var(--stroke, #{$silicon-stroke}) solid currentColor;
-			border-left: none;
-			border-bottom: 0;
+			border: 0.3em solid currentColor;
+			border-left-color: transparent;
+			border-bottom-color: transparent;
 
 			/* transform */
 			transform: rotate(45deg);
