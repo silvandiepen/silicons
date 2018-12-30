@@ -1,0 +1,30 @@
+@import '../default';
+
+@mixin silicon-float($class: '#{$silicon-prefix}float') {
+	.#{$class} {
+		/* position */
+		position: relative;
+
+		/* size */
+		display: inline-block;
+		box-sizing: border-box;
+		width: 1em;
+		height: 1em;
+
+		/* position */
+		background-image: radial-gradient(
+			closest-side,
+			transparent calc(100% - var(--stroke, #{$silicon-stroke})),
+			currentColor calc(100% - var(--stroke, #{$silicon-stroke})),
+			currentColor 100%,
+			transparent
+		);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: 0.5em 0.5em;
+
+		/* border */
+		border: var(--stroke, #{$silicon-stroke}) solid currentColor;
+		border-radius: 50%;
+	}
+}

@@ -148,6 +148,7 @@
   border: 0.15em solid currentColor;
   border-bottom-color: transparent;
   border-left-color: transparent;
+  border-radius: 0.05em;
   /* transform */
   transform: rotate(45deg);
   transform-origin: 100% 0;
@@ -182,9 +183,15 @@
   border: 0.15em solid currentColor;
   border-bottom-color: transparent;
   border-left-color: transparent;
+  border-radius: 0.05em;
   /* transform */
   transform: rotate(45deg);
   transform-origin: 100% 0;
+}
+
+.silicon-arrow-filled-left {
+  /* position */
+  transform: rotate(180deg);
 }
 
 .silicon-arrow-filled-right {
@@ -211,6 +218,7 @@
   border: 0.15em solid currentColor;
   border-bottom-color: transparent;
   border-left-color: transparent;
+  border-radius: 0.05em;
   /* transform */
   transform: rotate(45deg);
   transform-origin: 100% 0;
@@ -240,6 +248,7 @@
   border: 0.15em solid currentColor;
   border-bottom-color: transparent;
   border-left-color: transparent;
+  border-radius: 0.05em;
   /* transform */
   transform: rotate(45deg);
   transform-origin: 100% 0;
@@ -699,7 +708,7 @@
   /* position */
   position: absolute;
   /* size */
-  display: block-block;
+  display: block;
   box-sizing: border-box;
   /* border */
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
@@ -713,6 +722,18 @@
   height: 0.5em;
   /* transform */
   transform: translate(-50%, -50%);
+  /* border */
+  border-radius: 50%;
+}
+.silicon-device-camera:after {
+  /* position */
+  left: 50%;
+  bottom: calc(100% + var(--stroke, 0.1em));
+  /* size */
+  width: 0.3em;
+  height: 0.1em;
+  border-radius: 0.1em 0.1em 0 0;
+  transform: translateX(-50%);
 }
 
 .silicon-device-laptop {
@@ -1172,6 +1193,24 @@
 }
 .silicon-file-upload.colored:before, .silicon-file-upload.colored:after {
   color: var(--green,#10c565);
+}
+
+.silicon-float {
+  /* position */
+  position: relative;
+  /* size */
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  /* position */
+  background-image: radial-gradient(closest-side, transparent calc(100% - var(--stroke, 0.1em)), currentColor calc(100% - var(--stroke, 0.1em)), currentColor 100%, transparent);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 0.5em 0.5em;
+  /* border */
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 50%;
 }
 
 .silicon-globe {
