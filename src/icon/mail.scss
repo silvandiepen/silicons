@@ -15,8 +15,8 @@
 		overflow: hidden;
 		
 		/* border */
-		border: var(--stroke, #{$silicon-stroke}) solid currentColor;
-		border-radius: var(--stroke, #{$silicon-stroke});
+		border: #{$silicon-stroke-var} solid currentColor;
+		border-radius: #{$silicon-stroke-var};
 		
 		
 		
@@ -33,8 +33,8 @@
 			height: .6em;
 
 			/* border */
-			border: calc(var(--stroke, #{$silicon-stroke}) / 2) solid currentColor;
-			border-radius: var(--stroke, #{$silicon-stroke});
+			border: calc(#{$silicon-stroke-var} / 2) solid currentColor;
+			border-radius: #{$silicon-stroke-var};
 			
 			/* trasnform */
 			transform: translate(-50%,-50%) rotate(45deg);

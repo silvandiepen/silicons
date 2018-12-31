@@ -7,9 +7,8 @@
   width: 1em;
   height: 1em;
   /* background  */
-  background-image: linear-gradient(to right bottom, transparent calc(50% - (var(--stroke, $silicon-stroke) * 0.5)), currentColor calc(50% - (var(--stroke, $silicon-stroke) * 0.5)), currentColor calc(50% + (var(--stroke, $silicon-stroke) * 0.5)), transparent calc(50% - (var(--stroke, $silicon-stroke) * 0.5)));
+  background-image: linear-gradient(to right bottom, transparent calc(50% - (var(--stroke, 0.1em) * 0.5)), currentColor calc(50% - (var(--stroke, 0.1em) * 0.5)), currentColor calc(50% + (var(--stroke, 0.1em) * 0.5)), transparent calc(50% - (var(--stroke, 0.1em) * 0.5)));
   /* border */
   border: var(--stroke, 0.1em) solid currentColor;
-  border: 1px solid red;
   border-radius: 50%;
 }

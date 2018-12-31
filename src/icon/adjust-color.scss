@@ -10,9 +10,12 @@
 		box-sizing: border-box;
 		width: 1em;
 		height: 1em;
+		
+		/* background */
+		background-image: linear-gradient(to right, transparent 50%, currentColor 50%);
 
 		/* border */
-		border: var(--stroke, $silicon-stroke) solid currentColor;
-		border: 1px solid red;
+		border: calc(#{$silicon-stroke-var} / 2) solid currentColor;
+		border-radius: 50%;
 	}
 }

@@ -9,19 +9,19 @@
 
 			/* position */
 			position: absolute;
-			top: calc(var(--stroke, #{$silicon-stroke}) / 2);
-			left: calc(var(--stroke, #{$silicon-stroke}) / 2);
+			top: calc(#{$silicon-stroke-var} / 2);
+			left: calc(#{$silicon-stroke-var} / 2);
 
 			/* size */
 			display: block;
 			width: calc(25%);
-			height: calc(100% - var(--stroke, #{$silicon-stroke}));
+			height: calc(100% - #{$silicon-stroke-var});
 
 			/* background */
 			background-color: currentColor;
 
 			/* border */
-			border-radius: calc(var(--stroke, #{$silicon-stroke}) / 2);
+			border-radius: calc(#{$silicon-stroke-var} / 2);
 		}
 
 		&.colored {

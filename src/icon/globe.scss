@@ -13,7 +13,7 @@
 		height: 0.8em;
 
 		/* border */
-		border: var(--stroke, #{$silicon-stroke}) solid currentColor;
+		border: #{$silicon-stroke-var} solid currentColor;
 		border-radius: 50%;
 
 		&:before {
@@ -24,10 +24,10 @@
 			height: 100%;
 
 			/* margin */
-			margin-top: calc(var(--stroke, #{$silicon-stroke}) * -0.5);
+			margin-top: calc(#{$silicon-stroke-var} * -0.5);
 
 			/* border */
-			border: calc(var(--stroke, #{$silicon-stroke}) / 2) solid currentColor;
+			border: calc(#{$silicon-stroke-var} / 2) solid currentColor;
 			border-radius: 50%;
 		}
 		&:after {
@@ -47,8 +47,8 @@
 				linear-gradient(to right, currentColor, currentColor);
 			background-repeat: no-repeat, no-repeat;
 			background-position: center center, center center;
-			background-size: calc(var(--stroke, #{$silicon-stroke}) / 2) 100%,
-				100% calc(var(--stroke, #{$silicon-stroke}) / 2);
+			background-size: calc(#{$silicon-stroke-var} / 2) 100%,
+				100% calc(#{$silicon-stroke-var} / 2);
 		}
 
 		&.colored {
@@ -72,7 +72,7 @@
 				0.75em 0.25em;
 
 			/* border */
-			border: calc(var(--stroke, #{$silicon-stroke}) / 2) solid currentColor;
+			border: calc(#{$silicon-stroke-var} / 2) solid currentColor;
 		}
 	}
 }

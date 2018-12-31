@@ -1,6 +1,6 @@
 @import '../default';
 
-@mixin silicon-ball-volleyball($class: '#{$silicon-prefix}ball-volleyball') {
+@mixin silicon-ball-rugby($class: '#{$silicon-prefix}ball-rugby') {
 	.#{$class} {
 		/* position */
 		position: relative;
@@ -12,7 +12,7 @@
 		height: 1em;
 
 		/* border */
-		border: var(--stroke, $silicon-stroke) solid currentColor;
+		border: #{$silicon-stroke-var} solid currentColor;
 		border: 1px solid red;
 		border-radius: 50%;
 	}

@@ -6,13 +6,13 @@
 
 		display: inline-block;
 		box-sizing: border-box;
-		width: calc(var(--stroke, #{$silicon-stroke}) * 7);
-		height: calc(var(--stroke, #{$silicon-stroke}) * 7);
+		width: calc(#{$silicon-stroke-var} * 7);
+		height: calc(#{$silicon-stroke-var} * 7);
 
-		border: calc(var(--stroke, #{$silicon-stroke}) * 1.5) solid currentColor;
+		border: calc(#{$silicon-stroke-var} * 1.5) solid currentColor;
 		border-bottom: none;
 		border-left: none;
-		border-radius: 0 calc(var(--stroke, #{$silicon-stroke}) * 8) 0 0;
+		border-radius: 0 calc(#{$silicon-stroke-var} * 8) 0 0;
 
 		transform: rotate(-45deg);
 
@@ -28,22 +28,22 @@
 			box-sizing: border-box;
 		}
 		&:before {
-			width: calc(var(--stroke, #{$silicon-stroke}) * 4.25);
-			height: calc(var(--stroke, #{$silicon-stroke}) * 4.25);
+			width: calc(#{$silicon-stroke-var} * 4.25);
+			height: calc(#{$silicon-stroke-var} * 4.25);
 
-			border: calc(var(--stroke, #{$silicon-stroke}) * 1.5) solid currentColor;
+			border: calc(#{$silicon-stroke-var} * 1.5) solid currentColor;
 			border-bottom: none;
 			border-left: none;
-			border-radius: 0 calc(var(--stroke, #{$silicon-stroke}) * 4.25) 0 0;
+			border-radius: 0 calc(#{$silicon-stroke-var} * 4.25) 0 0;
 		}
 		&:after {
-			width: calc(var(--stroke, #{$silicon-stroke}) * 1.5);
-			height: calc(var(--stroke, #{$silicon-stroke}) * 1.5);
+			width: calc(#{$silicon-stroke-var} * 1.5);
+			height: calc(#{$silicon-stroke-var} * 1.5);
 
-			border: calc(var(--stroke, #{$silicon-stroke}) * 1.5) solid currentColor;
+			border: calc(#{$silicon-stroke-var} * 1.5) solid currentColor;
 			border-bottom: none;
 			border-left: none;
-			border-radius: 0 calc(var(--stroke, #{$silicon-stroke}) * 1.5) 0 0;
+			border-radius: 0 calc(#{$silicon-stroke-var} * 1.5) 0 0;
 		}
 		&.colored {
 			color: $silicons-color-blue;

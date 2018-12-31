@@ -28,3 +28,7 @@
   /* transform */
   transform: rotate(45deg);
 }
+.silicon-math-times:after {
+  /* transform */
+  transform: translate(-50%, -50%) rotate(90deg);
+}

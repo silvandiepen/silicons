@@ -9,7 +9,7 @@
 		display: inline-block;
 		box-sizing: border-box;
 		width: 1em;
-		height: var(--stroke, #{$silicon-stroke});
+		height: #{$silicon-stroke-var};
 
 		/* background */
 		background-color: currentColor;
@@ -35,14 +35,14 @@
 			top: 100%;
 
 			/* transform */
-			transform: translateY(calc(var(--stroke, #{$silicon-stroke}) * 2));
+			transform: translateY(calc(#{$silicon-stroke-var} * 2));
 		}
 		&:after {
 			/* position */
 			bottom: 100%;
 
 			/* transform */
-			transform: translateY(calc(var(--stroke, #{$silicon-stroke}) * -2));
+			transform: translateY(calc(#{$silicon-stroke-var} * -2));
 		}
 	}
 }

@@ -14,15 +14,14 @@
 		/* background  */
 		background-image: linear-gradient(
 			to right bottom,
-			transparent calc(50% - (var(--stroke, $silicon-stroke) * 0.5)),
-			currentColor calc(50% - (var(--stroke, $silicon-stroke) * 0.5)),
-			currentColor calc(50% + (var(--stroke, $silicon-stroke) * 0.5)),
-			transparent calc(50% - (var(--stroke, $silicon-stroke) * 0.5))
+			transparent calc(50% - (#{$silicon-stroke-var} * 0.5)),
+			currentColor calc(50% - (#{$silicon-stroke-var} * 0.5)),
+			currentColor calc(50% + (#{$silicon-stroke-var} * 0.5)),
+			transparent calc(50% - (#{$silicon-stroke-var} * 0.5))
 		);
 
 		/* border */
-		border: var(--stroke, $silicon-stroke) solid currentColor;
-		border: 1px solid red;
+		border: #{$silicon-stroke-var} solid currentColor;
 		border-radius: 50%;
 	}
 }

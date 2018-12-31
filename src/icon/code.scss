@@ -29,7 +29,7 @@
 			height: 0.75em;
 
 			/* border */
-			border: var(--stroke, #{$silicon-stroke}) solid currentColor;
+			border: #{$silicon-stroke-var} solid currentColor;
 
 			/* transform */
 			transform: translate(-50%, -50%) rotate(45deg);

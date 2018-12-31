@@ -1,29 +1,30 @@
 @import '../default';
 
-@mixin silicon-go-right($class: '#{$silicon-prefix}go-right') {
+@mixin silicon-arrow-right($class: '#{$silicon-prefix}arrow-right') {
 	.#{$class} {
 		/* position */
 		position: relative;
 
 		/* size */
 		display: block;
-		width: 0.5em;
-		height: 1em;
+		width: 1em;
+		height: #{$silicon-stroke-var};
 
-		overflow: hidden;
+		/* background  */
+		background-color: currentColor;
 
 		&:before {
 			content: '';
 
-			/* position */
+			/* size */
 			position: absolute;
-			top: 50%;
-			right: 0;
+			top: calc(#{$silicon-stroke-var} * 0.5);
+			right: calc(#{$silicon-stroke-var} * -0.5);
 
 			/* size */
 			display: block;
-			width: calc(0.5em - (#{$silicon-stroke-var} / 2));
-			height: calc(0.5em - (#{$silicon-stroke-var} / 2));
+			width: 0.3em;
+			height: 0.3em;
 
 			/* border */
 			border: #{$silicon-stroke-var} solid currentColor;

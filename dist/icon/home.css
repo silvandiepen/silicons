@@ -8,5 +8,4 @@
   height: 1em;
   /* border */
   border: var(--stroke, 0.1em) solid currentColor;
-  border: 1px solid red;
 }

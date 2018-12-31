@@ -7,6 +7,6 @@
 	@include silicon-text-align-left($class);
 	.#{$class} {
 		/* background */
-		background-size: 1em var(--stroke, #{$silicon-stroke});
+		background-size: 1em #{$silicon-stroke-var};
 	}
 }

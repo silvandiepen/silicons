@@ -8,11 +8,65 @@
 		/* size */
 		display: inline-block;
 		box-sizing: border-box;
-		width: 1em;
-		height: 1em;
+		width: 0.4em;
+		height: 0.85em;
 
 		/* border */
-		border: var(--stroke, $silicon-stroke) solid currentColor;
-		border: 1px solid red;
+		border: #{$silicon-stroke-var} solid currentColor;
+		border-top: none;
+
+		/* transform */
+		// transform: rotate(-45deg);
+
+		&:before {
+			content: '';
+
+			/* position */
+			position: absolute;
+			top: 0;
+			left: 50%;
+
+			/* size */
+			display: block;
+			box-sizing: border-box;
+			width: calc((0.4em - (#{$silicon-stroke-var} * 1.5)) * 1);
+			height: calc((0.4em - (#{$silicon-stroke-var} * 1.5)) * 1);
+
+			// /* background */
+			// background-image: radial-gradient(
+			// 	closest-side,
+			// 	currentColor 100%,
+			// 	transparent
+			// );
+			// background-repeat: no-repeat;
+			// background-position: center center;
+			// background-size: #{$silicon-stroke-var}
+			// 	#{$silicon-stroke-var};
+			/* background */
+			background-image: radial-gradient(
+					closest-side,
+					currentColor 100%,
+					transparent
+				),
+				linear-gradient(
+					to bottom right,
+					transparent calc(50% - (#{$silicon-stroke-var} * 0.25)),
+					currentColor calc(50% - (#{$silicon-stroke-var} * 0.25)),
+					currentColor calc(50% + (#{$silicon-stroke-var} * 0)),
+					transparent calc(50% + (#{$silicon-stroke-var} * 0))
+				);
+				background-size: .1em .1em, 100% 100%;
+			background-repeat: no-repeat, no-repeat;
+			background-position: left -0.1em top -0.1em, center center;
+
+			/* border */
+			border: #{$silicon-stroke-var} solid currentColor;
+			// border-right-color: transparent;
+			// border-bottom-color: transparent;
+			border-radius: #{$silicon-stroke-var} 0 50% 0;
+
+			/* transform */
+			transform: translate(-50%, -50%) scale(1, 1) rotate(45deg);
+		}
 	}
 }

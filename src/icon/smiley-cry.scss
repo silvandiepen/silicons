@@ -19,7 +19,7 @@
 			height: 0.2em;
 
 			/* border */
-			border: calc(var(--stroke, #{$silicon-stroke}) / 2) solid currentColor;
+			border: calc(#{$silicon-stroke-var} / 2) solid currentColor;
 			border-radius: 0 50% 50% 50%;
 
 			/* transform */

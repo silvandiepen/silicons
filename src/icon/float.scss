@@ -14,8 +14,8 @@
 		/* position */
 		background-image: radial-gradient(
 				closest-side,
-				transparent calc(100% - var(--stroke, #{$silicon-stroke})),
-				currentColor calc(100% - var(--stroke, #{$silicon-stroke})),
+				transparent calc(100% - #{$silicon-stroke-var}),
+				currentColor calc(100% - #{$silicon-stroke-var}),
 				currentColor 100%,
 				transparent
 			),
@@ -36,11 +36,11 @@
 		background-repeat: no-repeat, no-repeat, no-repeat;
 		background-position: center center, center center, center center;
 		background-size: 0.5em 0.5em,
-			calc(var(--stroke, #{$silicon-stroke}) / 2) 100%,
-			100% calc(var(--stroke, #{$silicon-stroke}) / 2);
+			calc(#{$silicon-stroke-var} / 2) 100%,
+			100% calc(#{$silicon-stroke-var} / 2);
 
 		/* border */
-		border: var(--stroke, #{$silicon-stroke}) solid currentColor;
+		border: #{$silicon-stroke-var} solid currentColor;
 		border-radius: 50%;
 		
 		/* transform */

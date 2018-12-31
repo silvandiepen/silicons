@@ -12,7 +12,7 @@
 		height: 0.8em;
 
 		/* border */
-		border: var(--stroke, #{$silicon-stroke}) solid currentColor;
+		border: #{$silicon-stroke-var} solid currentColor;
 
 		&.colored {
 			/* text */

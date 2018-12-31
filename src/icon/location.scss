@@ -12,7 +12,7 @@
 		height: 1em;
 
 		/* border */
-		border: var(--stroke, #{$silicon-stroke}) solid currentColor;
+		border: #{$silicon-stroke-var} solid currentColor;
 		border-radius: 50% 50% 0 50%;
 
 		/* transform */
@@ -29,8 +29,8 @@
 			/* size */
 			display: block;
 			box-sizing: border-box;
-			width: calc(var(--stroke, #{$silicon-stroke}) * 2);
-			height: calc(var(--stroke, #{$silicon-stroke}) * 2);
+			width: calc(#{$silicon-stroke-var} * 2);
+			height: calc(#{$silicon-stroke-var} * 2);
 
 			/* background */
 			background-color: currentColor;
@@ -50,8 +50,8 @@
 
 			&:after {
 				/* size */
-				width: calc(var(--stroke, #{$silicon-stroke}) * 3);
-				height: calc(var(--stroke, #{$silicon-stroke}) * 3);
+				width: calc(#{$silicon-stroke-var} * 3);
+				height: calc(#{$silicon-stroke-var} * 3);
 
 				/* text */
 				color: $silicons-color-black;

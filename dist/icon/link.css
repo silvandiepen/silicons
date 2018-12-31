@@ -4,9 +4,33 @@
   /* size */
   display: inline-block;
   box-sizing: border-box;
-  width: 1em;
-  height: 1em;
+  width: 0.5em;
+  height: calc(var(--stroke, 0.1em) / 2);
+  /* background */
+  background-color: currentColor;
+  /* transform */
+  transform: rotate(-45deg);
+}
+.silicon-link:before, .silicon-link:after {
+  content: "";
+  /* position */
+  position: absolute;
+  top: 50%;
+  /* size */
+  display: block;
+  width: 0.35em;
+  height: 0.2em;
   /* border */
   border: var(--stroke, 0.1em) solid currentColor;
-  border: 1px solid red;
+  border-radius: var(--stroke, 0.1em);
+  /* transform */
+  transform: translateY(-50%);
+}
+.silicon-link:before {
+  /* position */
+  right: calc(100% - (var(--stroke, 0.1em) * 2));
+}
+.silicon-link:after {
+  /* position */
+  left: calc(100% - (var(--stroke, 0.1em) * 2));
 }

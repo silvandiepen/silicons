@@ -7,7 +7,7 @@
 
 		/* size */
 		display: inline-block;
-    box-sizing: border-box;
+		box-sizing: border-box;
 		width: 1em;
 		height: 1em;
 
@@ -15,17 +15,17 @@
 		&:after {
 			content: '';
 
-		/* position */
+			/* position */
 			position: absolute;
 			top: 50%;
 			left: 50%;
 
-		/* size */
+			/* size */
 			display: block;
 			box-sizing: border-box;
 			width: 100%;
-			height: var(--stroke, #{$silicon-stroke});
-			
+			height: #{$silicon-stroke-var};
+
 			/* background */
 			background-color: currentColor;
 
@@ -35,6 +35,6 @@
 	}
 }
 
-@mixin silicon-plus($class: '#{$silicon-prefix}math-plus'){
+@mixin silicon-plus($class: '#{$silicon-prefix}math-plus') {
 	@include silicon-math-plus($class);
 }

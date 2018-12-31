@@ -12,7 +12,7 @@
 		height: 0.6em;
 
 		/* border */
-		border: var(--stroke, #{$silicon-stroke}) solid currentColor;
+		border: #{$silicon-stroke-var} solid currentColor;
 		border-bottom: 0;
 		border-radius: 0.1em 0.1em 0 0;
 
@@ -28,10 +28,10 @@
 			display: block;
 			box-sizing: border-box;
 			width: 1.2em;
-			height: calc(var(--stroke, #{$silicon-stroke}) * 2);
+			height: calc(#{$silicon-stroke-var} * 2);
 
 			/* border */
-			border: calc(var(--stroke, #{$silicon-stroke}) / 2) solid currentColor;
+			border: calc(#{$silicon-stroke-var} / 2) solid currentColor;
 			border-radius: 0 0 0.2em 0.2em;
 
 			/* transform */

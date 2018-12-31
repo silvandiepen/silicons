@@ -9,7 +9,7 @@
 		width: 1em;
 		height: 0.5em;
 
-		border: var(--stroke, #{$silicon-stroke}) solid currentColor;
+		border: #{$silicon-stroke-var} solid currentColor;
 		border-top: 0;
 
 		&:before,
@@ -25,7 +25,7 @@
 			left: 50%;
 
 			display: block;
-			width: calc(var(--stroke, #{$silicon-stroke}) / 2);
+			width: calc(#{$silicon-stroke-var} / 2);
 			height: 0.5em;
 
 			background-color: currentColor;
@@ -33,14 +33,14 @@
 			transform: translateX(-50%);
 		}
 		&:after {
-			bottom: calc(75% + 0.5em + (var(--stroke, #{$silicon-stroke}) / 2));
+			bottom: calc(75% + 0.5em + (#{$silicon-stroke-var} / 2));
 			left: 50%;
 
 			display: block;
 			width: 0.33em;
 			height: 0.33em;
 
-			border: calc(var(--stroke, #{$silicon-stroke}) / 2) solid currentColor;
+			border: calc(#{$silicon-stroke-var} / 2) solid currentColor;
 			border-top: none;
 			border-right: none;
 

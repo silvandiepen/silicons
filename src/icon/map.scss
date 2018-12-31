@@ -12,9 +12,9 @@
 		height: 1em;
 
 		/* border */
-		border: var(--stroke, #{$silicon-stroke}) solid currentColor;
-		border-right-width: calc(var(--stroke, #{$silicon-stroke}) / 4);
-		border-left-width: calc(var(--stroke, #{$silicon-stroke}) / 4);
+		border: #{$silicon-stroke-var} solid currentColor;
+		border-right-width: calc(#{$silicon-stroke-var} / 4);
+		border-left-width: calc(#{$silicon-stroke-var} / 4);
 
 		/* transform */
 		transform: skewY(-12deg);
@@ -25,7 +25,7 @@
 
 			/* position */
 			position: absolute;
-			top: calc(var(--stroke, #{$silicon-stroke}) * -1);
+			top: calc(#{$silicon-stroke-var} * -1);
 
 			/* size */
 			display: block;
@@ -34,16 +34,16 @@
 			height: 1em;
 
 			/* border */
-			border: var(--stroke, #{$silicon-stroke}) solid currentColor;
+			border: #{$silicon-stroke-var} solid currentColor;
 		}
 		&:before {
 			/* position */
-			left: calc(100% + (var(--stroke, #{$silicon-stroke}) / 4));
+			left: calc(100% + (#{$silicon-stroke-var} / 4));
 
 			/* border */
-			border-left-width: calc(var(--stroke, #{$silicon-stroke}) / 4);
-			border-radius: 0 var(--stroke, #{$silicon-stroke})
-				var(--stroke, #{$silicon-stroke}) 0;
+			border-left-width: calc(#{$silicon-stroke-var} / 4);
+			border-radius: 0 #{$silicon-stroke-var}
+				#{$silicon-stroke-var} 0;
 
 			/* transform */
 			transform: skewY(24deg);
@@ -51,12 +51,12 @@
 		}
 		&:after {
 			/* position */
-			right: calc(100% + (var(--stroke, #{$silicon-stroke}) / 4));
+			right: calc(100% + (#{$silicon-stroke-var} / 4));
 
 			/* border */
-			border-right-width: calc(var(--stroke, #{$silicon-stroke}) / 4);
-			border-radius: var(--stroke, #{$silicon-stroke}) 0 0
-				var(--stroke, #{$silicon-stroke});
+			border-right-width: calc(#{$silicon-stroke-var} / 4);
+			border-radius: #{$silicon-stroke-var} 0 0
+				#{$silicon-stroke-var};
 
 			/* transform */
 			transform: skewY(24deg);

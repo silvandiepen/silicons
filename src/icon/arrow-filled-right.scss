@@ -10,7 +10,7 @@
 		/* size */
 		display: block;
 		width: 1em;
-		height: var(--stroke, #{$silicon-stroke});
+		height: #{$silicon-stroke-var};
 
 		/* background */
 		background-color: currentColor;
@@ -20,8 +20,8 @@
 
 			/* size */
 			position: absolute;
-			top: calc(var(--stroke, #{$silicon-stroke}) * 0.5);
-			right: calc(var(--stroke, #{$silicon-stroke}) * -0.5);
+			top: calc(#{$silicon-stroke-var} * 0.5);
+			right: calc(#{$silicon-stroke-var} * -0.5);
 
 			/* size */
 			display: block;

@@ -10,7 +10,7 @@
 		box-sizing: border-box;
 		width: 1em;
 		height: 1em;
-		border: var(--stroke, #{$silicon-stroke}) solid currentColor;
+		border: #{$silicon-stroke-var} solid currentColor;
 		border-right-color: transparent;
 
 		/* border */
@@ -31,11 +31,11 @@
 			/* size */
 			display: block;
 			box-sizing: border-box;
-			width: calc(var(--stroke, #{$silicon-stroke}) * 3);
-			height: calc(var(--stroke, #{$silicon-stroke}) * 3);
+			width: calc(#{$silicon-stroke-var} * 3);
+			height: calc(#{$silicon-stroke-var} * 3);
 
 			/* border */
-			border: var(--stroke, #{$silicon-stroke}) solid currentColor;
+			border: #{$silicon-stroke-var} solid currentColor;
 			border-bottom: none;
 			border-left: none;
 

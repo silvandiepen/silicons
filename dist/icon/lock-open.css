@@ -4,9 +4,31 @@
   /* size */
   display: inline-block;
   box-sizing: border-box;
-  width: 1em;
-  height: 1em;
+  width: 0.8em;
+  height: 0.5em;
+  /* border */
+  border: calc(var(--stroke, 0.1em) * 0.5) solid currentColor;
+  border-radius: 0 0 var(--stroke, 0.1em) var(--stroke, 0.1em);
+}
+.silicon-lock-open:before {
+  content: "";
+  /* position */
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  /* size */
+  display: block;
+  box-sizing: border-box;
+  width: 0.6em;
+  height: 0.5em;
   /* border */
   border: var(--stroke, 0.1em) solid currentColor;
-  border: 1px solid red;
+  border-bottom: 0;
+  border-radius: 0.3em 0.3em 0 0;
+  transform: translateX(-50%);
+}
+
+.silicon-lock-open:before {
+  /* border */
+  border-right-color: transparent;
 }

@@ -6,7 +6,9 @@
   box-sizing: border-box;
   width: 1em;
   height: 1em;
+  /* background */
+  background-image: linear-gradient(to right, transparent 50%, currentColor 50%);
   /* border */
-  border: var(--stroke, 0.1em) solid currentColor;
-  border: 1px solid red;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-radius: 50%;
 }

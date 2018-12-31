@@ -1,18 +1,12 @@
 @import '../default';
+@import 'lock';
 
 @mixin silicon-lock-open($class: '#{$silicon-prefix}lock-open') {
+	@include silicon-lock($class);
 	.#{$class} {
-		/* position */
-		position: relative;
-
-		/* size */
-		display: inline-block;
-		box-sizing: border-box;
-		width: 1em;
-		height: 1em;
-		
-		/* border */		
-		border: var(--stroke, $silicon-stroke) solid currentColor;
-		border: 1px solid red;
+		&:before{
+			/* border */
+			border-right-color: transparent;
+		}
 	}
 }

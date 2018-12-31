@@ -9,7 +9,7 @@
 		width: 1em;
 		height: 1em;
 
-		border: var(--stroke, #{$silicon-stroke}) solid currentColor;
+		border: #{$silicon-stroke-var} solid currentColor;
 		border-radius: 50% 0 50% 50%;
 
 		transform: rotate(-45deg);

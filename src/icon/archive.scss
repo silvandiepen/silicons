@@ -1,6 +1,6 @@
 @import '../default';
 
-@mixin silicon-archive($class: '#{$silicon-prefix}adjust-archive') {
+@mixin silicon-archive($class: '#{$silicon-prefix}archive') {
 	.#{$class} {
 		/* position */
 		position: relative;
@@ -8,11 +8,54 @@
 		/* size */
 		display: inline-block;
 		box-sizing: border-box;
-		width: 1em;
-		height: 1em;
+		width: 0.75em;
+		height: 0.55em;
 
 		/* border */
-		border: var(--stroke, $silicon-stroke) solid currentColor;
-		border: 1px solid red;
+		border: #{$silicon-stroke-var} solid currentColor;
+		border-top: none;
+
+		/* transform */
+		transform: translateY(0.2em);
+
+		&:before,
+		&:after {
+			content: '';
+
+			/* position */
+			position: absolute;
+
+			/* size */
+			display: block;
+			box-sizing: border-box;
+
+			/* transform */
+			transform: translateX(-50%);
+		}
+
+		&:before {
+			/* position */
+			bottom: 100%;
+			left: 50%;
+
+			/* size */
+			width: 1em;
+			height: calc(#{$silicon-stroke-var} * 3);
+
+			/* border */
+			border: calc(#{$silicon-stroke-var} / 2) solid currentColor;
+		}
+		&:after {
+			/* position */
+			bottom: calc(100% - (#{$silicon-stroke-var} * 1));
+			left: 50%;
+
+			/* size */
+			width: 0.2em;
+			height: calc(#{$silicon-stroke-var} / 2);
+
+			/* background */
+			background-color: currentColor;
+		}
 	}
 }

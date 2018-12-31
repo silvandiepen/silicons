@@ -14,8 +14,8 @@
 		overflow: hidden;
 
 		/* border */
-		border: var(--stroke, #{$silicon-stroke}) solid currentColor;
-		border-radius: var(--stroke, #{$silicon-stroke});
+		border: #{$silicon-stroke-var} solid currentColor;
+		border-radius: #{$silicon-stroke-var};
 
 		&:before {
 			content: '';
@@ -30,7 +30,7 @@
 			height: 0.1em;
 
 			/* border */
-			border: calc(var(--stroke, #{$silicon-stroke}) / 2) solid currentColor;
+			border: calc(#{$silicon-stroke-var} / 2) solid currentColor;
 			border-radius: 50%;
 		}
 
@@ -47,8 +47,8 @@
 			height: 0.6em;
 
 			/* border */
-			border: calc(var(--stroke, #{$silicon-stroke}) / 2) solid currentColor;
-			border-radius: var(--stroke, #{$silicon-stroke}) 0 0 0;
+			border: calc(#{$silicon-stroke-var} / 2) solid currentColor;
+			border-radius: #{$silicon-stroke-var} 0 0 0;
 
 			/* trasnform */
 			transform: rotate(45deg);

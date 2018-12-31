@@ -24,7 +24,7 @@
 		background-size: 0.2em 0.2em, 0.2em 0.2em;
 
 			/* border */
-		border: calc(var(--stroke, #{$silicon-stroke}) / 1) solid currentColor;
+		border: calc(#{$silicon-stroke-var} / 1) solid currentColor;
 		border-radius: 50%;
 
 		&:before,
@@ -45,7 +45,7 @@
 			height: 0.5em;
 
 			/* border */
-			border: calc(var(--stroke, #{$silicon-stroke}) / 2) solid transparent;
+			border: calc(#{$silicon-stroke-var} / 2) solid transparent;
 			border-bottom-color: currentColor;
 			border-radius: 50%;
 

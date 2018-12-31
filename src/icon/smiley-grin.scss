@@ -12,7 +12,7 @@
 			height: 0.25em;
 
 			/* border */
-			border: calc(var(--stroke, #{$silicon-stroke}) / 2) solid currentColor;
+			border: calc(#{$silicon-stroke-var} / 2) solid currentColor;
 			border-radius: 0 0 0.5em 0.5em;
 
 			/* transform */

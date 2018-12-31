@@ -9,7 +9,7 @@
 		width: 1em;
 		height: 1em;
 
-		border: var(--stroke, #{$silicon-stroke}) solid currentColor;
+		border: #{$silicon-stroke-var} solid currentColor;
 		border-radius: 50%;
 
 		&:before,
@@ -26,7 +26,7 @@
 
 			display: block;
 			width: 0.5em;
-			height: var(--stroke, #{$silicon-stroke});
+			height: #{$silicon-stroke-var};
 
 			background-color: currentColor;
 
@@ -43,10 +43,10 @@
 
 			background-image: linear-gradient(
 				to bottom,
-				transparent calc(50% - var(--stroke, #{$silicon-stroke}) / 4),
-				currentColor calc(50% - var(--stroke, #{$silicon-stroke}) / 4),
-				currentColor calc(50% + var(--stroke, #{$silicon-stroke}) / 4),
-				transparent calc(50% + var(--stroke, #{$silicon-stroke}) / 4)
+				transparent calc(50% - #{$silicon-stroke-var} / 4),
+				currentColor calc(50% - #{$silicon-stroke-var} / 4),
+				currentColor calc(50% + #{$silicon-stroke-var} / 4),
+				transparent calc(50% + #{$silicon-stroke-var} / 4)
 			);
 
 			transform: translate(-50%, -50%);

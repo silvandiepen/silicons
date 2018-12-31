@@ -9,44 +9,44 @@
 		display: inline-block;
 		box-sizing: border-box;
 		width: 1em;
-		height: calc(var(--stroke, #{$silicon-stroke}) * 3);
+		height: calc(#{$silicon-stroke-var} * 3);
 
 		/* background */
 		background-image: linear-gradient(to right, currentColor, currentColor);
 		background-repeat: no-repeat;
 		background-position: bottom left;
-		background-size: 0.75em var(--stroke, #{$silicon-stroke});
+		background-size: 0.75em #{$silicon-stroke-var};
 
 		/* border */
-		border-top: var(--stroke, #{$silicon-stroke}) solid currentColor;
+		border-top: #{$silicon-stroke-var} solid currentColor;
 		border-right: none;
 		border-left: none;
 
 		/* transform */
-		transform: translateY(calc(var(--stroke, #{$silicon-stroke}) * -2));
+		transform: translateY(calc(#{$silicon-stroke-var} * -2));
 
 		&:before {
 			content: '';
 
 			/* position */
 			position: absolute;
-			top: calc(var(--stroke, #{$silicon-stroke}) * 3);
+			top: calc(#{$silicon-stroke-var} * 3);
 			left: 0;
 
 			/* size */
 			display: block;
 			box-sizing: border-box;
 			width: 100%;
-			height: calc(var(--stroke, #{$silicon-stroke}) * 3);
+			height: calc(#{$silicon-stroke-var} * 3);
 
 			/* background */
 			background-image: linear-gradient(to right, currentColor, currentColor);
 			background-repeat: no-repeat;
 			background-position: bottom left;
-			background-size: 0.5em var(--stroke, #{$silicon-stroke});
+			background-size: 0.5em #{$silicon-stroke-var};
 
 			/* border */
-			border-top: var(--stroke, #{$silicon-stroke}) solid currentColor;
+			border-top: #{$silicon-stroke-var} solid currentColor;
 			border-right: none;
 			border-left: none;
 		}

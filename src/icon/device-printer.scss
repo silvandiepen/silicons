@@ -12,7 +12,7 @@
 		height: 0.5em;
 
 		/* border */
-		border: calc(var(--stroke, #{$silicon-stroke}) / 2) solid currentColor;
+		border: calc(#{$silicon-stroke-var} / 2) solid currentColor;
 
 		&:before,
 		&:after {
@@ -25,7 +25,7 @@
 
 		&:after {
 			/* position */
-			bottom: calc(100% + (var(--stroke, #{$silicon-stroke}) * 2.5));
+			bottom: calc(100% + (#{$silicon-stroke-var} * 2.5));
 			left: 50%;
 
 			/* size */
@@ -34,7 +34,7 @@
 			height: 0.1em;
 
 			/* border */
-			border: calc(var(--stroke, #{$silicon-stroke}) / 2) solid currentColor;
+			border: calc(#{$silicon-stroke-var} / 2) solid currentColor;
 			border-bottom: none;
 
 			/* transform */
@@ -51,9 +51,9 @@
 			height: 0.5em;
 
 			/* border */
-			border: var(--stroke, #{$silicon-stroke}) solid currentColor;
-			border-radius: var(--stroke, #{$silicon-stroke})
-				var(--stroke, #{$silicon-stroke}) 0 0;
+			border: #{$silicon-stroke-var} solid currentColor;
+			border-radius: #{$silicon-stroke-var}
+				#{$silicon-stroke-var} 0 0;
 
 			/* transform */
 			transform: translatex(-50%);

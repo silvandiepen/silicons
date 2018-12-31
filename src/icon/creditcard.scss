@@ -14,12 +14,11 @@
 		/* background */
 		background-image: linear-gradient(to right, currentColor, currentColor);
 		background-repeat: no-repeat;
-		background-position: bottom 0.2em center;
+		background-position: bottom 0.1em center;
 		background-size: 100% 0.2em;
 
 		/* border */
-		border: var(--stroke, $silicon-stroke) solid currentColor;
-		border: 1px solid red;
-		border-radius: var(--stroke, $silicon-stroke);
+		border: calc(#{$silicon-stroke-var} / 2) solid currentColor;
+		border-radius: #{$silicon-stroke-var};
 	}
 }

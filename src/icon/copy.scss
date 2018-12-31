@@ -26,13 +26,13 @@
 			height: 1em;
 
 			/* border */
-			border: var(--stroke, #{$silicon-stroke}) solid currentColor;
+			border: #{$silicon-stroke-var} solid currentColor;
 		}
 
 		&:before {
 			/* position */
-			top: calc(var(--stroke, #{$silicon-stroke}) * -2);
-			left: calc(var(--stroke, #{$silicon-stroke}) * -2);
+			top: calc(#{$silicon-stroke-var} * -2);
+			left: calc(#{$silicon-stroke-var} * -2);
 			z-index: -1;
 
 			/* border */
@@ -56,7 +56,7 @@
 				background-color: white;
 
 				/* border */
-				border: calc(var(--stroke, #{$silicon-stroke}) / 2) solid currentColor;
+				border: calc(#{$silicon-stroke-var} / 2) solid currentColor;
 			}
 			&:before{
 				/* text */

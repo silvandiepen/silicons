@@ -1,12 +1,44 @@
-.silicon-adjust-archive {
+.silicon-archive {
   /* position */
   position: relative;
   /* size */
   display: inline-block;
   box-sizing: border-box;
-  width: 1em;
-  height: 1em;
+  width: 0.75em;
+  height: 0.55em;
   /* border */
   border: var(--stroke, 0.1em) solid currentColor;
-  border: 1px solid red;
+  border-top: none;
+  /* transform */
+  transform: translateY(0.2em);
+}
+.silicon-archive:before, .silicon-archive:after {
+  content: "";
+  /* position */
+  position: absolute;
+  /* size */
+  display: block;
+  box-sizing: border-box;
+  /* transform */
+  transform: translateX(-50%);
+}
+.silicon-archive:before {
+  /* position */
+  bottom: 100%;
+  left: 50%;
+  /* size */
+  width: 1em;
+  height: calc(var(--stroke, 0.1em) * 3);
+  /* border */
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+}
+.silicon-archive:after {
+  /* position */
+  bottom: calc(100% - (var(--stroke, 0.1em) * 1));
+  left: 50%;
+  /* size */
+  width: 0.2em;
+  height: calc(var(--stroke, 0.1em) / 2);
+  /* background */
+  background-color: currentColor;
 }

@@ -9,8 +9,8 @@
 		width: 0.75em;
 		height: 0.75em;
 
-		border-bottom: var(--stroke, #{$silicon-stroke}) solid currentColor;
-		border-left: var(--stroke, #{$silicon-stroke}) solid currentColor;
+		border-bottom: #{$silicon-stroke-var} solid currentColor;
+		border-left: #{$silicon-stroke-var} solid currentColor;
 
     transform: translateY(0.25em) rotate(-45deg);
     
@@ -22,28 +22,28 @@
     }
     
 		&:before {
-			top: calc(-0.5em + var(--stroke, #{$silicon-stroke}));
-			left: calc(var(--stroke, #{$silicon-stroke}) * -1);
+			top: calc(-0.5em + #{$silicon-stroke-var});
+			left: calc(#{$silicon-stroke-var} * -1);
 
 			width: 0.75em;
 			height: 0.5em;
 
-			border-top: var(--stroke, #{$silicon-stroke}) solid currentColor;
-			border-right: var(--stroke, #{$silicon-stroke}) solid currentColor;
-			border-left: var(--stroke, #{$silicon-stroke}) solid currentColor;
+			border-top: #{$silicon-stroke-var} solid currentColor;
+			border-right: #{$silicon-stroke-var} solid currentColor;
+			border-left: #{$silicon-stroke-var} solid currentColor;
 			border-radius: 0.5em 0.5em 0 0;
 		}
 
 		&:after {
 			top: 0;
-			left: calc(0.5em + var(--stroke, #{$silicon-stroke}));
+			left: calc(0.5em + #{$silicon-stroke-var});
 
 			width: 0.5em;
 			height: 0.75em;
 
-			border-top: var(--stroke, #{$silicon-stroke}) solid currentColor;
-			border-right: var(--stroke, #{$silicon-stroke}) solid currentColor;
-			border-bottom: var(--stroke, #{$silicon-stroke}) solid currentColor;
+			border-top: #{$silicon-stroke-var} solid currentColor;
+			border-right: #{$silicon-stroke-var} solid currentColor;
+			border-bottom: #{$silicon-stroke-var} solid currentColor;
 			border-radius: 0 0.5em 0.5em 0;
     }
 		&.colored {

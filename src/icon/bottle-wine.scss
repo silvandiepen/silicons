@@ -12,6 +12,7 @@
 		height: 1em;
 		
 		/* border */
+		border: #{$silicon-stroke-var} solid currentColor;
 		border: 1px solid red;
 	}
 }

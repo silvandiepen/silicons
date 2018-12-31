@@ -27,7 +27,7 @@
 		/* size */
 			display: block;
 			height: 1em;
-			width: var(--stroke, #{$silicon-stroke});
+			width: #{$silicon-stroke-var};
 			
 			/* background */
 			background-color: currentColor;
