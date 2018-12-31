@@ -1,0 +1,13 @@
+.silicon-ball-basketball {
+  /* position */
+  position: relative;
+  /* size */
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  /* border */
+  border: var(--stroke, 0.1em) solid currentColor;
+  border: 1px solid red;
+  border-radius: 50%;
+}

@@ -31,14 +31,14 @@ function makeFiles(items, callback) {
 	iconList.silicons =[];
 	let iconArray = [];
 	let mixins = '';
-	let includes = "@import 'mixins'; \n";
+	let includes = '';
 
 	for (var i = 0; i < items.length; i++) {
 		if (items[i].indexOf('.scss') > 0) {
 			let iconname = items[i].replace('.scss', '');
 			iconList.silicons.push(iconname);
-			mixins = mixins + `\n @import 'icon/${iconname}';`;
-			includes = includes + `@include silicon-${iconname}(); \n`;
+			mixins = mixins + `@import 'icon/${iconname}';\n `;
+			includes = includes + `@include silicon-${iconname}();\n`;
 		}
 	}
 	
@@ -58,8 +58,8 @@ function makeFiles(items, callback) {
 		console.log(`mixins file is created`);
 	});
 
-	// ICONS
-	fs.writeFile(path.join('./src/', 'icons.scss'), includes, (err) => {
+	// INCLUDES
+	fs.writeFile(path.join('./src/', 'includes.scss'), includes, (err) => {
 		if (err) throw err;
 		console.log(`icons file is created`);
 	});

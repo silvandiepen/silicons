@@ -1,0 +1,14 @@
+@import '../default';
+@import 'math-plus';
+
+@mixin silicon-math-times($class: '#{$silicon-prefix}math-times') {
+	@include silicon-plus($class);
+	.#{$class} {
+		/* transform */
+		transform: rotate(45deg);
+	}
+}
+
+@mixin silicon-close($class: '#{$silicon-prefix}close'){
+	@include silicon-math-times($class);
+}

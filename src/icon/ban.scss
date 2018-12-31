@@ -1,0 +1,28 @@
+@import '../default';
+
+@mixin silicon-ban($class: '#{$silicon-prefix}ban') {
+	.#{$class} {
+		/* position */
+		position: relative;
+
+		/* size */
+		display: inline-block;
+		box-sizing: border-box;
+		width: 1em;
+		height: 1em;
+
+		/* background  */
+		background-image: linear-gradient(
+			to right bottom,
+			transparent calc(50% - (var(--stroke, $silicon-stroke) * 0.5)),
+			currentColor calc(50% - (var(--stroke, $silicon-stroke) * 0.5)),
+			currentColor calc(50% + (var(--stroke, $silicon-stroke) * 0.5)),
+			transparent calc(50% - (var(--stroke, $silicon-stroke) * 0.5))
+		);
+
+		/* border */
+		border: var(--stroke, $silicon-stroke) solid currentColor;
+		border: 1px solid red;
+		border-radius: 50%;
+	}
+}

@@ -1,0 +1,17 @@
+@import '../default';
+
+@mixin silicon-bottle-wine($class: '#{$silicon-prefix}bottle-wine') {
+	.#{$class} {
+		/* position */
+		position: relative;
+
+		/* size */
+		display: inline-block;
+		box-sizing: border-box;
+		width: 1em;
+		height: 1em;
+		
+		/* border */
+		border: 1px solid red;
+	}
+}

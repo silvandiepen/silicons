@@ -25,3 +25,8 @@
   transform: rotate(45deg);
   transform-origin: 100% 0;
 }
+
+.silicon-go-left {
+  /* position */
+  transform: rotate(-180deg);
+}

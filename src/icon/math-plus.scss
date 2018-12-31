@@ -1,6 +1,6 @@
 @import '../default';
 
-@mixin silicon-close($class: '#{$silicon-prefix}close') {
+@mixin silicon-math-plus($class: '#{$silicon-prefix}math-plus') {
 	.#{$class} {
 		/* position */
 		position: relative;
@@ -10,9 +10,6 @@
     box-sizing: border-box;
 		width: 1em;
 		height: 1em;
-
-		/* transform */
-		transform: rotate(45deg);
 
 		&:before,
 		&:after {
@@ -31,14 +28,13 @@
 			
 			/* background */
 			background-color: currentColor;
-		}
-		&:before {
+
 			/* transform */
 			transform: translate(-50%, -50%);
 		}
-		&:after {
-			/* transform */
-			transform: translate(-50%, -50%) rotate(90deg);
-		}
 	}
+}
+
+@mixin silicon-plus($class: '#{$silicon-prefix}math-plus'){
+	@include silicon-math-plus($class);
 }

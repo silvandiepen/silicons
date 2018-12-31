@@ -1,3 +1,29 @@
+.silicon-adjust-color {
+  /* position */
+  position: relative;
+  /* size */
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  /* border */
+  border: var(--stroke, 0.1em) solid currentColor;
+  border: 1px solid red;
+}
+
+.silicon-adjust-archive {
+  /* position */
+  position: relative;
+  /* size */
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  /* border */
+  border: var(--stroke, 0.1em) solid currentColor;
+  border: 1px solid red;
+}
+
 .silicon-arrow-basic-down {
   /* position */
   position: relative;
@@ -257,6 +283,91 @@
 .silicon-arrow-filled-up {
   /* position */
   transform: rotate(-90deg);
+}
+
+.silicon-asterisk {
+  /* position */
+  position: relative;
+  /* size */
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  /* border */
+  border: var(--stroke, 0.1em) solid currentColor;
+  border: 1px solid red;
+}
+
+.silicon-ball-basketball {
+  /* position */
+  position: relative;
+  /* size */
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  /* border */
+  border: var(--stroke, 0.1em) solid currentColor;
+  border: 1px solid red;
+  border-radius: 50%;
+}
+
+.silicon-ball-football {
+  /* position */
+  position: relative;
+  /* size */
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  /* border */
+  border: var(--stroke, 0.1em) solid currentColor;
+  border: 1px solid red;
+  border-radius: 50%;
+}
+
+.silicon-ball-tennis {
+  /* position */
+  position: relative;
+  /* size */
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  /* border */
+  border: var(--stroke, 0.1em) solid currentColor;
+  border: 1px solid red;
+  border-radius: 50%;
+}
+
+.silicon-ball-volleyball {
+  /* position */
+  position: relative;
+  /* size */
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  /* border */
+  border: var(--stroke, 0.1em) solid currentColor;
+  border: 1px solid red;
+  border-radius: 50%;
+}
+
+.silicon-ban {
+  /* position */
+  position: relative;
+  /* size */
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  /* background  */
+  background-image: linear-gradient(to right bottom, transparent calc(50% - (var(--stroke, $silicon-stroke) * 0.5)), currentColor calc(50% - (var(--stroke, $silicon-stroke) * 0.5)), currentColor calc(50% + (var(--stroke, $silicon-stroke) * 0.5)), transparent calc(50% - (var(--stroke, $silicon-stroke) * 0.5)));
+  /* border */
+  border: var(--stroke, 0.1em) solid currentColor;
+  border: 1px solid red;
+  border-radius: 50%;
 }
 
 .silicon-battery-25 {
@@ -539,6 +650,57 @@
   background-color: var(--green,#10c565);
 }
 
+.silicon-bed {
+  /* position */
+  position: relative;
+  /* size */
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  /* border */
+  border: var(--stroke, 0.1em) solid currentColor;
+  border: 1px solid red;
+}
+
+.silicon-book {
+  /* position */
+  position: relative;
+  /* size */
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  /* border */
+  border: var(--stroke, 0.1em) solid currentColor;
+  border: 1px solid red;
+}
+
+.silicon-bottle-beer {
+  /* position */
+  position: relative;
+  /* size */
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  /* border */
+  border: var(--stroke, 0.1em) solid currentColor;
+  border: 1px solid red;
+}
+
+.silicon-bottle-wine {
+  /* position */
+  position: relative;
+  /* size */
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  /* border */
+  border: 1px solid red;
+}
+
 .silicon-burger {
   /* position */
   position: relative;
@@ -573,40 +735,6 @@
   bottom: 100%;
   /* transform */
   transform: translateY(calc(var(--stroke, 0.1em) * -2));
-}
-
-.silicon-close {
-  /* position */
-  position: relative;
-  /* size */
-  display: inline-block;
-  box-sizing: border-box;
-  width: 1em;
-  height: 1em;
-  /* transform */
-  transform: rotate(45deg);
-}
-.silicon-close:before, .silicon-close:after {
-  content: "";
-  /* position */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  /* size */
-  display: block;
-  box-sizing: border-box;
-  width: 100%;
-  height: var(--stroke, 0.1em);
-  /* background */
-  background-color: currentColor;
-}
-.silicon-close:before {
-  /* transform */
-  transform: translate(-50%, -50%);
-}
-.silicon-close:after {
-  /* transform */
-  transform: translate(-50%, -50%) rotate(90deg);
 }
 
 .silicon-code {
@@ -689,6 +817,25 @@
   background-color: var(--white,#ffffff);
   /* opacity */
   opacity: 0.5;
+}
+
+.silicon-creditcard {
+  /* position */
+  position: relative;
+  /* size */
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 0.75em;
+  /* background */
+  background-image: linear-gradient(to right, currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: bottom 0.2em center;
+  background-size: 100% 0.2em;
+  /* border */
+  border: var(--stroke, 0.1em) solid currentColor;
+  border: 1px solid red;
+  border-radius: var(--stroke, 0.1em);
 }
 
 .silicon-device-camera {
@@ -1204,13 +1351,15 @@
   width: 1em;
   height: 1em;
   /* position */
-  background-image: radial-gradient(closest-side, transparent calc(100% - var(--stroke, 0.1em)), currentColor calc(100% - var(--stroke, 0.1em)), currentColor 100%, transparent);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 0.5em 0.5em;
+  background-image: radial-gradient(closest-side, transparent calc(100% - var(--stroke, 0.1em)), currentColor calc(100% - var(--stroke, 0.1em)), currentColor 100%, transparent), linear-gradient(to bottom, currentColor 0.25em, transparent 0.25em, transparent 0.6em, currentColor 0.6em), linear-gradient(to right, currentColor 0.25em, transparent 0.25em, transparent 0.6em, currentColor 0.6em);
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: center center, center center, center center;
+  background-size: 0.5em 0.5em, calc(var(--stroke, 0.1em) / 2) 100%, 100% calc(var(--stroke, 0.1em) / 2);
   /* border */
   border: var(--stroke, 0.1em) solid currentColor;
   border-radius: 50%;
+  /* transform */
+  transform: rotate(45deg);
 }
 
 .silicon-globe {
@@ -1327,6 +1476,11 @@
   transform-origin: 100% 0;
 }
 
+.silicon-go-left {
+  /* position */
+  transform: rotate(-180deg);
+}
+
 .silicon-go-right {
   /* position */
   position: relative;
@@ -1388,6 +1542,45 @@
   transform: rotate(-90deg);
 }
 
+.silicon-home {
+  /* position */
+  position: relative;
+  /* size */
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  /* border */
+  border: var(--stroke, 0.1em) solid currentColor;
+  border: 1px solid red;
+}
+
+.silicon-label {
+  /* position */
+  position: relative;
+  /* size */
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  /* border */
+  border: var(--stroke, 0.1em) solid currentColor;
+  border: 1px solid red;
+}
+
+.silicon-link {
+  /* position */
+  position: relative;
+  /* size */
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  /* border */
+  border: var(--stroke, 0.1em) solid currentColor;
+  border: 1px solid red;
+}
+
 .silicon-location {
   /* position */
   position: relative;
@@ -1432,6 +1625,32 @@
   height: calc(var(--stroke, 0.1em) * 3);
   /* text */
   color: var(--black,#101010);
+}
+
+.silicon-lock-open {
+  /* position */
+  position: relative;
+  /* size */
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  /* border */
+  border: var(--stroke, 0.1em) solid currentColor;
+  border: 1px solid red;
+}
+
+.silicon-lock {
+  /* position */
+  position: relative;
+  /* size */
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  /* border */
+  border: var(--stroke, 0.1em) solid currentColor;
+  border: 1px solid red;
 }
 
 .silicon-mail {
@@ -1537,6 +1756,108 @@
   background-position: left center;
 }
 
+.silicon-math-minus {
+  /* position */
+  position: relative;
+  /* size */
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+}
+.silicon-math-minus:before, .silicon-math-minus:after {
+  content: "";
+  /* position */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* size */
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: var(--stroke, 0.1em);
+  /* background */
+  background-color: currentColor;
+}
+.silicon-math-minus:before {
+  /* transform */
+  transform: translate(-50%, -50%);
+}
+.silicon-math-minus:after {
+  /* transform */
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.silicon-math-plus {
+  /* position */
+  position: relative;
+  /* size */
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+}
+.silicon-math-plus:before, .silicon-math-plus:after {
+  content: "";
+  /* position */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* size */
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: var(--stroke, 0.1em);
+  /* background */
+  background-color: currentColor;
+  /* transform */
+  transform: translate(-50%, -50%);
+}
+
+.silicon-math-times {
+  /* position */
+  position: relative;
+  /* size */
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+}
+.silicon-math-times:before, .silicon-math-times:after {
+  content: "";
+  /* position */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* size */
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: var(--stroke, 0.1em);
+  /* background */
+  background-color: currentColor;
+  /* transform */
+  transform: translate(-50%, -50%);
+}
+
+.silicon-math-times {
+  /* transform */
+  transform: rotate(45deg);
+}
+
+.silicon-office-marker {
+  /* position */
+  position: relative;
+  /* size */
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  /* border */
+  border: var(--stroke, 0.1em) solid currentColor;
+  border: 1px solid red;
+}
+
 .silicon-office-paperclip {
   /* custom properties */
   --height: calc(var(--stroke, 0.1em) * 5.5);
@@ -1586,6 +1907,19 @@
   border-radius: 0 calc(var(--height) - (var(--stroke, 0.1em) * 3) / 2) calc(var(--height) - (var(--stroke, 0.1em) * 3) / 2) 0;
 }
 
+.silicon-office-pencil {
+  /* position */
+  position: relative;
+  /* size */
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  /* border */
+  border: var(--stroke, 0.1em) solid currentColor;
+  border: 1px solid red;
+}
+
 .silicon-office-scissors {
   /* position */
   position: relative;
@@ -1628,6 +1962,19 @@
   border-radius: 0 0.1em 120% 0;
   /* transform */
   transform: rotate(22.5deg);
+}
+
+.silicon-paste {
+  /* position */
+  position: relative;
+  /* size */
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  /* border */
+  border: var(--stroke, 0.1em) solid currentColor;
+  border: 1px solid red;
 }
 
 .silicon-picture {
@@ -2557,6 +2904,32 @@
   background-position: bottom right;
 }
 
+.silicon-time-clock {
+  /* position */
+  position: relative;
+  /* size */
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  /* border */
+  border: var(--stroke, 0.1em) solid currentColor;
+  border: 1px solid red;
+}
+
+.silicon-time-watch {
+  /* position */
+  position: relative;
+  /* size */
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  /* border */
+  border: var(--stroke, 0.1em) solid currentColor;
+  border: 1px solid red;
+}
+
 .silicon-trash {
   position: relative;
   display: inline-block;
@@ -2616,6 +2989,30 @@
   border: var(--stroke, 0.1em) solid currentColor;
   border-radius: 50%;
   transform: translateX(-50%);
+}
+
+.silicon-vehicle-bicycle {
+  /* position */
+  position: relative;
+  /* size */
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  /* border */
+  border: 1px solid red;
+}
+
+.silicon-vehicle-car {
+  /* position */
+  position: relative;
+  /* size */
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  /* border */
+  border: 1px solid red;
 }
 
 .silicon-volume-high {

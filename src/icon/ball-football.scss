@@ -1,0 +1,19 @@
+@import '../default';
+
+@mixin silicon-ball-football($class: '#{$silicon-prefix}ball-football') {
+	.#{$class} {
+		/* position */
+		position: relative;
+
+		/* size */
+		display: inline-block;
+		box-sizing: border-box;
+		width: 1em;
+		height: 1em;
+
+		/* border */
+		border: var(--stroke, $silicon-stroke) solid currentColor;
+		border: 1px solid red;
+		border-radius: 50%;
+	}
+}

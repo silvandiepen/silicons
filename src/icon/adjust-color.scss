@@ -1,0 +1,18 @@
+@import '../default';
+
+@mixin silicon-adjust-color($class: '#{$silicon-prefix}adjust-color') {
+	.#{$class} {
+		/* position */
+		position: relative;
+
+		/* size */
+		display: inline-block;
+		box-sizing: border-box;
+		width: 1em;
+		height: 1em;
+
+		/* border */
+		border: var(--stroke, $silicon-stroke) solid currentColor;
+		border: 1px solid red;
+	}
+}
