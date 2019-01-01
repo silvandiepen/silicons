@@ -1,6 +1,6 @@
 @import '../default';
 
-@mixin silicon-bottle-beer($class: '#{$silicon-prefix}bottle-beer') {
+@mixin silicon-glass-wine($class: '#{$silicon-prefix}glass-wine') {
 	.#{$class} {
 		/* position */
 		position: relative;
@@ -8,11 +8,12 @@
 		/* size */
 		display: inline-block;
 		box-sizing: border-box;
-		width: 1em;
-		height: 1em;
+		width: .5em;
+		height: .5em;
 		
 		/* border */
 		border: #{$silicon-stroke-var} solid currentColor;
-		border: 1px solid red;
+		border-radius: 0 0 50% 50%;
+
 	}
 }

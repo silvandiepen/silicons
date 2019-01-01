@@ -19,8 +19,10 @@
   width: 0.5em;
   height: var(--stroke, 0.1em);
   background-color: currentColor;
-  transform: translate(-0.1em, -0.1em) rotate(45deg);
-  transform-origin: 0 50%;
+  -webkit-transform: translate(-0.1em, -0.1em) rotate(45deg);
+          transform: translate(-0.1em, -0.1em) rotate(45deg);
+  -webkit-transform-origin: 0 50%;
+          transform-origin: 0 50%;
 }
 .silicon-zoom-out:after {
   top: 50%;
@@ -29,5 +31,6 @@
   width: 0.4em;
   height: 0.4em;
   background-image: linear-gradient(to bottom, transparent calc(50% - var(--stroke, 0.1em) / 4), currentColor calc(50% - var(--stroke, 0.1em) / 4), currentColor calc(50% + var(--stroke, 0.1em) / 4), transparent calc(50% + var(--stroke, 0.1em) / 4));
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }

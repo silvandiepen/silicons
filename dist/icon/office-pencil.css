@@ -20,17 +20,17 @@
   /* size */
   display: block;
   box-sizing: border-box;
-  width: calc((0.4em - (var(--stroke, 0.1em) * 1.5))*2);
-  height: calc((0.4em - (var(--stroke, 0.1em) * 1.5))*2);
+  width: calc((0.4em - (var(--stroke, 0.1em) * 1.5)) * 1);
+  height: calc((0.4em - (var(--stroke, 0.1em) * 1.5)) * 1);
   /* background */
-  background-image: linear-gradient(to bottom right, transparent calc(50% - (var(--stroke, 0.1em) * 0.25)), currentColor calc(50% - (var(--stroke, 0.1em) * 0.25)), currentColor calc(50% +(var(--stroke, 0.1em) * 0.25)), transparent calc(50% + (var(--stroke, 0.1em) * 0.25)));
-  background-repeat: no-repeat;
-  background-position: center center;
+  background-image: radial-gradient(closest-side, currentColor 100%, transparent), linear-gradient(to bottom right, transparent calc(50% - (var(--stroke, 0.1em) * 0.25)), currentColor calc(50% - (var(--stroke, 0.1em) * 0.25)), currentColor calc(50% + (var(--stroke, 0.1em) * 0)), transparent calc(50% + (var(--stroke, 0.1em) * 0)));
+  background-size: 0.1em 0.1em, 100% 100%;
+  background-repeat: no-repeat, no-repeat;
+  background-position: left -0.1em top -0.1em, center center;
   /* border */
   border: var(--stroke, 0.1em) solid currentColor;
-  border-right: none;
-  border-bottom: none;
-  border-radius: var(--stroke, 0.1em) 0 0 0;
+  border-radius: var(--stroke, 0.1em) 0 50% 0;
   /* transform */
-  transform: translate(-50%, -50%) scale(0.5, 1) rotate(45deg);
+  -webkit-transform: translate(-50%, -50%) scale(1, 1) rotate(45deg);
+          transform: translate(-50%, -50%) scale(1, 1) rotate(45deg);
 }

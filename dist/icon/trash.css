@@ -7,14 +7,16 @@
   border: var(--stroke, 0.1em) solid currentColor;
   border-top: none;
   border-radius: 0 0 0.1em 0.1em;
-  transform: translateY(0.2em);
+  -webkit-transform: translateY(0.2em);
+          transform: translateY(0.2em);
 }
 .silicon-trash:before, .silicon-trash:after {
   content: "";
   position: absolute;
   display: block;
   box-sizing: border-box;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 .silicon-trash:before {
   bottom: calc(100% + var(--stroke, 0.1em));

@@ -16,7 +16,8 @@
   border-right: none;
   border-left: none;
   /* transform */
-  transform: translateY(calc(var(--stroke, 0.1em) * -2));
+  -webkit-transform: translateY(calc(var(--stroke, 0.1em) * -2));
+          transform: translateY(calc(var(--stroke, 0.1em) * -2));
 }
 .silicon-text-align-right:before {
   content: "";

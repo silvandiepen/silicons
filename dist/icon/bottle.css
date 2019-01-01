@@ -1,4 +1,4 @@
-.silicon-bottle-wine {
+.silicon-bottle {
   /* position */
   position: relative;
   /* size */
@@ -6,11 +6,16 @@
   box-sizing: border-box;
   width: 0.45em;
   height: 0.85em;
+  /* background */
+  background-image: linear-gradient(to bottom, currentColor, currentColor), linear-gradient(to bottom, currentColor, currentColor);
+  background-repeat: no-repeat, no-repeat;
+  background-position: top 25% center, top 70% center;
+  background-size: 100% calc(var(--stroke, 0.1em) * 0.5), 100% calc(var(--stroke, 0.1em) * 0.5);
   /* border */
   border: var(--stroke, 0.1em) solid currentColor;
   border-radius: 0.5em 0.5em 0 0;
 }
-.silicon-bottle-wine:before {
+.silicon-bottle:before {
   content: "";
   /* position */
   position: absolute;

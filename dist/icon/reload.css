@@ -11,7 +11,8 @@
   /* border */
   border-radius: 50%;
   /* transform */
-  transform: rotate(180deg) scale(-1, 1);
+  -webkit-transform: rotate(180deg) scale(-1, 1);
+          transform: rotate(180deg) scale(-1, 1);
 }
 .silicon-reload:before, .silicon-reload:after {
   content: "";
@@ -29,5 +30,6 @@
   border-bottom: none;
   border-left: none;
   /* transform */
-  transform: translate(25%, 75%) rotate(22.5deg);
+  -webkit-transform: translate(25%, 75%) rotate(22.5deg);
+          transform: translate(25%, 75%) rotate(22.5deg);
 }

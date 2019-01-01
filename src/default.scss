@@ -1,7 +1,7 @@
 $silicon-prefix: 'silicon-' !default;
 $silicon-stroke: 0.1em !default;
-$silicon-stroke-var: var(--stroke, #{$silicon-stroke});
-$silicon-stroke-half-var: calc(var(--stroke, #{$silicon-stroke}) * 0.5);
+$silicon-stroke-var: var(--stroke, #{$silicon-stroke}) !default;
+$silicon-stroke-half-var: calc(var(--stroke, #{$silicon-stroke}) * 0.5) !default;
 
 $silicons-color-black: unquote('var(--black,#101010)') !default;
 $silicons-color-dark: unquote('var(--dark,#303030)') !default;

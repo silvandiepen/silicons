@@ -25,7 +25,8 @@
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-radius: 0 calc(var(--stroke, 0.1em) * 0.5) calc(var(--stroke, 0.1em) * 0.5) 0;
   /* transform */
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 .silicon-battery-50.colored {
   /* text */

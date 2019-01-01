@@ -5,9 +5,16 @@
   display: inline-block;
   box-sizing: border-box;
   width: 1em;
-  height: 1em;
+  height: 0.75em;
+  /* background */
+  background-image: linear-gradient(to right, currentColor, currentColor), linear-gradient(to right, currentColor, currentColor), linear-gradient(to right, currentColor, currentColor), linear-gradient(to right, currentColor, currentColor), linear-gradient(to right, currentColor, currentColor);
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position: center center, left 20% center, left 40% center, left 60% center, left 80% center;
+  background-size: 0.7em calc(var(--stroke, 0.1em) * 0.5), calc(var(--stroke, 0.1em) * 0.5) 0.2em, calc(var(--stroke, 0.1em) * 0.5) 0.2em, calc(var(--stroke, 0.1em) * 0.5) 0.2em, calc(var(--stroke, 0.1em) * 0.5) 0.2em;
   /* border */
   border: var(--stroke, 0.1em) solid currentColor;
-  border: 1px solid red;
-  border-radius: 50%;
+  border-radius: 0.6em 0.6em 0.6em 0.6em/0.4em 0.4em 0.4em 0.4em;
+  /* transform */
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }

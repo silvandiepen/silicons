@@ -1,0 +1,45 @@
+@import '../default';
+
+@mixin silicon-bottle($class: '#{$silicon-prefix}bottle') {
+	.#{$class} {
+		/* position */
+		position: relative;
+
+		/* size */
+		display: inline-block;
+		box-sizing: border-box;
+		width: 0.45em;
+		height: 0.85em;
+		
+		/* background */
+		background-image: linear-gradient(to bottom, currentColor, currentColor),linear-gradient(to bottom, currentColor, currentColor);
+		background-repeat: no-repeat, no-repeat;
+		background-position: top 25% center, top 70% center;
+		background-size: 100%  #{$silicon-stroke-half-var}, 100%  #{$silicon-stroke-half-var};
+		
+		/* border */
+		border: #{$silicon-stroke-var} solid currentColor;
+		border-radius: 0.5em 0.5em 0 0;
+
+		&:before {
+			content: '';
+			/* position */
+			position: absolute;
+			left: 50%;
+			bottom: 100%;
+
+			/* size */
+			display: block;
+			box-sizing: border-box;
+			height: 0.4em;
+			width: 0.25em;
+
+			/* border */
+			border: #{$silicon-stroke-var} solid currentColor;
+			border-bottom: none;
+			// border-top: none;
+			
+			transform: translateX(-50%);
+		}
+	}
+}

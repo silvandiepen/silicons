@@ -12,7 +12,8 @@
   /* border */
   border-radius: 50%;
   /* transform */
-  transform: rotate(-22.5deg);
+  -webkit-transform: rotate(-22.5deg);
+          transform: rotate(-22.5deg);
 }
 .silicon-refresh:before, .silicon-refresh:after {
   content: "";
@@ -34,7 +35,8 @@
   border-bottom: none;
   border-left: none;
   /* transform */
-  transform: translate(25%, 75%) rotate(22.5deg);
+  -webkit-transform: translate(25%, 75%) rotate(22.5deg);
+          transform: translate(25%, 75%) rotate(22.5deg);
 }
 .silicon-refresh:after {
   /* position */
@@ -44,5 +46,6 @@
   border-top: none;
   border-right: none;
   /* transform */
-  transform: translate(-25%, -75%) rotate(22.5deg);
+  -webkit-transform: translate(-25%, -75%) rotate(22.5deg);
+          transform: translate(-25%, -75%) rotate(22.5deg);
 }

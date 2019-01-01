@@ -26,7 +26,8 @@
   border-top: 0;
   border-right: 0;
   /* transform */
-  transform: translateX(-50%) translateY(calc(var(--stroke, 0.1em) * -1)) rotate(-45deg);
+  -webkit-transform: translateX(-50%) translateY(calc(var(--stroke, 0.1em) * -1)) rotate(-45deg);
+          transform: translateX(-50%) translateY(calc(var(--stroke, 0.1em) * -1)) rotate(-45deg);
 }
 .silicon-device-tv .colored {
   /* background */

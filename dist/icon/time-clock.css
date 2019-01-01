@@ -25,17 +25,20 @@
   width: calc(var(--stroke, 0.1em) / 2);
   margin-left: calc(var(--stroke, 0.1em) * -0.25);
   /* transform */
-  transform-origin: 50% calc(100% - (var(--stroke, 0.1em) / 2));
+  -webkit-transform-origin: 50% calc(100% - (var(--stroke, 0.1em) / 2));
+          transform-origin: 50% calc(100% - (var(--stroke, 0.1em) / 2));
 }
 .silicon-time-clock:before {
   /* size */
   height: 0.5em;
   /* transform */
-  transform: rotate(calc(360deg / 12 * var(--time-hours, 4)));
+  -webkit-transform: rotate(calc(360deg / 12 * var(--time-hours, 4)));
+          transform: rotate(calc(360deg / 12 * var(--time-hours, 4)));
 }
 .silicon-time-clock:after {
   /* size */
   height: 0.35em;
   /* transform */
-  transform: rotate(calc(360deg / 60 * var(--time-minutes, 11)));
+  -webkit-transform: rotate(calc(360deg / 60 * var(--time-minutes, 11)));
+          transform: rotate(calc(360deg / 60 * var(--time-minutes, 11)));
 }

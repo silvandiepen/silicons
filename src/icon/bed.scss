@@ -9,10 +9,39 @@
 		display: inline-block;
 		box-sizing: border-box;
 		width: 1em;
-		height: 1em;
-		
+		height: 0.4em;
+
 		/* border */
 		border: #{$silicon-stroke-var} solid currentColor;
-		border: 1px solid red;
+		border-radius: #{$silicon-stroke-var};
+
+		&:before {
+			content: '';
+			
+			/* position */
+			position: absolute;
+			bottom: 100%;
+			left: 50%;
+
+			/* size */
+			display: block;
+			box-sizing: border-box;
+			width: 0.8em;
+			height: 0.4em;
+
+			/* background */
+			background-image: linear-gradient(to right, currentColor, currentColor),linear-gradient(to right, currentColor, currentColor);
+			background-repeat: no-repeat, no-repeat;
+			background-position: bottom left 17.5%, bottom left 82.5%;
+			background-size: 0.2em 0.1em,0.2em 0.1em;
+
+			/* border */
+			border: #{$silicon-stroke-var} solid currentColor;
+			border-radius: calc(#{$silicon-stroke-var} * 2)
+				calc(#{$silicon-stroke-var} * 2) 0 0;
+
+			/* transform */
+			transform: translateX(-50%);
+		}
 	}
 }

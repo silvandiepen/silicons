@@ -27,7 +27,8 @@
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-bottom: none;
   /* transform */
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 .silicon-device-printer:before {
   /* position */
@@ -41,9 +42,11 @@
   border: var(--stroke, 0.1em) solid currentColor;
   border-radius: var(--stroke, 0.1em) var(--stroke, 0.1em) 0 0;
   /* transform */
-  transform: translatex(-50%);
+  -webkit-transform: translatex(-50%);
+          transform: translatex(-50%);
   /* paths */
-  clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 100%, 74% 100%, 74% 50%, 26% 50%, 26% 100%);
+  -webkit-clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 100%, 74% 100%, 74% 50%, 26% 50%, 26% 100%);
+          clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 100%, 74% 100%, 74% 50%, 26% 50%, 26% 100%);
 }
 .silicon-device-printer.colored, .silicon-device-printer.colored:after {
   /* text */

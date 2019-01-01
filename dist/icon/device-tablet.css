@@ -26,7 +26,8 @@
   /* border */
   border-radius: 0 0 0.05em 0.05em;
   /* transform */
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 .silicon-device-tablet.colored {
   /* text */
@@ -51,5 +52,6 @@
   /* border */
   border-radius: 0 0.05em 0.05em 0;
   /* transform */
-  transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
 }

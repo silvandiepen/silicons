@@ -26,7 +26,8 @@
   /* border */
   border-bottom: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   /* transform */
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 .silicon-device-screen.colored {
   /* text */

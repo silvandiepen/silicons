@@ -9,7 +9,8 @@
   background-position: 0.65em bottom, 0.15em bottom;
   background-size: 0.2em 0.25em, 0.2em 0.25em;
   /* transform */
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 .silicon-office-scissors:before, .silicon-office-scissors:after {
   content: "";
@@ -23,7 +24,8 @@
   /* background */
   background-color: currentColor;
   /* transform */
-  transform-origin: 50% 50%;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
 }
 .silicon-office-scissors:before {
   /* position */
@@ -31,7 +33,8 @@
   /* border */
   border-radius: 0.1em 0 0 120%;
   /* transform */
-  transform: rotate(-22.5deg);
+  -webkit-transform: rotate(-22.5deg);
+          transform: rotate(-22.5deg);
 }
 .silicon-office-scissors:after {
   /* position */
@@ -39,5 +42,6 @@
   /* border */
   border-radius: 0 0.1em 120% 0;
   /* transform */
-  transform: rotate(22.5deg);
+  -webkit-transform: rotate(22.5deg);
+          transform: rotate(22.5deg);
 }

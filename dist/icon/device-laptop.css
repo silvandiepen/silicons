@@ -26,7 +26,8 @@
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-radius: 0 0 0.2em 0.2em;
   /* transform */
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 .silicon-device-laptop.colored {
   /* text */

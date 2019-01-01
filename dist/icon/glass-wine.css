@@ -1,13 +1,12 @@
-.silicon-ball-volleyball {
+.silicon-glass-wine {
   /* position */
   position: relative;
   /* size */
   display: inline-block;
   box-sizing: border-box;
-  width: 1em;
-  height: 1em;
+  width: 0.5em;
+  height: 0.5em;
   /* border */
   border: var(--stroke, 0.1em) solid currentColor;
-  border: 1px solid red;
-  border-radius: 50%;
+  border-radius: 0 0 50% 50%;
 }

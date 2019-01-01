@@ -3,6 +3,9 @@ const Fiber = require('fibers');
 const fs = require('fs');
 const path = require('path');
 
+const autoprefixer = require('autoprefixer');
+const postcss = require('postcss');
+
 const src = './src/icon';
 const dist = './dist/icon';
 
@@ -13,10 +16,17 @@ function doSass(file) {
 			fiber: Fiber
 		},
 		function(err, result) {
-			fs.writeFile(path.join(dist, file + '.css'), result.css, (err) => {
-				if (err) throw err;
-				console.log(`${file} is created`);
-			});
+			postcss([autoprefixer])
+				.process(result.css)
+				.then(function(result) {
+					result.warnings().forEach(function(warn) {
+						console.warn(warn.toString());
+					});
+					fs.writeFile(path.join(dist, file + '.css'), result.css, (err) => {
+						if (err) throw err;
+						console.log(`${file} is created`);
+					});
+				});
 		}
 	);
 }
@@ -28,7 +38,7 @@ function arrayRemove(arr, value) {
 
 function makeFiles(items, callback) {
 	let iconList = {};
-	iconList.silicons =[];
+	iconList.silicons = [];
 	let iconArray = [];
 	let mixins = '';
 	let includes = '';
@@ -41,7 +51,7 @@ function makeFiles(items, callback) {
 			includes = includes + `@include silicon-${iconname}();\n`;
 		}
 	}
-	
+
 	// JSON
 	fs.writeFile(
 		path.join('./dist/', 'icons.json'),

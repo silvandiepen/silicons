@@ -1,38 +1,40 @@
 {
-  "name": "silicons",
-  "version": "0.0.5",
-  "description": "css only responsive icons",
-  "main": "src/index.scss",
-  "scripts": {
-    "test": "npm run test",
-    "dev": "sass --watch sass src/icons.scss dist/icons.css--style compressed",
-    "build": " npm run build:icons && npm run build:sass && npm run build:min",
-    "build:min": "sass src/icons.scss dist/icons.min.css --style compressed",
-    "build:sass": "sass src/icons.scss dist/icons.css",
-    "build:icons": "node ./build/icons.js",
-    "prepublishOnly": "npm run stylelint && npm run build",
-    "stylelint": "stylelint src/**/*.scss"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/silvandiepen/silicons.git"
-  },
-  "keywords": [
-    "responsive",
-    "icon",
-    "css"
-  ],
-  "author": "Sil van Diepen",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/silvandiepen/silicons/issues"
-  },
-  "homepage": "https://github.com/silvandiepen/silicons#readme",
-  "devDependencies": {
-    "fibers": "^3.1.1",
-    "sass": "^1.15.2",
-    "stylelint": "^9.9.0",
-    "stylelint-config-rational-order": "0.0.2",
-    "stylelint-order": "^2.0.0"
-  }
+	"name": "silicons",
+	"version": "0.0.5",
+	"description": "css only responsive icons",
+	"main": "src/index.scss",
+	"scripts": {
+		"test": "npm run test",
+		"dev": "sass --watch sass src/icons.scss dist/icons.css--style compressed",
+		"build": " npm run build:icons && npm run build:sass && npm run build:min",
+		"build:icons": "node ./build/icons.js",
+		"build:sass": "sass src/icons.scss dist/icons.css",
+		"build:min": "sass src/icons.scss dist/icons.min.css --style compressed",
+		"prepublishOnly": "npm run stylelint && npm run build",
+		"stylelint": "stylelint src/**/*.scss"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/silvandiepen/silicons.git"
+	},
+	"keywords": [
+		"responsive",
+		"icon",
+		"css"
+	],
+	"author": "Sil van Diepen",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/silvandiepen/silicons/issues"
+	},
+	"homepage": "https://github.com/silvandiepen/silicons#readme",
+	"devDependencies": {
+		"autoprefixer": "^9.4.3",
+		"fibers": "^3.1.1",
+		"sass": "^1.15.2",
+		"stylelint": "^9.9.0",
+		"stylelint-config-rational-order": "0.0.2",
+		"stylelint-order": "^2.0.0",
+		"postcss": "^7.0.7"
+	}
 }

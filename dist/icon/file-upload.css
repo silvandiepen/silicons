@@ -19,7 +19,8 @@
   width: calc(var(--stroke, 0.1em) / 2);
   height: 0.5em;
   background-color: currentColor;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 .silicon-file-upload:after {
   bottom: calc(75% + 0.5em + (var(--stroke, 0.1em) / 2));
@@ -30,8 +31,10 @@
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-top: none;
   border-right: none;
-  transform: rotate(135deg);
-  transform-origin: 0 100%;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  -webkit-transform-origin: 0 100%;
+          transform-origin: 0 100%;
 }
 .silicon-file-upload.colored {
   color: var(--dark,#303030);

@@ -26,9 +26,11 @@
   /* background */
   background-color: currentColor;
   /* transform */
-  transform: translate(-50%, -50%) rotate(60deg);
+  -webkit-transform: translate(-50%, -50%) rotate(60deg);
+          transform: translate(-50%, -50%) rotate(60deg);
 }
 .silicon-asterisk:after {
   /* transform */
-  transform: translate(-50%, -50%) rotate(120deg);
+  -webkit-transform: translate(-50%, -50%) rotate(120deg);
+          transform: translate(-50%, -50%) rotate(120deg);
 }

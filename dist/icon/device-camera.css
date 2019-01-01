@@ -28,7 +28,8 @@
   width: 0.5em;
   height: 0.5em;
   /* transform */
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   /* border */
   border-radius: 50%;
 }
@@ -40,5 +41,6 @@
   width: 0.3em;
   height: 0.1em;
   border-radius: 0.1em 0.1em 0 0;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }

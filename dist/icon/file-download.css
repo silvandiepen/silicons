@@ -27,7 +27,8 @@
   /* background */
   background-color: currentColor;
   /* transform */
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 .silicon-file-download:after {
   /* position */
@@ -42,8 +43,10 @@
   border-top: none;
   border-right: none;
   /* transform */
-  transform: rotate(-45deg);
-  transform-origin: 0 100%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transform-origin: 0 100%;
+          transform-origin: 0 100%;
 }
 .silicon-file-download.colored {
   /* text */

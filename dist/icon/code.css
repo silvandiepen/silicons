@@ -23,5 +23,6 @@
   /* border */
   border: var(--stroke, 0.1em) solid currentColor;
   /* transform */
-  transform: translate(-50%, -50%) rotate(45deg);
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
 }

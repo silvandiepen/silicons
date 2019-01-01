@@ -23,7 +23,8 @@
   width: calc(var(--stroke, 0.1em) / 2);
   height: 0.5em;
   background-color: currentColor;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 .silicon-file-import:after {
   bottom: calc(40% - var(--stroke, 0.1em) / 2);
@@ -34,8 +35,10 @@
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-top: none;
   border-right: none;
-  transform: rotate(-45deg);
-  transform-origin: 0 100%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transform-origin: 0 100%;
+          transform-origin: 0 100%;
 }
 .silicon-file-import.colored {
   color: var(--dark,#303030);

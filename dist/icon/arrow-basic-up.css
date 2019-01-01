@@ -23,11 +23,14 @@
   border-bottom: none;
   border-left: none;
   /* transform */
-  transform: rotate(45deg);
-  transform-origin: 100% 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform-origin: 100% 0;
+          transform-origin: 100% 0;
 }
 
 .silicon-arrow-basic-up {
   /* position */
-  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }

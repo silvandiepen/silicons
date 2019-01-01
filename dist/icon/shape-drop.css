@@ -6,7 +6,8 @@
   height: 1em;
   border: var(--stroke, 0.1em) solid currentColor;
   border-radius: 50% 0 50% 50%;
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 .silicon-shape-drop.colored {
   color: var(--blue,#1eb3e0);

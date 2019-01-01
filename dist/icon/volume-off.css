@@ -6,7 +6,8 @@
   height: 1em;
   border-bottom: none;
   border-left: none;
-  transform: translateX(25%) rotate(45deg);
+  -webkit-transform: translateX(25%) rotate(45deg);
+          transform: translateX(25%) rotate(45deg);
 }
 .silicon-volume-off:before, .silicon-volume-off:after {
   content: "";
@@ -30,7 +31,8 @@
   width: calc(var(--stroke, 0.1em) * 4);
   height: calc(var(--stroke, 0.1em) * 4);
   background-color: currentColor;
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 .silicon-volume-off.colored {
   color: var(--gray,#7f7f7f);

@@ -10,7 +10,8 @@
   border: var(--stroke, 0.1em) solid currentColor;
   border-top: none;
   /* transform */
-  transform: translateY(0.2em);
+  -webkit-transform: translateY(0.2em);
+          transform: translateY(0.2em);
 }
 .silicon-archive:before, .silicon-archive:after {
   content: "";
@@ -20,7 +21,8 @@
   display: block;
   box-sizing: border-box;
   /* transform */
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 .silicon-archive:before {
   /* position */

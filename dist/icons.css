@@ -433,11 +433,17 @@
   display: inline-block;
   box-sizing: border-box;
   width: 1em;
-  height: 1em;
+  height: 0.75em;
+  /* background */
+  background-image: linear-gradient(to right, currentColor, currentColor), linear-gradient(to right, currentColor, currentColor), linear-gradient(to right, currentColor, currentColor), linear-gradient(to right, currentColor, currentColor), linear-gradient(to right, currentColor, currentColor);
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position: center center, left 20% center, left 40% center, left 60% center, left 80% center;
+  background-size: 0.7em calc(var(--stroke, 0.1em) * 0.5), calc(var(--stroke, 0.1em) * 0.5) 0.2em, calc(var(--stroke, 0.1em) * 0.5) 0.2em, calc(var(--stroke, 0.1em) * 0.5) 0.2em, calc(var(--stroke, 0.1em) * 0.5) 0.2em;
   /* border */
   border: var(--stroke, 0.1em) solid currentColor;
-  border: 1px solid red;
-  border-radius: 50%;
+  border-radius: 0.6em 0.6em 0.6em 0.6em/0.4em 0.4em 0.4em 0.4em;
+  /* transform */
+  transform: rotate(-45deg);
 }
 
 .silicon-ball-tennis {
@@ -774,10 +780,32 @@
   display: inline-block;
   box-sizing: border-box;
   width: 1em;
-  height: 1em;
+  height: 0.4em;
   /* border */
   border: var(--stroke, 0.1em) solid currentColor;
-  border: 1px solid red;
+  border-radius: var(--stroke, 0.1em);
+}
+.silicon-bed:before {
+  content: "";
+  /* position */
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  /* size */
+  display: block;
+  box-sizing: border-box;
+  width: 0.8em;
+  height: 0.4em;
+  /* background */
+  background-image: linear-gradient(to right, currentColor, currentColor), linear-gradient(to right, currentColor, currentColor);
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom left 17.5%, bottom left 82.5%;
+  background-size: 0.2em 0.1em, 0.2em 0.1em;
+  /* border */
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: calc(var(--stroke, 0.1em) * 2) calc(var(--stroke, 0.1em) * 2) 0 0;
+  /* transform */
+  transform: translateX(-50%);
 }
 
 .silicon-book {
@@ -786,37 +814,73 @@
   /* size */
   display: inline-block;
   box-sizing: border-box;
-  width: 1em;
-  height: 1em;
+  width: 0.75em;
+  height: 0.75em;
+  background-image: linear-gradient(to bottom, currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: var(--stroke, 0.1em) calc(100% - 					(var(--stroke, 0.1em) * 2));
   /* border */
   border: var(--stroke, 0.1em) solid currentColor;
-  border: 1px solid red;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 0.2em 0 0 0;
+}
+.silicon-book:before {
+  content: "";
+  /* position */
+  position: absolute;
+  top: 100%;
+  left: calc(var(--stroke, 0.1em) * -1);
+  /* size */
+  display: block;
+  box-sizing: border-box;
+  width: calc(100% + var(--stroke, 0.1em));
+  height: 0.4em;
+  background-image: radial-gradient(closest-side, transparent calc(100% - 0.05em), currentColor calc(100% - 0.05em), currentColor 100%, transparent);
+  background-size: 0.4em 0.4em;
+  background-position: top 50% right -0.31em;
+  background-repeat: no-repeat;
+  /* border */
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-right: none;
+  border-radius: 0.2em 0 0 0.2em;
+  /* transform */
+  transform: translateY(-50%);
 }
 
-.silicon-bottle-beer {
+.silicon-bottle {
   /* position */
   position: relative;
   /* size */
   display: inline-block;
   box-sizing: border-box;
-  width: 1em;
-  height: 1em;
+  width: 0.45em;
+  height: 0.85em;
+  /* background */
+  background-image: linear-gradient(to bottom, currentColor, currentColor), linear-gradient(to bottom, currentColor, currentColor);
+  background-repeat: no-repeat, no-repeat;
+  background-position: top 25% center, top 70% center;
+  background-size: 100% calc(var(--stroke, 0.1em) * 0.5), 100% calc(var(--stroke, 0.1em) * 0.5);
   /* border */
   border: var(--stroke, 0.1em) solid currentColor;
-  border: 1px solid red;
+  border-radius: 0.5em 0.5em 0 0;
 }
-
-.silicon-bottle-wine {
+.silicon-bottle:before {
+  content: "";
   /* position */
-  position: relative;
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
   /* size */
-  display: inline-block;
+  display: block;
   box-sizing: border-box;
-  width: 1em;
-  height: 1em;
+  height: 0.4em;
+  width: 0.25em;
   /* border */
   border: var(--stroke, 0.1em) solid currentColor;
-  border: 1px solid red;
+  border-bottom: none;
+  transform: translateX(-50%);
 }
 
 .silicon-burger {
@@ -1479,6 +1543,19 @@
   transform: rotate(45deg);
 }
 
+.silicon-glass-wine {
+  /* position */
+  position: relative;
+  /* size */
+  display: inline-block;
+  box-sizing: border-box;
+  width: 0.5em;
+  height: 0.5em;
+  /* border */
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 0 0 50% 50%;
+}
+
 .silicon-globe {
   /* position */
   position: relative;
@@ -2138,19 +2215,18 @@
   /* size */
   display: block;
   box-sizing: border-box;
-  width: calc((0.4em - (var(--stroke, 0.1em) * 1.5))*2);
-  height: calc((0.4em - (var(--stroke, 0.1em) * 1.5))*2);
+  width: calc((0.4em - (var(--stroke, 0.1em) * 1.5)) * 1);
+  height: calc((0.4em - (var(--stroke, 0.1em) * 1.5)) * 1);
   /* background */
-  background-image: linear-gradient(to bottom right, transparent calc(50% - (var(--stroke, 0.1em) * 0.25)), currentColor calc(50% - (var(--stroke, 0.1em) * 0.25)), currentColor calc(50% +(var(--stroke, 0.1em) * 0.25)), transparent calc(50% + (var(--stroke, 0.1em) * 0.25)));
-  background-repeat: no-repeat;
-  background-position: center center;
+  background-image: radial-gradient(closest-side, currentColor 100%, transparent), linear-gradient(to bottom right, transparent calc(50% - (var(--stroke, 0.1em) * 0.25)), currentColor calc(50% - (var(--stroke, 0.1em) * 0.25)), currentColor calc(50% + (var(--stroke, 0.1em) * 0)), transparent calc(50% + (var(--stroke, 0.1em) * 0)));
+  background-size: 0.1em 0.1em, 100% 100%;
+  background-repeat: no-repeat, no-repeat;
+  background-position: left -0.1em top -0.1em, center center;
   /* border */
   border: var(--stroke, 0.1em) solid currentColor;
-  border-right: none;
-  border-bottom: none;
-  border-radius: var(--stroke, 0.1em) 0 0 0;
+  border-radius: var(--stroke, 0.1em) 0 50% 0;
   /* transform */
-  transform: translate(-50%, -50%) scale(0.5, 1) rotate(45deg);
+  transform: translate(-50%, -50%) scale(1, 1) rotate(45deg);
 }
 
 .silicon-office-scissors {

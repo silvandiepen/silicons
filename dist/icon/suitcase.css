@@ -31,7 +31,8 @@
   border-top: none;
   border-bottom: none;
   /* transform */
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 .silicon-suitcase:after {
   /* position */
@@ -43,7 +44,8 @@
   border-bottom: none;
   border-radius: 0.25em 0.25em 0 0;
   /* transform */
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 .silicon-suitcase.colored {
   /* text */

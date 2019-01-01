@@ -5,8 +5,31 @@
   display: inline-block;
   box-sizing: border-box;
   width: 1em;
-  height: 1em;
+  height: 0.4em;
   /* border */
   border: var(--stroke, 0.1em) solid currentColor;
-  border: 1px solid red;
+  border-radius: var(--stroke, 0.1em);
+}
+.silicon-bed:before {
+  content: "";
+  /* position */
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  /* size */
+  display: block;
+  box-sizing: border-box;
+  width: 0.8em;
+  height: 0.4em;
+  /* background */
+  background-image: linear-gradient(to right, currentColor, currentColor), linear-gradient(to right, currentColor, currentColor);
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom left 17.5%, bottom left 82.5%;
+  background-size: 0.2em 0.1em, 0.2em 0.1em;
+  /* border */
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: calc(var(--stroke, 0.1em) * 2) calc(var(--stroke, 0.1em) * 2) 0 0;
+  /* transform */
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }

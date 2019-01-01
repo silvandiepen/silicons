@@ -38,8 +38,10 @@
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-radius: var(--stroke, 0.1em) 0 0 0;
   /* trasnform */
-  transform: rotate(45deg);
-  transform-origin: 50% 50%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
 }
 .silicon-picture.colored {
   /* text */

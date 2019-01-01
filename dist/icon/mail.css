@@ -25,8 +25,10 @@
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-radius: var(--stroke, 0.1em);
   /* trasnform */
-  transform: translate(-50%, -50%) rotate(45deg);
-  transform-origin: 50% 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
 }
 .silicon-mail.colored {
   /* text */

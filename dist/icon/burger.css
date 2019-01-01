@@ -25,11 +25,13 @@
   /* position */
   top: 100%;
   /* transform */
-  transform: translateY(calc(var(--stroke, 0.1em) * 2));
+  -webkit-transform: translateY(calc(var(--stroke, 0.1em) * 2));
+          transform: translateY(calc(var(--stroke, 0.1em) * 2));
 }
 .silicon-burger:after {
   /* position */
   bottom: 100%;
   /* transform */
-  transform: translateY(calc(var(--stroke, 0.1em) * -2));
+  -webkit-transform: translateY(calc(var(--stroke, 0.1em) * -2));
+          transform: translateY(calc(var(--stroke, 0.1em) * -2));
 }

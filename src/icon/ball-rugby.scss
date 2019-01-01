@@ -9,11 +9,26 @@
 		display: inline-block;
 		box-sizing: border-box;
 		width: 1em;
-		height: 1em;
+		height: 0.75em;
+
+		/* background */
+		background-image: linear-gradient(to right, currentColor, currentColor),
+			linear-gradient(to right, currentColor, currentColor),
+			linear-gradient(to right, currentColor, currentColor),
+			linear-gradient(to right, currentColor, currentColor),
+			linear-gradient(to right, currentColor, currentColor);
+		background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+		background-position: center center, left 20% center, left 40% center,
+			left 60% center, left 80% center;
+		background-size: 0.7em #{$silicon-stroke-half-var},
+			#{$silicon-stroke-half-var} 0.2em, #{$silicon-stroke-half-var} 0.2em,
+			#{$silicon-stroke-half-var} 0.2em, #{$silicon-stroke-half-var} 0.2em;
 
 		/* border */
 		border: #{$silicon-stroke-var} solid currentColor;
-		border: 1px solid red;
-		border-radius: 50%;
+		border-radius: 0.6em 0.6em 0.6em 0.6em / 0.4em 0.4em 0.4em 0.4em;
+
+		/* transform */
+		transform: rotate(-45deg);
 	}
 }

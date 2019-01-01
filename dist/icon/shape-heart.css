@@ -6,7 +6,8 @@
   height: 0.75em;
   border-bottom: var(--stroke, 0.1em) solid currentColor;
   border-left: var(--stroke, 0.1em) solid currentColor;
-  transform: translateY(0.25em) rotate(-45deg);
+  -webkit-transform: translateY(0.25em) rotate(-45deg);
+          transform: translateY(0.25em) rotate(-45deg);
 }
 .silicon-shape-heart:before, .silicon-shape-heart:after {
   content: "";
