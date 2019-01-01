@@ -8,15 +8,37 @@
 		/* size */
 		display: inline-block;
 		box-sizing: border-box;
-		width: 0.4em;
-		height: 0.85em;
+		width: 0.6em;
+		height: 1em;
+
+		background-image: linear-gradient(to bottom, currentColor, currentColor),
+			linear-gradient(to bottom, currentColor, currentColor),
+			radial-gradient(
+				closest-side,
+				transparent calc(100% - #{$silicon-stroke-half-var}),
+				currentColor calc(100% - #{$silicon-stroke-half-var}),
+				currentColor 100%,
+				transparent
+			),	
+			radial-gradient(
+				closest-side,
+				transparent calc(100% - #{$silicon-stroke-half-var}),
+				currentColor calc(100% - #{$silicon-stroke-half-var}),
+				currentColor 100%,
+				transparent
+			);
+		background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+		background-position: 25% 0.1em, 75% 0.1em, bottom 0.75em center, bottom 0.2em center;
+		background-size: #{$silicon-stroke-half-var} 0.55em,
+			#{$silicon-stroke-half-var} 0.55em, .8em .8em, .8em .8em;
 
 		/* border */
 		border: #{$silicon-stroke-var} solid currentColor;
 		border-top: none;
+		border-radius: 0 0 0.5em 0.5em / 0 0 0.3em 0.3em;
 
 		/* transform */
-		// transform: rotate(-45deg);
+		transform: rotate(225deg);
 
 		&:before {
 			content: '';
@@ -29,41 +51,39 @@
 			/* size */
 			display: block;
 			box-sizing: border-box;
-			width: calc((0.4em - (#{$silicon-stroke-var} * 1.5)) * 1);
-			height: calc((0.4em - (#{$silicon-stroke-var} * 1.5)) * 1);
+			width: calc((0.575em - (#{$silicon-stroke-var} * 1.5)) * 1);
+			height: calc((0.575em - (#{$silicon-stroke-var} * 1.5)) * 1);
 
-			// /* background */
 			// background-image: radial-gradient(
-			// 	closest-side,
-			// 	currentColor 100%,
-			// 	transparent
-			// );
-			// background-repeat: no-repeat;
-			// background-position: center center;
-			// background-size: #{$silicon-stroke-var}
-			// 	#{$silicon-stroke-var};
-			/* background */
+			// 		closest-side,
+			// 		currentColor 100%,
+			// 		transparent
+			// 	),
+			// 	linear-gradient(
+			// 		to bottom right,
+			// 		transparent calc(50% - (#{$silicon-stroke-var} * 0.25)),
+			// 		currentColor calc(50% - (#{$silicon-stroke-var} * 0.25)),
+			// 		currentColor calc(50% + (#{$silicon-stroke-var} * 0)),
+			// 		transparent calc(50% + (#{$silicon-stroke-var} * 0))
+			// 	);
+			// 	background-size: .2em .2em, 100% 100%;
+			// background-repeat: no-repeat, no-repeat;
+			// background-position: left -0.1em top -0.1em, center center;
+
 			background-image: radial-gradient(
-					closest-side,
-					currentColor 100%,
-					transparent
-				),
-				linear-gradient(
-					to bottom right,
-					transparent calc(50% - (#{$silicon-stroke-var} * 0.25)),
-					currentColor calc(50% - (#{$silicon-stroke-var} * 0.25)),
-					currentColor calc(50% + (#{$silicon-stroke-var} * 0)),
-					transparent calc(50% + (#{$silicon-stroke-var} * 0))
-				);
-				background-size: .1em .1em, 100% 100%;
-			background-repeat: no-repeat, no-repeat;
-			background-position: left -0.1em top -0.1em, center center;
+				closest-side,
+				currentColor 100%,
+				transparent
+			);
+			background-size: 0.3em 0.3em;
+			background-repeat: no-repeat;
+			background-position: -0.15em -0.15em;
 
 			/* border */
-			border: #{$silicon-stroke-var} solid currentColor;
-			// border-right-color: transparent;
-			// border-bottom-color: transparent;
-			border-radius: #{$silicon-stroke-var} 0 50% 0;
+			border: calc(#{$silicon-stroke-var} * 0.8) solid currentColor;
+			border-right-color: transparent;
+			border-bottom-color: transparent;
+			// border-radius: #{$silicon-stroke-var} 0 0 0;
 
 			/* transform */
 			transform: translate(-50%, -50%) scale(1, 1) rotate(45deg);

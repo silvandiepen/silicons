@@ -1,0 +1,51 @@
+.silicon-retweet {
+  /* position */
+  position: relative;
+  /* size */
+  display: block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  /* border */
+  border-radius: 50%;
+  /* transform */
+  -webkit-transform: rotate(-22.5deg);
+          transform: rotate(-22.5deg);
+}
+.silicon-retweet:before, .silicon-retweet:after {
+  content: "";
+  /* position */
+  position: absolute;
+  /* size */
+  display: block;
+  box-sizing: border-box;
+  width: calc(var(--stroke, 0.1em) * 3);
+  height: calc(var(--stroke, 0.1em) * 3);
+  /* border */
+  border: var(--stroke, 0.1em) solid currentColor;
+}
+.silicon-retweet:before {
+  /* position */
+  top: 50%;
+  left: 50%;
+  /* border */
+  border-bottom: none;
+  border-left: none;
+  /* transform */
+  -webkit-transform: translate(25%, 75%) rotate(22.5deg);
+          transform: translate(25%, 75%) rotate(22.5deg);
+}
+.silicon-retweet:after {
+  /* position */
+  bottom: 50%;
+  right: 50%;
+  /* border */
+  border-top: none;
+  border-right: none;
+  /* transform */
+  -webkit-transform: translate(-25%, -75%) rotate(22.5deg);
+          transform: translate(-25%, -75%) rotate(22.5deg);
+}

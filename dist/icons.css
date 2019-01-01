@@ -1551,9 +1551,33 @@
   box-sizing: border-box;
   width: 0.5em;
   height: 0.5em;
+  /* background */
+  background-image: linear-gradient(to bottom, currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% calc(var(--stroke, 0.1em) * 0.5);
   /* border */
   border: var(--stroke, 0.1em) solid currentColor;
   border-radius: 0 0 50% 50%;
+}
+.silicon-glass-wine:before {
+  content: "";
+  /* position */
+  position: absolute;
+  top: 100%;
+  left: calc(var(--stroke, 0.1em) * -1);
+  /* background */
+  background-image: linear-gradient(to bottom, currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: var(--stroke, 0.1em) 100%;
+  /* size */
+  display: block;
+  box-sizing: border-box;
+  height: 0.4em;
+  width: 0.5em;
+  /* border */
+  border-bottom: var(--stroke, 0.1em) solid currentColor;
 }
 
 .silicon-globe {
@@ -2199,12 +2223,18 @@
   /* size */
   display: inline-block;
   box-sizing: border-box;
-  width: 0.4em;
-  height: 0.85em;
+  width: 0.6em;
+  height: 1em;
+  background-image: linear-gradient(to bottom, currentColor, currentColor), linear-gradient(to bottom, currentColor, currentColor), radial-gradient(closest-side, transparent calc(100% - calc(var(--stroke, 0.1em) * 0.5)), currentColor calc(100% - calc(var(--stroke, 0.1em) * 0.5)), currentColor 100%, transparent), radial-gradient(closest-side, transparent calc(100% - calc(var(--stroke, 0.1em) * 0.5)), currentColor calc(100% - calc(var(--stroke, 0.1em) * 0.5)), currentColor 100%, transparent);
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position: 25% 0.1em, 75% 0.1em, bottom 0.75em center, bottom 0.2em center;
+  background-size: calc(var(--stroke, 0.1em) * 0.5) 0.55em, calc(var(--stroke, 0.1em) * 0.5) 0.55em, 0.8em 0.8em, 0.8em 0.8em;
   /* border */
   border: var(--stroke, 0.1em) solid currentColor;
   border-top: none;
+  border-radius: 0 0 0.5em 0.5em/0 0 0.3em 0.3em;
   /* transform */
+  transform: rotate(225deg);
 }
 .silicon-office-pencil:before {
   content: "";
@@ -2215,16 +2245,16 @@
   /* size */
   display: block;
   box-sizing: border-box;
-  width: calc((0.4em - (var(--stroke, 0.1em) * 1.5)) * 1);
-  height: calc((0.4em - (var(--stroke, 0.1em) * 1.5)) * 1);
-  /* background */
-  background-image: radial-gradient(closest-side, currentColor 100%, transparent), linear-gradient(to bottom right, transparent calc(50% - (var(--stroke, 0.1em) * 0.25)), currentColor calc(50% - (var(--stroke, 0.1em) * 0.25)), currentColor calc(50% + (var(--stroke, 0.1em) * 0)), transparent calc(50% + (var(--stroke, 0.1em) * 0)));
-  background-size: 0.1em 0.1em, 100% 100%;
-  background-repeat: no-repeat, no-repeat;
-  background-position: left -0.1em top -0.1em, center center;
+  width: calc((0.575em - (var(--stroke, 0.1em) * 1.5)) * 1);
+  height: calc((0.575em - (var(--stroke, 0.1em) * 1.5)) * 1);
+  background-image: radial-gradient(closest-side, currentColor 100%, transparent);
+  background-size: 0.3em 0.3em;
+  background-repeat: no-repeat;
+  background-position: -0.15em -0.15em;
   /* border */
-  border: var(--stroke, 0.1em) solid currentColor;
-  border-radius: var(--stroke, 0.1em) 0 50% 0;
+  border: calc(var(--stroke, 0.1em) * 0.8) solid currentColor;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
   /* transform */
   transform: translate(-50%, -50%) scale(1, 1) rotate(45deg);
 }
@@ -2279,11 +2309,43 @@
   /* size */
   display: inline-block;
   box-sizing: border-box;
-  width: 1em;
+  width: 0.75em;
   height: 1em;
+  background-image: linear-gradient(to bottom, transparent, transparent calc(50% - (var(--stroke, 0.1em) / 4)), currentColor calc(50% - (var(--stroke, 0.1em) / 4)), currentColor calc(50% + (var(--stroke, 0.1em) / 4)), transparent calc(50% + (var(--stroke, 0.1em) / 4)), transparent);
+  background-repeat: repeat-y;
+  background-position: center center;
+  background-size: 0.4em calc(var(--stroke, 0.1em) * 1.5);
   /* border */
   border: var(--stroke, 0.1em) solid currentColor;
-  border: 1px solid red;
+}
+.silicon-paste:before {
+  content: "";
+  /* position */
+  position: absolute;
+  top: 0em;
+  left: 50%;
+  /* display */
+  width: 0.3em;
+  height: 0.1em;
+  /* background */
+  background-color: currentColor;
+  /* transform */
+  transform: translateX(-50%);
+}
+.silicon-paste:after {
+  content: "";
+  /* position */
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  /* display */
+  width: 0.2em;
+  height: 0.2em;
+  /* border */
+  border: calc(var(--stroke, 0.1em) * 0.5) solid currentColor;
+  border-radius: 50% 50% 0 0;
+  /* transform */
+  transform: translateX(-50%);
 }
 
 .silicon-picture {
@@ -2431,6 +2493,55 @@
   border-left: none;
   /* transform */
   transform: translate(25%, 75%) rotate(22.5deg);
+}
+
+.silicon-retweet {
+  /* position */
+  position: relative;
+  /* size */
+  display: block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  /* border */
+  border-radius: 50%;
+  /* transform */
+  transform: rotate(-22.5deg);
+}
+.silicon-retweet:before, .silicon-retweet:after {
+  content: "";
+  /* position */
+  position: absolute;
+  /* size */
+  display: block;
+  box-sizing: border-box;
+  width: calc(var(--stroke, 0.1em) * 3);
+  height: calc(var(--stroke, 0.1em) * 3);
+  /* border */
+  border: var(--stroke, 0.1em) solid currentColor;
+}
+.silicon-retweet:before {
+  /* position */
+  top: 50%;
+  left: 50%;
+  /* border */
+  border-bottom: none;
+  border-left: none;
+  /* transform */
+  transform: translate(25%, 75%) rotate(22.5deg);
+}
+.silicon-retweet:after {
+  /* position */
+  bottom: 50%;
+  right: 50%;
+  /* border */
+  border-top: none;
+  border-right: none;
+  /* transform */
+  transform: translate(-25%, -75%) rotate(22.5deg);
 }
 
 .silicon-search {
@@ -3358,18 +3469,6 @@
   transform: translateX(-50%);
 }
 
-.silicon-vehicle-bicycle {
-  /* position */
-  position: relative;
-  /* size */
-  display: inline-block;
-  box-sizing: border-box;
-  width: 1em;
-  height: 1em;
-  /* border */
-  border: 1px solid red;
-}
-
 .silicon-vehicle-car {
   /* position */
   position: relative;
@@ -3377,9 +3476,54 @@
   display: inline-block;
   box-sizing: border-box;
   width: 1em;
-  height: 1em;
+  height: 0.3em;
+  /* background */
+  background-image: radial-gradient(closest-side, currentColor 50%, transparent 50%), radial-gradient(closest-side, currentColor 50%, transparent 50%);
+  background-repeat: no-repeat, no-repeat;
+  background-position: left center, right center;
+  background-size: 0.2em 0.2em, 0.2em 0.2em;
   /* border */
-  border: 1px solid red;
+  border: calc(var(--stroke, 0.1em) * 0.5) solid currentColor;
+  border-radius: var(--stroke, 0.1em) var(--stroke, 0.1em) 0 0;
+}
+.silicon-vehicle-car:before, .silicon-vehicle-car:after {
+  content: "";
+  /* position */
+  position: absolute;
+  /* size */
+  display: block;
+  box-sizing: border-box;
+}
+.silicon-vehicle-car:before {
+  /* size */
+  display: inline-block;
+  box-sizing: border-box;
+  width: 0.8em;
+  height: 0.3em;
+  /* background */
+  background-image: radial-gradient(closest-side, transparent calc(100% - 0.025em), currentColor calc(100% - 0.025em), currentColor 100%, transparent);
+  background-repeat: no-repeat;
+  background-position: 90% 0.1em;
+  background-size: 0.2em 0.2em;
+  /* border */
+  border: calc(var(--stroke, 0.1em) * 0.5) solid currentColor;
+  border-radius: 0.2em 0.2em 0 0/0.5em 0.5em 0 0;
+  bottom: 100%;
+  left: 50%;
+  /* transform */
+  transform: translateX(-50%);
+}
+.silicon-vehicle-car:after {
+  top: 100%;
+  left: calc(calc(var(--stroke, 0.1em) * 0.5) * -1);
+  /* size */
+  width: 0.15em;
+  height: 0.2em;
+  box-shadow: 0.85em 0 0 0 currentColor;
+  /* background */
+  background-color: currentColor;
+  /* border */
+  border-radius: 0 0 0.05em 0.05em;
 }
 
 .silicon-volume-high {

@@ -8,12 +8,40 @@
 		/* size */
 		display: inline-block;
 		box-sizing: border-box;
-		width: .5em;
-		height: .5em;
+		width: 0.5em;
+		height: 0.5em;
 		
+		/* background */
+		background-image: linear-gradient(to bottom, currentColor, currentColor);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: 100% #{$silicon-stroke-half-var};
+
 		/* border */
 		border: #{$silicon-stroke-var} solid currentColor;
 		border-radius: 0 0 50% 50%;
 
+		&:before {
+			content: '';
+			/* position */
+			position: absolute;
+			top: 100%;
+			left: calc(#{$silicon-stroke-var} * -1);
+
+			/* background */
+			background-image: linear-gradient(to bottom, currentColor, currentColor);
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: #{$silicon-stroke-var} 100%;
+
+			/* size */
+			display: block;
+			box-sizing: border-box;
+			height: 0.4em;
+			width: 0.5em;
+
+			/* border */
+			border-bottom: #{$silicon-stroke-var} solid currentColor;
+		}
 	}
 }

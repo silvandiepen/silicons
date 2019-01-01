@@ -9,9 +9,77 @@
 		display: inline-block;
 		box-sizing: border-box;
 		width: 1em;
-		height: 1em;
-		
+		height: 0.3em;
+
+		/* background */
+		background-image: radial-gradient(
+				closest-side,
+				currentColor 50%,
+				transparent 50%
+			),
+			radial-gradient(closest-side, currentColor 50%, transparent 50%);
+		background-repeat: no-repeat, no-repeat;
+		background-position: left center, right center;
+		background-size: 0.2em 0.2em, 0.2em 0.2em;
+
 		/* border */
-		border: 1px solid red;
+		border: #{$silicon-stroke-half-var}  solid currentColor;
+		border-radius: #{$silicon-stroke-var} #{$silicon-stroke-var} 0 0;
+
+		&:before,
+		&:after {
+			content: '';
+
+			/* position */
+			position: absolute;
+
+			/* size */
+			display: block;
+			box-sizing: border-box;
+		}
+		&:before {
+			/* size */
+			display: inline-block;
+			box-sizing: border-box;
+			width: 0.8em;
+			height: 0.3em;
+
+			/* background */
+			background-image: radial-gradient(
+				closest-side,
+				transparent calc(100% - 0.025em),
+				currentColor calc(100% - 0.025em),
+				currentColor 100%,
+				transparent
+			);
+			background-repeat: no-repeat;
+			background-position: 90% .1em;;
+			background-size: 0.2em 0.2em;
+
+			/* border */
+			border: #{$silicon-stroke-half-var} solid currentColor;
+			border-radius: 0.2em 0.2em 0 0 / 0.5em 0.5em 0 0;
+
+			bottom: 100%;
+			left: 50%;
+
+			/* transform */
+			transform: translateX(-50%);
+		}
+		&:after {
+			top: 100%;
+			left: calc(#{$silicon-stroke-half-var} * -1);
+
+			/* size */
+			width: 0.15em;
+			height: 0.2em;
+			box-shadow: 0.85em 0 0 0 currentColor;
+
+			/* background */
+			background-color: currentColor;
+
+			/* border */
+			border-radius: 0 0 0.05em 0.05em;
+		}
 	}
 }
