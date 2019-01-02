@@ -19,8 +19,8 @@
   top: -0.05em;
   /* size */
   display: block;
-  height: 1em;
   width: var(--stroke, 0.1em);
+  height: 1em;
   /* background */
   background-color: currentColor;
   /* transform */

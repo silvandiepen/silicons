@@ -27,9 +27,9 @@
   width: 0.5em;
   height: 0.5em;
   background-image: radial-gradient(closest-side, transparent calc(100% - 0.05em), currentColor calc(100% - 0.05em), currentColor 100%, transparent);
-  background-size: 0.3em 0.5em;
   background-repeat: no-repeat;
   background-position: center -0.15em;
+  background-size: 0.3em 0.5em;
   /* border */
   border: calc(var(--stroke, 0.1em) * 0.5) solid currentColor;
   border-bottom: none;

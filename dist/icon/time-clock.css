@@ -16,14 +16,14 @@
   content: "";
   /* position */
   position: absolute;
-  left: 50%;
   bottom: calc(50% - (var(--stroke, 0.1em) /2));
-  /* background */
-  background-color: currentColor;
+  left: 50%;
   /* size */
   display: block;
   width: calc(var(--stroke, 0.1em) / 2);
   margin-left: calc(var(--stroke, 0.1em) * -0.25);
+  /* background */
+  background-color: currentColor;
   /* transform */
   -webkit-transform-origin: 50% calc(100% - (var(--stroke, 0.1em) / 2));
           transform-origin: 50% calc(100% - (var(--stroke, 0.1em) / 2));

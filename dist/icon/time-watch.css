@@ -6,24 +6,24 @@
   box-sizing: border-box;
   width: 0.5em;
   height: 1em;
+  /* background */
   background-image: radial-gradient(closest-side, transparent calc(100% - 0.05em), currentColor calc(100% - 0.05em), currentColor 100%, transparent), linear-gradient(to bottom, currentColor, currentColor), linear-gradient(to bottom, currentColor, currentColor);
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position: center center, center top, center bottom;
   background-size: 0.5em 0.5em, 0.3em 0.3em, 0.3em 0.3em;
-  /* border */
 }
 .silicon-time-watch:before, .silicon-time-watch:after {
   content: "";
   /* position */
   position: absolute;
-  left: 50%;
   bottom: calc(50% - (var(--stroke, 0.1em) / 4));
-  /* background */
-  background-color: currentColor;
+  left: 50%;
   /* size */
   display: block;
   width: calc(var(--stroke, 0.1em) / 4);
   margin-left: calc(var(--stroke, 0.1em) * -0.25);
+  /* background */
+  background-color: currentColor;
   /* transform */
   -webkit-transform-origin: 50% calc(100% - (var(--stroke, 0.1em) / 4));
           transform-origin: 50% calc(100% - (var(--stroke, 0.1em) / 4));

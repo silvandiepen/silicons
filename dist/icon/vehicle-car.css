@@ -24,6 +24,9 @@
   box-sizing: border-box;
 }
 .silicon-vehicle-car:before {
+  /* position  */
+  bottom: 100%;
+  left: 50%;
   /* size */
   display: inline-block;
   box-sizing: border-box;
@@ -37,8 +40,6 @@
   /* border */
   border: calc(var(--stroke, 0.1em) * 0.5) solid currentColor;
   border-radius: 0.2em 0.2em 0 0/0.5em 0.5em 0 0;
-  bottom: 100%;
-  left: 50%;
   /* transform */
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -49,9 +50,9 @@
   /* size */
   width: 0.15em;
   height: 0.2em;
-  box-shadow: 0.85em 0 0 0 currentColor;
   /* background */
   background-color: currentColor;
   /* border */
   border-radius: 0 0 0.05em 0.05em;
+  box-shadow: 0.85em 0 0 0 currentColor;
 }

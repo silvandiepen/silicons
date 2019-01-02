@@ -21,16 +21,16 @@
   position: absolute;
   top: 100%;
   left: calc(var(--stroke, 0.1em) * -1);
+  /* size */
+  display: block;
+  box-sizing: border-box;
+  width: 0.5em;
+  height: 0.4em;
   /* background */
   background-image: linear-gradient(to bottom, currentColor, currentColor);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: var(--stroke, 0.1em) 100%;
-  /* size */
-  display: block;
-  box-sizing: border-box;
-  height: 0.4em;
-  width: 0.5em;
   /* border */
   border-bottom: var(--stroke, 0.1em) solid currentColor;
 }
