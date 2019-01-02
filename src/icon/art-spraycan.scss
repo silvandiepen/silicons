@@ -12,15 +12,22 @@
 		height: 1em;
 
 		background-image: radial-gradient(
-			closest-side,
-			transparent calc(100% - 0.05em),
-			currentColor calc(100% - 0.05em),
-			currentColor 100%,
-			transparent
-		);
-		background-repeat: no-repeat;
-		background-position: bottom 0.8em center;
-		background-size: 0.9em 0.9em;
+				closest-side,
+				transparent calc(100% - 0.05em),
+				currentColor calc(100% - 0.05em),
+				currentColor 100%,
+				transparent
+			),
+			radial-gradient(
+				closest-side,
+				transparent calc(100% - 0.05em),
+				currentColor calc(100% - 0.05em),
+				currentColor 100%,
+				transparent
+			);
+		background-repeat: no-repeat, no-repeat;
+		background-position: bottom 0.75em center, bottom 0.1em center;
+		background-size: 0.9em 0.9em, 0.9em 0.9em;
 
 		/* border */
 		border: #{$silicon-stroke-var} solid currentColor;
@@ -28,7 +35,7 @@
 		border-radius: 0 0 0.5em 0.5em / 0 0 0.3em 0.3em;
 
 		/* transform */
-		transform: rotate(225deg);
+		// transform: rotate(225deg);
 
 		&:before {
 			content: '';
@@ -42,13 +49,21 @@
 			display: block;
 			box-sizing: border-box;
 			width: 0.6em;
-			height: 0.2em;
+			height: 0.1em;
+
+			background-image: radial-gradient(
+				closest-side,
+				currentColor 100%,
+				transparent
+			);
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: 0.05em 0.05em;
 
 			/* border */
-			border: #{$silicon-stroke-var} solid currentColor;
-			border-top-width: #{$silicon-stroke-half-var};
+			border: #{$silicon-stroke-half-var} solid currentColor;
 			border-bottom: none;
-			border-radius: 0.2em 0.2em 0 0;
+			border-radius: 0.4em 0.4em 0 0 / 0.5em 0.5em 0 0;
 
 			/* transform */
 			transform: translateX(-50%);
@@ -58,29 +73,18 @@
 
 			/* position */
 			position: absolute;
-			bottom: calc(100% + 0.15em);
+			bottom: calc(100% + 0.1em);
 			left: 50%;
 
 			/* size */
 			display: block;
 			box-sizing: border-box;
 			width: 0.3em;
-			height: 0.4em;
-
-			/* background */
-			background-image: radial-gradient(
-				closest-side,
-				currentColor 100%,
-				transparent
-			);
-			background-repeat: no-repeat;
-			background-position: bottom 0.1em center;
-			background-size: 0.5em 0.5em;
+			height: 0.3em;
 
 			/* border */
 			border: #{$silicon-stroke-half-var} solid currentColor;
-			border-bottom: none;
-			border-radius: 0.1em 0.1em 0 0;
+			border-radius: 0.4em / 0.5em;
 
 			/* transform */
 			transform: translateX(-50%);

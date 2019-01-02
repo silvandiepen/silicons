@@ -31,7 +31,7 @@
   /* position */
   right: 50%;
   /* border */
-  border-radius: 0.1em 0 0 120%;
+  border-radius: 0.2em 0 0 120%;
   /* transform */
   -webkit-transform: rotate(-22.5deg);
           transform: rotate(-22.5deg);
@@ -40,7 +40,7 @@
   /* position */
   left: 50%;
   /* border */
-  border-radius: 0 0.1em 120% 0;
+  border-radius: 0 0.2em 120% 0;
   /* transform */
   -webkit-transform: rotate(22.5deg);
           transform: rotate(22.5deg);

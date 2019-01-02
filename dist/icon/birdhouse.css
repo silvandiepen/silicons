@@ -1,20 +1,16 @@
-.silicon-home {
+.silicon-birdhouse {
   /* position */
   position: relative;
   /* size */
   display: inline-block;
   box-sizing: border-box;
-  width: 0.9em;
-  height: 0.5em;
-  background-image: linear-gradient(to bottom, currentColor, currentColor), linear-gradient(to bottom, currentColor, currentColor), linear-gradient(to bottom, currentColor, currentColor), linear-gradient(to bottom, currentColor, currentColor), linear-gradient(to bottom, currentColor, currentColor);
-  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
-  background-position: left 0.1em bottom, 0.35em 0.1em, 0.475em 0.1em, 0.35em 0.225em, 0.475em 0.225em;
-  background-size: 0.2em 0.3em, 0.1em 0.1em, 0.1em 0.1em, 0.1em 0.1em, 0.1em 0.1em;
+  width: 0.8em;
+  height: 0.65em;
   /* border */
   border: var(--stroke, 0.1em) solid currentColor;
   border-top: none;
 }
-.silicon-home:before {
+.silicon-birdhouse:before {
   content: "";
   /* position */
   position: absolute;
@@ -23,12 +19,12 @@
   /* size */
   display: block;
   box-sizing: border-box;
-  width: calc(0.8em - (var(--stroke, 0.1em) * 1));
-  height: calc(0.8em - (var(--stroke, 0.1em) * 1));
+  width: calc(.8em - (var(--stroke, 0.1em) * 1.5));
+  height: calc(.8em - (var(--stroke, 0.1em) * 1.5));
   /* background */
   background-image: radial-gradient(closest-side, currentColor 100%, transparent);
   background-repeat: no-repeat;
-  background-position: 0.1em 0.1em;
+  background-position: center center;
   background-size: calc(var(--stroke, 0.1em) * 1.5) calc(var(--stroke, 0.1em) * 1.5);
   /* border */
   border: var(--stroke, 0.1em) solid currentColor;
