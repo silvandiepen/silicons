@@ -10,7 +10,7 @@
 		box-sizing: border-box;
 		width: 0.5em;
 		height: 0.5em;
-		
+
 		/* background */
 		background-image: linear-gradient(to bottom, currentColor, currentColor);
 		background-repeat: no-repeat;
@@ -28,17 +28,17 @@
 			top: 100%;
 			left: calc(#{$silicon-stroke-var} * -1);
 
+			/* size */
+			display: block;
+			box-sizing: border-box;
+			width: 0.5em;
+			height: 0.4em;
+
 			/* background */
 			background-image: linear-gradient(to bottom, currentColor, currentColor);
 			background-repeat: no-repeat;
 			background-position: center center;
 			background-size: #{$silicon-stroke-var} 100%;
-
-			/* size */
-			display: block;
-			box-sizing: border-box;
-			height: 0.4em;
-			width: 0.5em;
 
 			/* border */
 			border-bottom: #{$silicon-stroke-var} solid currentColor;

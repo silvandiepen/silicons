@@ -6,9 +6,10 @@
   box-sizing: border-box;
   width: 0.6em;
   height: 1em;
-  background-repeat: no-repeat, no-repeat;
-  background-position: bottom 0.75em center, bottom 0.2em center;
-  background-size: 0.8em 0.8em, 0.8em 0.8em;
+  background-image: radial-gradient(closest-side, transparent calc(100% - 0.05em), currentColor calc(100% - 0.05em), currentColor 100%, transparent);
+  background-repeat: no-repeat;
+  background-position: bottom 0.8em center;
+  background-size: 0.9em 0.9em;
   /* border */
   border: var(--stroke, 0.1em) solid currentColor;
   border-top: none;
@@ -21,22 +22,43 @@
   content: "";
   /* position */
   position: absolute;
-  top: 0;
+  bottom: 100%;
   left: 50%;
   /* size */
   display: block;
   box-sizing: border-box;
-  width: calc((0.575em - (var(--stroke, 0.1em) * 1.5)) * 1);
-  height: calc((0.575em - (var(--stroke, 0.1em) * 1.5)) * 1);
-  background-image: radial-gradient(closest-side, currentColor 100%, transparent);
-  background-size: 0.3em 0.3em;
-  background-repeat: no-repeat;
-  background-position: -0.15em -0.15em;
+  width: 0.6em;
+  height: 0.2em;
   /* border */
-  border: calc(var(--stroke, 0.1em) * 0.8) solid currentColor;
-  border-right-color: transparent;
-  border-bottom-color: transparent;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-top-width: calc(var(--stroke, 0.1em) * 0.5);
+  border-bottom: none;
+  border-radius: 0.2em 0.2em 0 0;
   /* transform */
-  -webkit-transform: translate(-50%, -50%) scale(1, 1) rotate(45deg);
-          transform: translate(-50%, -50%) scale(1, 1) rotate(45deg);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.silicon-office-marker:after {
+  content: "";
+  /* position */
+  position: absolute;
+  bottom: calc(100% + 0.15em);
+  left: 50%;
+  /* size */
+  display: block;
+  box-sizing: border-box;
+  width: 0.3em;
+  height: 0.4em;
+  /* background */
+  background-image: radial-gradient(closest-side, currentColor 100%, transparent);
+  background-repeat: no-repeat;
+  background-position: bottom 0.1em center;
+  background-size: 0.5em 0.5em;
+  /* border */
+  border: calc(var(--stroke, 0.1em) * 0.5) solid currentColor;
+  border-bottom: none;
+  border-radius: 0.1em 0.1em 0 0;
+  /* transform */
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }

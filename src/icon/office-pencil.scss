@@ -11,6 +11,7 @@
 		width: 0.6em;
 		height: 1em;
 
+		/* background */
 		background-image: linear-gradient(to bottom, currentColor, currentColor),
 			linear-gradient(to bottom, currentColor, currentColor),
 			radial-gradient(
@@ -19,7 +20,7 @@
 				currentColor calc(100% - #{$silicon-stroke-half-var}),
 				currentColor 100%,
 				transparent
-			),	
+			),
 			radial-gradient(
 				closest-side,
 				transparent calc(100% - #{$silicon-stroke-half-var}),
@@ -28,9 +29,10 @@
 				transparent
 			);
 		background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
-		background-position: 25% 0.1em, 75% 0.1em, bottom 0.75em center, bottom 0.2em center;
+		background-position: 25% 0.1em, 75% 0.1em, bottom 0.75em center,
+			bottom 0.2em center;
 		background-size: #{$silicon-stroke-half-var} 0.55em,
-			#{$silicon-stroke-half-var} 0.55em, .8em .8em, .8em .8em;
+			#{$silicon-stroke-half-var} 0.55em, 0.8em 0.8em, 0.8em 0.8em;
 
 		/* border */
 		border: #{$silicon-stroke-var} solid currentColor;
@@ -54,30 +56,14 @@
 			width: calc((0.575em - (#{$silicon-stroke-var} * 1.5)) * 1);
 			height: calc((0.575em - (#{$silicon-stroke-var} * 1.5)) * 1);
 
-			// background-image: radial-gradient(
-			// 		closest-side,
-			// 		currentColor 100%,
-			// 		transparent
-			// 	),
-			// 	linear-gradient(
-			// 		to bottom right,
-			// 		transparent calc(50% - (#{$silicon-stroke-var} * 0.25)),
-			// 		currentColor calc(50% - (#{$silicon-stroke-var} * 0.25)),
-			// 		currentColor calc(50% + (#{$silicon-stroke-var} * 0)),
-			// 		transparent calc(50% + (#{$silicon-stroke-var} * 0))
-			// 	);
-			// 	background-size: .2em .2em, 100% 100%;
-			// background-repeat: no-repeat, no-repeat;
-			// background-position: left -0.1em top -0.1em, center center;
-
 			background-image: radial-gradient(
 				closest-side,
 				currentColor 100%,
 				transparent
 			);
-			background-size: 0.3em 0.3em;
 			background-repeat: no-repeat;
 			background-position: -0.15em -0.15em;
+			background-size: 0.3em 0.3em;
 
 			/* border */
 			border: calc(#{$silicon-stroke-var} * 0.8) solid currentColor;

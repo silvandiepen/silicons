@@ -11,8 +11,8 @@
 		width: 1em;
 		height: 1em;
 		border: #{$silicon-stroke-var} solid currentColor;
-		border-left-color: transparent;
 		border-right-color: transparent;
+		border-left-color: transparent;
 
 		/* border */
 		border-radius: 50%;
@@ -50,8 +50,8 @@
 		}
 		&:after {
 			/* position */
-			bottom: 50%;
 			right: 50%;
+			bottom: 50%;
 
 			/* border */
 			border-top: none;

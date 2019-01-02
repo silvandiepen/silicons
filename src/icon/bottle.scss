@@ -25,14 +25,14 @@
 			content: '';
 			/* position */
 			position: absolute;
-			left: 50%;
 			bottom: 100%;
+			left: 50%;
 
 			/* size */
 			display: block;
 			box-sizing: border-box;
-			height: 0.4em;
 			width: 0.25em;
+			height: 0.4em;
 
 			/* border */
 			border: #{$silicon-stroke-var} solid currentColor;

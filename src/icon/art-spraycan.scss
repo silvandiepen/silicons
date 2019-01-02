@@ -1,6 +1,6 @@
 @import '../default';
 
-@mixin silicon-office-marker($class: '#{$silicon-prefix}office-marker') {
+@mixin silicon-art-spraycan($class: '#{$silicon-prefix}art-spraycan') {
 	.#{$class} {
 		/* position */
 		position: relative;

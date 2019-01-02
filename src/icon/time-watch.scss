@@ -2,7 +2,6 @@
 
 @mixin silicon-time-watch($class: '#{$silicon-prefix}time-watch') {
 	.#{$class} {
-
 		/* position */
 		position: relative;
 
@@ -12,6 +11,7 @@
 		width: 0.5em;
 		height: 1em;
 
+		/* background */
 		background-image: radial-gradient(
 				closest-side,
 				transparent calc(100% - 0.05em),
@@ -25,26 +25,22 @@
 		background-position: center center, center top, center bottom;
 		background-size: 0.5em 0.5em, 0.3em 0.3em, 0.3em 0.3em;
 
-		/* border */
-		// border: calc(#{$silicon-stroke-var} /2) solid currentColor;
-		// border-radius: 50%;
-
 		&:before,
 		&:after {
 			content: '';
 
 			/* position */
 			position: absolute;
-			left: 50%;
 			bottom: calc(50% - (#{$silicon-stroke-var} / 4));
-
-			/* background */
-			background-color: currentColor;
+			left: 50%;
 
 			/* size */
 			display: block;
 			width: calc(#{$silicon-stroke-var} / 4);
 			margin-left: calc(#{$silicon-stroke-var} * -0.25);
+
+			/* background */
+			background-color: currentColor;
 
 			/* transform */
 			transform-origin: 50% calc(100% - (#{$silicon-stroke-var} / 4));

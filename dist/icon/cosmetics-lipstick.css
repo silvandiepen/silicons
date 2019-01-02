@@ -1,0 +1,40 @@
+.silicon-cosmetics-lipstick {
+  /* position */
+  position: relative;
+  /* size */
+  display: inline-block;
+  box-sizing: border-box;
+  width: 0.6em;
+  height: 1em;
+  background-image: radial-gradient(closest-side, transparent calc(100% - 0.05em), currentColor calc(100% - 0.05em), currentColor 100%, transparent), radial-gradient(closest-side, transparent calc(100% - 0.05em), currentColor calc(100% - 0.05em), currentColor 100%, transparent);
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom 0.75em center, bottom 0.1em center;
+  background-size: 0.9em 0.9em, 0.9em 0.9em;
+  /* border */
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-top: none;
+  border-radius: 0 0 0.5em 0.5em/0 0 0.3em 0.3em;
+}
+.silicon-cosmetics-lipstick:before {
+  content: "";
+  /* position */
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  /* size */
+  display: block;
+  box-sizing: border-box;
+  width: 0.5em;
+  height: 0.5em;
+  background-image: radial-gradient(closest-side, transparent calc(100% - 0.05em), currentColor calc(100% - 0.05em), currentColor 100%, transparent);
+  background-size: 0.3em 0.5em;
+  background-repeat: no-repeat;
+  background-position: center -0.15em;
+  /* border */
+  border: calc(var(--stroke, 0.1em) * 0.5) solid currentColor;
+  border-bottom: none;
+  border-radius: 0.4em 0.4em 0 0/0.5em 0.5em 0 0;
+  /* transform */
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}

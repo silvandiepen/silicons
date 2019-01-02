@@ -44,9 +44,9 @@
 				currentColor 100%,
 				transparent
 			);
-			background-size: 0.4em 0.4em;
-			background-position: top 50% right -0.31em;
 			background-repeat: no-repeat;
+			background-position: top 50% right -0.31em;
+			background-size: 0.4em 0.4em;
 
 			/* border */
 			border: #{$silicon-stroke-var} solid currentColor;

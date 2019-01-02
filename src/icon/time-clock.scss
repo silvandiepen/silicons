@@ -24,16 +24,16 @@
 
 			/* position */
 			position: absolute;
-			left: 50%;
 			bottom: calc(50% - (#{$silicon-stroke-var} /2));
-
-			/* background */
-			background-color: currentColor;
+			left: 50%;
 
 			/* size */
 			display: block;
 			width: calc(#{$silicon-stroke-var} / 2);
 			margin-left: calc(#{$silicon-stroke-var} * -0.25);
+
+			/* background */
+			background-color: currentColor;
 
 			/* transform */
 			transform-origin: 50% calc(100% - (#{$silicon-stroke-var} / 2));

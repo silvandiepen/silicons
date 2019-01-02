@@ -23,7 +23,7 @@
 		background-size: 0.2em 0.2em, 0.2em 0.2em;
 
 		/* border */
-		border: #{$silicon-stroke-half-var}  solid currentColor;
+		border: #{$silicon-stroke-half-var} solid currentColor;
 		border-radius: #{$silicon-stroke-var} #{$silicon-stroke-var} 0 0;
 
 		&:before,
@@ -38,6 +38,10 @@
 			box-sizing: border-box;
 		}
 		&:before {
+			/* position  */
+			bottom: 100%;
+			left: 50%;
+
 			/* size */
 			display: inline-block;
 			box-sizing: border-box;
@@ -53,15 +57,12 @@
 				transparent
 			);
 			background-repeat: no-repeat;
-			background-position: 90% .1em;;
+			background-position: 90% 0.1em;
 			background-size: 0.2em 0.2em;
 
 			/* border */
 			border: #{$silicon-stroke-half-var} solid currentColor;
 			border-radius: 0.2em 0.2em 0 0 / 0.5em 0.5em 0 0;
-
-			bottom: 100%;
-			left: 50%;
 
 			/* transform */
 			transform: translateX(-50%);
@@ -73,13 +74,13 @@
 			/* size */
 			width: 0.15em;
 			height: 0.2em;
-			box-shadow: 0.85em 0 0 0 currentColor;
 
 			/* background */
 			background-color: currentColor;
 
 			/* border */
 			border-radius: 0 0 0.05em 0.05em;
+			box-shadow: 0.85em 0 0 0 currentColor;
 		}
 	}
 }

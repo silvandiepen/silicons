@@ -1,6 +1,8 @@
 @import '../default';
 
-@mixin silicon-cosmetics-lipstick($class: '#{$silicon-prefix}cosmetics-lipstick') {
+@mixin silicon-cosmetics-lipstick(
+	$class: '#{$silicon-prefix}cosmetics-lipstick'
+) {
 	.#{$class} {
 		/* position */
 		position: relative;
@@ -55,9 +57,9 @@
 				currentColor 100%,
 				transparent
 			);
-			background-size: 0.3em 0.5em;
 			background-repeat: no-repeat;
 			background-position: center -0.15em;
+			background-size: 0.3em 0.5em;
 
 			/* border */
 			border: #{$silicon-stroke-half-var} solid currentColor;
