@@ -40,5 +40,9 @@
 
 			transform: translateX(-50%);
 		}
+		&.colored{
+			background-color: color(Yellow);
+			color: color(Green);
+		}
 	}
 }
