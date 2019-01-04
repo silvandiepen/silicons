@@ -41,8 +41,11 @@
 			transform: translateX(-50%);
 		}
 		&.colored{
-			background-color: color(Yellow);
-			color: color(Green);
+			/* text */
+			color:var(--color-green,#{color(Green)});
+			
+			/* background */
+			background-color: ar(--color-yellow,#{color(Yellow)});
 		}
 	}
 }
