@@ -551,7 +551,7 @@
   /* text */
   color: var(--color-green, color(Green));
   /* background */
-  background-color: ar(--color-yellow, color(Yellow));
+  background-color: var(--color-yellow, color(Yellow));
 }
 
 .silicon-ban {
