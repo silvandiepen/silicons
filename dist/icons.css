@@ -483,6 +483,12 @@
   /* position */
   right: 70%;
 }
+.silicon-ball-basketball.colored {
+  /* text */
+  color: var(--color-black, color(Black));
+  /* background */
+  background-color: var(--color-orange, color(Orange));
+}
 
 .silicon-ball-rugby {
   /* position */
@@ -502,6 +508,12 @@
   border-radius: 0.6em 0.6em 0.6em 0.6em/0.4em 0.4em 0.4em 0.4em;
   /* transform */
   transform: rotate(-45deg);
+}
+.silicon-ball-rugby.colored {
+  /* text */
+  color: var(--color-black, color(Black));
+  /* background */
+  background-color: var(--color-orange, color(Orange));
 }
 
 .silicon-ball-tennis {
@@ -534,6 +546,12 @@
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-radius: 0.5em 0.5em 0 0;
   transform: translateX(-50%);
+}
+.silicon-ball-tennis.colored {
+  /* text */
+  color: var(--color-green, color(Green));
+  /* background */
+  background-color: ar(--color-yellow, color(Yellow));
 }
 
 .silicon-ban {

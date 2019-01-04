@@ -18,3 +18,9 @@
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
+.silicon-ball-rugby.colored {
+  /* text */
+  color: var(--color-black, color(Black));
+  /* background */
+  background-color: var(--color-orange, color(Orange));
+}

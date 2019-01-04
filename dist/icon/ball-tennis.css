@@ -31,3 +31,9 @@
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
+.silicon-ball-tennis.colored {
+  /* text */
+  color: var(--color-green, color(Green));
+  /* background */
+  background-color: ar(--color-yellow, color(Yellow));
+}

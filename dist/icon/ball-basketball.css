@@ -41,3 +41,9 @@
   /* position */
   right: 70%;
 }
+.silicon-ball-basketball.colored {
+  /* text */
+  color: var(--color-black, color(Black));
+  /* background */
+  background-color: var(--color-orange, color(Orange));
+}
