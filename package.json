@@ -2,7 +2,7 @@
 	"name": "silicons",
 	"version": "0.1.2",
 	"description": "css only responsive icons",
-	"main": "src/index.scss",
+	"main": "index.scss",
 	"scripts": {
 		"test": "npm run stylelint && npm run build",
 		"dev": "npm run build:sass -- --watch",
