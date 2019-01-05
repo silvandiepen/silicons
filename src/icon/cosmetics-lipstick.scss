@@ -50,6 +50,7 @@
 			width: 0.5em;
 			height: 0.5em;
 
+			/* background */
 			background-image: radial-gradient(
 				closest-side,
 				transparent calc(100% - 0.05em),
@@ -70,7 +71,10 @@
 			transform: translateX(-50%);
 		}
 		&.colored {
+			/* text */
 			color: $silicons-color-dark-gray;
+			
+			/* background */
 			background-color: $silicons-color-gray;
 			background-image: radial-gradient(
 					closest-side,
@@ -87,7 +91,10 @@
 					transparent
 				);
 			&:before {
+				/* text */
 				color: $silicons-color-dark-red;
+				
+				/* background */
 				background-color: $silicons-color-red;
 				background-image: radial-gradient(
 					closest-side,

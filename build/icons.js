@@ -1,3 +1,4 @@
+/* eslint-disable */
 const sass = require('sass');
 const Fiber = require('fibers');
 const fs = require('fs');
@@ -8,6 +9,22 @@ const postcss = require('postcss');
 
 const src = './src/icon';
 const dist = './dist/icon';
+
+function cssJs(fileName, css) {
+	let CSSObj = {};
+	CSSObj[fileName] = {
+		data: css
+	};
+	return `const data = ${JSON.stringify(CSSObj)}
+	export default data;`;
+}
+function cssJsImports(icons) {
+	let imports = ``;
+	icons.forEach(function(icon) {
+		imports = imports + `\nimport './js/${icon}.js'`;
+	});
+	return imports;
+}
 
 function doSass(file) {
 	sass.render(
@@ -24,16 +41,19 @@ function doSass(file) {
 					});
 					fs.writeFile(path.join(dist, file + '.css'), result.css, (err) => {
 						if (err) throw err;
-						console.log(`${file} is created`);
+						console.log(`${file}.css is created`);
 					});
+					fs.writeFile(
+						path.join('./dist/js', file + '.js'),
+						cssJs(file, result.css),
+						(err) => {
+							if (err) throw err;
+							console.log(`${file}.js is created`);
+						}
+					);
 				});
 		}
 	);
-}
-function arrayRemove(arr, value) {
-	return arr.filter(function(ele) {
-		return ele != value;
-	});
 }
 
 function makeFiles(items, callback) {
@@ -62,6 +82,16 @@ function makeFiles(items, callback) {
 		}
 	);
 
+	// JSON
+	fs.writeFile(
+		path.join('./dist/', 'icons.js'),
+		cssJsImports(iconList.silicons),
+		(err) => {
+			if (err) throw err;
+			console.log(`icons.js is created`);
+		}
+	);
+
 	// MIXINS
 	fs.writeFile(path.join('./src/', 'mixins.scss'), mixins, (err) => {
 		if (err) throw err;
@@ -85,6 +115,6 @@ fs.readdir(src, function(err, items) {
 					doSass(item.replace('.scss', ''));
 				}
 			});
-		}, 1000);
+		}, 250);
 	});
 });
