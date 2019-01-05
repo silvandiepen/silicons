@@ -1,0 +1,8 @@
+@import '../default';
+
+@mixin silicon-save($class: '#{$silicon-prefix}save') {
+	.#{$class} {
+		/* position */
+		position: relative;
+	}
+}

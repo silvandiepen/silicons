@@ -1,0 +1,2 @@
+const data = {"adjust-color":{"data":".silicon-adjust-color {\n  /* position */\n  position: relative;\n  /* size */\n  display: inline-block;\n  box-sizing: border-box;\n  width: 1em;\n  height: 1em;\n  /* background */\n  background-image: linear-gradient(to right, transparent 50%, currentColor 50%);\n  /* border */\n  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;\n  border-radius: 50%;\n}"}}
+	export default data;

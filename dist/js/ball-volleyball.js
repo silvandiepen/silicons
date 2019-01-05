@@ -1,0 +1,2 @@
+const data = {"ball-volleyball":{"data":".silicon-ball-volleyball {\n  /* position */\n  position: relative;\n  /* size */\n  display: inline-block;\n  box-sizing: border-box;\n  width: 1em;\n  height: 1em;\n}"}}
+	export default data;

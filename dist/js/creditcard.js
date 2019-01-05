@@ -1,0 +1,2 @@
+const data = {"creditcard":{"data":".silicon-creditcard {\n  /* position */\n  position: relative;\n  /* size */\n  display: inline-block;\n  box-sizing: border-box;\n  width: 1em;\n  height: 0.75em;\n  /* background */\n  background-image: linear-gradient(to right, currentColor, currentColor);\n  background-repeat: no-repeat;\n  background-position: bottom 0.1em center;\n  background-size: 100% 0.2em;\n  /* border */\n  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;\n  border-radius: var(--stroke, 0.1em);\n}"}}
+	export default data;

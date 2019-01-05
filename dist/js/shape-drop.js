@@ -1,0 +1,2 @@
+const data = {"shape-drop":{"data":".silicon-shape-drop {\n  position: relative;\n  display: inline-block;\n  box-sizing: border-box;\n  width: 1em;\n  height: 1em;\n  border: var(--stroke, 0.1em) solid currentColor;\n  border-radius: 50% 0 50% 50%;\n  -webkit-transform: rotate(-45deg);\n          transform: rotate(-45deg);\n}\n.silicon-shape-drop.colored {\n  color: var(--blue,#1eb3e0);\n  background-color: var(--light-blue,#61caea);\n}"}}
+	export default data;

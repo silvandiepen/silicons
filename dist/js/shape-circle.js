@@ -1,0 +1,2 @@
+const data = {"shape-circle":{"data":".silicon-shape-circle {\n  /* position */\n  position: relative;\n  /* size */\n  display: inline-block;\n  box-sizing: border-box;\n  width: 0.9em;\n  height: 0.9em;\n  /* border */\n  border: var(--stroke, 0.1em) solid currentColor;\n  border-radius: 50%;\n}\n.silicon-shape-circle.colored {\n  /* text */\n  color: var(--turquoise,#3feac3);\n  /* background */\n  background-color: var(--turquoise,#3feac3);\n}"}}
+	export default data;

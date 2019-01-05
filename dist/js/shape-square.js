@@ -1,0 +1,2 @@
+const data = {"shape-square":{"data":".silicon-shape-square {\n  /* position */\n  position: relative;\n  /* size */\n  display: inline-block;\n  box-sizing: border-box;\n  width: 0.8em;\n  height: 0.8em;\n  /* border */\n  border: var(--stroke, 0.1em) solid currentColor;\n}\n.silicon-shape-square.colored {\n  /* text */\n  color: var(--purple,#7329b1);\n  /* background */\n  background-color: var(--purple,#7329b1);\n}"}}
+	export default data;
