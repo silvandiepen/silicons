@@ -12,14 +12,14 @@
   background-size: 0.9em 0.9em, 0.9em 0.9em;
   /* border */
   border: var(--stroke, 0.1em) solid currentColor;
-  border-top: none;
-  border-radius: 0 0 0.5em 0.5em/0 0 0.3em 0.3em;
+  border-top-color: transparent;
+  border-radius: 0.2em 0.2em 0.5em 0.5em/0.2em 0.2em 0.3em 0.3em;
 }
 .silicon-cosmetics-lipstick:before {
   content: "";
   /* position */
   position: absolute;
-  bottom: 100%;
+  bottom: calc(100% + calc(var(--stroke, 0.1em) * 0.5));
   left: 50%;
   /* size */
   display: block;
@@ -37,4 +37,14 @@
   /* transform */
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+.silicon-cosmetics-lipstick.colored {
+  color: var(--gray,#444444);
+  background-color: var(--gray,#7f7f7f);
+  background-image: radial-gradient(closest-side, var(--red,#eb0f33) calc(100% - 0.05em), var(--black,#101010) calc(100% - 0.05em), var(--black,#101010) 100%, var(--gray,#7f7f7f)), radial-gradient(closest-side, transparent calc(100% - 0.05em), var(--gray,#444444) calc(100% - 0.05em), var(--gray,#444444) 100%, transparent);
+}
+.silicon-cosmetics-lipstick.colored:before {
+  color: var(--dark-red,#bb0c29);
+  background-color: var(--red,#eb0f33);
+  background-image: radial-gradient(closest-side, var(--light-red,#f4536d) 100%, transparent);
 }

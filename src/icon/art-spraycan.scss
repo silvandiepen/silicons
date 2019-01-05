@@ -42,28 +42,20 @@
 
 			/* position */
 			position: absolute;
-			bottom: 100%;
+			bottom: calc(100% - #{$silicon-stroke-var});
 			left: 50%;
 
 			/* size */
 			display: block;
 			box-sizing: border-box;
 			width: 0.6em;
-			height: 0.1em;
-
-			background-image: radial-gradient(
-				closest-side,
-				currentColor 100%,
-				transparent
-			);
-			background-repeat: no-repeat;
-			background-position: center center;
-			background-size: 0.05em 0.05em;
+			height: 0.2em;
 
 			/* border */
-			border: #{$silicon-stroke-half-var} solid currentColor;
+			border: #{$silicon-stroke-var} solid currentColor;
+			border-top-width: #{$silicon-stroke-half-var};
 			border-bottom: none;
-			border-radius: 0.4em 0.4em 0 0 / 0.5em 0.5em 0 0;
+			border-radius: 50%;
 
 			/* transform */
 			transform: translateX(-50%);
@@ -73,7 +65,7 @@
 
 			/* position */
 			position: absolute;
-			bottom: calc(100% + 0.1em);
+			bottom: calc(100% + 0.05em);
 			left: 50%;
 
 			/* size */
@@ -81,6 +73,16 @@
 			box-sizing: border-box;
 			width: 0.3em;
 			height: 0.3em;
+
+			/* background */
+			background-image: radial-gradient(
+				closest-side,
+				currentColor 100%,
+				transparent
+			);
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: 0.05em 0.05em;
 
 			/* border */
 			border: #{$silicon-stroke-half-var} solid currentColor;

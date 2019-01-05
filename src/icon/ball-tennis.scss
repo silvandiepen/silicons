@@ -42,10 +42,10 @@
 		}
 		&.colored {
 			/* text */
-			color: var(--color-green, #{color(Green)});
+			color: $silicons-color-black;
 
 			/* background */
-			background-color: var(--color-yellow, #{color(Yellow)});
+			background-color: $silicons-color-yellow;
 		}
 	}
 }

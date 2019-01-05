@@ -14,6 +14,7 @@ $silicons-color-dark-green: unquote('var(--dark-green,#{darken(#10c565,10%)})') 
 $silicons-color-light-blue: unquote('var(--light-blue,#{lighten(#1eb3e0,15%)})') !default;
 $silicons-color-blue: unquote('var(--blue,#1eb3e0)') !default;
 $silicons-color-dark-blue: unquote('var(--dark-blue,#{darken(#1eb3e0,10%)})') !default;
+$silicons-color-light-red: unquote('var(--light-red,#{lighten(#eb0f33, 15%)})') !default;
 $silicons-color-red: unquote('var(--red,#eb0f33)') !default;
 $silicons-color-dark-red: unquote('var(--dark-red,#{darken(#eb0f33, 10%)})') !default;
 $silicons-color-brown: unquote('var(--brown,#aa834f)') !default;

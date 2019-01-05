@@ -121,6 +121,11 @@
   transform-origin: 100% 0;
 }
 
+.silicon-arrow-basic-left {
+  /* position */
+  transform: rotate(180deg);
+}
+
 .silicon-arrow-basic-right {
   /* position */
   position: relative;
@@ -370,21 +375,18 @@
   content: "";
   /* position */
   position: absolute;
-  bottom: 100%;
+  bottom: calc(100% - var(--stroke, 0.1em));
   left: 50%;
   /* size */
   display: block;
   box-sizing: border-box;
   width: 0.6em;
-  height: 0.1em;
-  background-image: radial-gradient(closest-side, currentColor 100%, transparent);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 0.05em 0.05em;
+  height: 0.2em;
   /* border */
-  border: calc(var(--stroke, 0.1em) * 0.5) solid currentColor;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-top-width: calc(var(--stroke, 0.1em) * 0.5);
   border-bottom: none;
-  border-radius: 0.4em 0.4em 0 0/0.5em 0.5em 0 0;
+  border-radius: 50%;
   /* transform */
   transform: translateX(-50%);
 }
@@ -392,13 +394,18 @@
   content: "";
   /* position */
   position: absolute;
-  bottom: calc(100% + 0.1em);
+  bottom: calc(100% + 0.05em);
   left: 50%;
   /* size */
   display: block;
   box-sizing: border-box;
   width: 0.3em;
   height: 0.3em;
+  /* background */
+  background-image: radial-gradient(closest-side, currentColor 100%, transparent);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 0.05em 0.05em;
   /* border */
   border: calc(var(--stroke, 0.1em) * 0.5) solid currentColor;
   border-radius: 0.4em/0.5em;
@@ -549,9 +556,9 @@
 }
 .silicon-ball-tennis.colored {
   /* text */
-  color: var(--color-green, color(Green));
+  color: var(--black,#101010);
   /* background */
-  background-color: var(--color-yellow, color(Yellow));
+  background-color: var(--yellow,#f5c505);
 }
 
 .silicon-ban {
@@ -905,8 +912,8 @@
   /* size */
   display: block;
   box-sizing: border-box;
-  width: calc(.8em - (var(--stroke, 0.1em) * 1.5));
-  height: calc(.8em - (var(--stroke, 0.1em) * 1.5));
+  width: calc(0.8em - (var(--stroke, 0.1em) * 1.5));
+  height: calc(0.8em - (var(--stroke, 0.1em) * 1.5));
   /* background */
   background-image: radial-gradient(closest-side, currentColor 100%, transparent);
   background-repeat: no-repeat;
@@ -918,6 +925,19 @@
   border-bottom: none;
   /* transform */
   transform: translate(-50%, -50%) rotate(45deg);
+}
+.silicon-birdhouse.colored {
+  /* background */
+  background-color: var(--brown,#aa834f);
+  /* border */
+  border-width: 0;
+}
+.silicon-birdhouse.colored:before {
+  /* text */
+  color: var(--dark-brown,#87683f);
+  /* background */
+  background-color: var(--brown,#aa834f);
+  background-image: radial-gradient(closest-side, var(--black,#101010) 100%, transparent);
 }
 
 .silicon-book {
@@ -1127,14 +1147,14 @@
   background-size: 0.9em 0.9em, 0.9em 0.9em;
   /* border */
   border: var(--stroke, 0.1em) solid currentColor;
-  border-top: none;
-  border-radius: 0 0 0.5em 0.5em/0 0 0.3em 0.3em;
+  border-top-color: transparent;
+  border-radius: 0.2em 0.2em 0.5em 0.5em/0.2em 0.2em 0.3em 0.3em;
 }
 .silicon-cosmetics-lipstick:before {
   content: "";
   /* position */
   position: absolute;
-  bottom: 100%;
+  bottom: calc(100% + calc(var(--stroke, 0.1em) * 0.5));
   left: 50%;
   /* size */
   display: block;
@@ -1151,6 +1171,16 @@
   border-radius: 0.4em 0.4em 0 0/0.5em 0.5em 0 0;
   /* transform */
   transform: translateX(-50%);
+}
+.silicon-cosmetics-lipstick.colored {
+  color: var(--gray,#444444);
+  background-color: var(--gray,#7f7f7f);
+  background-image: radial-gradient(closest-side, var(--red,#eb0f33) calc(100% - 0.05em), var(--black,#101010) calc(100% - 0.05em), var(--black,#101010) 100%, var(--gray,#7f7f7f)), radial-gradient(closest-side, transparent calc(100% - 0.05em), var(--gray,#444444) calc(100% - 0.05em), var(--gray,#444444) 100%, transparent);
+}
+.silicon-cosmetics-lipstick.colored:before {
+  color: var(--dark-red,#bb0c29);
+  background-color: var(--red,#eb0f33);
+  background-image: radial-gradient(closest-side, var(--light-red,#f4536d) 100%, transparent);
 }
 
 .silicon-creditcard {

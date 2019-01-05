@@ -19,8 +19,8 @@
   /* size */
   display: block;
   box-sizing: border-box;
-  width: calc(.8em - (var(--stroke, 0.1em) * 1.5));
-  height: calc(.8em - (var(--stroke, 0.1em) * 1.5));
+  width: calc(0.8em - (var(--stroke, 0.1em) * 1.5));
+  height: calc(0.8em - (var(--stroke, 0.1em) * 1.5));
   /* background */
   background-image: radial-gradient(closest-side, currentColor 100%, transparent);
   background-repeat: no-repeat;
@@ -33,4 +33,17 @@
   /* transform */
   -webkit-transform: translate(-50%, -50%) rotate(45deg);
           transform: translate(-50%, -50%) rotate(45deg);
+}
+.silicon-birdhouse.colored {
+  /* background */
+  background-color: var(--brown,#aa834f);
+  /* border */
+  border-width: 0;
+}
+.silicon-birdhouse.colored:before {
+  /* text */
+  color: var(--dark-brown,#87683f);
+  /* background */
+  background-color: var(--brown,#aa834f);
+  background-image: radial-gradient(closest-side, var(--black,#101010) 100%, transparent);
 }

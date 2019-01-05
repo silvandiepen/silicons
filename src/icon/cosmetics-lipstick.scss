@@ -33,15 +33,15 @@
 
 		/* border */
 		border: #{$silicon-stroke-var} solid currentColor;
-		border-top: none;
-		border-radius: 0 0 0.5em 0.5em / 0 0 0.3em 0.3em;
+		border-top-color: transparent;
+		border-radius: 0.2em 0.2em 0.5em 0.5em / 0.2em 0.2em 0.3em 0.3em;
 
 		&:before {
 			content: '';
 
 			/* position */
 			position: absolute;
-			bottom: 100%;
+			bottom: calc(100% + #{$silicon-stroke-half-var});
 			left: 50%;
 
 			/* size */
@@ -68,6 +68,33 @@
 
 			/* transform */
 			transform: translateX(-50%);
+		}
+		&.colored {
+			color: $silicons-color-dark-gray;
+			background-color: $silicons-color-gray;
+			background-image: radial-gradient(
+					closest-side,
+					$silicons-color-red calc(100% - 0.05em),
+					$silicons-color-black calc(100% - 0.05em),
+					$silicons-color-black 100%,
+					$silicons-color-gray
+				),
+				radial-gradient(
+					closest-side,
+					transparent calc(100% - 0.05em),
+					$silicons-color-dark-gray calc(100% - 0.05em),
+					$silicons-color-dark-gray 100%,
+					transparent
+				);
+			&:before {
+				color: $silicons-color-dark-red;
+				background-color: $silicons-color-red;
+				background-image: radial-gradient(
+					closest-side,
+					$silicons-color-light-red 100%,
+					transparent
+				);
+			}
 		}
 	}
 }

@@ -4,6 +4,7 @@
 @mixin silicon-arrow-basic-left($class: '#{$silicon-prefix}arrow-basic-left') {
 	@include silicon-arrow-basic-right($class);
 	.#{$class} {
-		
+		/* position */
+		transform: rotate(180deg);
 	}
 }

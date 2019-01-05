@@ -33,7 +33,7 @@
 }
 .silicon-ball-tennis.colored {
   /* text */
-  color: var(--color-green, color(Green));
+  color: var(--black,#101010);
   /* background */
-  background-color: var(--color-yellow, color(Yellow));
+  background-color: var(--yellow,#f5c505);
 }
