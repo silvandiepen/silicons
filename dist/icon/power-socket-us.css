@@ -1,0 +1,17 @@
+.silicon-power-socket-us {
+  /* position */
+  position: relative;
+  /* size */
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  /* background */
+  background-image: linear-gradient(to bottom, currentColor, currentColor), linear-gradient(to bottom, currentColor, currentColor);
+  background-repeat: no-repeat, no-repeat;
+  background-position: 25% center, 75% center;
+  background-size: var(--stroke, 0.1em) calc(var(--stroke, 0.1em) * 2), var(--stroke, 0.1em) calc(var(--stroke, 0.1em) * 2);
+  /* border */
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 50% 50% 50% 50%/0 0 0 0;
+}

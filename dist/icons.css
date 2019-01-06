@@ -2133,15 +2133,13 @@
   /* position */
   position: relative;
   /* size */
-  width: 0.25em;
-  height: 0.25em;
+  width: calc(var(--stroke, 0.1em) * 2.5);
+  height: calc(var(--stroke, 0.1em) * 2.5);
   /* background */
   background-color: transparent;
   /* border */
   border-radius: 50%;
   box-shadow: 0 -0.4em, -0.28em -0.28em 0 -0.01em, -0.4em 0 0 -0.02em, -0.28em 0.28em 0 -0.03em, 0 0.4em 0 -0.04em, 0.28em 0.28em 0 -0.05em, 0.4em 0 0 -0.06em, 0.28em -0.28em 0 -0.07em;
-  /* margin */
-  margin: 0.375em;
 }
 
 .silicon-location {
@@ -2756,6 +2754,42 @@
   color: var(--dark-green,#0c964d);
   /* background */
   background-color: var(--green,#10c565);
+}
+
+.silicon-power-socket-eu {
+  /* position */
+  position: relative;
+  /* size */
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  /* background */
+  background-image: radial-gradient(closest-side, currentColor 100%, transparent), radial-gradient(closest-side, currentColor 100%, transparent);
+  background-repeat: no-repeat, no-repeat;
+  background-position: 25% center, 75% center;
+  background-size: var(--stroke, 0.1em) var(--stroke, 0.1em), var(--stroke, 0.1em) var(--stroke, 0.1em);
+  /* border */
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 50%;
+}
+
+.silicon-power-socket-us {
+  /* position */
+  position: relative;
+  /* size */
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  /* background */
+  background-image: linear-gradient(to bottom, currentColor, currentColor), linear-gradient(to bottom, currentColor, currentColor);
+  background-repeat: no-repeat, no-repeat;
+  background-position: 25% center, 75% center;
+  background-size: var(--stroke, 0.1em) calc(var(--stroke, 0.1em) * 2), var(--stroke, 0.1em) calc(var(--stroke, 0.1em) * 2);
+  /* border */
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 50% 50% 50% 50%/0 0 0 0;
 }
 
 .silicon-refresh {

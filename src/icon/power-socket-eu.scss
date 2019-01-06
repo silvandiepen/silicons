@@ -1,0 +1,23 @@
+@import '../default';
+@mixin silicon-power-socket-eu($class: '#{$silicon-prefix}power-socket-eu') {
+	.#{$class} {
+		/* position */
+		position: relative;
+
+		/* size */
+		display: inline-block;
+		box-sizing: border-box;
+		width: 1em;
+		height: 1em;
+		
+		/* background */ 
+		background-image: radial-gradient(closest-side, currentColor 100%, transparent), radial-gradient(closest-side, currentColor 100%, transparent);
+		background-repeat: no-repeat, no-repeat;
+		background-position: 25% center, 75% center;
+		background-size: #{$silicon-stroke-var} #{$silicon-stroke-var}, #{$silicon-stroke-var} #{$silicon-stroke-var};
+		
+		/* border */ 
+		border: #{$silicon-stroke-var} solid currentColor; 
+		border-radius: 50%; 
+	}
+}
