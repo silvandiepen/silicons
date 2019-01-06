@@ -574,34 +574,57 @@
   border: var(--stroke, 0.1em) solid currentColor;
   border-radius: 50%;
   /* transform */
-  transform: rotate(22.5deg);
+  transform: rotate(-22.5deg);
 }
 .silicon-ball-volleyball:before {
   content: "";
   /* position */
   position: absolute;
-  top: 0.2em;
+  top: 0.1em;
   left: 50%;
   /* size */
   display: block;
   box-sizing: border-box;
-  width: 66.66%;
+  width: 75%;
   height: 100%;
-  /* size */
+  /* background */
   background-image: linear-gradient(to bottom, currentColor, currentColor);
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 100% calc(var(--stroke, 0.1em) * 0.5);
+  background-size: calc(var(--stroke, 0.1em) * 0.5) 100%;
   /* border */
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-radius: 0.5em 0.5em 0 0;
+  transform: translateX(-50%);
+}
+.silicon-ball-volleyball:after {
+  content: "";
+  /* position */
+  position: absolute;
+  top: 0em;
+  left: 50%;
+  /* size */
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 25%;
+  /* background */
+  background-image: linear-gradient(45deg, transparent calc(50% - 0.025em), currentColor calc(50% - 0.025em), currentColor calc(50% + 0.025em), transparent calc(50% + 0.025em)), linear-gradient(-45deg, transparent calc(50% - 0.025em), currentColor calc(50% - 0.025em), currentColor calc(50% + 0.025em), transparent calc(50% + 0.025em));
+  background-repeat: no-repeat, no-repeat;
+  background-position: top left, top right;
+  background-size: 0.5em 0.5em, 0.5em 0.5em;
+  /* transform */
   transform: translateX(-50%);
 }
 .silicon-ball-volleyball.colored {
   /* text */
   color: var(--black,#101010);
   /* background */
-  background-color: var(--yellow,#f5c505);
+  background-color: var(--white,#ffffff);
+}
+.silicon-ball-volleyball.colored::before, .silicon-ball-volleyball.colored::after {
+  /* text */
+  color: var(--gray,#7f7f7f);
 }
 
 .silicon-ban {
@@ -2104,6 +2127,21 @@
 .silicon-link:after {
   /* position */
   left: calc(100% - (var(--stroke, 0.1em) * 2));
+}
+
+.silicon-loading-spinner {
+  /* position */
+  position: relative;
+  /* size */
+  width: 0.25em;
+  height: 0.25em;
+  /* background */
+  background-color: transparent;
+  /* border */
+  border-radius: 50%;
+  box-shadow: 0 -0.4em, -0.28em -0.28em 0 -0.01em, -0.4em 0 0 -0.02em, -0.28em 0.28em 0 -0.03em, 0 0.4em 0 -0.04em, 0.28em 0.28em 0 -0.05em, 0.4em 0 0 -0.06em, 0.28em -0.28em 0 -0.07em;
+  /* margin */
+  margin: 0.375em;
 }
 
 .silicon-location {
