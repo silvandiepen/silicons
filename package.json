@@ -8,8 +8,8 @@
 		"dev": "npm run build:sass -- --watch",
 		"build": " npm run build:icons && npm run build:sass && npm run build:min",
 		"build:icons": "node ./build/icons.js",
-		"build:sass": "sass src/icons.scss dist/icons.css",
-		"build:min": "sass src/icons.scss dist/icons.min.css --style compressed",
+		"build:sass": "sass src/index.scss dist/icons.css",
+		"build:min": "sass src/index.scss dist/icons.min.css --style compressed",
 		"prepublishOnly": "npm run stylelint && npm run build",
 		"stylelint": "stylelint src/**/*.scss"
 	},
