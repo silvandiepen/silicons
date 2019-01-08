@@ -14,12 +14,33 @@
 		background-image: linear-gradient(to bottom, currentColor, currentColor),
 			linear-gradient(to bottom, currentColor, currentColor);
 		background-repeat: no-repeat, no-repeat;
-		background-position: 25% center, 75% center;
-		background-size: #{$silicon-stroke-var} calc(#{$silicon-stroke-var} * 2),
-			#{$silicon-stroke-var} calc(#{$silicon-stroke-var} * 2);
+		background-position: 30% calc(#{$silicon-stroke-var} * 2), 70% calc(#{$silicon-stroke-var} * 2);
+		background-size: #{$silicon-stroke-half-var} calc(#{$silicon-stroke-var} * 2),
+			#{$silicon-stroke-half-var} calc(#{$silicon-stroke-var} * 2);
 
 		/* border */
 		border: #{$silicon-stroke-var} solid currentColor;
-		border-radius: 50% 50% 50% 50% / 0 0 0 0;
+		border-radius: 0.3em / 0.5em;
+
+		&:before {
+			content: '';
+			/* position */
+			position: absolute;
+			bottom: calc(#{$silicon-stroke-var});
+			left: 50%;
+			/* size */
+			display: block;
+			width: #{$silicon-stroke-var};
+			height: #{$silicon-stroke-var};
+			
+			/* background */
+			background-color: currentColor;
+			
+			/* border */
+			border-radius: 50% 50% 0 0;
+
+			/* transform */
+			transform: translateX(-50%);
+		}
 	}
 }
