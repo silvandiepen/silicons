@@ -9,9 +9,27 @@
   /* background */
   background-image: linear-gradient(to bottom, currentColor, currentColor), linear-gradient(to bottom, currentColor, currentColor);
   background-repeat: no-repeat, no-repeat;
-  background-position: 25% center, 75% center;
-  background-size: var(--stroke, 0.1em) calc(var(--stroke, 0.1em) * 2), var(--stroke, 0.1em) calc(var(--stroke, 0.1em) * 2);
+  background-position: 30% calc(var(--stroke, 0.1em) * 2), 70% calc(var(--stroke, 0.1em) * 2);
+  background-size: calc(var(--stroke, 0.1em) * 0.5) calc(var(--stroke, 0.1em) * 2), calc(var(--stroke, 0.1em) * 0.5) calc(var(--stroke, 0.1em) * 2);
   /* border */
   border: var(--stroke, 0.1em) solid currentColor;
-  border-radius: 50% 50% 50% 50%/0 0 0 0;
+  border-radius: 0.3em/0.5em;
+}
+.silicon-power-socket-us:before {
+  content: "";
+  /* position */
+  position: absolute;
+  bottom: calc(var(--stroke, 0.1em));
+  left: 50%;
+  /* size */
+  display: block;
+  width: var(--stroke, 0.1em);
+  height: var(--stroke, 0.1em);
+  /* background */
+  background-color: currentColor;
+  /* border */
+  border-radius: 50% 50% 0 0;
+  /* transform */
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
