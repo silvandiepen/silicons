@@ -1,9 +1,9 @@
 @import '../default';
 @import 'volume-off';
 
-@mixin silicon-volume-medium($class: '#{$silicon-prefix}volume-medium') {
-	@include silicon-volume-off($class);
-	.#{$class} {
+@mixin silicon-volume-medium($selector: '.#{$silicon-prefix}volume-medium') {
+	@include silicon-volume-off($selector);
+	.#{$selector} {
 		background-image: radial-gradient(
 				at bottom left,
 				transparent calc(35% - var(--stroke, #{$silicon-stroke / 2})),

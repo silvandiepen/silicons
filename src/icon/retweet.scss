@@ -1,7 +1,7 @@
 @import '../default';
 
-@mixin silicon-retweet($class: '#{$silicon-prefix}retweet') {
-	.#{$class} {
+@mixin silicon-retweet($selector: '.#{$silicon-prefix}retweet') {
+	.#{$selector} {
 		/* position */
 		position: relative;
 

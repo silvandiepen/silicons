@@ -1,7 +1,7 @@
 @import '../default';
 
-@mixin silicon-smiley-happy($class: '#{$silicon-prefix}smiley-happy') {
-	.#{$class} {
+@mixin silicon-smiley-happy($selector: '.#{$silicon-prefix}smiley-happy') {
+	.#{$selector} {
 		/* position */
 		position: relative;
 

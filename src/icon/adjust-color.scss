@@ -1,7 +1,7 @@
 @import '../default';
 
-@mixin silicon-adjust-color($class: '#{$silicon-prefix}adjust-color') {
-	.#{$class} {
+@mixin silicon-adjust-color($selector: '.#{$silicon-prefix}adjust-color') {
+	.#{$selector} {
 		/* position */
 		position: relative;
 

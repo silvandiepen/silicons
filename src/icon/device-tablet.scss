@@ -1,9 +1,9 @@
 @import '../default';
 @import 'device-phone';
 
-@mixin silicon-device-tablet($class: '#{$silicon-prefix}device-tablet') {
-	@include silicon-device-phone($class);
-	.#{$class} {
+@mixin silicon-device-tablet($selector: '.#{$silicon-prefix}device-tablet') {
+	@include silicon-device-phone($selector);
+	.#{$selector} {
 		/* size */
 		width: 1em;
 		height: 0.6em;

@@ -1,9 +1,9 @@
 @import '../default';
 @import 'smiley-happy';
 
-@mixin silicon-smiley-wink($class: '#{$silicon-prefix}smiley-wink') {
-	@include silicon-smiley-happy($class);
-	.#{$class} {
+@mixin silicon-smiley-wink($selector: '.#{$silicon-prefix}smiley-wink') {
+	@include silicon-smiley-happy($selector);
+	.#{$selector} {
 		/* bacmground */
 		background-image: inherit, inear-gradient(to right, currentColor, currentColor);
 		background-position: inherit, left calc(50% + .15em) bottom calc(50% + .1em);

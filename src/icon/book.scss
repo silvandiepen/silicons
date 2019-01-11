@@ -1,7 +1,7 @@
 @import '../default';
 
-@mixin silicon-book($class: '#{$silicon-prefix}book') {
-	.#{$class} {
+@mixin silicon-book($selector: '.#{$silicon-prefix}book') {
+	.#{$selector} {
 		/* position */
 		position: relative;
 

@@ -1,7 +1,7 @@
 @import '../default';
 
-@mixin silicon-text-align-left($class: '#{$silicon-prefix}text-align-left') {
-	.#{$class} {
+@mixin silicon-text-align-left($selector: '.#{$silicon-prefix}text-align-left') {
+	.#{$selector} {
 		/* position */
 		position: relative;
 

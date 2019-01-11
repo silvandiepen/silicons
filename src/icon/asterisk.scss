@@ -1,7 +1,7 @@
 @import '../default';
 
-@mixin silicon-asterisk($class: '#{$silicon-prefix}asterisk') {
-	.#{$class} {
+@mixin silicon-asterisk($selector: '.#{$silicon-prefix}asterisk') {
+	.#{$selector} {
 		/* position */
 		position: relative;
 

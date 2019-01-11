@@ -1,7 +1,7 @@
 @import '../default';
 
-@mixin silicon-math-plus($class: '#{$silicon-prefix}math-plus') {
-	.#{$class} {
+@mixin silicon-math-plus($selector: '.#{$silicon-prefix}math-plus') {
+	.#{$selector} {
 		/* position */
 		position: relative;
 
@@ -35,6 +35,6 @@
 	}
 }
 
-@mixin silicon-plus($class: '#{$silicon-prefix}math-plus') {
-	@include silicon-math-plus($class);
+@mixin silicon-plus($selector: '.#{$silicon-prefix}math-plus') {
+	@include silicon-math-plus($selector);
 }

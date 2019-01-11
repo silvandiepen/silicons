@@ -1,9 +1,9 @@
 @import '../default';
 @import 'smiley-happy';
 
-@mixin silicon-smiley-grin($class: '#{$silicon-prefix}smiley-grin') {
-	@include silicon-smiley-happy($class);
-	.#{$class} {
+@mixin silicon-smiley-grin($selector: '.#{$silicon-prefix}smiley-grin') {
+	@include silicon-smiley-happy($selector);
+	.#{$selector} {
 		&:after {
 			content: '';
 

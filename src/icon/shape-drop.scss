@@ -1,7 +1,7 @@
 @import "../default";
 
-@mixin silicon-shape-drop($class: '#{$silicon-prefix}shape-drop') {
-	.#{$class} {
+@mixin silicon-shape-drop($selector: '.#{$silicon-prefix}shape-drop') {
+	.#{$selector} {
 		position: relative;
 
 		display: inline-block;

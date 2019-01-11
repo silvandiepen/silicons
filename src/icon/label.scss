@@ -1,7 +1,7 @@
 @import '../default';
 
-@mixin silicon-label($class: '#{$silicon-prefix}label') {
-	.#{$class} {
+@mixin silicon-label($selector: '.#{$silicon-prefix}label') {
+	.#{$selector} {
 		/* position */
 		position: relative;
 

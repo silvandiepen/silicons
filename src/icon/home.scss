@@ -1,7 +1,7 @@
 @import '../default';
 
-@mixin silicon-home($class: '#{$silicon-prefix}home') {
-	.#{$class} {
+@mixin silicon-home($selector: '.#{$silicon-prefix}home') {
+	.#{$selector} {
 		/* position */
 		position: relative;
 

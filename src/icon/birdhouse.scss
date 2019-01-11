@@ -1,7 +1,7 @@
 @import '../default';
 
-@mixin silicon-birdhouse($class: '#{$silicon-prefix}birdhouse') {
-	.#{$class} {
+@mixin silicon-birdhouse($selector: '.#{$silicon-prefix}birdhouse') {
+	.#{$selector} {
 		/* position */
 		position: relative;
 

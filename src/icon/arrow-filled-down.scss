@@ -1,9 +1,9 @@
 @import '../default';
 @import 'arrow-filled-right';
 
-@mixin silicon-arrow-filled-down($class: '#{$silicon-prefix}arrow-filled-down') {
-	@include silicon-arrow-filled-right($class);
-	.#{$class} {
+@mixin silicon-arrow-filled-down($selector: '.#{$silicon-prefix}arrow-filled-down') {
+	@include silicon-arrow-filled-right($selector);
+	.#{$selector} {
 		/* position */
 		transform: rotate(90deg);
 	}

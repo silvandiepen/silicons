@@ -1,7 +1,7 @@
 @import '../default';
 
-@mixin silicon-ball-volleyball($class: '#{$silicon-prefix}ball-volleyball') {
-	.#{$class} {
+@mixin silicon-ball-volleyball($selector: '.#{$silicon-prefix}ball-volleyball') {
+	.#{$selector} {
 		/* position */
 		position: relative;
 

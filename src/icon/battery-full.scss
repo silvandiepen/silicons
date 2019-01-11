@@ -1,9 +1,9 @@
 @import '../default';
 @import 'battery-empty';
 
-@mixin silicon-battery-full($class: '#{$silicon-prefix}battery-full') {
-	@include silicon-battery-empty(#{$class});
-	.#{$class} {
+@mixin silicon-battery-full($selector: '.#{$silicon-prefix}battery-full') {
+	@include silicon-battery-empty(#{$selector});
+	.#{$selector} {
 		&:after {
 			content: '';
 			

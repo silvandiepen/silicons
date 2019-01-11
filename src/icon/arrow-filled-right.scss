@@ -1,9 +1,9 @@
 @import '../default';
 
 @mixin silicon-arrow-filled-right(
-	$class: '#{$silicon-prefix}arrow-filled-right'
+	$selector: '#{$silicon-prefix}arrow-filled-right'
 ) {
-	.#{$class} {
+	.#{$selector} {
 		/* position */
 		position: relative;
 

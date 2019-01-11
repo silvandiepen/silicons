@@ -1,7 +1,7 @@
 @import '../default';
 
-@mixin silicon-float($class: '#{$silicon-prefix}float') {
-	.#{$class} {
+@mixin silicon-float($selector: '.#{$silicon-prefix}float') {
+	.#{$selector} {
 		/* position */
 		position: relative;
 

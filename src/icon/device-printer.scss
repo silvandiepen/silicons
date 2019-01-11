@@ -1,7 +1,7 @@
 @import '../default';
 
-@mixin silicon-device-printer($class: '#{$silicon-prefix}device-printer') {
-	.#{$class} {
+@mixin silicon-device-printer($selector: '.#{$silicon-prefix}device-printer') {
+	.#{$selector} {
 		/* position */
 		position: relative;
 

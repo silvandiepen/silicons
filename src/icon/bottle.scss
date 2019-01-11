@@ -1,7 +1,7 @@
 @import '../default';
 
-@mixin silicon-bottle($class: '#{$silicon-prefix}bottle') {
-	.#{$class} {
+@mixin silicon-bottle($selector: '.#{$silicon-prefix}bottle') {
+	.#{$selector} {
 		/* position */
 		position: relative;
 

@@ -1,7 +1,7 @@
 @import '../default';
 
-@mixin silicon-code($class: '#{$silicon-prefix}code') {
-	.#{$class} {
+@mixin silicon-code($selector: '.#{$silicon-prefix}code') {
+	.#{$selector} {
 		/* position */
 		position: relative;
 

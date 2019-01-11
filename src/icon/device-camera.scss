@@ -1,7 +1,7 @@
 @import '../default';
 
-@mixin silicon-device-camera($class: '#{$silicon-prefix}device-camera') {
-	.#{$class} {
+@mixin silicon-device-camera($selector: '.#{$silicon-prefix}device-camera') {
+	.#{$selector} {
 		/* position */
 		position: relative;
 

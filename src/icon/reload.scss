@@ -1,7 +1,7 @@
 @import '../default';
 
-@mixin silicon-reload($class: '#{$silicon-prefix}reload') {
-	.#{$class} {
+@mixin silicon-reload($selector: '.#{$silicon-prefix}reload') {
+	.#{$selector} {
 		/* position */
 		position: relative;
 

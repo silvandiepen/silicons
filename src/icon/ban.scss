@@ -1,7 +1,7 @@
 @import '../default';
 
-@mixin silicon-ban($class: '#{$silicon-prefix}ban') {
-	.#{$class} {
+@mixin silicon-ban($selector: '.#{$silicon-prefix}ban') {
+	.#{$selector} {
 		/* position */
 		position: relative;
 

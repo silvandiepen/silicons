@@ -1,9 +1,9 @@
 @import '../default';
 @import 'smiley-happy';
 
-@mixin silicon-smiley-sad($class: '#{$silicon-prefix}smiley-sad') {
-	@include silicon-smiley-happy($class);
-	.#{$class} {
+@mixin silicon-smiley-sad($selector: '.#{$silicon-prefix}smiley-sad') {
+	@include silicon-smiley-happy($selector);
+	.#{$selector} {
 		&:after {
 			/* border */
 			border-top-color: currentColor;

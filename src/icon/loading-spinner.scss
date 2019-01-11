@@ -1,7 +1,7 @@
 @import '../default';
 
-@mixin silicon-loading-spinner($class: '#{$silicon-prefix}loading-spinner') {
-	.#{$class} {
+@mixin silicon-loading-spinner($selector: '.#{$silicon-prefix}loading-spinner') {
+	.#{$selector} {
 		/* position */
 		position: relative;
 

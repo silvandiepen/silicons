@@ -1,7 +1,7 @@
 @import '../default';
 
-@mixin silicon-time-clock($class: '#{$silicon-prefix}time-clock') {
-	.#{$class} {
+@mixin silicon-time-clock($selector: '.#{$silicon-prefix}time-clock') {
+	.#{$selector} {
 		--time-hours: 2;
 		--time-minutes: 35;
 

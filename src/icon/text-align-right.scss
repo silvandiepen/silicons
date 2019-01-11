@@ -2,10 +2,10 @@
 @import 'text-align-left';
 
 @mixin silicon-text-align-right(
-	$class: '#{$silicon-prefix}text-align-right'
+	$selector: '#{$silicon-prefix}text-align-right'
 ) {
-	@include silicon-text-align-left($class);
-	.#{$class} {
+	@include silicon-text-align-left($selector);
+	.#{$selector} {
 		background-position: bottom right;
 		
 		&:before {

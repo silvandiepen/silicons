@@ -2,10 +2,10 @@
 @import 'text-align-left';
 
 @mixin silicon-text-align-center(
-	$class: '#{$silicon-prefix}text-align-center'
+	$selector: '#{$silicon-prefix}text-align-center'
 ) {
-	@include silicon-text-align-left($class);
-	.#{$class} {
+	@include silicon-text-align-left($selector);
+	.#{$selector} {
 		/* background */
 		background-position: bottom center;
 		

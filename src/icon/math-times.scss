@@ -1,9 +1,9 @@
 @import '../default';
 @import 'math-plus';
 
-@mixin silicon-math-times($class: '#{$silicon-prefix}math-times') {
-	@include silicon-plus($class);
-	.#{$class} {
+@mixin silicon-math-times($selector: '.#{$silicon-prefix}math-times') {
+	@include silicon-plus($selector);
+	.#{$selector} {
 		/* transform */
 		transform: rotate(45deg);
 		&:after{
@@ -13,6 +13,6 @@
 	}
 }
 
-@mixin silicon-close($class: '#{$silicon-prefix}close'){
-	@include silicon-math-times($class);
+@mixin silicon-close($selector: '.#{$silicon-prefix}close'){
+	@include silicon-math-times($selector);
 }

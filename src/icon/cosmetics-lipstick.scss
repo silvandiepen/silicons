@@ -1,9 +1,9 @@
 @import '../default';
 
 @mixin silicon-cosmetics-lipstick(
-	$class: '#{$silicon-prefix}cosmetics-lipstick'
+	$selector: '#{$silicon-prefix}cosmetics-lipstick'
 ) {
-	.#{$class} {
+	.#{$selector} {
 		/* position */
 		position: relative;
 

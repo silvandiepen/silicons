@@ -1,7 +1,7 @@
 @import '../default';
 
-@mixin silicon-office-pencil($class: '#{$silicon-prefix}office-pencil') {
-	.#{$class} {
+@mixin silicon-office-pencil($selector: '.#{$silicon-prefix}office-pencil') {
+	.#{$selector} {
 		/* position */
 		position: relative;
 

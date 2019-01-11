@@ -1,7 +1,7 @@
 @import '../default';
 
-@mixin silicon-device-laptop($class: '#{$silicon-prefix}device-laptop') {
-	.#{$class} {
+@mixin silicon-device-laptop($selector: '.#{$silicon-prefix}device-laptop') {
+	.#{$selector} {
 		/* position */
 		position: relative;
 

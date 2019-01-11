@@ -1,7 +1,7 @@
 @import '../default';
 
-@mixin silicon-mail($class: '#{$silicon-prefix}mail') {
-	.#{$class} {
+@mixin silicon-mail($selector: '.#{$silicon-prefix}mail') {
+	.#{$selector} {
 		/* position */
 		position: relative;
 

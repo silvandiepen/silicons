@@ -1,7 +1,7 @@
 @import '../default';
 
-@mixin silicon-time-watch($class: '#{$silicon-prefix}time-watch') {
-	.#{$class} {
+@mixin silicon-time-watch($selector: '.#{$silicon-prefix}time-watch') {
+	.#{$selector} {
 		/* position */
 		position: relative;
 

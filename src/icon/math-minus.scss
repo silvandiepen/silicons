@@ -1,7 +1,7 @@
 @import '../default';
 
-@mixin silicon-math-minus($class: '#{$silicon-prefix}math-minus') {
-	.#{$class} {
+@mixin silicon-math-minus($selector: '.#{$silicon-prefix}math-minus') {
+	.#{$selector} {
 		/* position */
 		position: relative;
 
@@ -39,6 +39,6 @@
 		}
 	}
 }
-@mixin silicon-min($class: '#{$silicon-prefix}min'){
-	@include silicon-math-minus($class);
+@mixin silicon-min($selector: '.#{$silicon-prefix}min'){
+	@include silicon-math-minus($selector);
 }

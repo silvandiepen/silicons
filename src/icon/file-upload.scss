@@ -1,7 +1,7 @@
 @import '../default';
 
-@mixin silicon-file-upload($class: '#{$silicon-prefix}file-upload') {
-	.#{$class} {
+@mixin silicon-file-upload($selector: '.#{$silicon-prefix}file-upload') {
+	.#{$selector} {
 		position: relative;
 
 		display: inline-block;

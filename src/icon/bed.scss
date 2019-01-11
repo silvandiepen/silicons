@@ -1,7 +1,7 @@
 @import '../default';
 
-@mixin silicon-bed($class: '#{$silicon-prefix}bed') {
-	.#{$class} {
+@mixin silicon-bed($selector: '.#{$silicon-prefix}bed') {
+	.#{$selector} {
 		/* position */
 		position: relative;
 

@@ -1,7 +1,7 @@
 @import '../default';
 
-@mixin silicon-office-paperclip($class: '#{$silicon-prefix}office-paperclip') {
-	.#{$class} {
+@mixin silicon-office-paperclip($selector: '.#{$silicon-prefix}office-paperclip') {
+	.#{$selector} {
 		/* custom properties */
 		--height: calc(#{$silicon-stroke-var} * 5.5);
 		position: relative;

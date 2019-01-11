@@ -1,7 +1,7 @@
 @import '../default';
 
-@mixin silicon-battery-empty($class: '#{$silicon-prefix}battery-empty') {
-	.#{$class} {
+@mixin silicon-battery-empty($selector: '.#{$silicon-prefix}battery-empty') {
+	.#{$selector} {
 		/* position */
 		position: relative;
 

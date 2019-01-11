@@ -1,7 +1,7 @@
 @import "../default";
 
-@mixin silicon-shape-heart($class: '#{$silicon-prefix}shape-heart') {
-	.#{$class} {    
+@mixin silicon-shape-heart($selector: '.#{$silicon-prefix}shape-heart') {
+	.#{$selector} {    
 		position: relative;
 
 		display: inline-block;

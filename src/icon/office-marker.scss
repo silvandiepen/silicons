@@ -1,7 +1,7 @@
 @import '../default';
 
-@mixin silicon-office-marker($class: '#{$silicon-prefix}office-marker') {
-	.#{$class} {
+@mixin silicon-office-marker($selector: '.#{$silicon-prefix}office-marker') {
+	.#{$selector} {
 		/* position */
 		position: relative;
 

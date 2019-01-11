@@ -2,10 +2,10 @@
 @import 'arrow-filled-right';
 
 @mixin silicon-arrow-filled-left(
-	$class: '#{$silicon-prefix}arrow-filled-left'
+	$selector: '#{$silicon-prefix}arrow-filled-left'
 ) {
-	@include silicon-arrow-filled-right($class);
-	.#{$class} {
+	@include silicon-arrow-filled-right($selector);
+	.#{$selector} {
 		/* position */
 		transform: rotate(180deg);
 	}

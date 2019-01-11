@@ -1,6 +1,6 @@
 @import '../default';
-@mixin silicon-picture($class: '#{$silicon-prefix}picture') {
-	.#{$class} {
+@mixin silicon-picture($selector: '.#{$silicon-prefix}picture') {
+	.#{$selector} {
 		/* position */
 		position: relative;
 

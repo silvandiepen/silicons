@@ -1,7 +1,7 @@
 @import '../default';
 
-@mixin silicon-zoom-in($class: '#{$silicon-prefix}zoom-in') {
-	.#{$class} {
+@mixin silicon-zoom-in($selector: '.#{$silicon-prefix}zoom-in') {
+	.#{$selector} {
 		position: relative;
 
 		display: inline-block;
