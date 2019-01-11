@@ -4,6 +4,7 @@
 @mixin silicon-volume-mute($selector: '.#{$silicon-prefix}volume-mute') {
 	@include silicon-volume-off($selector);
 	#{$selector} {
+		// Background
 		background-image: radial-gradient(
 				at bottom left,
 				transparent calc(35% - var(--stroke, #{$silicon-stroke / 2})),

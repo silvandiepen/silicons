@@ -1,15 +1,15 @@
 .silicon-shape-drop {
   position: relative;
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 1em;
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-radius: 50% 0 50% 50%;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
 .silicon-shape-drop.colored {
-  color: var(--blue,#1eb3e0);
   background-color: var(--light-blue,#61caea);
+  color: var(--blue,#1eb3e0);
 }

@@ -1,53 +1,40 @@
 .silicon-copy {
-  /* position */
   position: relative;
   z-index: 1;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 0.75em;
   height: 1em;
+  box-sizing: border-box;
 }
-.silicon-copy:before, .silicon-copy:after {
+.silicon-copy::before, .silicon-copy::after {
   content: "";
-  /* position */
   position: absolute;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: 0.75em;
   height: 1em;
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
 }
-.silicon-copy:before {
-  /* position */
+.silicon-copy::before {
   top: calc(var(--stroke, 0.1em) * -2);
   left: calc(var(--stroke, 0.1em) * -2);
   z-index: -1;
-  /* border */
   border-right: none;
   border-bottom: none;
 }
-.silicon-copy:after {
-  /* position */
+.silicon-copy::after {
   top: 0;
   left: 0;
   z-index: 1;
 }
-.silicon-copy.colored:before, .silicon-copy.colored:after {
-  /* text */
-  color: var(--black,#101010);
-  /* background */
-  background-color: white;
-  /* border */
+.silicon-copy.colored::before, .silicon-copy.colored::after {
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  background-color: white;
+  color: var(--black,#101010);
 }
-.silicon-copy.colored:before {
-  /* text */
-  color: var(--gray,#7f7f7f);
-  /* background */
+.silicon-copy.colored::before {
   background-color: var(--white,#ffffff);
+  color: var(--gray,#7f7f7f);
   /* opacity */
   opacity: 0.5;
 }

@@ -2,16 +2,20 @@
 
 @mixin silicon-ball-rugby($selector: '.#{$silicon-prefix}ball-rugby') {
 	#{$selector} {
-		/* position */
+		// Position
 		position: relative;
 
-		/* size */
+		// Box Model
 		display: inline-block;
-		box-sizing: border-box;
 		width: 1em;
 		height: 0.75em;
+		box-sizing: border-box;
 
-		/* background */
+		// Border
+		border: #{$silicon-stroke-var} solid currentColor;
+		border-radius: 0.6em 0.6em 0.6em 0.6em / 0.4em 0.4em 0.4em 0.4em;
+
+		// Background
 		background-image: linear-gradient(to right, currentColor, currentColor),
 			linear-gradient(to right, currentColor, currentColor),
 			linear-gradient(to right, currentColor, currentColor),
@@ -24,19 +28,15 @@
 			#{$silicon-stroke-half-var} 0.2em, #{$silicon-stroke-half-var} 0.2em,
 			#{$silicon-stroke-half-var} 0.2em, #{$silicon-stroke-half-var} 0.2em;
 
-		/* border */
-		border: #{$silicon-stroke-var} solid currentColor;
-		border-radius: 0.6em 0.6em 0.6em 0.6em / 0.4em 0.4em 0.4em 0.4em;
-
-		/* transform */
+		// Transform
 		transform: rotate(-45deg);
 
 		&.colored {
-			/* text */
-			color: var(--color-black, #{color(Black)});
 
-			/* background */
+			// Background
 			background-color: var(--color-orange, #{color(Orange)});
+			// Typography
+			color: var(--color-black, #{color(Black)});
 		}
 	}
 }

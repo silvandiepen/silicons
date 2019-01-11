@@ -2,46 +2,46 @@
 
 @mixin silicon-device-printer($selector: '.#{$silicon-prefix}device-printer') {
 	#{$selector} {
-		/* position */
+		// Position
 		position: relative;
 
-		/* size */
+		// Box Model
 		display: inline-block;
-		box-sizing: border-box;
 		width: 0.5em;
 		height: 0.5em;
+		box-sizing: border-box;
 
-		/* border */
+		// Border
 		border: calc(#{$silicon-stroke-var} / 2) solid currentColor;
 
-		&:before,
-		&:after {
+		&::before,
+		&::after {
 			content: '';
 
-			/* position */
+			// Position
 			position: absolute;
 			box-sizing: border-box;
 		}
 
-		&:after {
-			/* position */
+		&::after {
+			// Position
 			bottom: calc(100% + (#{$silicon-stroke-var} * 2.5));
 			left: 50%;
 
-			/* size */
+			// Box Model
 			display: block;
 			width: 0.5em;
 			height: 0.1em;
 
-			/* border */
+			// Border
 			border: calc(#{$silicon-stroke-var} / 2) solid currentColor;
 			border-bottom: none;
 
-			/* transform */
+			// Transform
 			transform: translateX(-50%);
 		}
-		&:before {
-			/* position */
+		&::before {
+			// Position
 			top: -0.25em;
 			left: 50%;
 
@@ -50,15 +50,15 @@
 			width: 1em;
 			height: 0.5em;
 
-			/* border */
+			// Border
 			border: #{$silicon-stroke-var} solid currentColor;
 			border-radius: #{$silicon-stroke-var}
 				#{$silicon-stroke-var} 0 0;
 
-			/* transform */
+			// Transform
 			transform: translatex(-50%);
 
-			/* paths */
+			// Visibility
 			clip-path: polygon(
 				0% 100%,
 				0% 0%,
@@ -72,19 +72,19 @@
 		}
 		&.colored {
 			&,
-			&:after {
-				/* text */
-				color: $silicons-color-gray;
-				
-				/* background */
+			&::after {
+				// Background
 				background-color: $silicons-color-white;
-			}
-			&:before {
-				/* text */
-				color: $silicons-color-black;
 				
-				/* background */
+				// Typography
+				color: $silicons-color-gray;
+			}
+			&::before {
+				// Background
 				background-color: $silicons-color-dark;
+				
+				// Typography
+				color: $silicons-color-black;
 			}
 		}
 	}

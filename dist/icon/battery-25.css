@@ -1,60 +1,45 @@
 .silicon-battery-25 {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 0.5em;
-  /* border */
+  box-sizing: border-box;
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-radius: calc(var(--stroke, 0.1em) * 1.5);
 }
-.silicon-battery-25:before {
+.silicon-battery-25::before {
   content: "";
-  /* position */
   position: absolute;
   top: 50%;
   left: 100%;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: 0.2em;
   height: 0.25em;
-  /* border */
+  box-sizing: border-box;
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-radius: 0 calc(var(--stroke, 0.1em) * 0.5) calc(var(--stroke, 0.1em) * 0.5) 0;
-  /* transform */
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
 .silicon-battery-25.colored {
-  /* text */
-  color: black;
-  /* background */
   background-color: var(--white,#ffffff);
+  color: black;
 }
-.silicon-battery-25.colored:before {
-  /* background */
+.silicon-battery-25.colored::before {
   background-color: var(--white,#ffffff);
 }
 
-.silicon-battery-25:after {
+.silicon-battery-25::after {
   content: "\8";
-  /* position */
   position: absolute;
   top: calc(var(--stroke, 0.1em) / 2);
   left: calc(var(--stroke, 0.1em) / 2);
-  /* size */
   display: block;
   width: calc(25%);
   height: calc(100% - var(--stroke, 0.1em));
-  /* background */
-  background-color: currentColor;
-  /* border */
   border-radius: calc(var(--stroke, 0.1em) / 2);
+  background-color: currentColor;
 }
-.silicon-battery-25.colored:after {
-  /* background */
+.silicon-battery-25.colored::after {
   background-color: var(--red,#eb0f33);
 }

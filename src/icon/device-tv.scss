@@ -2,44 +2,44 @@
 
 @mixin silicon-device-tv($selector: '.#{$silicon-prefix}device-tv') {
 	#{$selector} {
-		/* position */
+		// Position
 		position: relative;
 
-		/* size */
+		// Box Model
 		display: inline-block;
-		box-sizing: border-box;
 		width: 1em;
 		height: 0.75em;
+		box-sizing: border-box;
 
-		/* border */
+		// Border
 		border: #{$silicon-stroke-var} solid currentColor;
 		border-radius: 0.2em;
 
-		&:before {
+		&::before {
 			content: '';
 
-			/* position */
+			// Position
 			position: absolute;
 			bottom: 100%;
 			left: 50%;
 
-			/* size */
+			// Box Model
 			display: block;
-			box-sizing: border-box;
 			width: calc(#{$silicon-stroke-var} * 3);
 			height: calc(#{$silicon-stroke-var} * 3);
+			box-sizing: border-box;
 
-			/* border */
+			// Border
 			border: calc(#{$silicon-stroke-var} / 2) solid currentColor;
 			border-top: 0;
 			border-right: 0;
 
-			/* transform */
+			// Transform
 			transform: translateX(-50%)
 				translateY(calc(#{$silicon-stroke-var} * -1)) rotate(-45deg);
 		}
 		.colored {
-			/* background */
+			// Background
 			background-image: $silicons-color-purple;
 		}
 	}

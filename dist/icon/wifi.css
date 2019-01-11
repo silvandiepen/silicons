@@ -1,9 +1,9 @@
 .silicon-wifi {
   position: relative;
   display: inline-block;
-  box-sizing: border-box;
   width: calc(var(--stroke, 0.1em) * 7);
   height: calc(var(--stroke, 0.1em) * 7);
+  box-sizing: border-box;
   border: calc(var(--stroke, 0.1em) * 1.5) solid currentColor;
   border-bottom: none;
   border-left: none;
@@ -11,7 +11,7 @@
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
-.silicon-wifi:before, .silicon-wifi:after {
+.silicon-wifi::before, .silicon-wifi::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -19,7 +19,7 @@
   display: block;
   box-sizing: border-box;
 }
-.silicon-wifi:before {
+.silicon-wifi::before {
   width: calc(var(--stroke, 0.1em) * 4.25);
   height: calc(var(--stroke, 0.1em) * 4.25);
   border: calc(var(--stroke, 0.1em) * 1.5) solid currentColor;
@@ -27,7 +27,7 @@
   border-left: none;
   border-radius: 0 calc(var(--stroke, 0.1em) * 4.25) 0 0;
 }
-.silicon-wifi:after {
+.silicon-wifi::after {
   width: calc(var(--stroke, 0.1em) * 1.5);
   height: calc(var(--stroke, 0.1em) * 1.5);
   border: calc(var(--stroke, 0.1em) * 1.5) solid currentColor;

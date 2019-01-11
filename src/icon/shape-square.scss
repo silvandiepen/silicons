@@ -2,24 +2,24 @@
 
 @mixin silicon-shape-square($selector: '.#{$silicon-prefix}shape-square') {
 	#{$selector} {
-		/* position */
+		// Position
 		position: relative;
 
-		/* size */
+		// Box Model
 		display: inline-block;
-		box-sizing: border-box;
 		width: 0.8em;
 		height: 0.8em;
+		box-sizing: border-box;
 
-		/* border */
+		// Border
 		border: #{$silicon-stroke-var} solid currentColor;
 
 		&.colored {
-			/* text */
-			color: $silicons-color-purple;
-
-			/* background */
+			// Background
 			background-color: $silicons-color-purple;
+			
+			// Typography
+			color: $silicons-color-purple;
 		}
 	}
 }

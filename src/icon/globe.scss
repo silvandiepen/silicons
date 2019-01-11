@@ -2,47 +2,47 @@
 
 @mixin silicon-globe($selector: '.#{$silicon-prefix}globe') {
 	#{$selector} {
-		/* position */
+		// Position
 		position: relative;
 
-		/* size */
+		// Box Model
 		display: inline-flex;
 		justify-content: center;
-		box-sizing: border-box;
 		width: 1em;
 		height: 0.8em;
+		box-sizing: border-box;
 
-		/* border */
+		// Border
 		border: #{$silicon-stroke-var} solid currentColor;
 		border-radius: 50%;
 
-		&:before {
+		&::before {
 			content: '';
 
-			/* size */
+			// Box Model
 			width: 60%;
 			height: 100%;
 
-			/* margin */
-			margin-top: calc(#{$silicon-stroke-var} * -0.5);
-
-			/* border */
+			// Border
 			border: calc(#{$silicon-stroke-var} / 2) solid currentColor;
 			border-radius: 50%;
+
+			// Spacing
+			margin-top: calc(#{$silicon-stroke-var} * -0.5);
 		}
-		&:after {
+		&::after {
 			content: '';
-			/* position */
+			// Position
 			position: absolute;
 			top: 0;
 			left: 0;
 
-			/* size */
+			// Box Model
 			display: block;
 			width: 100%;
 			height: 100%;
 
-			/* background */
+			// Background
 			background-image: linear-gradient(to right, currentColor, currentColor),
 				linear-gradient(to right, currentColor, currentColor);
 			background-repeat: no-repeat, no-repeat;
@@ -52,10 +52,11 @@
 		}
 
 		&.colored {
-			/* text */
-			color: $silicons-color-dark;
 
-			/* background */
+			// Border
+			border: calc(#{$silicon-stroke-var} / 2) solid currentColor;
+
+			// Background
 			background-color: $silicons-color-light-blue;
 			background-image: radial-gradient(
 					$silicons-color-green 50%,
@@ -70,9 +71,8 @@
 				right -0.25em center, center top -0.15em, center bottom -0.15em;
 			background-size: 0.5em 0.5em, 0.5em 0.5em, 0.5em 0.5em, 0.75em 0.25em,
 				0.75em 0.25em;
-
-			/* border */
-			border: calc(#{$silicon-stroke-var} / 2) solid currentColor;
+			// Typography
+			color: $silicons-color-dark;
 		}
 	}
 }

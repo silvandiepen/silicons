@@ -2,65 +2,65 @@
 
 @mixin silicon-ball-volleyball($selector: '.#{$silicon-prefix}ball-volleyball') {
 	#{$selector} {
-		/* position */
+		// Position
 		position: relative;
 
-		/* size */
+		// Box Model
 		display: inline-block;
-		box-sizing: border-box;
 		width: 1em;
 		height: 1em;
+		box-sizing: border-box;
 
-		overflow: hidden;
-
-		/* border */
+		// Border
 		border: #{$silicon-stroke-var} solid currentColor;
 		border-radius: 50%;
 
-		/* transform */
+		// Transform
 		transform: rotate(-22.5deg);
 
-		&:before {
+		overflow: hidden;
+
+		&::before {
 			content: '';
 
-			/* position */
+			// Position
 			position: absolute;
 			top: 0.1em;
 			left: 50%;
 
-			/* size */
+			// Box Model
 			display: block;
-			box-sizing: border-box;
 			width: 75%;
 			height: 100%;
+			box-sizing: border-box;
 
-			/* background */
+			// Border
+			border: calc(#{$silicon-stroke-var} / 2) solid currentColor;
+			border-radius: 0.5em 0.5em 0 0;
+
+			// Background
 			background-image: linear-gradient(to bottom, currentColor, currentColor);
 			background-repeat: no-repeat;
 			background-position: center center;
 			background-size: #{$silicon-stroke-half-var} 100%;
 
-			/* border */
-			border: calc(#{$silicon-stroke-var} / 2) solid currentColor;
-			border-radius: 0.5em 0.5em 0 0;
-
 			transform: translateX(-50%);
 		}
-		&:after {
+		&::after {
 			content: '';
 
-			/* position */
+			// Position
 			position: absolute;
 			top: 0em;
 			left: 50%;
 
-			/* size */
+			// Box Model
 			display: block;
-			box-sizing: border-box;
 			width: 100%;
 			height: 25%;
+			box-sizing: border-box;
 
-			/* background */
+			// Background
 			background-image: linear-gradient(
 					45deg,
 					transparent calc(50% - 0.025em),
@@ -79,19 +79,19 @@
 			background-position: top left, top right;
 			background-size: .5em .5em, .5em .5em;
 
-			/* transform */
+			// Transform
 			transform: translateX(-50%);
 		}
 		&.colored {
-			/* text */
-			color: $silicons-color-black;
-
-			/* background */
+			// Background
 			background-color: $silicons-color-white;
+			
+			// Typography
+			color: $silicons-color-black;
+			
 			&::before, &::after{
-				
-			/* text */
-			color: $silicons-color-gray;
+				// Typography
+				color: $silicons-color-gray;
 			}
 		}
 	}

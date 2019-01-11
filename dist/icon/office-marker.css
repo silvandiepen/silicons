@@ -1,64 +1,51 @@
 .silicon-office-marker {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 0.6em;
   height: 1em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-top: none;
+  border-radius: 0 0 0.5em 0.5em/0 0 0.3em 0.3em;
   background-image: radial-gradient(closest-side, transparent calc(100% - 0.05em), currentColor calc(100% - 0.05em), currentColor 100%, transparent);
   background-repeat: no-repeat;
   background-position: bottom 0.8em center;
   background-size: 0.9em 0.9em;
-  /* border */
-  border: var(--stroke, 0.1em) solid currentColor;
-  border-top: none;
-  border-radius: 0 0 0.5em 0.5em/0 0 0.3em 0.3em;
-  /* transform */
   -webkit-transform: rotate(225deg);
           transform: rotate(225deg);
 }
-.silicon-office-marker:before {
+.silicon-office-marker::before {
   content: "";
-  /* position */
   position: absolute;
   bottom: 100%;
   left: 50%;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: 0.6em;
   height: 0.2em;
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-top-width: calc(var(--stroke, 0.1em) * 0.5);
   border-bottom: none;
   border-radius: 0.2em 0.2em 0 0;
-  /* transform */
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
-.silicon-office-marker:after {
+.silicon-office-marker::after {
   content: "";
-  /* position */
   position: absolute;
   bottom: calc(100% + 0.15em);
   left: 50%;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: 0.3em;
   height: 0.4em;
-  /* background */
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) * 0.5) solid currentColor;
+  border-bottom: none;
+  border-radius: 0.1em 0.1em 0 0;
   background-image: radial-gradient(closest-side, currentColor 100%, transparent);
   background-repeat: no-repeat;
   background-position: bottom 0.1em center;
   background-size: 0.5em 0.5em;
-  /* border */
-  border: calc(var(--stroke, 0.1em) * 0.5) solid currentColor;
-  border-bottom: none;
-  border-radius: 0.1em 0.1em 0 0;
-  /* transform */
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }

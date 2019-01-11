@@ -2,48 +2,63 @@
 
 @mixin silicon-trash($selector: '.#{$silicon-prefix}trash') {
 	#{$selector} {
+		// Position
 		position: relative;
 
+		// Box Model
 		display: inline-block;
-    box-sizing: border-box;
 		width: 0.75em;
 		height: 0.75em;
+		box-sizing: border-box;
 
+		// Border
 		border: #{$silicon-stroke-var} solid currentColor;
 		border-top: none;
 		border-radius: 0 0 0.1em 0.1em;
 
+		// Transform
 		transform: translateY(0.2em);
-    
-    &:before, &:after{
-      content: '';
-      
-      position: absolute;
-      
+
+		&::before,
+		&::after {
+			content: '';
+
+			// Position
+			position: absolute;
+
+			// Box Model
 			display: block;
-      box-sizing: border-box;
-      
+			box-sizing: border-box;
+
+			// Transform
 			transform: translateX(-50%);
-    }
-    
-		&:before {
+		}
+
+		&::before {
+			// Position
 			bottom: calc(100% + #{$silicon-stroke-var});
 			left: 50%;
 
+			// Box Model
 			width: 1em;
 			height: #{$silicon-stroke-var};
 
-			background-color: currentColor;
-
+			// Border
 			border: none;
+
+			// Background
+			background-color: currentColor;
 		}
-		&:after {
+		&::after {
+			// Position
 			bottom: calc(100% + (#{$silicon-stroke-var} * 2));
 			left: 50%;
 
+			// Box Model
 			width: 0.2em;
 			height: 0.1em;
 
+			// Border
 			border: calc(#{$silicon-stroke-var} / 2) solid currentColor;
 			border-bottom: none;
 			border-radius: 0.2em 0.2em 0 0;

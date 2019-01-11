@@ -1,38 +1,28 @@
 .silicon-device-phone {
-  /* position */
   position: relative;
-  /* position */
   display: inline-block;
-  box-sizing: border-box;
   width: 0.6em;
   height: 1em;
-  /* border */
+  box-sizing: border-box;
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-radius: 0.1em;
 }
-.silicon-device-phone:before {
+.silicon-device-phone::before {
   content: "";
-  /* position */
   position: absolute;
   top: 0;
   left: 50%;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: 0.2em;
   height: 0.05em;
-  /* background */
-  background-color: currentColor;
-  /* border */
+  box-sizing: border-box;
   border-radius: 0 0 0.05em 0.05em;
-  /* transform */
+  background-color: currentColor;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
 .silicon-device-phone.colored {
-  /* text */
-  color: var(--dark,#303030);
-  /* background */
   background-color: var(--green,#10c565);
   background-image: linear-gradient(-70deg, transparent 40%, var(--white-02, rgba(255, 255, 255, 0.2)) 40%, var(--white-02, rgba(255, 255, 255, 0.2)) 60%, transparent 60%);
+  color: var(--dark,#303030);
 }

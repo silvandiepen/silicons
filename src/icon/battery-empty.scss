@@ -2,50 +2,50 @@
 
 @mixin silicon-battery-empty($selector: '.#{$silicon-prefix}battery-empty') {
 	#{$selector} {
-		/* position */
+		// Position
 		position: relative;
 
-		/* size */
+		// Box Model
 		display: inline-block;
-		box-sizing: border-box;
 		width: 1em;
 		height: 0.5em;
+		box-sizing: border-box;
 
-		/* border */
+		// Border
 		border: calc(#{$silicon-stroke-var} / 2) solid currentColor;
 		border-radius: calc(#{$silicon-stroke-var} * 1.5);
 
-		&:before {
+		&::before {
 			content: '';
 
-			/* position */
+			// Position
 			position: absolute;
 			top: 50%;
 			left: 100%;
 
-			/* size */
+			// Box Model
 			display: block;
-			box-sizing: border-box;
 			width: 0.2em;
 			height: 0.25em;
+			box-sizing: border-box;
 
-			/* border */
+			// Border
 			border: calc(#{$silicon-stroke-var} / 2) solid currentColor;
 			border-radius: 0 calc(#{$silicon-stroke-var} * 0.5)
 				calc(#{$silicon-stroke-var} * 0.5) 0;
 
-			/* transform */
+			// Transform
 			transform: translateY(-50%);
 		}
 
 		&.colored {
-			/* text */
-			color: black;
 			
-			/* background */
+			// Background
 			background-color: $silicons-color-white;
-			&:before {
-				/* background */
+			// Typography
+			color: black;
+			&::before {
+				// Background
 				background-color: $silicons-color-white;
 			}
 		}

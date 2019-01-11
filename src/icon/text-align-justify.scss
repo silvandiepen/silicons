@@ -2,11 +2,11 @@
 @import 'text-align-left';
 
 @mixin silicon-text-align-justify(
-	$selector: '#{$silicon-prefix}text-align-justify'
+	$selector: '.#{$silicon-prefix}text-align-justify'
 ) {
 	@include silicon-text-align-left($selector);
 	#{$selector} {
-		/* background */
+		// Background
 		background-size: 1em #{$silicon-stroke-var};
 	}
 }

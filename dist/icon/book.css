@@ -1,41 +1,34 @@
 .silicon-book {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 0.75em;
   height: 0.75em;
-  background-image: linear-gradient(to bottom, currentColor, currentColor);
-  background-repeat: no-repeat;
-  background-position: top right;
-  background-size: var(--stroke, 0.1em) calc(100% - 					(var(--stroke, 0.1em) * 2));
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-right: none;
   border-bottom: none;
   border-radius: 0.2em 0 0 0;
+  background-image: linear-gradient(to bottom, currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: var(--stroke, 0.1em) calc(100% - 					(var(--stroke, 0.1em) * 2));
 }
-.silicon-book:before {
+.silicon-book::before {
   content: "";
-  /* position */
   position: absolute;
   top: 100%;
   left: calc(var(--stroke, 0.1em) * -1);
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: calc(100% + var(--stroke, 0.1em));
   height: 0.4em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-right: none;
+  border-radius: 0.2em 0 0 0.2em;
   background-image: radial-gradient(closest-side, transparent calc(100% - 0.05em), currentColor calc(100% - 0.05em), currentColor 100%, transparent);
   background-repeat: no-repeat;
   background-position: top 50% right -0.31em;
   background-size: 0.4em 0.4em;
-  /* border */
-  border: var(--stroke, 0.1em) solid currentColor;
-  border-right: none;
-  border-radius: 0.2em 0 0 0.2em;
-  /* transform */
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }

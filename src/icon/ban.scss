@@ -2,14 +2,18 @@
 
 @mixin silicon-ban($selector: '.#{$silicon-prefix}ban') {
 	#{$selector} {
-		/* position */
+		// Position
 		position: relative;
 
-		/* size */
+		// Box Model
 		display: inline-block;
-		box-sizing: border-box;
 		width: 1em;
 		height: 1em;
+		box-sizing: border-box;
+
+		// Border
+		border: #{$silicon-stroke-var} solid currentColor;
+		border-radius: 50%;
 
 		/* background  */
 		background-image: linear-gradient(
@@ -19,9 +23,5 @@
 			currentColor calc(50% + (#{$silicon-stroke-var} * 0.5)),
 			transparent calc(50% - (#{$silicon-stroke-var} * 0.5))
 		);
-
-		/* border */
-		border: #{$silicon-stroke-var} solid currentColor;
-		border-radius: 50%;
 	}
 }

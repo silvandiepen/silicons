@@ -4,12 +4,12 @@
 @mixin silicon-smiley-sad($selector: '.#{$silicon-prefix}smiley-sad') {
 	@include silicon-smiley-happy($selector);
 	#{$selector} {
-		&:after {
-			/* border */
+		&::after {
+			// Border
 			border-top-color: currentColor;
 			border-bottom-color: transparent;
 
-			/* transform */
+			// Transform
 			transform: translate(-50%, 25%);
 		}
 	}

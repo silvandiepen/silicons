@@ -2,48 +2,45 @@
 
 @mixin silicon-device-phone($selector: '.#{$silicon-prefix}device-phone') {
 	#{$selector} {
-		/* position */
+		// Position
 		position: relative;
 
-		/* position */
+		// Position
 		display: inline-block;
-		box-sizing: border-box;
 		width: 0.6em;
 		height: 1em;
+		box-sizing: border-box;
 
-		/* border */
+		// Border
 		border: calc(#{$silicon-stroke-var} / 2) solid currentColor;
 		border-radius: 0.1em;
 
-		&:before {
+		&::before {
 			content: '';
 
-			/* position */
+			// Position
 			position: absolute;
 			top: 0;
 			left: 50%;
 
-			/* size */
+			// Box Model
 			display: block;
-			box-sizing: border-box;
 			width: 0.2em;
 			height: 0.05em;
+			box-sizing: border-box;
 
-			/* background */
-			background-color: currentColor;
-
-			/* border */
+			// Border
 			border-radius: 0 0 0.05em 0.05em;
 
-			/* transform */
+			// Background
+			background-color: currentColor;
+
+			// Transform
 			transform: translateX(-50%);
 		}
 
 		&.colored {
-			/* text */
-			color: $silicons-color-dark;
-
-			/* background */
+			// Background
 			background-color: $silicons-color-green;
 			background-image: linear-gradient(
 				-70deg,
@@ -52,6 +49,9 @@
 				var(--white-02, rgba(255, 255, 255, 0.2)) 60%,
 				transparent 60%
 			);
+			
+			// Typography
+			color: $silicons-color-dark;
 		}
 	}
 }

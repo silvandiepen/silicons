@@ -1,52 +1,40 @@
 .silicon-globe {
-  /* position */
   position: relative;
-  /* size */
   display: inline-flex;
   justify-content: center;
-  box-sizing: border-box;
   width: 1em;
   height: 0.8em;
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-radius: 50%;
 }
-.silicon-globe:before {
+.silicon-globe::before {
   content: "";
-  /* size */
   width: 60%;
   height: 100%;
-  /* margin */
-  margin-top: calc(var(--stroke, 0.1em) * -0.5);
-  /* border */
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-radius: 50%;
+  margin-top: calc(var(--stroke, 0.1em) * -0.5);
 }
-.silicon-globe:after {
+.silicon-globe::after {
   content: "";
-  /* position */
   position: absolute;
   top: 0;
   left: 0;
-  /* size */
   display: block;
   width: 100%;
   height: 100%;
-  /* background */
   background-image: linear-gradient(to right, currentColor, currentColor), linear-gradient(to right, currentColor, currentColor);
   background-repeat: no-repeat, no-repeat;
   background-position: center center, center center;
   background-size: calc(var(--stroke, 0.1em) / 2) 100%, 100% calc(var(--stroke, 0.1em) / 2);
 }
 .silicon-globe.colored {
-  /* text */
-  color: var(--dark,#303030);
-  /* background */
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   background-color: var(--light-blue,#61caea);
   background-image: radial-gradient(var(--green,#10c565) 50%, transparent 50%), radial-gradient(var(--green,#10c565) 50%, transparent 50%), radial-gradient(var(--green,#10c565) 50%, transparent 50%), radial-gradient(var(--white,#ffffff) 50%, transparent 50%), radial-gradient(var(--white,#ffffff) 50%, transparent 50%);
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
   background-position: center center, left -0.25em center, right -0.25em center, center top -0.15em, center bottom -0.15em;
   background-size: 0.5em 0.5em, 0.5em 0.5em, 0.5em 0.5em, 0.75em 0.25em, 0.75em 0.25em;
-  /* border */
-  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  color: var(--dark,#303030);
 }

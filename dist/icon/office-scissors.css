@@ -1,47 +1,34 @@
 .silicon-office-scissors {
-  /* position */
   position: relative;
   width: 1em;
   height: 1em;
-  /* background */
   background-image: radial-gradient(closest-side, transparent 50%, currentColor 50%, currentColor 100%, transparent), radial-gradient(closest-side, transparent 50%, currentColor 50%, currentColor 100%, transparent);
   background-repeat: no-repeat, no-repeat;
   background-position: 0.65em bottom, 0.15em bottom;
   background-size: 0.2em 0.25em, 0.2em 0.25em;
-  /* transform */
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
-.silicon-office-scissors:before, .silicon-office-scissors:after {
+.silicon-office-scissors::before, .silicon-office-scissors::after {
   content: "";
-  /* position */
   position: absolute;
   top: -0.05em;
-  /* size */
   display: block;
   width: var(--stroke, 0.1em);
   height: 1em;
-  /* background */
   background-color: currentColor;
-  /* transform */
   -webkit-transform-origin: 50% 50%;
           transform-origin: 50% 50%;
 }
-.silicon-office-scissors:before {
-  /* position */
+.silicon-office-scissors::before {
   right: 50%;
-  /* border */
   border-radius: 0.2em 0 0 120%;
-  /* transform */
   -webkit-transform: rotate(-22.5deg);
           transform: rotate(-22.5deg);
 }
-.silicon-office-scissors:after {
-  /* position */
+.silicon-office-scissors::after {
   left: 50%;
-  /* border */
   border-radius: 0 0.2em 120% 0;
-  /* transform */
   -webkit-transform: rotate(22.5deg);
           transform: rotate(22.5deg);
 }

@@ -1,1316 +1,1006 @@
 .silicon-adjust-color {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 1em;
-  /* background */
-  background-image: linear-gradient(to right, transparent 50%, currentColor 50%);
-  /* border */
+  box-sizing: border-box;
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-radius: 50%;
+  background-image: linear-gradient(to right, transparent 50%, currentColor 50%);
 }
 
 .silicon-archive {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 0.75em;
   height: 0.55em;
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-top: none;
-  /* transform */
   transform: translateY(0.2em);
 }
-.silicon-archive:before, .silicon-archive:after {
+.silicon-archive::before, .silicon-archive::after {
   content: "";
-  /* position */
   position: absolute;
-  /* size */
   display: block;
   box-sizing: border-box;
-  /* transform */
   transform: translateX(-50%);
 }
-.silicon-archive:before {
-  /* position */
+.silicon-archive::before {
   bottom: 100%;
   left: 50%;
-  /* size */
   width: 1em;
   height: calc(var(--stroke, 0.1em) * 3);
-  /* border */
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
 }
-.silicon-archive:after {
-  /* position */
+.silicon-archive::after {
   bottom: calc(100% - (var(--stroke, 0.1em) * 1));
   left: 50%;
-  /* size */
   width: 0.2em;
   height: calc(var(--stroke, 0.1em) / 2);
-  /* background */
   background-color: currentColor;
 }
 
 .silicon-arrow-basic-down {
-  /* position */
   position: relative;
-  /* size */
   display: block;
   width: 1em;
   height: var(--stroke, 0.1em);
   /* background  */
   background-color: currentColor;
 }
-.silicon-arrow-basic-down:before {
+.silicon-arrow-basic-down::before {
   content: "";
-  /* size */
   position: absolute;
   top: calc(var(--stroke, 0.1em) * 0.5);
   right: calc(var(--stroke, 0.1em) * -0.5);
-  /* size */
   display: block;
   width: 0.3em;
   height: 0.3em;
-  /* border */
   border: var(--stroke, 0.1em) solid currentColor;
   border-bottom: none;
   border-left: none;
-  /* transform */
   transform: rotate(45deg);
   transform-origin: 100% 0;
 }
 
 .silicon-arrow-basic-down {
-  /* position */
   transform: rotate(90deg);
 }
 
 .silicon-arrow-basic-left {
-  /* position */
   position: relative;
-  /* size */
   display: block;
   width: 1em;
   height: var(--stroke, 0.1em);
   /* background  */
   background-color: currentColor;
 }
-.silicon-arrow-basic-left:before {
+.silicon-arrow-basic-left::before {
   content: "";
-  /* size */
   position: absolute;
   top: calc(var(--stroke, 0.1em) * 0.5);
   right: calc(var(--stroke, 0.1em) * -0.5);
-  /* size */
   display: block;
   width: 0.3em;
   height: 0.3em;
-  /* border */
   border: var(--stroke, 0.1em) solid currentColor;
   border-bottom: none;
   border-left: none;
-  /* transform */
   transform: rotate(45deg);
   transform-origin: 100% 0;
 }
 
 .silicon-arrow-basic-left {
-  /* position */
   transform: rotate(180deg);
 }
 
 .silicon-arrow-basic-right {
-  /* position */
   position: relative;
-  /* size */
   display: block;
   width: 1em;
   height: var(--stroke, 0.1em);
   /* background  */
   background-color: currentColor;
 }
-.silicon-arrow-basic-right:before {
+.silicon-arrow-basic-right::before {
   content: "";
-  /* size */
   position: absolute;
   top: calc(var(--stroke, 0.1em) * 0.5);
   right: calc(var(--stroke, 0.1em) * -0.5);
-  /* size */
   display: block;
   width: 0.3em;
   height: 0.3em;
-  /* border */
   border: var(--stroke, 0.1em) solid currentColor;
   border-bottom: none;
   border-left: none;
-  /* transform */
   transform: rotate(45deg);
   transform-origin: 100% 0;
 }
 
 .silicon-arrow-basic-up {
-  /* position */
   position: relative;
-  /* size */
   display: block;
   width: 1em;
   height: var(--stroke, 0.1em);
   /* background  */
   background-color: currentColor;
 }
-.silicon-arrow-basic-up:before {
+.silicon-arrow-basic-up::before {
   content: "";
-  /* size */
   position: absolute;
   top: calc(var(--stroke, 0.1em) * 0.5);
   right: calc(var(--stroke, 0.1em) * -0.5);
-  /* size */
   display: block;
   width: 0.3em;
   height: 0.3em;
-  /* border */
   border: var(--stroke, 0.1em) solid currentColor;
   border-bottom: none;
   border-left: none;
-  /* transform */
   transform: rotate(45deg);
   transform-origin: 100% 0;
 }
 
 .silicon-arrow-basic-up {
-  /* position */
   transform: rotate(-90deg);
 }
 
 .silicon-arrow-filled-down {
-  /* position */
   position: relative;
-  /* size */
   display: block;
   width: 1em;
   height: var(--stroke, 0.1em);
-  /* background */
   background-color: currentColor;
 }
-.silicon-arrow-filled-down:before {
+.silicon-arrow-filled-down::before {
   content: "";
-  /* size */
   position: absolute;
   top: calc(var(--stroke, 0.1em) * 0.5);
   right: calc(var(--stroke, 0.1em) * -0.5);
-  /* size */
   display: block;
   width: 0;
   height: 0;
-  /* border */
   border: 0.15em solid currentColor;
   border-bottom-color: transparent;
   border-left-color: transparent;
   border-radius: 0.05em;
-  /* transform */
   transform: rotate(45deg);
   transform-origin: 100% 0;
 }
 
 .silicon-arrow-filled-down {
-  /* position */
   transform: rotate(90deg);
 }
 
-silicon-arrow-filled-left {
-  /* position */
+.silicon-arrow-filled-left {
   position: relative;
-  /* size */
   display: block;
   width: 1em;
   height: var(--stroke, 0.1em);
-  /* background */
   background-color: currentColor;
 }
-silicon-arrow-filled-left:before {
+.silicon-arrow-filled-left::before {
   content: "";
-  /* size */
   position: absolute;
   top: calc(var(--stroke, 0.1em) * 0.5);
   right: calc(var(--stroke, 0.1em) * -0.5);
-  /* size */
   display: block;
   width: 0;
   height: 0;
-  /* border */
   border: 0.15em solid currentColor;
   border-bottom-color: transparent;
   border-left-color: transparent;
   border-radius: 0.05em;
-  /* transform */
   transform: rotate(45deg);
   transform-origin: 100% 0;
 }
 
-silicon-arrow-filled-left {
-  /* position */
+.silicon-arrow-filled-left {
   transform: rotate(180deg);
 }
 
-silicon-arrow-filled-right {
-  /* position */
+.silicon-arrow-filled-right {
   position: relative;
-  /* size */
   display: block;
   width: 1em;
   height: var(--stroke, 0.1em);
-  /* background */
   background-color: currentColor;
 }
-silicon-arrow-filled-right:before {
+.silicon-arrow-filled-right::before {
   content: "";
-  /* size */
   position: absolute;
   top: calc(var(--stroke, 0.1em) * 0.5);
   right: calc(var(--stroke, 0.1em) * -0.5);
-  /* size */
   display: block;
   width: 0;
   height: 0;
-  /* border */
   border: 0.15em solid currentColor;
   border-bottom-color: transparent;
   border-left-color: transparent;
   border-radius: 0.05em;
-  /* transform */
   transform: rotate(45deg);
   transform-origin: 100% 0;
 }
 
 .silicon-arrow-filled-up {
-  /* position */
   position: relative;
-  /* size */
   display: block;
   width: 1em;
   height: var(--stroke, 0.1em);
-  /* background */
   background-color: currentColor;
 }
-.silicon-arrow-filled-up:before {
+.silicon-arrow-filled-up::before {
   content: "";
-  /* size */
   position: absolute;
   top: calc(var(--stroke, 0.1em) * 0.5);
   right: calc(var(--stroke, 0.1em) * -0.5);
-  /* size */
   display: block;
   width: 0;
   height: 0;
-  /* border */
   border: 0.15em solid currentColor;
   border-bottom-color: transparent;
   border-left-color: transparent;
   border-radius: 0.05em;
-  /* transform */
   transform: rotate(45deg);
   transform-origin: 100% 0;
 }
 
 .silicon-arrow-filled-up {
-  /* position */
   transform: rotate(-90deg);
 }
 
 .silicon-arrow-right {
-  /* position */
   position: relative;
-  /* size */
   display: block;
   width: 1em;
   height: var(--stroke, 0.1em);
   /* background  */
   background-color: currentColor;
 }
-.silicon-arrow-right:before {
+.silicon-arrow-right::before {
   content: "";
-  /* size */
   position: absolute;
   top: calc(var(--stroke, 0.1em) * 0.5);
   right: calc(var(--stroke, 0.1em) * -0.5);
-  /* size */
   display: block;
   width: 0.3em;
   height: 0.3em;
-  /* border */
   border: var(--stroke, 0.1em) solid currentColor;
   border-bottom: none;
   border-left: none;
-  /* transform */
   transform: rotate(45deg);
   transform-origin: 100% 0;
 }
 
 .silicon-art-spraycan {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 0.6em;
   height: 1em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-top: none;
+  border-radius: 0 0 0.5em 0.5em/0 0 0.3em 0.3em;
   background-image: radial-gradient(closest-side, transparent calc(100% - 0.05em), currentColor calc(100% - 0.05em), currentColor 100%, transparent), radial-gradient(closest-side, transparent calc(100% - 0.05em), currentColor calc(100% - 0.05em), currentColor 100%, transparent);
   background-repeat: no-repeat, no-repeat;
   background-position: bottom 0.75em center, bottom 0.1em center;
   background-size: 0.9em 0.9em, 0.9em 0.9em;
-  /* border */
-  border: var(--stroke, 0.1em) solid currentColor;
-  border-top: none;
-  border-radius: 0 0 0.5em 0.5em/0 0 0.3em 0.3em;
-  /* transform */
 }
-.silicon-art-spraycan:before {
+.silicon-art-spraycan::before {
   content: "";
-  /* position */
   position: absolute;
   bottom: calc(100% - var(--stroke, 0.1em));
   left: 50%;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: 0.6em;
   height: 0.2em;
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-top-width: calc(var(--stroke, 0.1em) * 0.5);
   border-bottom: none;
   border-radius: 50%;
-  /* transform */
   transform: translateX(-50%);
 }
-.silicon-art-spraycan:after {
+.silicon-art-spraycan::after {
   content: "";
-  /* position */
   position: absolute;
   bottom: calc(100% + 0.05em);
   left: 50%;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: 0.3em;
   height: 0.3em;
-  /* background */
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) * 0.5) solid currentColor;
+  border-radius: 0.4em/0.5em;
   background-image: radial-gradient(closest-side, currentColor 100%, transparent);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 0.05em 0.05em;
-  /* border */
-  border: calc(var(--stroke, 0.1em) * 0.5) solid currentColor;
-  border-radius: 0.4em/0.5em;
-  /* transform */
   transform: translateX(-50%);
 }
 
 .silicon-asterisk {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 1em;
-  /* background */
+  box-sizing: border-box;
   background-image: linear-gradient(to bottom, currentColor, currentColor);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100% var(--stroke, 0.1em);
 }
-.silicon-asterisk:before, .silicon-asterisk:after {
+.silicon-asterisk::before, .silicon-asterisk::after {
   content: "";
-  /* position */
   position: absolute;
   top: 50%;
   left: 50%;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: 100%;
   height: var(--stroke, 0.1em);
-  /* background */
+  box-sizing: border-box;
   background-color: currentColor;
-  /* transform */
   transform: translate(-50%, -50%) rotate(60deg);
 }
-.silicon-asterisk:after {
-  /* transform */
+.silicon-asterisk::after {
   transform: translate(-50%, -50%) rotate(120deg);
 }
 
 .silicon-ball-basketball {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 1em;
-  overflow: hidden;
-  /* background */
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 50%;
   background-image: linear-gradient(to right, currentColor, currentColor), linear-gradient(to right, currentColor, currentColor);
   background-repeat: no-repeat, no-repeat;
   background-position: center center, center, center;
   background-size: calc(var(--stroke, 0.1em) / 2) 100%, 100% calc(var(--stroke, 0.1em) / 2);
-  /* border */
-  border: var(--stroke, 0.1em) solid currentColor;
-  border-radius: 50%;
-  /* transform */
   transform: rotate(22.5deg);
+  overflow: hidden;
 }
-.silicon-ball-basketball:before, .silicon-ball-basketball:after {
+.silicon-ball-basketball::before, .silicon-ball-basketball::after {
   content: "";
-  /* position */
   position: absolute;
   top: 0;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: 100%;
   height: 100%;
-  /* border */
+  box-sizing: border-box;
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-radius: 50%;
 }
-.silicon-ball-basketball:before {
-  /* position */
+.silicon-ball-basketball::before {
   left: 70%;
 }
-.silicon-ball-basketball:after {
-  /* position */
+.silicon-ball-basketball::after {
   right: 70%;
 }
 .silicon-ball-basketball.colored {
-  /* text */
-  color: var(--color-black, color(Black));
-  /* background */
   background-color: var(--color-orange, color(Orange));
+  color: var(--color-black, color(Black));
 }
 
 .silicon-ball-rugby {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 0.75em;
-  /* background */
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 0.6em 0.6em 0.6em 0.6em/0.4em 0.4em 0.4em 0.4em;
   background-image: linear-gradient(to right, currentColor, currentColor), linear-gradient(to right, currentColor, currentColor), linear-gradient(to right, currentColor, currentColor), linear-gradient(to right, currentColor, currentColor), linear-gradient(to right, currentColor, currentColor);
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
   background-position: center center, left 20% center, left 40% center, left 60% center, left 80% center;
   background-size: 0.7em calc(var(--stroke, 0.1em) * 0.5), calc(var(--stroke, 0.1em) * 0.5) 0.2em, calc(var(--stroke, 0.1em) * 0.5) 0.2em, calc(var(--stroke, 0.1em) * 0.5) 0.2em, calc(var(--stroke, 0.1em) * 0.5) 0.2em;
-  /* border */
-  border: var(--stroke, 0.1em) solid currentColor;
-  border-radius: 0.6em 0.6em 0.6em 0.6em/0.4em 0.4em 0.4em 0.4em;
-  /* transform */
   transform: rotate(-45deg);
 }
 .silicon-ball-rugby.colored {
-  /* text */
-  color: var(--color-black, color(Black));
-  /* background */
   background-color: var(--color-orange, color(Orange));
+  color: var(--color-black, color(Black));
 }
 
 .silicon-ball-tennis {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 1em;
-  overflow: hidden;
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-radius: 50%;
-  /* transform */
   transform: rotate(22.5deg);
+  overflow: hidden;
 }
-.silicon-ball-tennis:before {
+.silicon-ball-tennis::before {
   content: "";
-  /* position */
   position: absolute;
   top: 0.2em;
   left: 50%;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: 66.66%;
   height: 100%;
-  /* border */
+  box-sizing: border-box;
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-radius: 0.5em 0.5em 0 0;
   transform: translateX(-50%);
 }
 .silicon-ball-tennis.colored {
-  /* text */
-  color: var(--black,#101010);
-  /* background */
   background-color: var(--yellow,#f5c505);
+  color: var(--black,#101010);
 }
 
 .silicon-ball-volleyball {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 1em;
-  overflow: hidden;
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-radius: 50%;
-  /* transform */
   transform: rotate(-22.5deg);
+  overflow: hidden;
 }
-.silicon-ball-volleyball:before {
+.silicon-ball-volleyball::before {
   content: "";
-  /* position */
   position: absolute;
   top: 0.1em;
   left: 50%;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: 75%;
   height: 100%;
-  /* background */
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-radius: 0.5em 0.5em 0 0;
   background-image: linear-gradient(to bottom, currentColor, currentColor);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: calc(var(--stroke, 0.1em) * 0.5) 100%;
-  /* border */
-  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
-  border-radius: 0.5em 0.5em 0 0;
   transform: translateX(-50%);
 }
-.silicon-ball-volleyball:after {
+.silicon-ball-volleyball::after {
   content: "";
-  /* position */
   position: absolute;
   top: 0em;
   left: 50%;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: 100%;
   height: 25%;
-  /* background */
+  box-sizing: border-box;
   background-image: linear-gradient(45deg, transparent calc(50% - 0.025em), currentColor calc(50% - 0.025em), currentColor calc(50% + 0.025em), transparent calc(50% + 0.025em)), linear-gradient(-45deg, transparent calc(50% - 0.025em), currentColor calc(50% - 0.025em), currentColor calc(50% + 0.025em), transparent calc(50% + 0.025em));
   background-repeat: no-repeat, no-repeat;
   background-position: top left, top right;
   background-size: 0.5em 0.5em, 0.5em 0.5em;
-  /* transform */
   transform: translateX(-50%);
 }
 .silicon-ball-volleyball.colored {
-  /* text */
-  color: var(--black,#101010);
-  /* background */
   background-color: var(--white,#ffffff);
+  color: var(--black,#101010);
 }
 .silicon-ball-volleyball.colored::before, .silicon-ball-volleyball.colored::after {
-  /* text */
   color: var(--gray,#7f7f7f);
 }
 
 .silicon-ban {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 1em;
-  /* background  */
-  background-image: linear-gradient(to right bottom, transparent calc(50% - (var(--stroke, 0.1em) * 0.5)), currentColor calc(50% - (var(--stroke, 0.1em) * 0.5)), currentColor calc(50% + (var(--stroke, 0.1em) * 0.5)), transparent calc(50% - (var(--stroke, 0.1em) * 0.5)));
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-radius: 50%;
+  /* background  */
+  background-image: linear-gradient(to right bottom, transparent calc(50% - (var(--stroke, 0.1em) * 0.5)), currentColor calc(50% - (var(--stroke, 0.1em) * 0.5)), currentColor calc(50% + (var(--stroke, 0.1em) * 0.5)), transparent calc(50% - (var(--stroke, 0.1em) * 0.5)));
 }
 
 .silicon-battery-25 {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 0.5em;
-  /* border */
+  box-sizing: border-box;
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-radius: calc(var(--stroke, 0.1em) * 1.5);
 }
-.silicon-battery-25:before {
+.silicon-battery-25::before {
   content: "";
-  /* position */
   position: absolute;
   top: 50%;
   left: 100%;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: 0.2em;
   height: 0.25em;
-  /* border */
+  box-sizing: border-box;
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-radius: 0 calc(var(--stroke, 0.1em) * 0.5) calc(var(--stroke, 0.1em) * 0.5) 0;
-  /* transform */
   transform: translateY(-50%);
 }
 .silicon-battery-25.colored {
-  /* text */
-  color: black;
-  /* background */
   background-color: var(--white,#ffffff);
+  color: black;
 }
-.silicon-battery-25.colored:before {
-  /* background */
+.silicon-battery-25.colored::before {
   background-color: var(--white,#ffffff);
 }
 
-.silicon-battery-25:after {
+.silicon-battery-25::after {
   content: "\8";
-  /* position */
   position: absolute;
   top: calc(var(--stroke, 0.1em) / 2);
   left: calc(var(--stroke, 0.1em) / 2);
-  /* size */
   display: block;
   width: calc(25%);
   height: calc(100% - var(--stroke, 0.1em));
-  /* background */
-  background-color: currentColor;
-  /* border */
   border-radius: calc(var(--stroke, 0.1em) / 2);
+  background-color: currentColor;
 }
-.silicon-battery-25.colored:after {
-  /* background */
+.silicon-battery-25.colored::after {
   background-color: var(--red,#eb0f33);
 }
 
 .silicon-battery-50 {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 0.5em;
-  /* border */
+  box-sizing: border-box;
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-radius: calc(var(--stroke, 0.1em) * 1.5);
 }
-.silicon-battery-50:before {
+.silicon-battery-50::before {
   content: "";
-  /* position */
   position: absolute;
   top: 50%;
   left: 100%;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: 0.2em;
   height: 0.25em;
-  /* border */
+  box-sizing: border-box;
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-radius: 0 calc(var(--stroke, 0.1em) * 0.5) calc(var(--stroke, 0.1em) * 0.5) 0;
-  /* transform */
   transform: translateY(-50%);
 }
 .silicon-battery-50.colored {
-  /* text */
-  color: black;
-  /* background */
   background-color: var(--white,#ffffff);
+  color: black;
 }
-.silicon-battery-50.colored:before {
-  /* background */
+.silicon-battery-50.colored::before {
   background-color: var(--white,#ffffff);
 }
 
-.silicon-battery-50:after {
+.silicon-battery-50::after {
   content: "\8";
-  /* position */
   position: absolute;
   top: calc(var(--stroke, 0.1em) / 2);
   left: calc(var(--stroke, 0.1em) / 2);
-  /* size */
   display: block;
   width: calc(50%);
   height: calc(100% - var(--stroke, 0.1em));
-  /* background */
-  background-color: currentColor;
-  /* border */
   border-radius: calc(var(--stroke, 0.1em) / 2);
+  background-color: currentColor;
 }
-.silicon-battery-50.colored:after {
-  /* background */
+.silicon-battery-50.colored::after {
   background-color: var(--orange,#f6790b);
 }
 
 .silicon-battery-75 {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 0.5em;
-  /* border */
+  box-sizing: border-box;
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-radius: calc(var(--stroke, 0.1em) * 1.5);
 }
-.silicon-battery-75:before {
+.silicon-battery-75::before {
   content: "";
-  /* position */
   position: absolute;
   top: 50%;
   left: 100%;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: 0.2em;
   height: 0.25em;
-  /* border */
+  box-sizing: border-box;
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-radius: 0 calc(var(--stroke, 0.1em) * 0.5) calc(var(--stroke, 0.1em) * 0.5) 0;
-  /* transform */
   transform: translateY(-50%);
 }
 .silicon-battery-75.colored {
-  /* text */
-  color: black;
-  /* background */
   background-color: var(--white,#ffffff);
+  color: black;
 }
-.silicon-battery-75.colored:before {
-  /* background */
+.silicon-battery-75.colored::before {
   background-color: var(--white,#ffffff);
 }
 
-.silicon-battery-75:after {
+.silicon-battery-75::after {
   content: "\8";
-  /* position */
   position: absolute;
   top: calc(var(--stroke, 0.1em) / 2);
   left: calc(var(--stroke, 0.1em) / 2);
-  /* size */
   display: block;
   width: calc(75%);
   height: calc(100% - var(--stroke, 0.1em));
-  /* background */
-  background-color: currentColor;
-  /* border */
   border-radius: calc(var(--stroke, 0.1em) / 2);
+  background-color: currentColor;
 }
-.silicon-battery-75.colored:after {
-  /* background */
+.silicon-battery-75.colored::after {
   background-color: var(--green,#10c565);
 }
 
 .silicon-battery-empty {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 0.5em;
-  /* border */
+  box-sizing: border-box;
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-radius: calc(var(--stroke, 0.1em) * 1.5);
 }
-.silicon-battery-empty:before {
+.silicon-battery-empty::before {
   content: "";
-  /* position */
   position: absolute;
   top: 50%;
   left: 100%;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: 0.2em;
   height: 0.25em;
-  /* border */
+  box-sizing: border-box;
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-radius: 0 calc(var(--stroke, 0.1em) * 0.5) calc(var(--stroke, 0.1em) * 0.5) 0;
-  /* transform */
   transform: translateY(-50%);
 }
 .silicon-battery-empty.colored {
-  /* text */
-  color: black;
-  /* background */
   background-color: var(--white,#ffffff);
+  color: black;
 }
-.silicon-battery-empty.colored:before {
-  /* background */
+.silicon-battery-empty.colored::before {
   background-color: var(--white,#ffffff);
 }
 
 .silicon-battery-full {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 0.5em;
-  /* border */
+  box-sizing: border-box;
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-radius: calc(var(--stroke, 0.1em) * 1.5);
 }
-.silicon-battery-full:before {
+.silicon-battery-full::before {
   content: "";
-  /* position */
   position: absolute;
   top: 50%;
   left: 100%;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: 0.2em;
   height: 0.25em;
-  /* border */
+  box-sizing: border-box;
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-radius: 0 calc(var(--stroke, 0.1em) * 0.5) calc(var(--stroke, 0.1em) * 0.5) 0;
-  /* transform */
   transform: translateY(-50%);
 }
 .silicon-battery-full.colored {
-  /* text */
-  color: black;
-  /* background */
   background-color: var(--white,#ffffff);
+  color: black;
 }
-.silicon-battery-full.colored:before {
-  /* background */
+.silicon-battery-full.colored::before {
   background-color: var(--white,#ffffff);
 }
 
-.silicon-battery-full:after {
+.silicon-battery-full::after {
   content: "";
-  /* position */
   position: absolute;
   top: calc(var(--stroke, 0.1em) / 2);
   left: calc(var(--stroke, 0.1em) / 2);
-  /* size */
   display: block;
   width: calc(100% - var(--stroke, 0.1em));
   height: calc(100% - var(--stroke, 0.1em));
-  /* background */
-  background-color: currentColor;
-  /* border */
   border-radius: calc(var(--stroke, 0.1em) / 2);
+  background-color: currentColor;
 }
-.silicon-battery-full.colored:after {
-  /* background */
+.silicon-battery-full.colored::after {
   background-color: var(--green,#10c565);
 }
 
 .silicon-bed {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 0.4em;
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-radius: var(--stroke, 0.1em);
 }
-.silicon-bed:before {
+.silicon-bed::before {
   content: "";
-  /* position */
   position: absolute;
   bottom: 100%;
   left: 50%;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: 0.8em;
   height: 0.4em;
-  /* background */
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: calc(var(--stroke, 0.1em) * 2) calc(var(--stroke, 0.1em) * 2) 0 0;
   background-image: linear-gradient(to right, currentColor, currentColor), linear-gradient(to right, currentColor, currentColor);
   background-repeat: no-repeat, no-repeat;
   background-position: bottom left 17.5%, bottom left 82.5%;
   background-size: 0.2em 0.1em, 0.2em 0.1em;
-  /* border */
-  border: var(--stroke, 0.1em) solid currentColor;
-  border-radius: calc(var(--stroke, 0.1em) * 2) calc(var(--stroke, 0.1em) * 2) 0 0;
-  /* transform */
   transform: translateX(-50%);
 }
 
 .silicon-birdhouse {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 0.8em;
   height: 0.65em;
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-top: none;
 }
-.silicon-birdhouse:before {
+.silicon-birdhouse::before {
   content: "";
-  /* position */
   position: absolute;
   top: 0;
   left: 50%;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: calc(0.8em - (var(--stroke, 0.1em) * 1.5));
   height: calc(0.8em - (var(--stroke, 0.1em) * 1.5));
-  /* background */
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-right: none;
+  border-bottom: none;
   background-image: radial-gradient(closest-side, currentColor 100%, transparent);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: calc(var(--stroke, 0.1em) * 1.5) calc(var(--stroke, 0.1em) * 1.5);
-  /* border */
-  border: var(--stroke, 0.1em) solid currentColor;
-  border-right: none;
-  border-bottom: none;
-  /* transform */
   transform: translate(-50%, -50%) rotate(45deg);
 }
 .silicon-birdhouse.colored {
-  /* background */
-  background-color: var(--brown,#aa834f);
-  /* border */
   border-width: 0;
+  background-color: var(--brown,#aa834f);
 }
-.silicon-birdhouse.colored:before {
-  /* text */
-  color: var(--dark-brown,#87683f);
-  /* background */
+.silicon-birdhouse.colored::before {
   background-color: var(--brown,#aa834f);
   background-image: radial-gradient(closest-side, var(--black,#101010) 100%, transparent);
+  color: var(--dark-brown,#87683f);
 }
 
 .silicon-book {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 0.75em;
   height: 0.75em;
-  background-image: linear-gradient(to bottom, currentColor, currentColor);
-  background-repeat: no-repeat;
-  background-position: top right;
-  background-size: var(--stroke, 0.1em) calc(100% - 					(var(--stroke, 0.1em) * 2));
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-right: none;
   border-bottom: none;
   border-radius: 0.2em 0 0 0;
+  background-image: linear-gradient(to bottom, currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: var(--stroke, 0.1em) calc(100% - 					(var(--stroke, 0.1em) * 2));
 }
-.silicon-book:before {
+.silicon-book::before {
   content: "";
-  /* position */
   position: absolute;
   top: 100%;
   left: calc(var(--stroke, 0.1em) * -1);
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: calc(100% + var(--stroke, 0.1em));
   height: 0.4em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-right: none;
+  border-radius: 0.2em 0 0 0.2em;
   background-image: radial-gradient(closest-side, transparent calc(100% - 0.05em), currentColor calc(100% - 0.05em), currentColor 100%, transparent);
   background-repeat: no-repeat;
   background-position: top 50% right -0.31em;
   background-size: 0.4em 0.4em;
-  /* border */
-  border: var(--stroke, 0.1em) solid currentColor;
-  border-right: none;
-  border-radius: 0.2em 0 0 0.2em;
-  /* transform */
   transform: translateY(-50%);
 }
 
 .silicon-bottle {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 0.45em;
   height: 0.85em;
-  /* background */
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 0.5em 0.5em 0 0;
   background-image: linear-gradient(to bottom, currentColor, currentColor), linear-gradient(to bottom, currentColor, currentColor);
   background-repeat: no-repeat, no-repeat;
   background-position: top 25% center, top 70% center;
   background-size: 100% calc(var(--stroke, 0.1em) * 0.5), 100% calc(var(--stroke, 0.1em) * 0.5);
-  /* border */
-  border: var(--stroke, 0.1em) solid currentColor;
-  border-radius: 0.5em 0.5em 0 0;
 }
-.silicon-bottle:before {
+.silicon-bottle::before {
   content: "";
-  /* position */
   position: absolute;
   bottom: 100%;
   left: 50%;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: 0.25em;
   height: 0.4em;
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-bottom: none;
   transform: translateX(-50%);
 }
 
 .silicon-burger {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: var(--stroke, 0.1em);
-  /* background */
+  box-sizing: border-box;
   background-color: currentColor;
 }
-.silicon-burger:before, .silicon-burger:after {
+.silicon-burger::before, .silicon-burger::after {
   content: "";
-  /* position */
   position: absolute;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: 100%;
   height: 100%;
-  /* background */
+  box-sizing: border-box;
   background-color: currentColor;
 }
-.silicon-burger:before {
-  /* position */
+.silicon-burger::before {
   top: 100%;
-  /* transform */
   transform: translateY(calc(var(--stroke, 0.1em) * 2));
 }
-.silicon-burger:after {
-  /* position */
+.silicon-burger::after {
   bottom: 100%;
-  /* transform */
   transform: translateY(calc(var(--stroke, 0.1em) * -2));
 }
 
 .silicon-code {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1.25em;
   height: 0.5em;
-  /* overflow */
+  box-sizing: border-box;
   overflow: hidden;
 }
-.silicon-code:before {
+.silicon-code::before {
   content: "";
-  /* position */
   position: absolute;
   top: 50%;
   left: 50%;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: 0.75em;
   height: 0.75em;
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
-  /* transform */
   transform: translate(-50%, -50%) rotate(45deg);
 }
 
 .silicon-copy {
-  /* position */
   position: relative;
   z-index: 1;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 0.75em;
   height: 1em;
+  box-sizing: border-box;
 }
-.silicon-copy:before, .silicon-copy:after {
+.silicon-copy::before, .silicon-copy::after {
   content: "";
-  /* position */
   position: absolute;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: 0.75em;
   height: 1em;
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
 }
-.silicon-copy:before {
-  /* position */
+.silicon-copy::before {
   top: calc(var(--stroke, 0.1em) * -2);
   left: calc(var(--stroke, 0.1em) * -2);
   z-index: -1;
-  /* border */
   border-right: none;
   border-bottom: none;
 }
-.silicon-copy:after {
-  /* position */
+.silicon-copy::after {
   top: 0;
   left: 0;
   z-index: 1;
 }
-.silicon-copy.colored:before, .silicon-copy.colored:after {
-  /* text */
-  color: var(--black,#101010);
-  /* background */
-  background-color: white;
-  /* border */
+.silicon-copy.colored::before, .silicon-copy.colored::after {
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  background-color: white;
+  color: var(--black,#101010);
 }
-.silicon-copy.colored:before {
-  /* text */
-  color: var(--gray,#7f7f7f);
-  /* background */
+.silicon-copy.colored::before {
   background-color: var(--white,#ffffff);
+  color: var(--gray,#7f7f7f);
   /* opacity */
   opacity: 0.5;
 }
 
-silicon-cosmetics-lipstick {
-  /* position */
+.silicon-cosmetics-lipstick {
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 0.6em;
   height: 1em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-top-color: transparent;
+  border-radius: 0.2em 0.2em 0.5em 0.5em/0.2em 0.2em 0.3em 0.3em;
   background-image: radial-gradient(closest-side, transparent calc(100% - 0.05em), currentColor calc(100% - 0.05em), currentColor 100%, transparent), radial-gradient(closest-side, transparent calc(100% - 0.05em), currentColor calc(100% - 0.05em), currentColor 100%, transparent);
   background-repeat: no-repeat, no-repeat;
   background-position: bottom 0.75em center, bottom 0.1em center;
   background-size: 0.9em 0.9em, 0.9em 0.9em;
-  /* border */
-  border: var(--stroke, 0.1em) solid currentColor;
-  border-top-color: transparent;
-  border-radius: 0.2em 0.2em 0.5em 0.5em/0.2em 0.2em 0.3em 0.3em;
 }
-silicon-cosmetics-lipstick:before {
+.silicon-cosmetics-lipstick::before {
   content: "";
-  /* position */
   position: absolute;
   bottom: calc(100% + calc(var(--stroke, 0.1em) * 0.5));
   left: 50%;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: 0.5em;
   height: 0.5em;
-  /* background */
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) * 0.5) solid currentColor;
+  border-bottom: none;
+  border-radius: 0.4em 0.4em 0 0/0.5em 0.5em 0 0;
   background-image: radial-gradient(closest-side, transparent calc(100% - 0.05em), currentColor calc(100% - 0.05em), currentColor 100%, transparent);
   background-repeat: no-repeat;
   background-position: center -0.15em;
   background-size: 0.3em 0.5em;
-  /* border */
-  border: calc(var(--stroke, 0.1em) * 0.5) solid currentColor;
-  border-bottom: none;
-  border-radius: 0.4em 0.4em 0 0/0.5em 0.5em 0 0;
-  /* transform */
   transform: translateX(-50%);
 }
-silicon-cosmetics-lipstick.colored {
-  /* text */
-  color: var(--gray,#444444);
-  /* background */
+.silicon-cosmetics-lipstick.colored {
   background-color: var(--gray,#7f7f7f);
   background-image: radial-gradient(closest-side, var(--red,#eb0f33) calc(100% - 0.05em), var(--black,#101010) calc(100% - 0.05em), var(--black,#101010) 100%, var(--gray,#7f7f7f)), radial-gradient(closest-side, transparent calc(100% - 0.05em), var(--gray,#444444) calc(100% - 0.05em), var(--gray,#444444) 100%, transparent);
+  color: var(--gray,#444444);
 }
-silicon-cosmetics-lipstick.colored:before {
-  /* text */
-  color: var(--dark-red,#bb0c29);
-  /* background */
+.silicon-cosmetics-lipstick.colored::before {
   background-color: var(--red,#eb0f33);
   background-image: radial-gradient(closest-side, var(--light-red,#f4536d) 100%, transparent);
+  color: var(--dark-red,#bb0c29);
 }
 
 .silicon-creditcard {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 0.75em;
-  /* background */
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-radius: var(--stroke, 0.1em);
   background-image: linear-gradient(to right, currentColor, currentColor);
   background-repeat: no-repeat;
   background-position: bottom 0.1em center;
   background-size: 100% 0.2em;
-  /* border */
-  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
-  border-radius: var(--stroke, 0.1em);
 }
 
 .silicon-device-camera {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 0.75em;
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-radius: var(--stroke, 0.1em);
 }
-.silicon-device-camera:before, .silicon-device-camera:after {
+.silicon-device-camera::before, .silicon-device-camera::after {
   content: "";
-  /* position */
   position: absolute;
-  /* size */
   display: block;
   box-sizing: border-box;
-  /* border */
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
 }
-.silicon-device-camera:before {
-  /* position */
+.silicon-device-camera::before {
   top: 50%;
   left: 50%;
-  /* size */
   width: 0.5em;
   height: 0.5em;
-  /* border */
   border-radius: 50%;
-  /* transform */
   transform: translate(-50%, -50%);
 }
-.silicon-device-camera:after {
-  /* position */
+.silicon-device-camera::after {
   bottom: calc(100% + var(--stroke, 0.1em));
   left: 50%;
-  /* size */
   width: 0.3em;
   height: 0.1em;
   border-radius: 0.1em 0.1em 0 0;
@@ -1318,349 +1008,266 @@ silicon-cosmetics-lipstick.colored:before {
 }
 
 .silicon-device-laptop {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 0.6em;
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-bottom: 0;
   border-radius: 0.1em 0.1em 0 0;
 }
-.silicon-device-laptop:before {
+.silicon-device-laptop::before {
   content: "";
-  /* position */
   position: absolute;
   top: calc(100%);
   left: 50%;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: 1.2em;
   height: calc(var(--stroke, 0.1em) * 2);
-  /* border */
+  box-sizing: border-box;
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-radius: 0 0 0.2em 0.2em;
-  /* transform */
   transform: translateX(-50%);
 }
 .silicon-device-laptop.colored {
-  /* text */
-  color: var(--dark,#303030);
-  /* background */
   background-color: var(--blue,#1eb3e0);
   background-image: linear-gradient(-70deg, transparent 40%, var(--white-02, rgba(255, 255, 255, 0.2)) 40%, var(--white-02, rgba(255, 255, 255, 0.2)) 60%, transparent 60%);
+  color: var(--dark,#303030);
 }
-.silicon-device-laptop.colored:before {
-  /* background */
+.silicon-device-laptop.colored::before {
   background-color: var(--gray,#7f7f7f);
 }
 
 .silicon-device-phone {
-  /* position */
   position: relative;
-  /* position */
   display: inline-block;
-  box-sizing: border-box;
   width: 0.6em;
   height: 1em;
-  /* border */
+  box-sizing: border-box;
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-radius: 0.1em;
 }
-.silicon-device-phone:before {
+.silicon-device-phone::before {
   content: "";
-  /* position */
   position: absolute;
   top: 0;
   left: 50%;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: 0.2em;
   height: 0.05em;
-  /* background */
-  background-color: currentColor;
-  /* border */
+  box-sizing: border-box;
   border-radius: 0 0 0.05em 0.05em;
-  /* transform */
+  background-color: currentColor;
   transform: translateX(-50%);
 }
 .silicon-device-phone.colored {
-  /* text */
-  color: var(--dark,#303030);
-  /* background */
   background-color: var(--green,#10c565);
   background-image: linear-gradient(-70deg, transparent 40%, var(--white-02, rgba(255, 255, 255, 0.2)) 40%, var(--white-02, rgba(255, 255, 255, 0.2)) 60%, transparent 60%);
+  color: var(--dark,#303030);
 }
 
 .silicon-device-printer {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 0.5em;
   height: 0.5em;
-  /* border */
+  box-sizing: border-box;
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
 }
-.silicon-device-printer:before, .silicon-device-printer:after {
+.silicon-device-printer::before, .silicon-device-printer::after {
   content: "";
-  /* position */
   position: absolute;
   box-sizing: border-box;
 }
-.silicon-device-printer:after {
-  /* position */
+.silicon-device-printer::after {
   bottom: calc(100% + (var(--stroke, 0.1em) * 2.5));
   left: 50%;
-  /* size */
   display: block;
   width: 0.5em;
   height: 0.1em;
-  /* border */
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-bottom: none;
-  /* transform */
   transform: translateX(-50%);
 }
-.silicon-device-printer:before {
-  /* position */
+.silicon-device-printer::before {
   top: -0.25em;
   left: 50%;
   /* sisze */
   display: block;
   width: 1em;
   height: 0.5em;
-  /* border */
   border: var(--stroke, 0.1em) solid currentColor;
   border-radius: var(--stroke, 0.1em) var(--stroke, 0.1em) 0 0;
-  /* transform */
   transform: translatex(-50%);
-  /* paths */
   clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 100%, 74% 100%, 74% 50%, 26% 50%, 26% 100%);
 }
-.silicon-device-printer.colored, .silicon-device-printer.colored:after {
-  /* text */
-  color: var(--gray,#7f7f7f);
-  /* background */
+.silicon-device-printer.colored, .silicon-device-printer.colored::after {
   background-color: var(--white,#ffffff);
+  color: var(--gray,#7f7f7f);
 }
-.silicon-device-printer.colored:before {
-  /* text */
-  color: var(--black,#101010);
-  /* background */
+.silicon-device-printer.colored::before {
   background-color: var(--dark,#303030);
+  color: var(--black,#101010);
 }
 
 .silicon-device-screen {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 0.75em;
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-radius: 0.1em;
 }
-.silicon-device-screen:before {
+.silicon-device-screen::before {
   content: "";
-  /* position */
   position: absolute;
   top: 100%;
   left: 50%;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: 50%;
   height: calc(var(--stroke, 0.1em) * 3);
-  /* background */
-  background-image: linear-gradient(to right, transparent calc(50% - var(--stroke, 0.1em) / 4), currentColor calc(50% - var(--stroke, 0.1em) / 4), currentColor calc(50% + var(--stroke, 0.1em) / 4), transparent calc(50% + var(--stroke, 0.1em) / 4));
-  /* border */
+  box-sizing: border-box;
   border-bottom: calc(var(--stroke, 0.1em) / 2) solid currentColor;
-  /* transform */
+  background-image: linear-gradient(to right, transparent calc(50% - var(--stroke, 0.1em) / 4), currentColor calc(50% - var(--stroke, 0.1em) / 4), currentColor calc(50% + var(--stroke, 0.1em) / 4), transparent calc(50% + var(--stroke, 0.1em) / 4));
   transform: translateX(-50%);
 }
 .silicon-device-screen.colored {
-  /* text */
-  color: var(--dark,#303030);
-  /* background */
   background-color: var(--blue,#1eb3e0);
   background-image: linear-gradient(-70deg, transparent 40%, var(--white-02, rgba(255, 255, 255, 0.2)) 40%, var(--white-02, rgba(255, 255, 255, 0.2)) 60%, transparent 60%);
+  color: var(--dark,#303030);
 }
 
 .silicon-device-tablet {
-  /* position */
   position: relative;
-  /* position */
   display: inline-block;
-  box-sizing: border-box;
   width: 0.6em;
   height: 1em;
-  /* border */
+  box-sizing: border-box;
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-radius: 0.1em;
 }
-.silicon-device-tablet:before {
+.silicon-device-tablet::before {
   content: "";
-  /* position */
   position: absolute;
   top: 0;
   left: 50%;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: 0.2em;
   height: 0.05em;
-  /* background */
-  background-color: currentColor;
-  /* border */
+  box-sizing: border-box;
   border-radius: 0 0 0.05em 0.05em;
-  /* transform */
+  background-color: currentColor;
   transform: translateX(-50%);
 }
 .silicon-device-tablet.colored {
-  /* text */
-  color: var(--dark,#303030);
-  /* background */
   background-color: var(--green,#10c565);
   background-image: linear-gradient(-70deg, transparent 40%, var(--white-02, rgba(255, 255, 255, 0.2)) 40%, var(--white-02, rgba(255, 255, 255, 0.2)) 60%, transparent 60%);
+  color: var(--dark,#303030);
 }
 
 .silicon-device-tablet {
-  /* size */
   width: 1em;
   height: 0.6em;
 }
-.silicon-device-tablet:before {
-  /* position */
+.silicon-device-tablet::before {
   top: 50%;
   left: 0;
-  /* size */
   width: 0.05em;
   height: 0.2em;
-  /* border */
   border-radius: 0 0.05em 0.05em 0;
-  /* transform */
   transform: translate(0, -50%);
 }
 
 .silicon-device-tv {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 0.75em;
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-radius: 0.2em;
 }
-.silicon-device-tv:before {
+.silicon-device-tv::before {
   content: "";
-  /* position */
   position: absolute;
   bottom: 100%;
   left: 50%;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: calc(var(--stroke, 0.1em) * 3);
   height: calc(var(--stroke, 0.1em) * 3);
-  /* border */
+  box-sizing: border-box;
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-top: 0;
   border-right: 0;
-  /* transform */
   transform: translateX(-50%) translateY(calc(var(--stroke, 0.1em) * -1)) rotate(-45deg);
 }
 .silicon-device-tv .colored {
-  /* background */
   background-image: var(--purple,#7329b1);
 }
 
 .silicon-file-download {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 0.5em;
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-top: 0;
 }
-.silicon-file-download:before, .silicon-file-download:after {
+.silicon-file-download::before, .silicon-file-download::after {
   content: "";
-  /* position */
   position: absolute;
   box-sizing: border-box;
 }
-.silicon-file-download:before {
-  /* position */
+.silicon-file-download::before {
   bottom: 75%;
   left: 50%;
-  /* size */
   display: block;
   width: calc(var(--stroke, 0.1em) / 2);
   height: 0.5em;
-  /* background */
   background-color: currentColor;
-  /* transform */
   transform: translateX(-50%);
 }
-.silicon-file-download:after {
-  /* position */
+.silicon-file-download::after {
   bottom: calc(75% - var(--stroke, 0.1em) / 2);
   left: 50%;
-  /* size */
   display: block;
   width: 0.33em;
   height: 0.33em;
-  /* border */
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-top: none;
   border-right: none;
-  /* transform */
   transform: rotate(-45deg);
   transform-origin: 0 100%;
 }
 .silicon-file-download.colored {
-  /* text */
   color: var(--dark,#303030);
 }
-.silicon-file-download.colored:before, .silicon-file-download.colored:after {
-  /* text */
+.silicon-file-download.colored::before, .silicon-file-download.colored::after {
   color: var(--blue,#1eb3e0);
 }
 
 .silicon-file-export {
   position: relative;
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 0.75em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-top: 0;
   background-image: linear-gradient(to right, currentColor 33.33%, transparent 33.33%, transparent, 66.66%, currentColor 66.66%);
   background-repeat: no-repeat;
   background-position: top left;
   background-size: 100% var(--stroke, 0.1em);
-  border: var(--stroke, 0.1em) solid currentColor;
-  border-top: 0;
 }
-.silicon-file-export:before, .silicon-file-export:after {
+.silicon-file-export::before, .silicon-file-export::after {
   content: "";
   position: absolute;
   box-sizing: border-box;
 }
-.silicon-file-export:before {
+.silicon-file-export::before {
   bottom: 75%;
   left: 50%;
   display: block;
@@ -1669,7 +1276,7 @@ silicon-cosmetics-lipstick.colored:before {
   background-color: currentColor;
   transform: translateX(-50%);
 }
-.silicon-file-export:after {
+.silicon-file-export::after {
   bottom: calc(75% + 0.5em + (var(--stroke, 0.1em) / 2));
   left: 50%;
   display: block;
@@ -1684,29 +1291,29 @@ silicon-cosmetics-lipstick.colored:before {
 .silicon-file-export.colored {
   color: var(--dark,#303030);
 }
-.silicon-file-export.colored:before, .silicon-file-export.colored:after {
+.silicon-file-export.colored::before, .silicon-file-export.colored::after {
   color: var(--blue,#1eb3e0);
 }
 
 .silicon-file-import {
   position: relative;
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 0.75em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-top: 0;
   background-image: linear-gradient(to right, currentColor 33.33%, transparent 33.33%, transparent, 66.66%, currentColor 66.66%);
   background-repeat: no-repeat;
   background-position: top left;
   background-size: 100% var(--stroke, 0.1em);
-  border: var(--stroke, 0.1em) solid currentColor;
-  border-top: 0;
 }
-.silicon-file-import:before, .silicon-file-import:after {
+.silicon-file-import::before, .silicon-file-import::after {
   content: "";
   position: absolute;
   box-sizing: border-box;
 }
-.silicon-file-import:before {
+.silicon-file-import::before {
   bottom: 40%;
   left: 50%;
   display: block;
@@ -1715,7 +1322,7 @@ silicon-cosmetics-lipstick.colored:before {
   background-color: currentColor;
   transform: translateX(-50%);
 }
-.silicon-file-import:after {
+.silicon-file-import::after {
   bottom: calc(40% - var(--stroke, 0.1em) / 2);
   left: 50%;
   display: block;
@@ -1730,25 +1337,25 @@ silicon-cosmetics-lipstick.colored:before {
 .silicon-file-import.colored {
   color: var(--dark,#303030);
 }
-.silicon-file-import.colored:before, .silicon-file-import.colored:after {
+.silicon-file-import.colored::before, .silicon-file-import.colored::after {
   color: var(--green,#10c565);
 }
 
 .silicon-file-upload {
   position: relative;
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 0.5em;
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-top: 0;
 }
-.silicon-file-upload:before, .silicon-file-upload:after {
+.silicon-file-upload::before, .silicon-file-upload::after {
   content: "";
   position: absolute;
   box-sizing: border-box;
 }
-.silicon-file-upload:before {
+.silicon-file-upload::before {
   bottom: 75%;
   left: 50%;
   display: block;
@@ -1757,7 +1364,7 @@ silicon-cosmetics-lipstick.colored:before {
   background-color: currentColor;
   transform: translateX(-50%);
 }
-.silicon-file-upload:after {
+.silicon-file-upload::after {
   bottom: calc(75% + 0.5em + (var(--stroke, 0.1em) / 2));
   left: 50%;
   display: block;
@@ -1772,481 +1379,372 @@ silicon-cosmetics-lipstick.colored:before {
 .silicon-file-upload.colored {
   color: var(--dark,#303030);
 }
-.silicon-file-upload.colored:before, .silicon-file-upload.colored:after {
+.silicon-file-upload.colored::before, .silicon-file-upload.colored::after {
   color: var(--green,#10c565);
 }
 
 .silicon-float {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 1em;
-  /* position */
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 50%;
   background-image: radial-gradient(closest-side, transparent calc(100% - var(--stroke, 0.1em)), currentColor calc(100% - var(--stroke, 0.1em)), currentColor 100%, transparent), linear-gradient(to bottom, currentColor 0.25em, transparent 0.25em, transparent 0.6em, currentColor 0.6em), linear-gradient(to right, currentColor 0.25em, transparent 0.25em, transparent 0.6em, currentColor 0.6em);
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position: center center, center center, center center;
   background-size: 0.5em 0.5em, calc(var(--stroke, 0.1em) / 2) 100%, 100% calc(var(--stroke, 0.1em) / 2);
-  /* border */
-  border: var(--stroke, 0.1em) solid currentColor;
-  border-radius: 50%;
-  /* transform */
   transform: rotate(45deg);
 }
 
 .silicon-glass-wine {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 0.5em;
   height: 0.5em;
-  /* background */
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 0 0 50% 50%;
   background-image: linear-gradient(to bottom, currentColor, currentColor);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100% calc(var(--stroke, 0.1em) * 0.5);
-  /* border */
-  border: var(--stroke, 0.1em) solid currentColor;
-  border-radius: 0 0 50% 50%;
 }
-.silicon-glass-wine:before {
+.silicon-glass-wine::before {
   content: "";
-  /* position */
   position: absolute;
   top: 100%;
   left: calc(var(--stroke, 0.1em) * -1);
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: 0.5em;
   height: 0.4em;
-  /* background */
+  box-sizing: border-box;
+  border-bottom: var(--stroke, 0.1em) solid currentColor;
   background-image: linear-gradient(to bottom, currentColor, currentColor);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: var(--stroke, 0.1em) 100%;
-  /* border */
-  border-bottom: var(--stroke, 0.1em) solid currentColor;
 }
 
 .silicon-globe {
-  /* position */
   position: relative;
-  /* size */
   display: inline-flex;
   justify-content: center;
-  box-sizing: border-box;
   width: 1em;
   height: 0.8em;
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-radius: 50%;
 }
-.silicon-globe:before {
+.silicon-globe::before {
   content: "";
-  /* size */
   width: 60%;
   height: 100%;
-  /* margin */
-  margin-top: calc(var(--stroke, 0.1em) * -0.5);
-  /* border */
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-radius: 50%;
+  margin-top: calc(var(--stroke, 0.1em) * -0.5);
 }
-.silicon-globe:after {
+.silicon-globe::after {
   content: "";
-  /* position */
   position: absolute;
   top: 0;
   left: 0;
-  /* size */
   display: block;
   width: 100%;
   height: 100%;
-  /* background */
   background-image: linear-gradient(to right, currentColor, currentColor), linear-gradient(to right, currentColor, currentColor);
   background-repeat: no-repeat, no-repeat;
   background-position: center center, center center;
   background-size: calc(var(--stroke, 0.1em) / 2) 100%, 100% calc(var(--stroke, 0.1em) / 2);
 }
 .silicon-globe.colored {
-  /* text */
-  color: var(--dark,#303030);
-  /* background */
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   background-color: var(--light-blue,#61caea);
   background-image: radial-gradient(var(--green,#10c565) 50%, transparent 50%), radial-gradient(var(--green,#10c565) 50%, transparent 50%), radial-gradient(var(--green,#10c565) 50%, transparent 50%), radial-gradient(var(--white,#ffffff) 50%, transparent 50%), radial-gradient(var(--white,#ffffff) 50%, transparent 50%);
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
   background-position: center center, left -0.25em center, right -0.25em center, center top -0.15em, center bottom -0.15em;
   background-size: 0.5em 0.5em, 0.5em 0.5em, 0.5em 0.5em, 0.75em 0.25em, 0.75em 0.25em;
-  /* border */
-  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  color: var(--dark,#303030);
 }
 
 .silicon-go-down {
-  /* position */
   position: relative;
-  /* size */
   display: block;
   width: 0.5em;
   height: 1em;
   overflow: hidden;
 }
-.silicon-go-down:before {
+.silicon-go-down::before {
   content: "";
-  /* position */
   position: absolute;
   top: 50%;
   right: 0;
-  /* size */
   display: block;
   width: calc(0.5em - (var(--stroke, 0.1em) / 2));
   height: calc(0.5em - (var(--stroke, 0.1em) / 2));
-  /* border */
   border: var(--stroke, 0.1em) solid currentColor;
   border-bottom: none;
   border-left: none;
-  /* transform */
   transform: rotate(45deg);
   transform-origin: 100% 0;
 }
 
 .silicon-go-down {
-  /* position */
   transform: rotate(90deg);
 }
 
 .silicon-go-left {
-  /* position */
   position: relative;
-  /* size */
   display: block;
   width: 0.5em;
   height: 1em;
   overflow: hidden;
 }
-.silicon-go-left:before {
+.silicon-go-left::before {
   content: "";
-  /* position */
   position: absolute;
   top: 50%;
   right: 0;
-  /* size */
   display: block;
   width: calc(0.5em - (var(--stroke, 0.1em) / 2));
   height: calc(0.5em - (var(--stroke, 0.1em) / 2));
-  /* border */
   border: var(--stroke, 0.1em) solid currentColor;
   border-bottom: none;
   border-left: none;
-  /* transform */
   transform: rotate(45deg);
   transform-origin: 100% 0;
 }
 
 .silicon-go-left {
-  /* position */
   transform: rotate(-180deg);
 }
 
 .silicon-go-right {
-  /* position */
   position: relative;
-  /* size */
   display: block;
   width: 0.5em;
   height: 1em;
   overflow: hidden;
 }
-.silicon-go-right:before {
+.silicon-go-right::before {
   content: "";
-  /* position */
   position: absolute;
   top: 50%;
   right: 0;
-  /* size */
   display: block;
   width: calc(0.5em - (var(--stroke, 0.1em) / 2));
   height: calc(0.5em - (var(--stroke, 0.1em) / 2));
-  /* border */
   border: var(--stroke, 0.1em) solid currentColor;
   border-bottom: none;
   border-left: none;
-  /* transform */
   transform: rotate(45deg);
   transform-origin: 100% 0;
 }
 
 .silicon-go-up {
-  /* position */
   position: relative;
-  /* size */
   display: block;
   width: 0.5em;
   height: 1em;
   overflow: hidden;
 }
-.silicon-go-up:before {
+.silicon-go-up::before {
   content: "";
-  /* position */
   position: absolute;
   top: 50%;
   right: 0;
-  /* size */
   display: block;
   width: calc(0.5em - (var(--stroke, 0.1em) / 2));
   height: calc(0.5em - (var(--stroke, 0.1em) / 2));
-  /* border */
   border: var(--stroke, 0.1em) solid currentColor;
   border-bottom: none;
   border-left: none;
-  /* transform */
   transform: rotate(45deg);
   transform-origin: 100% 0;
 }
 
 .silicon-go-up {
-  /* position */
   transform: rotate(-90deg);
 }
 
 .silicon-home {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 0.9em;
   height: 0.5em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-top: none;
   background-image: linear-gradient(to bottom, currentColor, currentColor), linear-gradient(to bottom, currentColor, currentColor), linear-gradient(to bottom, currentColor, currentColor), linear-gradient(to bottom, currentColor, currentColor), linear-gradient(to bottom, currentColor, currentColor);
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
   background-position: left 0.1em bottom, 0.35em 0.1em, 0.475em 0.1em, 0.35em 0.225em, 0.475em 0.225em;
   background-size: 0.2em 0.3em, 0.1em 0.1em, 0.1em 0.1em, 0.1em 0.1em, 0.1em 0.1em;
-  /* border */
-  border: var(--stroke, 0.1em) solid currentColor;
-  border-top: none;
 }
-.silicon-home:before {
+.silicon-home::before {
   content: "";
-  /* position */
   position: absolute;
   top: 0;
   left: 50%;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: calc(0.8em - (var(--stroke, 0.1em) * 1));
   height: calc(0.8em - (var(--stroke, 0.1em) * 1));
-  /* background */
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-right: none;
+  border-bottom: none;
   background-image: radial-gradient(closest-side, currentColor 100%, transparent);
   background-repeat: no-repeat;
   background-position: 0.1em 0.1em;
   background-size: calc(var(--stroke, 0.1em) * 1.5) calc(var(--stroke, 0.1em) * 1.5);
-  /* border */
-  border: var(--stroke, 0.1em) solid currentColor;
-  border-right: none;
-  border-bottom: none;
-  /* transform */
   transform: translate(-50%, -50%) rotate(45deg);
 }
 
 .silicon-label {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 0.5em;
   height: 0.65em;
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-top: none;
-  /* transform */
   transform: rotate(-45deg);
 }
-.silicon-label:before {
+.silicon-label::before {
   content: "";
-  /* position */
   position: absolute;
   top: 0;
   left: 50%;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: calc(0.5em - (var(--stroke, 0.1em) * 1.5));
   height: calc(0.5em - (var(--stroke, 0.1em) * 1.5));
-  /* background */
-  background-image: radial-gradient(closest-side, currentColor 100%, transparent);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: var(--stroke, 0.1em) var(--stroke, 0.1em);
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-right: none;
   border-bottom: none;
   border-radius: var(--stroke, 0.1em) 0 0 0;
-  /* transform */
+  background-image: radial-gradient(closest-side, currentColor 100%, transparent);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: var(--stroke, 0.1em) var(--stroke, 0.1em);
   transform: translate(-50%, -50%) rotate(45deg);
 }
 
 .silicon-link {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 0.5em;
   height: calc(var(--stroke, 0.1em) / 2);
-  /* background */
+  box-sizing: border-box;
   background-color: currentColor;
-  /* transform */
   transform: rotate(-45deg);
 }
-.silicon-link:before, .silicon-link:after {
+.silicon-link::before, .silicon-link::after {
   content: "";
-  /* position */
   position: absolute;
   top: 50%;
-  /* size */
   display: block;
   width: 0.35em;
   height: 0.2em;
-  /* border */
   border: var(--stroke, 0.1em) solid currentColor;
   border-radius: var(--stroke, 0.1em);
-  /* transform */
   transform: translateY(-50%);
 }
-.silicon-link:before {
-  /* position */
+.silicon-link::before {
   right: calc(100% - (var(--stroke, 0.1em) * 2));
 }
-.silicon-link:after {
-  /* position */
+.silicon-link::after {
   left: calc(100% - (var(--stroke, 0.1em) * 2));
 }
 
 .silicon-loading-spinner {
-  /* position */
   position: relative;
-  /* size */
   width: calc(var(--stroke, 0.1em) * 2.5);
   height: calc(var(--stroke, 0.1em) * 2.5);
-  /* background */
-  background-color: transparent;
-  /* border */
-  border-radius: 50%;
   box-shadow: 0 -0.4em, -0.28em -0.28em 0 -0.01em, -0.4em 0 0 -0.02em, -0.28em 0.28em 0 -0.03em, 0 0.4em 0 -0.04em, 0.28em 0.28em 0 -0.05em, 0.4em 0 0 -0.06em, 0.28em -0.28em 0 -0.07em;
+  border-radius: 50%;
+  background-color: transparent;
 }
 
 .silicon-location {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 1em;
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-radius: 50% 50% 0 50%;
-  /* transform */
   transform: rotate(45deg);
 }
-.silicon-location:after {
+.silicon-location::after {
   content: "";
-  /* position */
   position: absolute;
   top: 50%;
   right: 50%;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: calc(var(--stroke, 0.1em) * 2);
   height: calc(var(--stroke, 0.1em) * 2);
-  /* background */
-  background-color: currentColor;
-  /* border */
+  box-sizing: border-box;
   border-radius: 50%;
-  /* transform */
+  background-color: currentColor;
   transform: translate(50%, -50%);
 }
 .silicon-location.colored {
-  /* text */
-  color: var(--dark-red,#bb0c29);
-  /* background */
   background-color: var(--red,#eb0f33);
+  color: var(--dark-red,#bb0c29);
 }
-.silicon-location.colored:after {
-  /* size */
+.silicon-location.colored::after {
   width: calc(var(--stroke, 0.1em) * 3);
   height: calc(var(--stroke, 0.1em) * 3);
-  /* text */
   color: var(--black,#101010);
 }
 
 .silicon-lock-open {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 0.8em;
   height: 0.5em;
-  /* border */
+  box-sizing: border-box;
   border: calc(var(--stroke, 0.1em) * 0.5) solid currentColor;
   border-radius: 0 0 var(--stroke, 0.1em) var(--stroke, 0.1em);
 }
-.silicon-lock-open:before {
+.silicon-lock-open::before {
   content: "";
-  /* position */
   position: absolute;
   bottom: 100%;
   left: 50%;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: 0.6em;
   height: 0.5em;
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-bottom: 0;
   border-radius: 0.3em 0.3em 0 0;
   transform: translateX(-50%);
 }
 
-.silicon-lock-open:before {
-  /* border */
+.silicon-lock-open::before {
   border-right-color: transparent;
 }
 
 .silicon-lock {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 0.8em;
   height: 0.5em;
-  /* border */
+  box-sizing: border-box;
   border: calc(var(--stroke, 0.1em) * 0.5) solid currentColor;
   border-radius: 0 0 var(--stroke, 0.1em) var(--stroke, 0.1em);
 }
-.silicon-lock:before {
+.silicon-lock::before {
   content: "";
-  /* position */
   position: absolute;
   bottom: 100%;
   left: 50%;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: 0.6em;
   height: 0.5em;
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-bottom: 0;
   border-radius: 0.3em 0.3em 0 0;
@@ -2254,778 +1752,593 @@ silicon-cosmetics-lipstick.colored:before {
 }
 
 .silicon-mail {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 0.75em;
-  /* overflow */
-  overflow: hidden;
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-radius: var(--stroke, 0.1em);
+  overflow: hidden;
 }
-.silicon-mail:after {
+.silicon-mail::after {
   content: "";
-  /* position */
   position: absolute;
   left: 50%;
-  /* display */
   display: block;
   width: 0.6em;
   height: 0.6em;
-  /* border */
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-radius: var(--stroke, 0.1em);
-  /* trasnform */
   transform: translate(-50%, -50%) rotate(45deg);
   transform-origin: 50% 50%;
 }
 .silicon-mail.colored {
-  /* text */
-  color: var(--gray,#444444);
-  /* background */
   background-color: var(--white,#ffffff);
+  color: var(--gray,#444444);
 }
 
 .silicon-map {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 0.33em;
   height: 1em;
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-right-width: calc(var(--stroke, 0.1em) / 4);
   border-left-width: calc(var(--stroke, 0.1em) / 4);
-  /* transform */
   transform: skewY(-12deg);
 }
-.silicon-map:before, .silicon-map:after {
+.silicon-map::before, .silicon-map::after {
   content: "";
-  /* position */
   position: absolute;
   top: calc(var(--stroke, 0.1em) * -1);
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: 0.33em;
   height: 1em;
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
 }
-.silicon-map:before {
-  /* position */
+.silicon-map::before {
   left: calc(100% + (var(--stroke, 0.1em) / 4));
-  /* border */
   border-left-width: calc(var(--stroke, 0.1em) / 4);
   border-radius: 0 var(--stroke, 0.1em) var(--stroke, 0.1em) 0;
-  /* transform */
   transform: skewY(24deg);
   transform-origin: 0 100%;
 }
-.silicon-map:after {
-  /* position */
+.silicon-map::after {
   right: calc(100% + (var(--stroke, 0.1em) / 4));
-  /* border */
   border-right-width: calc(var(--stroke, 0.1em) / 4);
   border-radius: var(--stroke, 0.1em) 0 0 var(--stroke, 0.1em);
-  /* transform */
   transform: skewY(24deg);
   transform-origin: 100% 0;
 }
-.silicon-map.colored, .silicon-map.colored:after, .silicon-map.colored:before {
-  /* text */
-  color: var(--blue,#1eb3e0);
-  /* background */
+.silicon-map.colored, .silicon-map.colored::after, .silicon-map.colored::before {
   background-color: var(--light-blue,#61caea);
   background-image: radial-gradient(var(--green,#10c565) 40%, var(--beige,#cdb492) 50%, transparent 60%);
   background-position: center center;
   background-size: 1em 1em;
+  color: var(--blue,#1eb3e0);
 }
-.silicon-map.colored:before {
-  /* background */
+.silicon-map.colored::before {
   background-position: right center;
 }
-.silicon-map.colored:after {
-  /* background */
+.silicon-map.colored::after {
   background-position: left center;
 }
 
 .silicon-math-minus {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 1em;
+  box-sizing: border-box;
 }
-.silicon-math-minus:before, .silicon-math-minus:after {
+.silicon-math-minus::before, .silicon-math-minus::after {
   content: "";
-  /* position */
   position: absolute;
   top: 50%;
   left: 50%;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: 100%;
   height: var(--stroke, 0.1em);
-  /* background */
+  box-sizing: border-box;
   background-color: currentColor;
 }
-.silicon-math-minus:before {
-  /* transform */
+.silicon-math-minus::before {
   transform: translate(-50%, -50%);
 }
-.silicon-math-minus:after {
-  /* transform */
+.silicon-math-minus::after {
   transform: translate(-50%, -50%) rotate(90deg);
 }
 
 .silicon-math-plus {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 1em;
+  box-sizing: border-box;
 }
-.silicon-math-plus:before, .silicon-math-plus:after {
+.silicon-math-plus::before, .silicon-math-plus::after {
   content: "";
-  /* position */
   position: absolute;
   top: 50%;
   left: 50%;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: 100%;
   height: var(--stroke, 0.1em);
-  /* background */
+  box-sizing: border-box;
   background-color: currentColor;
-  /* transform */
   transform: translate(-50%, -50%);
 }
 
 .silicon-math-times {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 1em;
+  box-sizing: border-box;
 }
-.silicon-math-times:before, .silicon-math-times:after {
+.silicon-math-times::before, .silicon-math-times::after {
   content: "";
-  /* position */
   position: absolute;
   top: 50%;
   left: 50%;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: 100%;
   height: var(--stroke, 0.1em);
-  /* background */
+  box-sizing: border-box;
   background-color: currentColor;
-  /* transform */
   transform: translate(-50%, -50%);
 }
 
 .silicon-math-times {
-  /* transform */
   transform: rotate(45deg);
 }
-.silicon-math-times:after {
-  /* transform */
+.silicon-math-times::after {
   transform: translate(-50%, -50%) rotate(90deg);
 }
 
 .silicon-office-marker {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 0.6em;
   height: 1em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-top: none;
+  border-radius: 0 0 0.5em 0.5em/0 0 0.3em 0.3em;
   background-image: radial-gradient(closest-side, transparent calc(100% - 0.05em), currentColor calc(100% - 0.05em), currentColor 100%, transparent);
   background-repeat: no-repeat;
   background-position: bottom 0.8em center;
   background-size: 0.9em 0.9em;
-  /* border */
-  border: var(--stroke, 0.1em) solid currentColor;
-  border-top: none;
-  border-radius: 0 0 0.5em 0.5em/0 0 0.3em 0.3em;
-  /* transform */
   transform: rotate(225deg);
 }
-.silicon-office-marker:before {
+.silicon-office-marker::before {
   content: "";
-  /* position */
   position: absolute;
   bottom: 100%;
   left: 50%;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: 0.6em;
   height: 0.2em;
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-top-width: calc(var(--stroke, 0.1em) * 0.5);
   border-bottom: none;
   border-radius: 0.2em 0.2em 0 0;
-  /* transform */
   transform: translateX(-50%);
 }
-.silicon-office-marker:after {
+.silicon-office-marker::after {
   content: "";
-  /* position */
   position: absolute;
   bottom: calc(100% + 0.15em);
   left: 50%;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: 0.3em;
   height: 0.4em;
-  /* background */
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) * 0.5) solid currentColor;
+  border-bottom: none;
+  border-radius: 0.1em 0.1em 0 0;
   background-image: radial-gradient(closest-side, currentColor 100%, transparent);
   background-repeat: no-repeat;
   background-position: bottom 0.1em center;
   background-size: 0.5em 0.5em;
-  /* border */
-  border: calc(var(--stroke, 0.1em) * 0.5) solid currentColor;
-  border-bottom: none;
-  border-radius: 0.1em 0.1em 0 0;
-  /* transform */
   transform: translateX(-50%);
 }
 
 .silicon-office-paperclip {
-  /* custom properties */
   --height: calc(var(--stroke, 0.1em) * 5.5);
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 0.75em;
   height: var(--height);
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-left: none;
   border-radius: 0 0.3em 0.3em 0;
-  /* transform */
   transform: rotate(-45deg);
 }
-.silicon-office-paperclip:before, .silicon-office-paperclip:after {
+.silicon-office-paperclip::before, .silicon-office-paperclip::after {
   content: "";
-  /* position */
   position: absolute;
-  /* size */
   display: block;
   box-sizing: border-box;
-  /* border */
   border: var(--stroke, 0.1em) solid currentColor;
 }
-.silicon-office-paperclip:before {
-  /* position */
+.silicon-office-paperclip::before {
   top: calc(var(--stroke, 0.1em) * -1);
   right: 100%;
-  /* size */
   width: 0.5em;
   height: calc(var(--height) - (var(--stroke, 0.1em) * 1.5));
-  /* border */
   border-right: none;
   border-radius: calc( 					var(--height) - (var(--stroke, 0.1em) * 1.5) / 2 				) 0 0 calc(var(--height) - (var(--stroke, 0.1em) * 1.5) / 2);
 }
-.silicon-office-paperclip:after {
-  /* position */
+.silicon-office-paperclip::after {
   bottom: calc(var(--stroke, 0.1em) / 2);
   left: 0;
-  /* size */
   width: 0.5em;
   height: calc(var(--height) - (var(--stroke, 0.1em) * 3));
-  /* border */
   border-left: none;
   border-radius: 0 calc(var(--height) - (var(--stroke, 0.1em) * 3) / 2) calc(var(--height) - (var(--stroke, 0.1em) * 3) / 2) 0;
 }
 
 .silicon-office-pencil {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 0.6em;
   height: 1em;
-  /* background */
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-top: none;
+  border-radius: 0 0 0.5em 0.5em/0 0 0.3em 0.3em;
   background-image: linear-gradient(to bottom, currentColor, currentColor), linear-gradient(to bottom, currentColor, currentColor), radial-gradient(closest-side, transparent calc(100% - calc(var(--stroke, 0.1em) * 0.5)), currentColor calc(100% - calc(var(--stroke, 0.1em) * 0.5)), currentColor 100%, transparent), radial-gradient(closest-side, transparent calc(100% - calc(var(--stroke, 0.1em) * 0.5)), currentColor calc(100% - calc(var(--stroke, 0.1em) * 0.5)), currentColor 100%, transparent);
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
   background-position: 25% 0.1em, 75% 0.1em, bottom 0.75em center, bottom 0.2em center;
   background-size: calc(var(--stroke, 0.1em) * 0.5) 0.55em, calc(var(--stroke, 0.1em) * 0.5) 0.55em, 0.8em 0.8em, 0.8em 0.8em;
-  /* border */
-  border: var(--stroke, 0.1em) solid currentColor;
-  border-top: none;
-  border-radius: 0 0 0.5em 0.5em/0 0 0.3em 0.3em;
-  /* transform */
   transform: rotate(225deg);
 }
-.silicon-office-pencil:before {
+.silicon-office-pencil::before {
   content: "";
-  /* position */
   position: absolute;
   top: 0;
   left: 50%;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: calc((0.575em - (var(--stroke, 0.1em) * 1.5)) * 1);
   height: calc((0.575em - (var(--stroke, 0.1em) * 1.5)) * 1);
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) * 0.8) solid currentColor;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
   background-image: radial-gradient(closest-side, currentColor 100%, transparent);
   background-repeat: no-repeat;
   background-position: -0.15em -0.15em;
   background-size: 0.3em 0.3em;
-  /* border */
-  border: calc(var(--stroke, 0.1em) * 0.8) solid currentColor;
-  border-right-color: transparent;
-  border-bottom-color: transparent;
-  /* transform */
   transform: translate(-50%, -50%) scale(1, 1) rotate(45deg);
 }
 
 .silicon-office-scissors {
-  /* position */
   position: relative;
   width: 1em;
   height: 1em;
-  /* background */
   background-image: radial-gradient(closest-side, transparent 50%, currentColor 50%, currentColor 100%, transparent), radial-gradient(closest-side, transparent 50%, currentColor 50%, currentColor 100%, transparent);
   background-repeat: no-repeat, no-repeat;
   background-position: 0.65em bottom, 0.15em bottom;
   background-size: 0.2em 0.25em, 0.2em 0.25em;
-  /* transform */
   transform: rotate(45deg);
 }
-.silicon-office-scissors:before, .silicon-office-scissors:after {
+.silicon-office-scissors::before, .silicon-office-scissors::after {
   content: "";
-  /* position */
   position: absolute;
   top: -0.05em;
-  /* size */
   display: block;
   width: var(--stroke, 0.1em);
   height: 1em;
-  /* background */
   background-color: currentColor;
-  /* transform */
   transform-origin: 50% 50%;
 }
-.silicon-office-scissors:before {
-  /* position */
+.silicon-office-scissors::before {
   right: 50%;
-  /* border */
   border-radius: 0.2em 0 0 120%;
-  /* transform */
   transform: rotate(-22.5deg);
 }
-.silicon-office-scissors:after {
-  /* position */
+.silicon-office-scissors::after {
   left: 50%;
-  /* border */
   border-radius: 0 0.2em 120% 0;
-  /* transform */
   transform: rotate(22.5deg);
 }
 
 .silicon-paste {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 0.75em;
   height: 1em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
   background-image: linear-gradient(to bottom, transparent, transparent calc(50% - (var(--stroke, 0.1em) / 4)), currentColor calc(50% - (var(--stroke, 0.1em) / 4)), currentColor calc(50% + (var(--stroke, 0.1em) / 4)), transparent calc(50% + (var(--stroke, 0.1em) / 4)), transparent);
   background-repeat: repeat-y;
   background-position: center center;
   background-size: 0.4em calc(var(--stroke, 0.1em) * 1.5);
-  /* border */
-  border: var(--stroke, 0.1em) solid currentColor;
 }
-.silicon-paste:before {
+.silicon-paste::before {
   content: "";
-  /* position */
   position: absolute;
   top: 0em;
   left: 50%;
-  /* display */
   width: 0.3em;
   height: 0.1em;
-  /* background */
   background-color: currentColor;
-  /* transform */
   transform: translateX(-50%);
 }
-.silicon-paste:after {
+.silicon-paste::after {
   content: "";
-  /* position */
   position: absolute;
   bottom: 100%;
   left: 50%;
-  /* display */
   width: 0.2em;
   height: 0.2em;
-  /* border */
   border: calc(var(--stroke, 0.1em) * 0.5) solid currentColor;
   border-radius: 50% 50% 0 0;
-  /* transform */
   transform: translateX(-50%);
 }
 
 .silicon-picture {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 1em;
-  /* overflow */
-  overflow: hidden;
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-radius: var(--stroke, 0.1em);
+  overflow: hidden;
 }
-.silicon-picture:before {
+.silicon-picture::before {
   content: "";
-  /* position */
   position: absolute;
   top: 0.1em;
   left: 0.1em;
-  /* display */
   width: 0.1em;
   height: 0.1em;
-  /* border */
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-radius: 50%;
 }
-.silicon-picture:after {
+.silicon-picture::after {
   content: "";
-  /* position */
   position: absolute;
   top: 0.5em;
   left: 0.25em;
-  /* display */
   width: 0.6em;
   height: 0.6em;
-  /* border */
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-radius: var(--stroke, 0.1em) 0 0 0;
-  /* trasnform */
   transform: rotate(45deg);
   transform-origin: 50% 50%;
 }
 .silicon-picture.colored {
-  /* text */
-  color: var(--dark-brown,#87683f);
-  /* background */
   background-color: var(--light-blue,#61caea);
+  color: var(--dark-brown,#87683f);
 }
-.silicon-picture.colored:before {
-  /* text */
-  color: var(--yellow,#f5c505);
-  /* background */
-  background-color: var(--yellow,#f5c505);
-  /* shadow */
+.silicon-picture.colored::before {
   box-shadow: 0 0 0.2em 0 var(--white,#ffffff);
+  background-color: var(--yellow,#f5c505);
+  color: var(--yellow,#f5c505);
 }
-.silicon-picture.colored:after {
-  /* text */
-  color: var(--dark-green,#0c964d);
-  /* background */
+.silicon-picture.colored::after {
   background-color: var(--green,#10c565);
+  color: var(--dark-green,#0c964d);
 }
 
 .silicon-power-socket-eu {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 1em;
-  /* background */
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 50%;
   background-image: radial-gradient(closest-side, currentColor 100%, transparent), radial-gradient(closest-side, currentColor 100%, transparent), linear-gradient(to bottom, currentColor, currentColor calc(50% - calc(var(--stroke, 0.1em) * 0.5)), transparent calc(50% - calc(var(--stroke, 0.1em) * 0.5)), transparent calc(50% + calc(var(--stroke, 0.1em) * 0.5)), currentColor calc(50% + calc(var(--stroke, 0.1em) * 0.5)), currentColor), linear-gradient(to bottom, currentColor, currentColor calc(50% - calc(var(--stroke, 0.1em) * 0.5)), transparent calc(50% - calc(var(--stroke, 0.1em) * 0.5)), transparent calc(50% + calc(var(--stroke, 0.1em) * 0.5)), currentColor calc(50% + calc(var(--stroke, 0.1em) * 0.5)), currentColor);
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
   background-position: 25% center, 75% center, left top, right top;
   background-size: calc(var(--stroke, 0.1em) * 1.5) calc(var(--stroke, 0.1em) * 1.5), calc(var(--stroke, 0.1em) * 1.5) calc(var(--stroke, 0.1em) * 1.5), calc(var(--stroke, 0.1em) * 0.5) 100%, calc(var(--stroke, 0.1em) * 0.5) 100%;
-  /* border */
-  border: var(--stroke, 0.1em) solid currentColor;
-  border-radius: 50%;
 }
 
 .silicon-power-socket-us {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 1em;
-  /* background */
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 0.3em/0.5em;
   background-image: linear-gradient(to bottom, currentColor, currentColor), linear-gradient(to bottom, currentColor, currentColor);
   background-repeat: no-repeat, no-repeat;
   background-position: 30% calc(var(--stroke, 0.1em) * 2), 70% calc(var(--stroke, 0.1em) * 2);
   background-size: calc(var(--stroke, 0.1em) * 0.5) calc(var(--stroke, 0.1em) * 2), calc(var(--stroke, 0.1em) * 0.5) calc(var(--stroke, 0.1em) * 2);
-  /* border */
-  border: var(--stroke, 0.1em) solid currentColor;
-  border-radius: 0.3em/0.5em;
 }
-.silicon-power-socket-us:before {
+.silicon-power-socket-us::before {
   content: "";
-  /* position */
   position: absolute;
   bottom: calc(var(--stroke, 0.1em));
   left: 50%;
-  /* size */
   display: block;
   width: var(--stroke, 0.1em);
   height: var(--stroke, 0.1em);
-  /* background */
-  background-color: currentColor;
-  /* border */
   border-radius: 50% 50% 0 0;
-  /* transform */
+  background-color: currentColor;
   transform: translateX(-50%);
 }
 
 .silicon-refresh {
-  /* position */
   position: relative;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: 1em;
   height: 1em;
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-right-color: transparent;
   border-left-color: transparent;
-  /* border */
   border-radius: 50%;
-  /* transform */
   transform: rotate(-22.5deg);
 }
-.silicon-refresh:before, .silicon-refresh:after {
+.silicon-refresh::before, .silicon-refresh::after {
   content: "";
-  /* position */
   position: absolute;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: calc(var(--stroke, 0.1em) * 3);
   height: calc(var(--stroke, 0.1em) * 3);
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
 }
-.silicon-refresh:before {
-  /* position */
+.silicon-refresh::before {
   top: 50%;
   left: 50%;
-  /* border */
   border-bottom: none;
   border-left: none;
-  /* transform */
   transform: translate(25%, 75%) rotate(22.5deg);
 }
-.silicon-refresh:after {
-  /* position */
+.silicon-refresh::after {
   right: 50%;
   bottom: 50%;
-  /* border */
   border-top: none;
   border-right: none;
-  /* transform */
   transform: translate(-25%, -75%) rotate(22.5deg);
 }
 
 .silicon-reload {
-  /* position */
   position: relative;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: 1em;
   height: 1em;
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-right-color: transparent;
-  /* border */
   border-radius: 50%;
-  /* transform */
   transform: rotate(180deg) scale(-1, 1);
 }
-.silicon-reload:before, .silicon-reload:after {
+.silicon-reload::before, .silicon-reload::after {
   content: "";
-  /* position */
   position: absolute;
   top: 50%;
   left: 50%;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: calc(var(--stroke, 0.1em) * 3);
   height: calc(var(--stroke, 0.1em) * 3);
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-bottom: none;
   border-left: none;
-  /* transform */
   transform: translate(25%, 75%) rotate(22.5deg);
 }
 
 .silicon-retweet {
-  /* position */
   position: relative;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: 1em;
   height: 1em;
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-right-color: transparent;
   border-left-color: transparent;
   border-radius: 50%;
-  /* transform */
   transform: rotate(-22.5deg);
 }
-.silicon-retweet:before, .silicon-retweet:after {
+.silicon-retweet::before, .silicon-retweet::after {
   content: "";
-  /* position */
   position: absolute;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: calc(var(--stroke, 0.1em) * 3);
   height: calc(var(--stroke, 0.1em) * 3);
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
 }
-.silicon-retweet:before {
-  /* position */
+.silicon-retweet::before {
   top: 50%;
   left: 50%;
-  /* border */
   border-bottom: none;
   border-left: none;
-  /* transform */
   transform: translate(25%, 75%) rotate(22.5deg);
 }
-.silicon-retweet:after {
-  /* position */
+.silicon-retweet::after {
   right: 50%;
   bottom: 50%;
-  /* border */
   border-top: none;
   border-right: none;
-  /* transform */
   transform: translate(-25%, -75%) rotate(22.5deg);
 }
 
 .silicon-save {
-  /* position */
   position: relative;
 }
 
 .silicon-search {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 1em;
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-radius: 50%;
 }
-.silicon-search:before {
+.silicon-search::before {
   content: "";
-  /* position */
   position: absolute;
   top: 100%;
   left: 100%;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: 0.5em;
   height: var(--stroke, 0.1em);
-  /* background */
+  box-sizing: border-box;
   background-color: currentColor;
-  /* transform */
   transform: translate(-0.1em, -0.1em) rotate(45deg);
   transform-origin: 0 50%;
 }
 
 .silicon-shape-circle {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 0.9em;
   height: 0.9em;
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-radius: 50%;
 }
 .silicon-shape-circle.colored {
-  /* text */
-  color: var(--turquoise,#3feac3);
-  /* background */
   background-color: var(--turquoise,#3feac3);
+  color: var(--turquoise,#3feac3);
 }
 
 .silicon-shape-drop {
   position: relative;
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 1em;
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-radius: 50% 0 50% 50%;
   transform: rotate(-45deg);
 }
 .silicon-shape-drop.colored {
-  color: var(--blue,#1eb3e0);
   background-color: var(--light-blue,#61caea);
+  color: var(--blue,#1eb3e0);
 }
 
 .silicon-shape-heart {
   position: relative;
   display: inline-block;
-  box-sizing: border-box;
   width: 0.75em;
   height: 0.75em;
+  box-sizing: border-box;
   border-bottom: var(--stroke, 0.1em) solid currentColor;
   border-left: var(--stroke, 0.1em) solid currentColor;
   transform: translateY(0.25em) rotate(-45deg);
 }
-.silicon-shape-heart:before, .silicon-shape-heart:after {
+.silicon-shape-heart::before, .silicon-shape-heart::after {
   content: "";
   position: absolute;
   box-sizing: border-box;
 }
-.silicon-shape-heart:before {
+.silicon-shape-heart::before {
   top: calc(-0.5em + var(--stroke, 0.1em));
   left: calc(var(--stroke, 0.1em) * -1);
   width: 0.75em;
@@ -3035,7 +2348,7 @@ silicon-cosmetics-lipstick.colored:before {
   border-left: var(--stroke, 0.1em) solid currentColor;
   border-radius: 0.5em 0.5em 0 0;
 }
-.silicon-shape-heart:after {
+.silicon-shape-heart::after {
   top: 0;
   left: calc(0.5em + var(--stroke, 0.1em));
   width: 0.5em;
@@ -3045,798 +2358,618 @@ silicon-cosmetics-lipstick.colored:before {
   border-bottom: var(--stroke, 0.1em) solid currentColor;
   border-radius: 0 0.5em 0.5em 0;
 }
-.silicon-shape-heart.colored, .silicon-shape-heart.colored:after, .silicon-shape-heart.colored:before {
-  color: var(--dark-red,#bb0c29);
+.silicon-shape-heart.colored, .silicon-shape-heart.colored::after, .silicon-shape-heart.colored::before {
   background-color: var(--red,#eb0f33);
+  color: var(--dark-red,#bb0c29);
 }
 
 .silicon-shape-square {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 0.8em;
   height: 0.8em;
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
 }
 .silicon-shape-square.colored {
-  /* text */
-  color: var(--purple,#7329b1);
-  /* background */
   background-color: var(--purple,#7329b1);
+  color: var(--purple,#7329b1);
 }
 
 .silicon-smiley-angry {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 1em;
-  /* background */
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) / 1) solid currentColor;
+  border-radius: 50%;
   background-image: radial-gradient(closest-side, currentColor 100%, transparent), radial-gradient(closest-side, currentColor 100%, transparent);
   background-repeat: no-repeat, no-repeat;
   background-position: left calc(50% + 0.15em) bottom calc(50% + 0.1em), right calc(50% + 0.15em) bottom calc(50% + 0.1em);
   background-size: 0.2em 0.2em, 0.2em 0.2em;
-  /* border */
-  border: calc(var(--stroke, 0.1em) / 1) solid currentColor;
-  border-radius: 50%;
 }
-.silicon-smiley-angry:before, .silicon-smiley-angry:after {
+.silicon-smiley-angry::before, .silicon-smiley-angry::after {
   content: "";
-  /* position */
   position: absolute;
   box-sizing: border-box;
 }
-.silicon-smiley-angry:after {
-  /* position */
+.silicon-smiley-angry::after {
   top: 50%;
   left: 50%;
-  /* size */
   width: 0.5em;
   height: 0.5em;
-  /* border */
   border: calc(var(--stroke, 0.1em) / 2) solid transparent;
   border-bottom-color: currentColor;
   border-radius: 50%;
-  /* transform */
   transform: translate(-50%, -50%);
 }
 .silicon-smiley-angry.colored {
-  /* text */
-  color: var(--yellow,#f5c505);
-  /* background */
   background-color: var(--yellow,#f5c505);
   background-image: radial-gradient(closest-side, var(--black,#101010) 50%, var(--white,#ffffff) 50%, var(--white,#ffffff) 100%, transparent), radial-gradient(closest-side, var(--black,#101010) 50%, var(--white,#ffffff) 50%, var(--white,#ffffff) 100%, transparent);
+  color: var(--yellow,#f5c505);
 }
-.silicon-smiley-angry.colored:after {
-  /* text */
+.silicon-smiley-angry.colored::after {
   color: var(--black,#101010);
 }
 
 .silicon-smiley-angry {
   background-image: none;
 }
-.silicon-smiley-angry:before, .silicon-smiley-angry:after {
+.silicon-smiley-angry::before, .silicon-smiley-angry::after {
   content: "";
-  /* position */
   position: absolute;
   box-sizing: border-box;
 }
-.silicon-smiley-angry:before {
-  /* position */
+.silicon-smiley-angry::before {
   right: calc(50% + 0.05em);
   bottom: 50%;
-  /* size */
   width: 0.2em;
   height: 0.1em;
-  /* background */
-  background-color: currentColor;
-  /* border */
-  border-radius: 0 0 0.1em 0.1em;
   /* box */
   box-shadow: 0.3em 0 0 0 currentColor;
+  border-radius: 0 0 0.1em 0.1em;
+  background-color: currentColor;
 }
-.silicon-smiley-angry:after {
-  /* border */
+.silicon-smiley-angry::after {
   border-top-color: currentColor;
   border-bottom-color: transparent;
-  /* transform */
   transform: translate(-50%, 25%);
 }
-.silicon-smiley-angry.colored:before {
-  /* position */
+.silicon-smiley-angry.colored::before {
   bottom: calc(50% + 0.1em);
-  /* text */
-  color: var(--yellow,#f5c505);
-  /* border */
   border-radius: 0.1em 0.1em 0 0;
+  color: var(--yellow,#f5c505);
 }
 
 .silicon-smiley-cry {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 1em;
-  /* background */
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) / 1) solid currentColor;
+  border-radius: 50%;
   background-image: radial-gradient(closest-side, currentColor 100%, transparent), radial-gradient(closest-side, currentColor 100%, transparent);
   background-repeat: no-repeat, no-repeat;
   background-position: left calc(50% + 0.15em) bottom calc(50% + 0.1em), right calc(50% + 0.15em) bottom calc(50% + 0.1em);
   background-size: 0.2em 0.2em, 0.2em 0.2em;
-  /* border */
-  border: calc(var(--stroke, 0.1em) / 1) solid currentColor;
-  border-radius: 50%;
 }
-.silicon-smiley-cry:before, .silicon-smiley-cry:after {
+.silicon-smiley-cry::before, .silicon-smiley-cry::after {
   content: "";
-  /* position */
   position: absolute;
   box-sizing: border-box;
 }
-.silicon-smiley-cry:after {
-  /* position */
+.silicon-smiley-cry::after {
   top: 50%;
   left: 50%;
-  /* size */
   width: 0.5em;
   height: 0.5em;
-  /* border */
   border: calc(var(--stroke, 0.1em) / 2) solid transparent;
   border-bottom-color: currentColor;
   border-radius: 50%;
-  /* transform */
   transform: translate(-50%, -50%);
 }
 .silicon-smiley-cry.colored {
-  /* text */
-  color: var(--yellow,#f5c505);
-  /* background */
   background-color: var(--yellow,#f5c505);
   background-image: radial-gradient(closest-side, var(--black,#101010) 50%, var(--white,#ffffff) 50%, var(--white,#ffffff) 100%, transparent), radial-gradient(closest-side, var(--black,#101010) 50%, var(--white,#ffffff) 50%, var(--white,#ffffff) 100%, transparent);
+  color: var(--yellow,#f5c505);
 }
-.silicon-smiley-cry.colored:after {
-  /* text */
+.silicon-smiley-cry.colored::after {
   color: var(--black,#101010);
 }
 
-.silicon-smiley-cry:before {
+.silicon-smiley-cry::before {
   content: "";
-  /* position */
   position: absolute;
   top: 50%;
   right: calc(50% + 0.15em);
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: 0.2em;
   height: 0.2em;
-  /* border */
+  box-sizing: border-box;
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-radius: 0 50% 50% 50%;
-  /* transform */
   transform: rotate(45deg);
 }
-.silicon-smiley-cry:after {
-  /* border */
+.silicon-smiley-cry::after {
   border-top-color: currentColor;
   border-bottom-color: transparent;
-  /* transform */
   transform: translate(-50%, 25%);
 }
-.silicon-smiley-cry.colored:before {
-  /* text */
-  color: #6666ff;
-  /* background */
+.silicon-smiley-cry.colored::before {
   background-color: #9999ff;
+  color: #6666ff;
 }
 
 .silicon-smiley-grin {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 1em;
-  /* background */
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) / 1) solid currentColor;
+  border-radius: 50%;
   background-image: radial-gradient(closest-side, currentColor 100%, transparent), radial-gradient(closest-side, currentColor 100%, transparent);
   background-repeat: no-repeat, no-repeat;
   background-position: left calc(50% + 0.15em) bottom calc(50% + 0.1em), right calc(50% + 0.15em) bottom calc(50% + 0.1em);
   background-size: 0.2em 0.2em, 0.2em 0.2em;
-  /* border */
-  border: calc(var(--stroke, 0.1em) / 1) solid currentColor;
-  border-radius: 50%;
 }
-.silicon-smiley-grin:before, .silicon-smiley-grin:after {
+.silicon-smiley-grin::before, .silicon-smiley-grin::after {
   content: "";
-  /* position */
   position: absolute;
   box-sizing: border-box;
 }
-.silicon-smiley-grin:after {
-  /* position */
+.silicon-smiley-grin::after {
   top: 50%;
   left: 50%;
-  /* size */
   width: 0.5em;
   height: 0.5em;
-  /* border */
   border: calc(var(--stroke, 0.1em) / 2) solid transparent;
   border-bottom-color: currentColor;
   border-radius: 50%;
-  /* transform */
   transform: translate(-50%, -50%);
 }
 .silicon-smiley-grin.colored {
-  /* text */
-  color: var(--yellow,#f5c505);
-  /* background */
   background-color: var(--yellow,#f5c505);
   background-image: radial-gradient(closest-side, var(--black,#101010) 50%, var(--white,#ffffff) 50%, var(--white,#ffffff) 100%, transparent), radial-gradient(closest-side, var(--black,#101010) 50%, var(--white,#ffffff) 50%, var(--white,#ffffff) 100%, transparent);
+  color: var(--yellow,#f5c505);
 }
-.silicon-smiley-grin.colored:after {
-  /* text */
+.silicon-smiley-grin.colored::after {
   color: var(--black,#101010);
 }
 
-.silicon-smiley-grin:after {
+.silicon-smiley-grin::after {
   content: "";
-  /* size */
   width: 0.5em;
   height: 0.25em;
-  /* border */
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-radius: 0 0 0.5em 0.5em;
-  /* transform */
   transform: translate(-50%, 25%);
 }
-.silicon-smiley-grin.colored:after {
-  /* text */
-  color: black;
-  /* background */
+.silicon-smiley-grin.colored::after {
   background-color: white;
+  color: black;
 }
 
 .silicon-smiley-happy {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 1em;
-  /* background */
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) / 1) solid currentColor;
+  border-radius: 50%;
   background-image: radial-gradient(closest-side, currentColor 100%, transparent), radial-gradient(closest-side, currentColor 100%, transparent);
   background-repeat: no-repeat, no-repeat;
   background-position: left calc(50% + 0.15em) bottom calc(50% + 0.1em), right calc(50% + 0.15em) bottom calc(50% + 0.1em);
   background-size: 0.2em 0.2em, 0.2em 0.2em;
-  /* border */
-  border: calc(var(--stroke, 0.1em) / 1) solid currentColor;
-  border-radius: 50%;
 }
-.silicon-smiley-happy:before, .silicon-smiley-happy:after {
+.silicon-smiley-happy::before, .silicon-smiley-happy::after {
   content: "";
-  /* position */
   position: absolute;
   box-sizing: border-box;
 }
-.silicon-smiley-happy:after {
-  /* position */
+.silicon-smiley-happy::after {
   top: 50%;
   left: 50%;
-  /* size */
   width: 0.5em;
   height: 0.5em;
-  /* border */
   border: calc(var(--stroke, 0.1em) / 2) solid transparent;
   border-bottom-color: currentColor;
   border-radius: 50%;
-  /* transform */
   transform: translate(-50%, -50%);
 }
 .silicon-smiley-happy.colored {
-  /* text */
-  color: var(--yellow,#f5c505);
-  /* background */
   background-color: var(--yellow,#f5c505);
   background-image: radial-gradient(closest-side, var(--black,#101010) 50%, var(--white,#ffffff) 50%, var(--white,#ffffff) 100%, transparent), radial-gradient(closest-side, var(--black,#101010) 50%, var(--white,#ffffff) 50%, var(--white,#ffffff) 100%, transparent);
+  color: var(--yellow,#f5c505);
 }
-.silicon-smiley-happy.colored:after {
-  /* text */
+.silicon-smiley-happy.colored::after {
   color: var(--black,#101010);
 }
 
 .silicon-smiley-sad {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 1em;
-  /* background */
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) / 1) solid currentColor;
+  border-radius: 50%;
   background-image: radial-gradient(closest-side, currentColor 100%, transparent), radial-gradient(closest-side, currentColor 100%, transparent);
   background-repeat: no-repeat, no-repeat;
   background-position: left calc(50% + 0.15em) bottom calc(50% + 0.1em), right calc(50% + 0.15em) bottom calc(50% + 0.1em);
   background-size: 0.2em 0.2em, 0.2em 0.2em;
-  /* border */
-  border: calc(var(--stroke, 0.1em) / 1) solid currentColor;
-  border-radius: 50%;
 }
-.silicon-smiley-sad:before, .silicon-smiley-sad:after {
+.silicon-smiley-sad::before, .silicon-smiley-sad::after {
   content: "";
-  /* position */
   position: absolute;
   box-sizing: border-box;
 }
-.silicon-smiley-sad:after {
-  /* position */
+.silicon-smiley-sad::after {
   top: 50%;
   left: 50%;
-  /* size */
   width: 0.5em;
   height: 0.5em;
-  /* border */
   border: calc(var(--stroke, 0.1em) / 2) solid transparent;
   border-bottom-color: currentColor;
   border-radius: 50%;
-  /* transform */
   transform: translate(-50%, -50%);
 }
 .silicon-smiley-sad.colored {
-  /* text */
-  color: var(--yellow,#f5c505);
-  /* background */
   background-color: var(--yellow,#f5c505);
   background-image: radial-gradient(closest-side, var(--black,#101010) 50%, var(--white,#ffffff) 50%, var(--white,#ffffff) 100%, transparent), radial-gradient(closest-side, var(--black,#101010) 50%, var(--white,#ffffff) 50%, var(--white,#ffffff) 100%, transparent);
+  color: var(--yellow,#f5c505);
 }
-.silicon-smiley-sad.colored:after {
-  /* text */
+.silicon-smiley-sad.colored::after {
   color: var(--black,#101010);
 }
 
-.silicon-smiley-sad:after {
-  /* border */
+.silicon-smiley-sad::after {
   border-top-color: currentColor;
   border-bottom-color: transparent;
-  /* transform */
   transform: translate(-50%, 25%);
 }
 
 .silicon-smiley-wink {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 1em;
-  /* background */
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) / 1) solid currentColor;
+  border-radius: 50%;
   background-image: radial-gradient(closest-side, currentColor 100%, transparent), radial-gradient(closest-side, currentColor 100%, transparent);
   background-repeat: no-repeat, no-repeat;
   background-position: left calc(50% + 0.15em) bottom calc(50% + 0.1em), right calc(50% + 0.15em) bottom calc(50% + 0.1em);
   background-size: 0.2em 0.2em, 0.2em 0.2em;
-  /* border */
-  border: calc(var(--stroke, 0.1em) / 1) solid currentColor;
-  border-radius: 50%;
 }
-.silicon-smiley-wink:before, .silicon-smiley-wink:after {
+.silicon-smiley-wink::before, .silicon-smiley-wink::after {
   content: "";
-  /* position */
   position: absolute;
   box-sizing: border-box;
 }
-.silicon-smiley-wink:after {
-  /* position */
+.silicon-smiley-wink::after {
   top: 50%;
   left: 50%;
-  /* size */
   width: 0.5em;
   height: 0.5em;
-  /* border */
   border: calc(var(--stroke, 0.1em) / 2) solid transparent;
   border-bottom-color: currentColor;
   border-radius: 50%;
-  /* transform */
   transform: translate(-50%, -50%);
 }
 .silicon-smiley-wink.colored {
-  /* text */
-  color: var(--yellow,#f5c505);
-  /* background */
   background-color: var(--yellow,#f5c505);
   background-image: radial-gradient(closest-side, var(--black,#101010) 50%, var(--white,#ffffff) 50%, var(--white,#ffffff) 100%, transparent), radial-gradient(closest-side, var(--black,#101010) 50%, var(--white,#ffffff) 50%, var(--white,#ffffff) 100%, transparent);
+  color: var(--yellow,#f5c505);
 }
-.silicon-smiley-wink.colored:after {
-  /* text */
+.silicon-smiley-wink.colored::after {
   color: var(--black,#101010);
 }
 
 .silicon-smiley-wink {
-  /* bacmground */
   background-image: inherit, inear-gradient(to right, currentColor, currentColor);
   background-position: inherit, left calc(50% + .15em) bottom calc(50% + .1em);
   background-size: inherit, 0.2em 0.05em;
 }
 
 .silicon-suitcase {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 0.75em;
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-radius: var(--stroke, 0.1em);
 }
-.silicon-suitcase:before, .silicon-suitcase:after {
+.silicon-suitcase::before, .silicon-suitcase::after {
   content: "";
-  /* position */
   position: absolute;
   left: 50%;
-  /* size */
   display: block;
   box-sizing: border-box;
-  /* border */
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
 }
-.silicon-suitcase:before {
-  /* position */
+.silicon-suitcase::before {
   top: calc(var(--stroke, 0.1em) * -1);
-  /* size */
   width: 0.5em;
   height: calc(100% + var(--stroke, 0.1em) * 2);
-  /* border */
   border-top: none;
   border-bottom: none;
-  /* transform */
   transform: translateX(-50%);
 }
-.silicon-suitcase:after {
-  /* position */
+.silicon-suitcase::after {
   bottom: calc(100% + var(--stroke, 0.1em));
-  /* size */
   width: 0.3em;
   height: 0.125em;
-  /* border */
   border-bottom: none;
   border-radius: 0.25em 0.25em 0 0;
-  /* transform */
   transform: translateX(-50%);
 }
 .silicon-suitcase.colored {
-  /* text */
-  color: var(--dark-brown,#87683f);
-  /* background */
   background-color: var(--brown,#aa834f);
+  color: var(--dark-brown,#87683f);
 }
-.silicon-suitcase.colored:before {
+.silicon-suitcase.colored::before {
   color: var(--gray,#7f7f7f);
 }
-.silicon-suitcase.colored:after {
+.silicon-suitcase.colored::after {
   color: var(--dark,#303030);
 }
 
-silicon-text-align-center {
-  /* position */
+.silicon-text-align-center {
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: calc(var(--stroke, 0.1em) * 3);
-  /* background */
+  box-sizing: border-box;
+  border-top: var(--stroke, 0.1em) solid currentColor;
+  border-right: none;
+  border-left: none;
   background-image: linear-gradient(to right, currentColor, currentColor);
   background-repeat: no-repeat;
   background-position: bottom left;
   background-size: 0.75em var(--stroke, 0.1em);
-  /* border */
-  border-top: var(--stroke, 0.1em) solid currentColor;
-  border-right: none;
-  border-left: none;
-  /* transform */
   transform: translateY(calc(var(--stroke, 0.1em) * -2));
 }
-silicon-text-align-center:before {
+.silicon-text-align-center::before {
   content: "";
-  /* position */
   position: absolute;
   top: calc(var(--stroke, 0.1em) * 3);
   left: 0;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: 100%;
   height: calc(var(--stroke, 0.1em) * 3);
-  /* background */
+  box-sizing: border-box;
+  border-top: var(--stroke, 0.1em) solid currentColor;
+  border-right: none;
+  border-left: none;
   background-image: linear-gradient(to right, currentColor, currentColor);
   background-repeat: no-repeat;
   background-position: bottom left;
   background-size: 0.5em var(--stroke, 0.1em);
-  /* border */
-  border-top: var(--stroke, 0.1em) solid currentColor;
-  border-right: none;
-  border-left: none;
 }
-silicon-text-align-center.colored {
+.silicon-text-align-center.colored {
   color: var(--dark,#303030);
 }
 
-silicon-text-align-center {
-  /* background */
+.silicon-text-align-center {
   background-position: bottom center;
 }
-silicon-text-align-center:before {
-  /* background */
+.silicon-text-align-center::before {
   background-position: bottom center;
 }
 
-silicon-text-align-justify {
-  /* position */
+.silicon-text-align-justify {
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: calc(var(--stroke, 0.1em) * 3);
-  /* background */
+  box-sizing: border-box;
+  border-top: var(--stroke, 0.1em) solid currentColor;
+  border-right: none;
+  border-left: none;
   background-image: linear-gradient(to right, currentColor, currentColor);
   background-repeat: no-repeat;
   background-position: bottom left;
   background-size: 0.75em var(--stroke, 0.1em);
-  /* border */
-  border-top: var(--stroke, 0.1em) solid currentColor;
-  border-right: none;
-  border-left: none;
-  /* transform */
   transform: translateY(calc(var(--stroke, 0.1em) * -2));
 }
-silicon-text-align-justify:before {
+.silicon-text-align-justify::before {
   content: "";
-  /* position */
   position: absolute;
   top: calc(var(--stroke, 0.1em) * 3);
   left: 0;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: 100%;
   height: calc(var(--stroke, 0.1em) * 3);
-  /* background */
+  box-sizing: border-box;
+  border-top: var(--stroke, 0.1em) solid currentColor;
+  border-right: none;
+  border-left: none;
   background-image: linear-gradient(to right, currentColor, currentColor);
   background-repeat: no-repeat;
   background-position: bottom left;
   background-size: 0.5em var(--stroke, 0.1em);
-  /* border */
-  border-top: var(--stroke, 0.1em) solid currentColor;
-  border-right: none;
-  border-left: none;
 }
-silicon-text-align-justify.colored {
+.silicon-text-align-justify.colored {
   color: var(--dark,#303030);
 }
 
-silicon-text-align-justify {
-  /* background */
+.silicon-text-align-justify {
   background-size: 1em var(--stroke, 0.1em);
 }
 
 .silicon-text-align-left {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: calc(var(--stroke, 0.1em) * 3);
-  /* background */
+  box-sizing: border-box;
+  border-top: var(--stroke, 0.1em) solid currentColor;
+  border-right: none;
+  border-left: none;
   background-image: linear-gradient(to right, currentColor, currentColor);
   background-repeat: no-repeat;
   background-position: bottom left;
   background-size: 0.75em var(--stroke, 0.1em);
-  /* border */
-  border-top: var(--stroke, 0.1em) solid currentColor;
-  border-right: none;
-  border-left: none;
-  /* transform */
   transform: translateY(calc(var(--stroke, 0.1em) * -2));
 }
-.silicon-text-align-left:before {
+.silicon-text-align-left::before {
   content: "";
-  /* position */
   position: absolute;
   top: calc(var(--stroke, 0.1em) * 3);
   left: 0;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: 100%;
   height: calc(var(--stroke, 0.1em) * 3);
-  /* background */
+  box-sizing: border-box;
+  border-top: var(--stroke, 0.1em) solid currentColor;
+  border-right: none;
+  border-left: none;
   background-image: linear-gradient(to right, currentColor, currentColor);
   background-repeat: no-repeat;
   background-position: bottom left;
   background-size: 0.5em var(--stroke, 0.1em);
-  /* border */
-  border-top: var(--stroke, 0.1em) solid currentColor;
-  border-right: none;
-  border-left: none;
 }
 .silicon-text-align-left.colored {
   color: var(--dark,#303030);
 }
 
-silicon-text-align-right {
-  /* position */
+.silicon-text-align-right {
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: calc(var(--stroke, 0.1em) * 3);
-  /* background */
+  box-sizing: border-box;
+  border-top: var(--stroke, 0.1em) solid currentColor;
+  border-right: none;
+  border-left: none;
   background-image: linear-gradient(to right, currentColor, currentColor);
   background-repeat: no-repeat;
   background-position: bottom left;
   background-size: 0.75em var(--stroke, 0.1em);
-  /* border */
-  border-top: var(--stroke, 0.1em) solid currentColor;
-  border-right: none;
-  border-left: none;
-  /* transform */
   transform: translateY(calc(var(--stroke, 0.1em) * -2));
 }
-silicon-text-align-right:before {
+.silicon-text-align-right::before {
   content: "";
-  /* position */
   position: absolute;
   top: calc(var(--stroke, 0.1em) * 3);
   left: 0;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: 100%;
   height: calc(var(--stroke, 0.1em) * 3);
-  /* background */
+  box-sizing: border-box;
+  border-top: var(--stroke, 0.1em) solid currentColor;
+  border-right: none;
+  border-left: none;
   background-image: linear-gradient(to right, currentColor, currentColor);
   background-repeat: no-repeat;
   background-position: bottom left;
   background-size: 0.5em var(--stroke, 0.1em);
-  /* border */
-  border-top: var(--stroke, 0.1em) solid currentColor;
-  border-right: none;
-  border-left: none;
 }
-silicon-text-align-right.colored {
+.silicon-text-align-right.colored {
   color: var(--dark,#303030);
 }
 
-silicon-text-align-right {
+.silicon-text-align-right {
   background-position: bottom right;
 }
-silicon-text-align-right:before {
+.silicon-text-align-right::before {
   background-position: bottom right;
 }
 
 .silicon-time-clock {
   --time-hours: 2;
   --time-minutes: 35;
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 1em;
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-radius: 50%;
 }
-.silicon-time-clock:before, .silicon-time-clock:after {
+.silicon-time-clock::before, .silicon-time-clock::after {
   content: "";
-  /* position */
   position: absolute;
   bottom: calc(50% - (var(--stroke, 0.1em) /2));
   left: 50%;
-  /* size */
   display: block;
   width: calc(var(--stroke, 0.1em) / 2);
-  margin-left: calc(var(--stroke, 0.1em) * -0.25);
-  /* background */
   background-color: currentColor;
-  /* transform */
   transform-origin: 50% calc(100% - (var(--stroke, 0.1em) / 2));
+  margin-left: calc(var(--stroke, 0.1em) * -0.25);
 }
-.silicon-time-clock:before {
-  /* size */
+.silicon-time-clock::before {
   height: 0.5em;
-  /* transform */
   transform: rotate(calc(360deg / 12 * var(--time-hours, 4)));
 }
-.silicon-time-clock:after {
-  /* size */
+.silicon-time-clock::after {
   height: 0.35em;
-  /* transform */
   transform: rotate(calc(360deg / 60 * var(--time-minutes, 11)));
 }
 
 .silicon-time-watch {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 0.5em;
   height: 1em;
-  /* background */
+  box-sizing: border-box;
   background-image: radial-gradient(closest-side, transparent calc(100% - 0.05em), currentColor calc(100% - 0.05em), currentColor 100%, transparent), linear-gradient(to bottom, currentColor, currentColor), linear-gradient(to bottom, currentColor, currentColor);
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position: center center, center top, center bottom;
   background-size: 0.5em 0.5em, 0.3em 0.3em, 0.3em 0.3em;
 }
-.silicon-time-watch:before, .silicon-time-watch:after {
+.silicon-time-watch::before, .silicon-time-watch::after {
   content: "";
-  /* position */
   position: absolute;
   bottom: calc(50% - (var(--stroke, 0.1em) / 4));
   left: 50%;
-  /* size */
   display: block;
   width: calc(var(--stroke, 0.1em) / 4);
-  margin-left: calc(var(--stroke, 0.1em) * -0.25);
-  /* background */
   background-color: currentColor;
-  /* transform */
   transform-origin: 50% calc(100% - (var(--stroke, 0.1em) / 4));
+  margin-left: calc(var(--stroke, 0.1em) * -0.25);
 }
-.silicon-time-watch:before {
-  /* size */
+.silicon-time-watch::before {
   height: 0.2em;
-  /* transform */
   transform: rotate(calc(360deg / 12 * var(--time-hours, 4)));
 }
-.silicon-time-watch:after {
-  /* size */
+.silicon-time-watch::after {
   height: 0.15em;
-  /* transform */
   transform: rotate(calc(360deg / 60 * var(--time-minutes, 11)));
 }
 
 .silicon-trash {
   position: relative;
   display: inline-block;
-  box-sizing: border-box;
   width: 0.75em;
   height: 0.75em;
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-top: none;
   border-radius: 0 0 0.1em 0.1em;
   transform: translateY(0.2em);
 }
-.silicon-trash:before, .silicon-trash:after {
+.silicon-trash::before, .silicon-trash::after {
   content: "";
   position: absolute;
   display: block;
   box-sizing: border-box;
   transform: translateX(-50%);
 }
-.silicon-trash:before {
+.silicon-trash::before {
   bottom: calc(100% + var(--stroke, 0.1em));
   left: 50%;
   width: 1em;
   height: var(--stroke, 0.1em);
-  background-color: currentColor;
   border: none;
+  background-color: currentColor;
 }
-.silicon-trash:after {
+.silicon-trash::after {
   bottom: calc(100% + (var(--stroke, 0.1em) * 2));
   left: 50%;
   width: 0.2em;
@@ -3849,103 +2982,90 @@ silicon-text-align-right:before {
 .silicon-user {
   position: relative;
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 0.65em;
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-bottom: 0;
   border-radius: 0.75em 0.75em 0 0;
   transform: translateY(0.175em);
 }
-.silicon-user:before {
+.silicon-user::before {
   content: "";
   position: absolute;
   bottom: 100%;
   left: 50%;
   display: block;
-  box-sizing: border-box;
   width: 0.6em;
   height: 0.6em;
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-radius: 50%;
   transform: translateX(-50%);
 }
 
 .silicon-vehicle-car {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 0.3em;
-  /* background */
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) * 0.5) solid currentColor;
+  border-radius: var(--stroke, 0.1em) var(--stroke, 0.1em) 0 0;
   background-image: radial-gradient(closest-side, currentColor 50%, transparent 50%), radial-gradient(closest-side, currentColor 50%, transparent 50%);
   background-repeat: no-repeat, no-repeat;
   background-position: left center, right center;
   background-size: 0.2em 0.2em, 0.2em 0.2em;
-  /* border */
-  border: calc(var(--stroke, 0.1em) * 0.5) solid currentColor;
-  border-radius: var(--stroke, 0.1em) var(--stroke, 0.1em) 0 0;
 }
-.silicon-vehicle-car:before, .silicon-vehicle-car:after {
+.silicon-vehicle-car::before, .silicon-vehicle-car::after {
   content: "";
-  /* position */
   position: absolute;
-  /* size */
   display: block;
   box-sizing: border-box;
 }
-.silicon-vehicle-car:before {
+.silicon-vehicle-car::before {
   /* position  */
   bottom: 100%;
   left: 50%;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 0.8em;
   height: 0.3em;
-  /* background */
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) * 0.5) solid currentColor;
+  border-radius: 0.2em 0.2em 0 0/0.5em 0.5em 0 0;
   background-image: radial-gradient(closest-side, transparent calc(100% - 0.025em), currentColor calc(100% - 0.025em), currentColor 100%, transparent);
   background-repeat: no-repeat;
   background-position: 90% 0.1em;
   background-size: 0.2em 0.2em;
-  /* border */
-  border: calc(var(--stroke, 0.1em) * 0.5) solid currentColor;
-  border-radius: 0.2em 0.2em 0 0/0.5em 0.5em 0 0;
-  /* transform */
   transform: translateX(-50%);
 }
-.silicon-vehicle-car:after {
+.silicon-vehicle-car::after {
   top: 100%;
   left: calc(calc(var(--stroke, 0.1em) * 0.5) * -1);
-  /* size */
   width: 0.15em;
   height: 0.2em;
-  /* background */
-  background-color: currentColor;
-  /* border */
-  border-radius: 0 0 0.05em 0.05em;
   box-shadow: 0.85em 0 0 0 currentColor;
+  border-radius: 0 0 0.05em 0.05em;
+  background-color: currentColor;
 }
 
 .silicon-volume-high {
   position: relative;
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 1em;
+  box-sizing: border-box;
   border-bottom: none;
   border-left: none;
   transform: translateX(25%) rotate(45deg);
 }
-.silicon-volume-high:before, .silicon-volume-high:after {
+.silicon-volume-high::before, .silicon-volume-high::after {
   content: "";
   position: absolute;
   display: block;
   box-sizing: border-box;
 }
-.silicon-volume-high:before {
+.silicon-volume-high::before {
   bottom: calc(var(--stroke, 0.1em) * -1.5);
   left: calc(var(--stroke, 0.1em) * -1.5);
   width: 0;
@@ -3955,7 +3075,7 @@ silicon-text-align-right:before {
   border-right-color: transparent;
   border-radius: var(--stroke, 0.1em);
 }
-.silicon-volume-high:after {
+.silicon-volume-high::after {
   bottom: calc(var(--stroke, 0.1em) * -2);
   left: calc(var(--stroke, 0.1em) * -2);
   width: calc(var(--stroke, 0.1em) * 4);
@@ -3966,7 +3086,7 @@ silicon-text-align-right:before {
 .silicon-volume-high.colored {
   color: var(--gray,#7f7f7f);
 }
-.silicon-volume-high.colored:after, .silicon-volume-high.colored:before {
+.silicon-volume-high.colored::after, .silicon-volume-high.colored::before {
   color: var(--blue,#1eb3e0);
 }
 
@@ -3977,20 +3097,20 @@ silicon-text-align-right:before {
 .silicon-volume-low {
   position: relative;
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 1em;
+  box-sizing: border-box;
   border-bottom: none;
   border-left: none;
   transform: translateX(25%) rotate(45deg);
 }
-.silicon-volume-low:before, .silicon-volume-low:after {
+.silicon-volume-low::before, .silicon-volume-low::after {
   content: "";
   position: absolute;
   display: block;
   box-sizing: border-box;
 }
-.silicon-volume-low:before {
+.silicon-volume-low::before {
   bottom: calc(var(--stroke, 0.1em) * -1.5);
   left: calc(var(--stroke, 0.1em) * -1.5);
   width: 0;
@@ -4000,7 +3120,7 @@ silicon-text-align-right:before {
   border-right-color: transparent;
   border-radius: var(--stroke, 0.1em);
 }
-.silicon-volume-low:after {
+.silicon-volume-low::after {
   bottom: calc(var(--stroke, 0.1em) * -2);
   left: calc(var(--stroke, 0.1em) * -2);
   width: calc(var(--stroke, 0.1em) * 4);
@@ -4011,7 +3131,7 @@ silicon-text-align-right:before {
 .silicon-volume-low.colored {
   color: var(--gray,#7f7f7f);
 }
-.silicon-volume-low.colored:after, .silicon-volume-low.colored:before {
+.silicon-volume-low.colored::after, .silicon-volume-low.colored::before {
   color: var(--blue,#1eb3e0);
 }
 
@@ -4022,20 +3142,20 @@ silicon-text-align-right:before {
 .silicon-volume-medium {
   position: relative;
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 1em;
+  box-sizing: border-box;
   border-bottom: none;
   border-left: none;
   transform: translateX(25%) rotate(45deg);
 }
-.silicon-volume-medium:before, .silicon-volume-medium:after {
+.silicon-volume-medium::before, .silicon-volume-medium::after {
   content: "";
   position: absolute;
   display: block;
   box-sizing: border-box;
 }
-.silicon-volume-medium:before {
+.silicon-volume-medium::before {
   bottom: calc(var(--stroke, 0.1em) * -1.5);
   left: calc(var(--stroke, 0.1em) * -1.5);
   width: 0;
@@ -4045,7 +3165,7 @@ silicon-text-align-right:before {
   border-right-color: transparent;
   border-radius: var(--stroke, 0.1em);
 }
-.silicon-volume-medium:after {
+.silicon-volume-medium::after {
   bottom: calc(var(--stroke, 0.1em) * -2);
   left: calc(var(--stroke, 0.1em) * -2);
   width: calc(var(--stroke, 0.1em) * 4);
@@ -4056,7 +3176,7 @@ silicon-text-align-right:before {
 .silicon-volume-medium.colored {
   color: var(--gray,#7f7f7f);
 }
-.silicon-volume-medium.colored:after, .silicon-volume-medium.colored:before {
+.silicon-volume-medium.colored::after, .silicon-volume-medium.colored::before {
   color: var(--blue,#1eb3e0);
 }
 
@@ -4067,20 +3187,20 @@ silicon-text-align-right:before {
 .silicon-volume-mute {
   position: relative;
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 1em;
+  box-sizing: border-box;
   border-bottom: none;
   border-left: none;
   transform: translateX(25%) rotate(45deg);
 }
-.silicon-volume-mute:before, .silicon-volume-mute:after {
+.silicon-volume-mute::before, .silicon-volume-mute::after {
   content: "";
   position: absolute;
   display: block;
   box-sizing: border-box;
 }
-.silicon-volume-mute:before {
+.silicon-volume-mute::before {
   bottom: calc(var(--stroke, 0.1em) * -1.5);
   left: calc(var(--stroke, 0.1em) * -1.5);
   width: 0;
@@ -4090,7 +3210,7 @@ silicon-text-align-right:before {
   border-right-color: transparent;
   border-radius: var(--stroke, 0.1em);
 }
-.silicon-volume-mute:after {
+.silicon-volume-mute::after {
   bottom: calc(var(--stroke, 0.1em) * -2);
   left: calc(var(--stroke, 0.1em) * -2);
   width: calc(var(--stroke, 0.1em) * 4);
@@ -4101,7 +3221,7 @@ silicon-text-align-right:before {
 .silicon-volume-mute.colored {
   color: var(--gray,#7f7f7f);
 }
-.silicon-volume-mute.colored:after, .silicon-volume-mute.colored:before {
+.silicon-volume-mute.colored::after, .silicon-volume-mute.colored::before {
   color: var(--blue,#1eb3e0);
 }
 
@@ -4112,20 +3232,20 @@ silicon-text-align-right:before {
 .silicon-volume-off {
   position: relative;
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 1em;
+  box-sizing: border-box;
   border-bottom: none;
   border-left: none;
   transform: translateX(25%) rotate(45deg);
 }
-.silicon-volume-off:before, .silicon-volume-off:after {
+.silicon-volume-off::before, .silicon-volume-off::after {
   content: "";
   position: absolute;
   display: block;
   box-sizing: border-box;
 }
-.silicon-volume-off:before {
+.silicon-volume-off::before {
   bottom: calc(var(--stroke, 0.1em) * -1.5);
   left: calc(var(--stroke, 0.1em) * -1.5);
   width: 0;
@@ -4135,7 +3255,7 @@ silicon-text-align-right:before {
   border-right-color: transparent;
   border-radius: var(--stroke, 0.1em);
 }
-.silicon-volume-off:after {
+.silicon-volume-off::after {
   bottom: calc(var(--stroke, 0.1em) * -2);
   left: calc(var(--stroke, 0.1em) * -2);
   width: calc(var(--stroke, 0.1em) * 4);
@@ -4146,34 +3266,34 @@ silicon-text-align-right:before {
 .silicon-volume-off.colored {
   color: var(--gray,#7f7f7f);
 }
-.silicon-volume-off.colored:after, .silicon-volume-off.colored:before {
+.silicon-volume-off.colored::after, .silicon-volume-off.colored::before {
   color: var(--blue,#1eb3e0);
 }
 
 .silicon-weather-sun {
   position: relative;
   display: inline-block;
-  box-sizing: border-box;
   width: 0.5em;
   height: 0.5em;
+  box-shadow: -0.55em 0 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor, 0.55em 0 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor, 0 -0.55em 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor, 0 0.55em 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor, -0.4em -0.4em 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor, -0.4em 0.4em 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor, 0.4em -0.4em 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor, 0.4em 0.4em 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor;
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-radius: 50%;
-  box-shadow: -0.55em 0 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor, 0.55em 0 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor, 0 -0.55em 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor, 0 0.55em 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor, -0.4em -0.4em 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor, -0.4em 0.4em 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor, 0.4em -0.4em 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor, 0.4em 0.4em 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor;
 }
 
 .silicon-wifi {
   position: relative;
   display: inline-block;
-  box-sizing: border-box;
   width: calc(var(--stroke, 0.1em) * 7);
   height: calc(var(--stroke, 0.1em) * 7);
+  box-sizing: border-box;
   border: calc(var(--stroke, 0.1em) * 1.5) solid currentColor;
   border-bottom: none;
   border-left: none;
   border-radius: 0 calc(var(--stroke, 0.1em) * 8) 0 0;
   transform: rotate(-45deg);
 }
-.silicon-wifi:before, .silicon-wifi:after {
+.silicon-wifi::before, .silicon-wifi::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -4181,7 +3301,7 @@ silicon-text-align-right:before {
   display: block;
   box-sizing: border-box;
 }
-.silicon-wifi:before {
+.silicon-wifi::before {
   width: calc(var(--stroke, 0.1em) * 4.25);
   height: calc(var(--stroke, 0.1em) * 4.25);
   border: calc(var(--stroke, 0.1em) * 1.5) solid currentColor;
@@ -4189,7 +3309,7 @@ silicon-text-align-right:before {
   border-left: none;
   border-radius: 0 calc(var(--stroke, 0.1em) * 4.25) 0 0;
 }
-.silicon-wifi:after {
+.silicon-wifi::after {
   width: calc(var(--stroke, 0.1em) * 1.5);
   height: calc(var(--stroke, 0.1em) * 1.5);
   border: calc(var(--stroke, 0.1em) * 1.5) solid currentColor;
@@ -4204,18 +3324,18 @@ silicon-text-align-right:before {
 .silicon-zoom-in {
   position: relative;
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 1em;
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-radius: 50%;
 }
-.silicon-zoom-in:before, .silicon-zoom-in:after {
+.silicon-zoom-in::before, .silicon-zoom-in::after {
   content: "";
   position: absolute;
   box-sizing: border-box;
 }
-.silicon-zoom-in:before {
+.silicon-zoom-in::before {
   top: 100%;
   left: 100%;
   display: block;
@@ -4225,7 +3345,7 @@ silicon-text-align-right:before {
   transform: translate(-0.1em, -0.1em) rotate(45deg);
   transform-origin: 0 50%;
 }
-.silicon-zoom-in:after {
+.silicon-zoom-in::after {
   top: 50%;
   left: 50%;
   display: block;
@@ -4238,18 +3358,18 @@ silicon-text-align-right:before {
 .silicon-zoom-out {
   position: relative;
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 1em;
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-radius: 50%;
 }
-.silicon-zoom-out:before, .silicon-zoom-out:after {
+.silicon-zoom-out::before, .silicon-zoom-out::after {
   content: "";
   position: absolute;
   box-sizing: border-box;
 }
-.silicon-zoom-out:before {
+.silicon-zoom-out::before {
   top: 100%;
   left: 100%;
   display: block;
@@ -4259,7 +3379,7 @@ silicon-text-align-right:before {
   transform: translate(-0.1em, -0.1em) rotate(45deg);
   transform-origin: 0 50%;
 }
-.silicon-zoom-out:after {
+.silicon-zoom-out::after {
   top: 50%;
   left: 50%;
   display: block;

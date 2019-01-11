@@ -1,65 +1,47 @@
 .silicon-picture {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 1em;
-  /* overflow */
-  overflow: hidden;
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-radius: var(--stroke, 0.1em);
+  overflow: hidden;
 }
-.silicon-picture:before {
+.silicon-picture::before {
   content: "";
-  /* position */
   position: absolute;
   top: 0.1em;
   left: 0.1em;
-  /* display */
   width: 0.1em;
   height: 0.1em;
-  /* border */
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-radius: 50%;
 }
-.silicon-picture:after {
+.silicon-picture::after {
   content: "";
-  /* position */
   position: absolute;
   top: 0.5em;
   left: 0.25em;
-  /* display */
   width: 0.6em;
   height: 0.6em;
-  /* border */
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-radius: var(--stroke, 0.1em) 0 0 0;
-  /* trasnform */
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   -webkit-transform-origin: 50% 50%;
           transform-origin: 50% 50%;
 }
 .silicon-picture.colored {
-  /* text */
-  color: var(--dark-brown,#87683f);
-  /* background */
   background-color: var(--light-blue,#61caea);
+  color: var(--dark-brown,#87683f);
 }
-.silicon-picture.colored:before {
-  /* text */
-  color: var(--yellow,#f5c505);
-  /* background */
-  background-color: var(--yellow,#f5c505);
-  /* shadow */
+.silicon-picture.colored::before {
   box-shadow: 0 0 0.2em 0 var(--white,#ffffff);
+  background-color: var(--yellow,#f5c505);
+  color: var(--yellow,#f5c505);
 }
-.silicon-picture.colored:after {
-  /* text */
-  color: var(--dark-green,#0c964d);
-  /* background */
+.silicon-picture.colored::after {
   background-color: var(--green,#10c565);
+  color: var(--dark-green,#0c964d);
 }

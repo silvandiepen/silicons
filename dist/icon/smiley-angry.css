@@ -1,89 +1,67 @@
 .silicon-smiley-angry {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 1em;
-  /* background */
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) / 1) solid currentColor;
+  border-radius: 50%;
   background-image: radial-gradient(closest-side, currentColor 100%, transparent), radial-gradient(closest-side, currentColor 100%, transparent);
   background-repeat: no-repeat, no-repeat;
   background-position: left calc(50% + 0.15em) bottom calc(50% + 0.1em), right calc(50% + 0.15em) bottom calc(50% + 0.1em);
   background-size: 0.2em 0.2em, 0.2em 0.2em;
-  /* border */
-  border: calc(var(--stroke, 0.1em) / 1) solid currentColor;
-  border-radius: 50%;
 }
-.silicon-smiley-angry:before, .silicon-smiley-angry:after {
+.silicon-smiley-angry::before, .silicon-smiley-angry::after {
   content: "";
-  /* position */
   position: absolute;
   box-sizing: border-box;
 }
-.silicon-smiley-angry:after {
-  /* position */
+.silicon-smiley-angry::after {
   top: 50%;
   left: 50%;
-  /* size */
   width: 0.5em;
   height: 0.5em;
-  /* border */
   border: calc(var(--stroke, 0.1em) / 2) solid transparent;
   border-bottom-color: currentColor;
   border-radius: 50%;
-  /* transform */
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
 .silicon-smiley-angry.colored {
-  /* text */
-  color: var(--yellow,#f5c505);
-  /* background */
   background-color: var(--yellow,#f5c505);
   background-image: radial-gradient(closest-side, var(--black,#101010) 50%, var(--white,#ffffff) 50%, var(--white,#ffffff) 100%, transparent), radial-gradient(closest-side, var(--black,#101010) 50%, var(--white,#ffffff) 50%, var(--white,#ffffff) 100%, transparent);
+  color: var(--yellow,#f5c505);
 }
-.silicon-smiley-angry.colored:after {
-  /* text */
+.silicon-smiley-angry.colored::after {
   color: var(--black,#101010);
 }
 
 .silicon-smiley-angry {
   background-image: none;
 }
-.silicon-smiley-angry:before, .silicon-smiley-angry:after {
+.silicon-smiley-angry::before, .silicon-smiley-angry::after {
   content: "";
-  /* position */
   position: absolute;
   box-sizing: border-box;
 }
-.silicon-smiley-angry:before {
-  /* position */
+.silicon-smiley-angry::before {
   right: calc(50% + 0.05em);
   bottom: 50%;
-  /* size */
   width: 0.2em;
   height: 0.1em;
-  /* background */
-  background-color: currentColor;
-  /* border */
-  border-radius: 0 0 0.1em 0.1em;
   /* box */
   box-shadow: 0.3em 0 0 0 currentColor;
+  border-radius: 0 0 0.1em 0.1em;
+  background-color: currentColor;
 }
-.silicon-smiley-angry:after {
-  /* border */
+.silicon-smiley-angry::after {
   border-top-color: currentColor;
   border-bottom-color: transparent;
-  /* transform */
   -webkit-transform: translate(-50%, 25%);
           transform: translate(-50%, 25%);
 }
-.silicon-smiley-angry.colored:before {
-  /* position */
+.silicon-smiley-angry.colored::before {
   bottom: calc(50% + 0.1em);
-  /* text */
-  color: var(--yellow,#f5c505);
-  /* border */
   border-radius: 0.1em 0.1em 0 0;
+  color: var(--yellow,#f5c505);
 }

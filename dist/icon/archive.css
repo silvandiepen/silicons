@@ -1,46 +1,33 @@
 .silicon-archive {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 0.75em;
   height: 0.55em;
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-top: none;
-  /* transform */
   -webkit-transform: translateY(0.2em);
           transform: translateY(0.2em);
 }
-.silicon-archive:before, .silicon-archive:after {
+.silicon-archive::before, .silicon-archive::after {
   content: "";
-  /* position */
   position: absolute;
-  /* size */
   display: block;
   box-sizing: border-box;
-  /* transform */
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
-.silicon-archive:before {
-  /* position */
+.silicon-archive::before {
   bottom: 100%;
   left: 50%;
-  /* size */
   width: 1em;
   height: calc(var(--stroke, 0.1em) * 3);
-  /* border */
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
 }
-.silicon-archive:after {
-  /* position */
+.silicon-archive::after {
   bottom: calc(100% - (var(--stroke, 0.1em) * 1));
   left: 50%;
-  /* size */
   width: 0.2em;
   height: calc(var(--stroke, 0.1em) / 2);
-  /* background */
   background-color: currentColor;
 }

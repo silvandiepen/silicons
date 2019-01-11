@@ -2,74 +2,71 @@
 
 @mixin silicon-map($selector: '.#{$silicon-prefix}map') {
 	#{$selector} {
-		/* position */
+		// Position
 		position: relative;
 
-		/* size */
+		// Box Model
 		display: inline-block;
-		box-sizing: border-box;
 		width: 0.33em;
 		height: 1em;
+		box-sizing: border-box;
 
-		/* border */
+		// Border
 		border: #{$silicon-stroke-var} solid currentColor;
 		border-right-width: calc(#{$silicon-stroke-var} / 4);
 		border-left-width: calc(#{$silicon-stroke-var} / 4);
 
-		/* transform */
+		// Transform
 		transform: skewY(-12deg);
 
-		&:before,
-		&:after {
+		&::before,
+		&::after {
 			content: '';
 
-			/* position */
+			// Position
 			position: absolute;
 			top: calc(#{$silicon-stroke-var} * -1);
 
-			/* size */
+			// Box Model
 			display: block;
-			box-sizing: border-box;
 			width: 0.33em;
 			height: 1em;
+			box-sizing: border-box;
 
-			/* border */
+			// Border
 			border: #{$silicon-stroke-var} solid currentColor;
 		}
-		&:before {
-			/* position */
+		&::before {
+			// Position
 			left: calc(100% + (#{$silicon-stroke-var} / 4));
 
-			/* border */
+			// Border
 			border-left-width: calc(#{$silicon-stroke-var} / 4);
 			border-radius: 0 #{$silicon-stroke-var}
 				#{$silicon-stroke-var} 0;
 
-			/* transform */
+			// Transform
 			transform: skewY(24deg);
 			transform-origin: 0 100%;
 		}
-		&:after {
-			/* position */
+		&::after {
+			// Position
 			right: calc(100% + (#{$silicon-stroke-var} / 4));
 
-			/* border */
+			// Border
 			border-right-width: calc(#{$silicon-stroke-var} / 4);
 			border-radius: #{$silicon-stroke-var} 0 0
 				#{$silicon-stroke-var};
 
-			/* transform */
+			// Transform
 			transform: skewY(24deg);
 			transform-origin: 100% 0;
 		}
 		&.colored {
 			&,
-			&:after,
-			&:before {
-				/* text */
-				color: $silicons-color-blue;
-
-				/* background */
+			&::after,
+			&::before {
+				// Background
 				background-color: $silicons-color-light-blue;
 				background-image: radial-gradient(
 					$silicons-color-green 40%,
@@ -78,13 +75,16 @@
 				);
 				background-position: center center;
 				background-size: 1em 1em;
+				
+				// Typography
+				color: $silicons-color-blue;
 			}
-			&:before {
-				/* background */
+			&::before {
+				// Background
 				background-position: right center;
 			}
-			&:after {
-				/* background */
+			&::after {
+				// Background
 				background-position: left center;
 			}
 		}

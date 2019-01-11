@@ -1,38 +1,28 @@
 .silicon-mail {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 0.75em;
-  /* overflow */
-  overflow: hidden;
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-radius: var(--stroke, 0.1em);
+  overflow: hidden;
 }
-.silicon-mail:after {
+.silicon-mail::after {
   content: "";
-  /* position */
   position: absolute;
   left: 50%;
-  /* display */
   display: block;
   width: 0.6em;
   height: 0.6em;
-  /* border */
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-radius: var(--stroke, 0.1em);
-  /* trasnform */
   -webkit-transform: translate(-50%, -50%) rotate(45deg);
           transform: translate(-50%, -50%) rotate(45deg);
   -webkit-transform-origin: 50% 50%;
           transform-origin: 50% 50%;
 }
 .silicon-mail.colored {
-  /* text */
-  color: var(--gray,#444444);
-  /* background */
   background-color: var(--white,#ffffff);
+  color: var(--gray,#444444);
 }

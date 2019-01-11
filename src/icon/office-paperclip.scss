@@ -2,49 +2,51 @@
 
 @mixin silicon-office-paperclip($selector: '.#{$silicon-prefix}office-paperclip') {
 	#{$selector} {
-		/* custom properties */
+		// Custom Properties
 		--height: calc(#{$silicon-stroke-var} * 5.5);
+		
+		// Position
 		position: relative;
 
-		/* size */
+		// Box Model
 		display: inline-block;
-		box-sizing: border-box;
 		width: 0.75em;
 		height: var(--height);
+		box-sizing: border-box;
 
-		/* border */
+		// Border
 		border: #{$silicon-stroke-var} solid currentColor;
 		border-left: none;
 		border-radius: 0 0.3em 0.3em 0;
 
-		/* transform */
+		// Transform
 		transform: rotate(-45deg);
 
-		&:before,
-		&:after {
+		&::before,
+		&::after {
 			content: '';
 
-			/* position */
+			// Position
 			position: absolute;
 
-			/* size */
+			// Box Model
 			display: block;
 			box-sizing: border-box;
 
-			/* border */
+			// Border
 			border: #{$silicon-stroke-var} solid currentColor;
 		}
 
-		&:before {
-			/* position */
+		&::before {
+			// Position
 			top: calc(#{$silicon-stroke-var} * -1);
 			right: 100%;
 
-			/* size */
+			// Box Model
 			width: 0.5em;
 			height: calc(var(--height) - (#{$silicon-stroke-var} * 1.5));
 
-			/* border */
+			// Border
 			border-right: none;
 			border-radius: calc(
 					var(--height) - (#{$silicon-stroke-var} * 1.5) / 2
@@ -52,16 +54,16 @@
 				0 0 calc(var(--height) - (#{$silicon-stroke-var} * 1.5) / 2);
 		}
 
-		&:after {
-			/* position */
+		&::after {
+			// Position
 			bottom: calc(#{$silicon-stroke-var} / 2);
 			left: 0;
 
-			/* size */
+			// Box Model
 			width: 0.5em;
 			height: calc(var(--height) - (#{$silicon-stroke-var} * 3));
 
-			/* border */
+			// Border
 			border-left: none;
 			border-radius: 0
 				calc(var(--height) - (#{$silicon-stroke-var} * 3) / 2)

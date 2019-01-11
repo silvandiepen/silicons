@@ -2,50 +2,61 @@
 
 @mixin silicon-wifi($selector: '.#{$silicon-prefix}wifi') {
 	#{$selector} {
+		// Position
 		position: relative;
 
+		// Box Model
 		display: inline-block;
-		box-sizing: border-box;
 		width: calc(#{$silicon-stroke-var} * 7);
 		height: calc(#{$silicon-stroke-var} * 7);
+		box-sizing: border-box;
 
+		// Border
 		border: calc(#{$silicon-stroke-var} * 1.5) solid currentColor;
 		border-bottom: none;
 		border-left: none;
 		border-radius: 0 calc(#{$silicon-stroke-var} * 8) 0 0;
 
+		// Transform
 		transform: rotate(-45deg);
 
-		&:before,
-		&:after {
+		&::before,
+		&::after {
 			content: '';
 
+			// Position
 			position: absolute;
 			bottom: 0;
 			left: 0;
 
+			// Box Model
 			display: block;
 			box-sizing: border-box;
 		}
-		&:before {
+		&::before {
+			// Box Model
 			width: calc(#{$silicon-stroke-var} * 4.25);
 			height: calc(#{$silicon-stroke-var} * 4.25);
 
+		// Border
 			border: calc(#{$silicon-stroke-var} * 1.5) solid currentColor;
 			border-bottom: none;
 			border-left: none;
 			border-radius: 0 calc(#{$silicon-stroke-var} * 4.25) 0 0;
 		}
-		&:after {
+		&::after {
+			// Box Model
 			width: calc(#{$silicon-stroke-var} * 1.5);
 			height: calc(#{$silicon-stroke-var} * 1.5);
 
+		// Border
 			border: calc(#{$silicon-stroke-var} * 1.5) solid currentColor;
 			border-bottom: none;
 			border-left: none;
 			border-radius: 0 calc(#{$silicon-stroke-var} * 1.5) 0 0;
 		}
 		&.colored {
+			// Typography
 			color: $silicons-color-blue;
 		}
 	}

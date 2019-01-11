@@ -1,18 +1,18 @@
 .silicon-zoom-in {
   position: relative;
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 1em;
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-radius: 50%;
 }
-.silicon-zoom-in:before, .silicon-zoom-in:after {
+.silicon-zoom-in::before, .silicon-zoom-in::after {
   content: "";
   position: absolute;
   box-sizing: border-box;
 }
-.silicon-zoom-in:before {
+.silicon-zoom-in::before {
   top: 100%;
   left: 100%;
   display: block;
@@ -24,7 +24,7 @@
   -webkit-transform-origin: 0 50%;
           transform-origin: 0 50%;
 }
-.silicon-zoom-in:after {
+.silicon-zoom-in::after {
   top: 50%;
   left: 50%;
   display: block;

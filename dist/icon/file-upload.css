@@ -1,18 +1,18 @@
 .silicon-file-upload {
   position: relative;
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 0.5em;
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-top: 0;
 }
-.silicon-file-upload:before, .silicon-file-upload:after {
+.silicon-file-upload::before, .silicon-file-upload::after {
   content: "";
   position: absolute;
   box-sizing: border-box;
 }
-.silicon-file-upload:before {
+.silicon-file-upload::before {
   bottom: 75%;
   left: 50%;
   display: block;
@@ -22,7 +22,7 @@
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
-.silicon-file-upload:after {
+.silicon-file-upload::after {
   bottom: calc(75% + 0.5em + (var(--stroke, 0.1em) / 2));
   left: 50%;
   display: block;
@@ -39,6 +39,6 @@
 .silicon-file-upload.colored {
   color: var(--dark,#303030);
 }
-.silicon-file-upload.colored:before, .silicon-file-upload.colored:after {
+.silicon-file-upload.colored::before, .silicon-file-upload.colored::after {
   color: var(--green,#10c565);
 }

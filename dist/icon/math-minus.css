@@ -1,33 +1,26 @@
 .silicon-math-minus {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 1em;
+  box-sizing: border-box;
 }
-.silicon-math-minus:before, .silicon-math-minus:after {
+.silicon-math-minus::before, .silicon-math-minus::after {
   content: "";
-  /* position */
   position: absolute;
   top: 50%;
   left: 50%;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: 100%;
   height: var(--stroke, 0.1em);
-  /* background */
+  box-sizing: border-box;
   background-color: currentColor;
 }
-.silicon-math-minus:before {
-  /* transform */
+.silicon-math-minus::before {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
-.silicon-math-minus:after {
-  /* transform */
+.silicon-math-minus::after {
   -webkit-transform: translate(-50%, -50%) rotate(90deg);
           transform: translate(-50%, -50%) rotate(90deg);
 }

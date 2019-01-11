@@ -2,20 +2,20 @@
 
 @mixin silicon-adjust-color($selector: '.#{$silicon-prefix}adjust-color') {
 	#{$selector} {
-		/* position */
+		// Position
 		position: relative;
 
-		/* size */
+		// Box Model
 		display: inline-block;
-		box-sizing: border-box;
 		width: 1em;
 		height: 1em;
-		
-		/* background */
-		background-image: linear-gradient(to right, transparent 50%, currentColor 50%);
+		box-sizing: border-box;
 
-		/* border */
+		// Border
 		border: calc(#{$silicon-stroke-var} / 2) solid currentColor;
 		border-radius: 50%;
+		
+		// Background
+		background-image: linear-gradient(to right, transparent 50%, currentColor 50%);
 	}
 }

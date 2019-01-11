@@ -2,44 +2,44 @@
 
 @mixin silicon-asterisk($selector: '.#{$silicon-prefix}asterisk') {
 	#{$selector} {
-		/* position */
+		// Position
 		position: relative;
 
-		/* size */
+		// Box Model
 		display: inline-block;
-		box-sizing: border-box;
 		width: 1em;
 		height: 1em;
+		box-sizing: border-box;
 
-		/* background */
+		// Background
 		background-image: linear-gradient(to bottom, currentColor, currentColor);
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-size: 100% #{$silicon-stroke-var};
 
-		&:before,
-		&:after {
+		&::before,
+		&::after {
 			content: '';
 
-			/* position */
+			// Position
 			position: absolute;
 			top: 50%;
 			left: 50%;
 
-			/* size */
+			// Box Model
 			display: block;
-			box-sizing: border-box;
 			width: 100%;
 			height: #{$silicon-stroke-var};
+			box-sizing: border-box;
 
-			/* background */
+			// Background
 			background-color: currentColor;
 
-			/* transform */
+			// Transform
 			transform: translate(-50%, -50%) rotate(60deg);
 		}
-		&:after {
-			/* transform */
+		&::after {
+			// Transform
 			transform: translate(-50%, -50%) rotate(120deg);
 		}
 	}

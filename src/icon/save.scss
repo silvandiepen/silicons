@@ -2,7 +2,7 @@
 
 @mixin silicon-save($selector: '.#{$silicon-prefix}save') {
 	#{$selector} {
-		/* position */
+		// Position
 		position: relative;
 	}
 }

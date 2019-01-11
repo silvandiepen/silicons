@@ -1,38 +1,28 @@
 .silicon-device-screen {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 0.75em;
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-radius: 0.1em;
 }
-.silicon-device-screen:before {
+.silicon-device-screen::before {
   content: "";
-  /* position */
   position: absolute;
   top: 100%;
   left: 50%;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: 50%;
   height: calc(var(--stroke, 0.1em) * 3);
-  /* background */
-  background-image: linear-gradient(to right, transparent calc(50% - var(--stroke, 0.1em) / 4), currentColor calc(50% - var(--stroke, 0.1em) / 4), currentColor calc(50% + var(--stroke, 0.1em) / 4), transparent calc(50% + var(--stroke, 0.1em) / 4));
-  /* border */
+  box-sizing: border-box;
   border-bottom: calc(var(--stroke, 0.1em) / 2) solid currentColor;
-  /* transform */
+  background-image: linear-gradient(to right, transparent calc(50% - var(--stroke, 0.1em) / 4), currentColor calc(50% - var(--stroke, 0.1em) / 4), currentColor calc(50% + var(--stroke, 0.1em) / 4), transparent calc(50% + var(--stroke, 0.1em) / 4));
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
 .silicon-device-screen.colored {
-  /* text */
-  color: var(--dark,#303030);
-  /* background */
   background-color: var(--blue,#1eb3e0);
   background-image: linear-gradient(-70deg, transparent 40%, var(--white-02, rgba(255, 255, 255, 0.2)) 40%, var(--white-02, rgba(255, 255, 255, 0.2)) 60%, transparent 60%);
+  color: var(--dark,#303030);
 }

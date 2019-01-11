@@ -2,43 +2,43 @@
 
 @mixin silicon-bottle($selector: '.#{$silicon-prefix}bottle') {
 	#{$selector} {
-		/* position */
+		// Position
 		position: relative;
 
-		/* size */
+		// Box Model
 		display: inline-block;
-		box-sizing: border-box;
 		width: 0.45em;
 		height: 0.85em;
+		box-sizing: border-box;
 		
-		/* background */
+		// Border
+		border: #{$silicon-stroke-var} solid currentColor;
+		border-radius: 0.5em 0.5em 0 0;
+		
+		// Background
 		background-image: linear-gradient(to bottom, currentColor, currentColor),linear-gradient(to bottom, currentColor, currentColor);
 		background-repeat: no-repeat, no-repeat;
 		background-position: top 25% center, top 70% center;
 		background-size: 100%  #{$silicon-stroke-half-var}, 100%  #{$silicon-stroke-half-var};
-		
-		/* border */
-		border: #{$silicon-stroke-var} solid currentColor;
-		border-radius: 0.5em 0.5em 0 0;
 
-		&:before {
+		&::before {
 			content: '';
-			/* position */
+			// Position
 			position: absolute;
 			bottom: 100%;
 			left: 50%;
 
-			/* size */
+			// Box Model
 			display: block;
-			box-sizing: border-box;
 			width: 0.25em;
 			height: 0.4em;
+			box-sizing: border-box;
 
-			/* border */
+			// Border
 			border: #{$silicon-stroke-var} solid currentColor;
 			border-bottom: none;
-			// border-top: none;
 			
+			// Transform
 			transform: translateX(-50%);
 		}
 	}

@@ -2,34 +2,34 @@
 
 @mixin silicon-math-plus($selector: '.#{$silicon-prefix}math-plus') {
 	#{$selector} {
-		/* position */
+		// Position
 		position: relative;
 
-		/* size */
+		// Box Model
 		display: inline-block;
-		box-sizing: border-box;
 		width: 1em;
 		height: 1em;
+		box-sizing: border-box;
 
-		&:before,
-		&:after {
+		&::before,
+		&::after {
 			content: '';
 
-			/* position */
+			// Position
 			position: absolute;
 			top: 50%;
 			left: 50%;
 
-			/* size */
+			// Box Model
 			display: block;
-			box-sizing: border-box;
 			width: 100%;
 			height: #{$silicon-stroke-var};
+			box-sizing: border-box;
 
-			/* background */
+			// Background
 			background-color: currentColor;
 
-			/* transform */
+			// Transform
 			transform: translate(-50%, -50%);
 		}
 	}

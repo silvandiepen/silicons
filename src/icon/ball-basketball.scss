@@ -2,18 +2,20 @@
 
 @mixin silicon-ball-basketball($selector: '.#{$silicon-prefix}ball-basketball') {
 	#{$selector} {
-		/* position */
+		// Position
 		position: relative;
 
-		/* size */
+		// Box Model
 		display: inline-block;
-		box-sizing: border-box;
 		width: 1em;
 		height: 1em;
+		box-sizing: border-box;
 
-		overflow: hidden;
+		// Border
+		border: #{$silicon-stroke-var} solid currentColor;
+		border-radius: 50%;
 
-		/* background */
+		// Background
 		background-image: linear-gradient(to right, currentColor, currentColor),
 			linear-gradient(to right, currentColor, currentColor);
 		background-repeat: no-repeat, no-repeat;
@@ -21,45 +23,43 @@
 		background-size: calc(#{$silicon-stroke-var} / 2) 100%,
 			100% calc(#{$silicon-stroke-var} / 2);
 
-		/* border */
-		border: #{$silicon-stroke-var} solid currentColor;
-		border-radius: 50%;
-
-		/* transform */
+		// Transform
 		transform: rotate(22.5deg);
 
-		&:before,
-		&:after {
+		overflow: hidden;
+
+		&::before,
+		&::after {
 			content: '';
 
-			/* position */
+			// Position
 			position: absolute;
 			top: 0;
 
-			/* size */
+			// Box Model
 			display: block;
-			box-sizing: border-box;
 			width: 100%;
 			height: 100%;
+			box-sizing: border-box;
 
-			/* border */
+			// Border
 			border: calc(#{$silicon-stroke-var} / 2) solid currentColor;
 			border-radius: 50%;
 		}
-		&:before {
-			/* position */
+		&::before {
+			// Position
 			left: 70%;
 		}
-		&:after {
-			/* position */
+		&::after {
+			// Position
 			right: 70%;
 		}
 		&.colored {
-			/* text */
-			color: var(--color-black, #{color(Black)});
 
-			/* background */
+			// Background
 			background-color: var(--color-orange, #{color(Orange)});
+			// Typography
+			color: var(--color-black, #{color(Black)});
 		}
 	}
 }

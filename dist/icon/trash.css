@@ -1,16 +1,16 @@
 .silicon-trash {
   position: relative;
   display: inline-block;
-  box-sizing: border-box;
   width: 0.75em;
   height: 0.75em;
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-top: none;
   border-radius: 0 0 0.1em 0.1em;
   -webkit-transform: translateY(0.2em);
           transform: translateY(0.2em);
 }
-.silicon-trash:before, .silicon-trash:after {
+.silicon-trash::before, .silicon-trash::after {
   content: "";
   position: absolute;
   display: block;
@@ -18,15 +18,15 @@
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
-.silicon-trash:before {
+.silicon-trash::before {
   bottom: calc(100% + var(--stroke, 0.1em));
   left: 50%;
   width: 1em;
   height: var(--stroke, 0.1em);
-  background-color: currentColor;
   border: none;
+  background-color: currentColor;
 }
-.silicon-trash:after {
+.silicon-trash::after {
   bottom: calc(100% + (var(--stroke, 0.1em) * 2));
   left: 50%;
   width: 0.2em;

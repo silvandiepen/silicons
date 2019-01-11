@@ -1,44 +1,33 @@
 .silicon-time-clock {
   --time-hours: 2;
   --time-minutes: 35;
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 1em;
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-radius: 50%;
 }
-.silicon-time-clock:before, .silicon-time-clock:after {
+.silicon-time-clock::before, .silicon-time-clock::after {
   content: "";
-  /* position */
   position: absolute;
   bottom: calc(50% - (var(--stroke, 0.1em) /2));
   left: 50%;
-  /* size */
   display: block;
   width: calc(var(--stroke, 0.1em) / 2);
-  margin-left: calc(var(--stroke, 0.1em) * -0.25);
-  /* background */
   background-color: currentColor;
-  /* transform */
   -webkit-transform-origin: 50% calc(100% - (var(--stroke, 0.1em) / 2));
           transform-origin: 50% calc(100% - (var(--stroke, 0.1em) / 2));
+  margin-left: calc(var(--stroke, 0.1em) * -0.25);
 }
-.silicon-time-clock:before {
-  /* size */
+.silicon-time-clock::before {
   height: 0.5em;
-  /* transform */
   -webkit-transform: rotate(calc(360deg / 12 * var(--time-hours, 4)));
           transform: rotate(calc(360deg / 12 * var(--time-hours, 4)));
 }
-.silicon-time-clock:after {
-  /* size */
+.silicon-time-clock::after {
   height: 0.35em;
-  /* transform */
   -webkit-transform: rotate(calc(360deg / 60 * var(--time-minutes, 11)));
           transform: rotate(calc(360deg / 60 * var(--time-minutes, 11)));
 }

@@ -2,34 +2,42 @@
 
 @mixin silicon-user($selector: '.#{$silicon-prefix}user') {
 	#{$selector} {
+		// Position
 		position: relative;
 
+		// Box Model
 		display: inline-block;
-    box-sizing: border-box;
 		width: 1em;
 		height: 0.65em;
+		box-sizing: border-box;
 
+		// Border
 		border: #{$silicon-stroke-var} solid currentColor;
 		border-bottom: 0;
 		border-radius: 0.75em 0.75em 0 0;
 
+		// Transform
 		transform: translateY(0.175em);
 
-		&:before {
+		&::before {
 			content: '';
 
+			// Position
 			position: absolute;
 			bottom: 100%;
 			left: 50%;
 
+			// Box Model
 			display: block;
-			box-sizing: border-box;
 			width: 0.6em;
 			height: 0.6em;
+			box-sizing: border-box;
 
+			// Border
 			border: #{$silicon-stroke-var} solid currentColor;
 			border-radius: 50%;
 
+			// Transform
 			transform: translateX(-50%);
 		}
 	}

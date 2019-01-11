@@ -1,32 +1,25 @@
 .silicon-bottle {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 0.45em;
   height: 0.85em;
-  /* background */
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 0.5em 0.5em 0 0;
   background-image: linear-gradient(to bottom, currentColor, currentColor), linear-gradient(to bottom, currentColor, currentColor);
   background-repeat: no-repeat, no-repeat;
   background-position: top 25% center, top 70% center;
   background-size: 100% calc(var(--stroke, 0.1em) * 0.5), 100% calc(var(--stroke, 0.1em) * 0.5);
-  /* border */
-  border: var(--stroke, 0.1em) solid currentColor;
-  border-radius: 0.5em 0.5em 0 0;
 }
-.silicon-bottle:before {
+.silicon-bottle::before {
   content: "";
-  /* position */
   position: absolute;
   bottom: 100%;
   left: 50%;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: 0.25em;
   height: 0.4em;
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-bottom: none;
   -webkit-transform: translateX(-50%);

@@ -1,16 +1,20 @@
 @import '../default';
 @mixin silicon-power-socket-us($selector: '.#{$silicon-prefix}power-socket-us') {
 	#{$selector} {
-		/* position */
+		// Position
 		position: relative;
 
-		/* size */
+		// Box Model
 		display: inline-block;
-		box-sizing: border-box;
 		width: 1em;
 		height: 1em;
+		box-sizing: border-box;
 
-		/* background */
+		// Border
+		border: #{$silicon-stroke-var} solid currentColor;
+		border-radius: 0.3em / 0.5em;
+
+		// Background
 		background-image: linear-gradient(to bottom, currentColor, currentColor),
 			linear-gradient(to bottom, currentColor, currentColor);
 		background-repeat: no-repeat, no-repeat;
@@ -18,28 +22,26 @@
 		background-size: #{$silicon-stroke-half-var} calc(#{$silicon-stroke-var} * 2),
 			#{$silicon-stroke-half-var} calc(#{$silicon-stroke-var} * 2);
 
-		/* border */
-		border: #{$silicon-stroke-var} solid currentColor;
-		border-radius: 0.3em / 0.5em;
-
-		&:before {
+		&::before {
 			content: '';
-			/* position */
+			
+			// Position
 			position: absolute;
 			bottom: calc(#{$silicon-stroke-var});
 			left: 50%;
-			/* size */
+			
+			// Box Model
 			display: block;
 			width: #{$silicon-stroke-var};
 			height: #{$silicon-stroke-var};
 			
-			/* background */
-			background-color: currentColor;
-			
-			/* border */
+			// Border
 			border-radius: 50% 50% 0 0;
+			
+			// Background
+			background-color: currentColor;
 
-			/* transform */
+			// Transform
 			transform: translateX(-50%);
 		}
 	}

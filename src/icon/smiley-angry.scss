@@ -5,51 +5,53 @@
 	@include silicon-smiley-happy($selector);
 	#{$selector} {
 		background-image: none;
-		&:before,
-		&:after {
+		&::before,
+		&::after {
 			content: '';
 			
-			/* position */
+			// Position
 			position: absolute;
+			
+			// Box Model
 			box-sizing: border-box;
 		}
 
-		&:before {
-			/* position */
+		&::before {
+			// Position
 			right: calc(50% + 0.05em);
 			bottom: 50%;
 			
-			/* size */
+			// Box Model
 			width: 0.2em;
 			height: 0.1em;
 			
-			/* background */
-			background-color: currentColor;
-			
-			/* border */
-			border-radius: 0 0 0.1em 0.1em;
-			
 			/* box */
 			box-shadow: 0.3em 0 0 0 currentColor;
+			
+			// Border
+			border-radius: 0 0 0.1em 0.1em;
+			
+			// Background
+			background-color: currentColor;
 		}
-		&:after {
-			/* border */
+		&::after {
+			// Border
 			border-top-color: currentColor;
 			border-bottom-color: transparent;
 			
-			/* transform */
+			// Transform
 			transform: translate(-50%, 25%);
 		}
 		&.colored {
-			&:before {
-				/* position */
+			&::before {
+				// Position
 				bottom: calc(50% + 0.1em);
 				
-				/* text */
-				color: $silicons-color-yellow;
-				
-				/* border */
+				// Border
 				border-radius: 0.1em 0.1em 0 0;
+				
+				// Typography
+				color: $silicons-color-yellow;
 			}
 		}
 	}

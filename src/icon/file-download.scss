@@ -1,70 +1,72 @@
-@import "../default";
+@import '../default';
 
 @mixin silicon-file-download($selector: '.#{$silicon-prefix}file-download') {
-	#{$selector} {		
-		/* position */ 
+	#{$selector} {
+		// Position
 		position: relative;
 
-		/* size */ 
+		// Box Model
 		display: inline-block;
-		box-sizing: border-box;
 		width: 1em;
 		height: 0.5em;
+		box-sizing: border-box;
 
-		/* border */ 
+		// Border
 		border: #{$silicon-stroke-var} solid currentColor;
 		border-top: 0;
 
-		&:before,
-		&:after {
+		&::before,
+		&::after {
 			content: '';
 
-		/* position */ 
+			// Position
 			position: absolute;
 			box-sizing: border-box;
 		}
-		
-		&:before {
-			/* position */ 
+
+		&::before {
+			// Position
 			bottom: 75%;
 			left: 50%;
 
-		/* size */ 
+			// Box Model
 			display: block;
 			width: calc(#{$silicon-stroke-var} / 2);
 			height: 0.5em;
 
-		/* background */ 
+			// Background
 			background-color: currentColor;
 
-		/* transform */ 
+			// Transform
 			transform: translateX(-50%);
 		}
 
-		&:after {
-			/* position */ 
+		&::after {
+			// Position
 			bottom: calc(75% - #{$silicon-stroke-var} / 2);
 			left: 50%;
 
-		/* size */ 
+			// Box Model
 			display: block;
 			width: 0.33em;
 			height: 0.33em;
-			
-		/* border */ 
+
+			// Border
 			border: calc(#{$silicon-stroke-var} / 2) solid currentColor;
 			border-top: none;
 			border-right: none;
 
-		/* transform */ 
+			// Transform
 			transform: rotate(-45deg);
 			transform-origin: 0 100%;
 		}
-		&.colored{
-			/* text */ 
+		&.colored {
+			// Typography
 			color: $silicons-color-dark;
-			&:before,&:after{
-				/* text */ 
+			
+			&::before,
+			&::after {
+				// Typography
 				color: $silicons-color-blue;
 			}
 		}

@@ -1,29 +1,22 @@
 .silicon-arrow-filled-down {
-  /* position */
   position: relative;
-  /* size */
   display: block;
   width: 1em;
   height: var(--stroke, 0.1em);
-  /* background */
   background-color: currentColor;
 }
-.silicon-arrow-filled-down:before {
+.silicon-arrow-filled-down::before {
   content: "";
-  /* size */
   position: absolute;
   top: calc(var(--stroke, 0.1em) * 0.5);
   right: calc(var(--stroke, 0.1em) * -0.5);
-  /* size */
   display: block;
   width: 0;
   height: 0;
-  /* border */
   border: 0.15em solid currentColor;
   border-bottom-color: transparent;
   border-left-color: transparent;
   border-radius: 0.05em;
-  /* transform */
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   -webkit-transform-origin: 100% 0;
@@ -31,7 +24,6 @@
 }
 
 .silicon-arrow-filled-down {
-  /* position */
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
 }

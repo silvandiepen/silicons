@@ -2,21 +2,28 @@
 
 @mixin silicon-shape-drop($selector: '.#{$silicon-prefix}shape-drop') {
 	#{$selector} {
+		// Position
 		position: relative;
 
+		// Box Model
 		display: inline-block;
-    box-sizing: border-box;
 		width: 1em;
 		height: 1em;
+    box-sizing: border-box;
 
+		// Border
 		border: #{$silicon-stroke-var} solid currentColor;
 		border-radius: 50% 0 50% 50%;
-
+		
+		// Transform
 		transform: rotate(-45deg);
 
 		&.colored {
-			color: $silicons-color-blue;
+			// Background
 			background-color: $silicons-color-light-blue;
+			
+			// Typography
+			color: $silicons-color-blue;
 		}
 	}
 }

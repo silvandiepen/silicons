@@ -1,27 +1,21 @@
 .silicon-lock-open {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 0.8em;
   height: 0.5em;
-  /* border */
+  box-sizing: border-box;
   border: calc(var(--stroke, 0.1em) * 0.5) solid currentColor;
   border-radius: 0 0 var(--stroke, 0.1em) var(--stroke, 0.1em);
 }
-.silicon-lock-open:before {
+.silicon-lock-open::before {
   content: "";
-  /* position */
   position: absolute;
   bottom: 100%;
   left: 50%;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: 0.6em;
   height: 0.5em;
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-bottom: 0;
   border-radius: 0.3em 0.3em 0 0;
@@ -29,7 +23,6 @@
           transform: translateX(-50%);
 }
 
-.silicon-lock-open:before {
-  /* border */
+.silicon-lock-open::before {
   border-right-color: transparent;
 }

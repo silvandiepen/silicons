@@ -4,10 +4,11 @@
 @mixin silicon-math-times($selector: '.#{$silicon-prefix}math-times') {
 	@include silicon-plus($selector);
 	#{$selector} {
-		/* transform */
+		// Transform
 		transform: rotate(45deg);
-		&:after{
-			/* transform */
+		
+		&::after{
+			// Transform
 			transform: translate(-50%, -50%) rotate(90deg);
 		}
 	}

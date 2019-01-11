@@ -2,46 +2,59 @@
 
 @mixin silicon-zoom-in($selector: '.#{$silicon-prefix}zoom-in') {
 	#{$selector} {
+		// Position
 		position: relative;
 
+		// Box Model
 		display: inline-block;
-    box-sizing: border-box;
 		width: 1em;
 		height: 1em;
+    box-sizing: border-box;
 
+		// Border
 		border: #{$silicon-stroke-var} solid currentColor;
     border-radius: 50%;
     
-		&:before,
-		&:after {
+		&::before,
+		&::after {
 			content: '';
 
+		// Position
 			position: absolute;
+			
+			// Box Model
 			box-sizing: border-box;
 		}
 
-		&:before {
+		&::before {
+			// Position
 			top: 100%;
 			left: 100%;
 
+		// Box Model
 			display: block;
 			width: 0.5em;
 			height: #{$silicon-stroke-var};
 
+		// Background
 			background-color: currentColor;
 
+		// Transform
 			transform: translate(-0.1em, -0.1em) rotate(45deg);
 			transform-origin: 0 50%;
 		}
 
-		&:after {
+		&::after {
+			// Position
 			top: 50%;
 			left: 50%;
 
+		// Box Model
 			display: block;
 			width: 0.4em;
 			height: 0.4em;
 
+		// Background
 			background-image: linear-gradient(
 					to right,
 					transparent calc(50% - #{$silicon-stroke-var} / 4),
@@ -57,6 +70,7 @@
 					transparent calc(50% + #{$silicon-stroke-var} / 4)
 				);
 
+		// Transform
 			transform: translate(-50%, -50%);
 		}
 	}

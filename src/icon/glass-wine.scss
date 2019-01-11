@@ -2,46 +2,47 @@
 
 @mixin silicon-glass-wine($selector: '.#{$silicon-prefix}glass-wine') {
 	#{$selector} {
-		/* position */
+		// Position
 		position: relative;
 
-		/* size */
+		// Box Model
 		display: inline-block;
-		box-sizing: border-box;
 		width: 0.5em;
 		height: 0.5em;
+		box-sizing: border-box;
 
-		/* background */
+		// Border
+		border: #{$silicon-stroke-var} solid currentColor;
+		border-radius: 0 0 50% 50%;
+
+		// Background
 		background-image: linear-gradient(to bottom, currentColor, currentColor);
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-size: 100% #{$silicon-stroke-half-var};
 
-		/* border */
-		border: #{$silicon-stroke-var} solid currentColor;
-		border-radius: 0 0 50% 50%;
-
-		&:before {
+		&::before {
 			content: '';
-			/* position */
+			
+			// Position
 			position: absolute;
 			top: 100%;
 			left: calc(#{$silicon-stroke-var} * -1);
 
-			/* size */
+			// Box Model
 			display: block;
-			box-sizing: border-box;
 			width: 0.5em;
 			height: 0.4em;
+			box-sizing: border-box;
 
-			/* background */
+			// Border
+			border-bottom: #{$silicon-stroke-var} solid currentColor;
+
+			// Background
 			background-image: linear-gradient(to bottom, currentColor, currentColor);
 			background-repeat: no-repeat;
 			background-position: center center;
 			background-size: #{$silicon-stroke-var} 100%;
-
-			/* border */
-			border-bottom: #{$silicon-stroke-var} solid currentColor;
 		}
 	}
 }

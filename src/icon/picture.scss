@@ -1,82 +1,82 @@
 @import '../default';
 @mixin silicon-picture($selector: '.#{$silicon-prefix}picture') {
 	#{$selector} {
-		/* position */
+		// Position
 		position: relative;
 
-		/* size */
+		// Box Model
 		display: inline-block;
-		box-sizing: border-box;
 		width: 1em;
 		height: 1em;
+		box-sizing: border-box;
 
-		/* overflow */
-		overflow: hidden;
-
-		/* border */
+		// Border
 		border: #{$silicon-stroke-var} solid currentColor;
 		border-radius: #{$silicon-stroke-var};
 
-		&:before {
+		// Visual
+		overflow: hidden;
+
+		&::before {
 			content: '';
 
-			/* position */
+			// Position
 			position: absolute;
 			top: 0.1em;
 			left: 0.1em;
 
-			/* display */
+			// Box Model
 			width: 0.1em;
 			height: 0.1em;
 
-			/* border */
+			// Border
 			border: calc(#{$silicon-stroke-var} / 2) solid currentColor;
 			border-radius: 50%;
 		}
 
-		&:after {
+		&::after {
 			content: '';
 
-			/* position */
+			// Position
 			position: absolute;
 			top: 0.5em;
 			left: 0.25em;
 
-			/* display */
+			// Box Model
 			width: 0.6em;
 			height: 0.6em;
 
-			/* border */
+			// Border
 			border: calc(#{$silicon-stroke-var} / 2) solid currentColor;
 			border-radius: #{$silicon-stroke-var} 0 0 0;
 
-			/* trasnform */
+			// Transform
 			transform: rotate(45deg);
 			transform-origin: 50% 50%;
 		}
 
 		&.colored {
-			/* text */
-			color: $silicons-color-dark-brown;
-
-			/* background */
+			// Background
 			background-color: $silicons-color-light-blue;
-			&:before {
-				/* text */
-				color: $silicons-color-yellow;
+			
+			// Typography
+			color: $silicons-color-dark-brown;
+			&::before {
+				// Box Model
+				box-shadow: 0 0 0.2em 0 $silicons-color-white;
 
-				/* background */
+				// Background
 				background-color: $silicons-color-yellow;
 
-				/* shadow */
-				box-shadow: 0 0 0.2em 0 $silicons-color-white;
+				// Typography
+				color: $silicons-color-yellow;
 			}
-			&:after {
-				/* text */
-				color: $silicons-color-dark-green;
-
-				/* background */
+			&::after {
+				// Background
 				background-color: $silicons-color-green;
+
+				// Typography
+				color: $silicons-color-dark-green;
 			}
 		}
 	}

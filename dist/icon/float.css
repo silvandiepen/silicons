@@ -1,20 +1,15 @@
 .silicon-float {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 1em;
-  /* position */
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 50%;
   background-image: radial-gradient(closest-side, transparent calc(100% - var(--stroke, 0.1em)), currentColor calc(100% - var(--stroke, 0.1em)), currentColor 100%, transparent), linear-gradient(to bottom, currentColor 0.25em, transparent 0.25em, transparent 0.6em, currentColor 0.6em), linear-gradient(to right, currentColor 0.25em, transparent 0.25em, transparent 0.6em, currentColor 0.6em);
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position: center center, center center, center center;
   background-size: 0.5em 0.5em, calc(var(--stroke, 0.1em) / 2) 100%, 100% calc(var(--stroke, 0.1em) / 2);
-  /* border */
-  border: var(--stroke, 0.1em) solid currentColor;
-  border-radius: 50%;
-  /* transform */
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }

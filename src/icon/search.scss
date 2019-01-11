@@ -2,37 +2,37 @@
 
 @mixin silicon-search($selector: '.#{$silicon-prefix}search') {
 	#{$selector} {
-		/* position */
+		// Position
 		position: relative;
 
-		/* size */
+		// Box Model
 		display: inline-block;
-		box-sizing: border-box;
 		width: 1em;
 		height: 1em;
+		box-sizing: border-box;
 
-		/* border */
+		// Border
 		border: #{$silicon-stroke-var} solid currentColor;
 		border-radius: 50%;
 
-		&:before {
+		&::before {
 			content: '';
 
-			/* position */
+			// Position
 			position: absolute;
 			top: 100%;
 			left: 100%;
 
-			/* size */
+			// Box Model
 			display: block;
-			box-sizing: border-box;
 			width: 0.5em;
 			height: #{$silicon-stroke-var};
+			box-sizing: border-box;
 
-			/* background */
+			// Background
 			background-color: currentColor;
 
-			/* transform */
+			// Transform
 			transform: translate(-0.1em, -0.1em) rotate(45deg);
 			transform-origin: 0 50%;
 		}

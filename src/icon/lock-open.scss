@@ -4,8 +4,8 @@
 @mixin silicon-lock-open($selector: '.#{$silicon-prefix}lock-open') {
 	@include silicon-lock($selector);
 	#{$selector} {
-		&:before{
-			/* border */
+		&::before{
+			// Border
 			border-right-color: transparent;
 		}
 	}

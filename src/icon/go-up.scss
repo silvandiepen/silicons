@@ -4,7 +4,7 @@
 @mixin silicon-go-up($selector: '.#{$silicon-prefix}go-up') {
 	@include silicon-go-right($selector);
 	#{$selector} {
-		/* position */
+		// Position
 		transform: rotate(-90deg);
 	}
 }

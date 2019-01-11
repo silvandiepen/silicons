@@ -2,15 +2,21 @@
 
 @mixin silicon-office-marker($selector: '.#{$silicon-prefix}office-marker') {
 	#{$selector} {
-		/* position */
+		// Position
 		position: relative;
 
-		/* size */
+		// Box Model
 		display: inline-block;
-		box-sizing: border-box;
 		width: 0.6em;
 		height: 1em;
+		box-sizing: border-box;
 
+		// Border
+		border: #{$silicon-stroke-var} solid currentColor;
+		border-top: none;
+		border-radius: 0 0 0.5em 0.5em / 0 0 0.3em 0.3em;
+
+		// Background
 		background-image: radial-gradient(
 			closest-side,
 			transparent calc(100% - 0.05em),
@@ -22,52 +28,52 @@
 		background-position: bottom 0.8em center;
 		background-size: 0.9em 0.9em;
 
-		/* border */
-		border: #{$silicon-stroke-var} solid currentColor;
-		border-top: none;
-		border-radius: 0 0 0.5em 0.5em / 0 0 0.3em 0.3em;
-
-		/* transform */
+		// Transform
 		transform: rotate(225deg);
 
-		&:before {
+		&::before {
 			content: '';
 
-			/* position */
+			// Position
 			position: absolute;
 			bottom: 100%;
 			left: 50%;
 
-			/* size */
+			// Box Model
 			display: block;
-			box-sizing: border-box;
 			width: 0.6em;
 			height: 0.2em;
+			box-sizing: border-box;
 
-			/* border */
+			// Border
 			border: #{$silicon-stroke-var} solid currentColor;
 			border-top-width: #{$silicon-stroke-half-var};
 			border-bottom: none;
 			border-radius: 0.2em 0.2em 0 0;
 
-			/* transform */
+			// Transform
 			transform: translateX(-50%);
 		}
-		&:after {
+		&::after {
 			content: '';
 
-			/* position */
+			// Position
 			position: absolute;
 			bottom: calc(100% + 0.15em);
 			left: 50%;
 
-			/* size */
+			// Box Model
 			display: block;
-			box-sizing: border-box;
 			width: 0.3em;
 			height: 0.4em;
+			box-sizing: border-box;
 
-			/* background */
+			// Border
+			border: #{$silicon-stroke-half-var} solid currentColor;
+			border-bottom: none;
+			border-radius: 0.1em 0.1em 0 0;
+
+			// Background
 			background-image: radial-gradient(
 				closest-side,
 				currentColor 100%,
@@ -77,12 +83,7 @@
 			background-position: bottom 0.1em center;
 			background-size: 0.5em 0.5em;
 
-			/* border */
-			border: #{$silicon-stroke-half-var} solid currentColor;
-			border-bottom: none;
-			border-radius: 0.1em 0.1em 0 0;
-
-			/* transform */
+			// Transform
 			transform: translateX(-50%);
 		}
 	}

@@ -1,14 +1,10 @@
 .silicon-adjust-color {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 1em;
-  /* background */
-  background-image: linear-gradient(to right, transparent 50%, currentColor 50%);
-  /* border */
+  box-sizing: border-box;
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-radius: 50%;
+  background-image: linear-gradient(to right, transparent 50%, currentColor 50%);
 }

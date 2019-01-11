@@ -9,6 +9,6 @@
 		],
 	},
 	"extends": [
-    "stylelint-config-rational-order"
+    "stylelint-logical-order"
   ]
 }

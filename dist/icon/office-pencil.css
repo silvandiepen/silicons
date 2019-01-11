@@ -1,44 +1,35 @@
 .silicon-office-pencil {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 0.6em;
   height: 1em;
-  /* background */
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-top: none;
+  border-radius: 0 0 0.5em 0.5em/0 0 0.3em 0.3em;
   background-image: linear-gradient(to bottom, currentColor, currentColor), linear-gradient(to bottom, currentColor, currentColor), radial-gradient(closest-side, transparent calc(100% - calc(var(--stroke, 0.1em) * 0.5)), currentColor calc(100% - calc(var(--stroke, 0.1em) * 0.5)), currentColor 100%, transparent), radial-gradient(closest-side, transparent calc(100% - calc(var(--stroke, 0.1em) * 0.5)), currentColor calc(100% - calc(var(--stroke, 0.1em) * 0.5)), currentColor 100%, transparent);
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
   background-position: 25% 0.1em, 75% 0.1em, bottom 0.75em center, bottom 0.2em center;
   background-size: calc(var(--stroke, 0.1em) * 0.5) 0.55em, calc(var(--stroke, 0.1em) * 0.5) 0.55em, 0.8em 0.8em, 0.8em 0.8em;
-  /* border */
-  border: var(--stroke, 0.1em) solid currentColor;
-  border-top: none;
-  border-radius: 0 0 0.5em 0.5em/0 0 0.3em 0.3em;
-  /* transform */
   -webkit-transform: rotate(225deg);
           transform: rotate(225deg);
 }
-.silicon-office-pencil:before {
+.silicon-office-pencil::before {
   content: "";
-  /* position */
   position: absolute;
   top: 0;
   left: 50%;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: calc((0.575em - (var(--stroke, 0.1em) * 1.5)) * 1);
   height: calc((0.575em - (var(--stroke, 0.1em) * 1.5)) * 1);
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) * 0.8) solid currentColor;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
   background-image: radial-gradient(closest-side, currentColor 100%, transparent);
   background-repeat: no-repeat;
   background-position: -0.15em -0.15em;
   background-size: 0.3em 0.3em;
-  /* border */
-  border: calc(var(--stroke, 0.1em) * 0.8) solid currentColor;
-  border-right-color: transparent;
-  border-bottom-color: transparent;
-  /* transform */
   -webkit-transform: translate(-50%, -50%) scale(1, 1) rotate(45deg);
           transform: translate(-50%, -50%) scale(1, 1) rotate(45deg);
 }

@@ -1,17 +1,22 @@
 @import '../default';
 
 @mixin silicon-cosmetics-lipstick(
-	$selector: '#{$silicon-prefix}cosmetics-lipstick'
+	$selector: '.#{$silicon-prefix}cosmetics-lipstick'
 ) {
 	#{$selector} {
-		/* position */
+		// Position
 		position: relative;
 
-		/* size */
+		// Box Model
 		display: inline-block;
-		box-sizing: border-box;
 		width: 0.6em;
 		height: 1em;
+		box-sizing: border-box;
+
+		// Border
+		border: #{$silicon-stroke-var} solid currentColor;
+		border-top-color: transparent;
+		border-radius: 0.2em 0.2em 0.5em 0.5em / 0.2em 0.2em 0.3em 0.3em;
 
 		background-image: radial-gradient(
 				closest-side,
@@ -31,26 +36,26 @@
 		background-position: bottom 0.75em center, bottom 0.1em center;
 		background-size: 0.9em 0.9em, 0.9em 0.9em;
 
-		/* border */
-		border: #{$silicon-stroke-var} solid currentColor;
-		border-top-color: transparent;
-		border-radius: 0.2em 0.2em 0.5em 0.5em / 0.2em 0.2em 0.3em 0.3em;
-
-		&:before {
+		&::before {
 			content: '';
 
-			/* position */
+			// Position
 			position: absolute;
 			bottom: calc(100% + #{$silicon-stroke-half-var});
 			left: 50%;
 
-			/* size */
+			// Box Model
 			display: block;
-			box-sizing: border-box;
 			width: 0.5em;
 			height: 0.5em;
+			box-sizing: border-box;
 
-			/* background */
+			// Border
+			border: #{$silicon-stroke-half-var} solid currentColor;
+			border-bottom: none;
+			border-radius: 0.4em 0.4em 0 0 / 0.5em 0.5em 0 0;
+
+			// Background
 			background-image: radial-gradient(
 				closest-side,
 				transparent calc(100% - 0.05em),
@@ -62,19 +67,12 @@
 			background-position: center -0.15em;
 			background-size: 0.3em 0.5em;
 
-			/* border */
-			border: #{$silicon-stroke-half-var} solid currentColor;
-			border-bottom: none;
-			border-radius: 0.4em 0.4em 0 0 / 0.5em 0.5em 0 0;
-
-			/* transform */
+			// Transform
 			transform: translateX(-50%);
 		}
 		&.colored {
-			/* text */
-			color: $silicons-color-dark-gray;
 			
-			/* background */
+			// Background
 			background-color: $silicons-color-gray;
 			background-image: radial-gradient(
 					closest-side,
@@ -90,17 +88,19 @@
 					$silicons-color-dark-gray 100%,
 					transparent
 				);
-			&:before {
-				/* text */
-				color: $silicons-color-dark-red;
+			// Typography
+			color: $silicons-color-dark-gray;
+			&::before {
 				
-				/* background */
+				// Background
 				background-color: $silicons-color-red;
 				background-image: radial-gradient(
 					closest-side,
 					$silicons-color-light-red 100%,
 					transparent
 				);
+				// Typography
+				color: $silicons-color-dark-red;
 			}
 		}
 	}

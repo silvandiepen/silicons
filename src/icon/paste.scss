@@ -2,15 +2,19 @@
 
 @mixin silicon-paste($selector: '.#{$silicon-prefix}paste') {
 	#{$selector} {
-		/* position */
+		// Position
 		position: relative;
 
-		/* size */
+		// Box Model
 		display: inline-block;
-		box-sizing: border-box;
 		width: 0.75em;
 		height: 1em;
+		box-sizing: border-box;
 
+		// Border
+		border: #{$silicon-stroke-var} solid currentColor;
+
+		// Background
 		background-image: linear-gradient(
 			to bottom,
 			transparent,
@@ -24,44 +28,41 @@
 		background-position: center center;
 		background-size: 0.4em calc(#{$silicon-stroke-var} * 1.5);
 
-		/* border */
-		border: #{$silicon-stroke-var} solid currentColor;
-
-		&:before {
+		&::before {
 			content: '';
 
-			/* position */
+			// Position
 			position: absolute;
 			top: 0em;
 			left: 50%;
 
-			/* display */
+			// Box Model
 			width: 0.3em;
 			height: 0.1em;
 
-			/* background */
+			// Background
 			background-color: currentColor;
 
-			/* transform */
+			// Transform
 			transform: translateX(-50%);
 		}
-		&:after {
+		&::after {
 			content: '';
 
-			/* position */
+			// Position
 			position: absolute;
 			bottom: 100%;
 			left: 50%;
 
-			/* display */
+			// Box Model
 			width: 0.2em;
 			height: 0.2em;
 
-			/* border */
+			// Border
 			border: #{$silicon-stroke-half-var} solid currentColor;
 			border-radius: 50% 50% 0 0;
 
-			/* transform */
+			// Transform
 			transform: translateX(-50%);
 		}
 	}

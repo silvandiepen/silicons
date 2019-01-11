@@ -2,16 +2,15 @@
 
 @mixin silicon-weather-sun($selector: '.#{$silicon-prefix}weather-sun') {
 	#{$selector} {
+		// Position
 		position: relative;
 
+		// Box Model
 		display: inline-block;
-		box-sizing: border-box;
 		width: 0.5em;
 		height: 0.5em;
 
-		border: #{$silicon-stroke-var} solid currentColor;
-		border-radius: 50%;
-
+		// Box Model
 		box-shadow: -0.55em 0 0
 				calc((#{$silicon-stroke-var} * 1.75) * -1) currentColor,
 			0.55em 0 0 calc((#{$silicon-stroke-var} * 1.75) * -1)
@@ -25,5 +24,10 @@
 			0.4em -0.4em 0 calc((#{$silicon-stroke-var} * 1.75) * -1) currentColor,
 			0.4em 0.4em 0 calc((#{$silicon-stroke-var} * 1.75) * -1)
 				currentColor;
+		box-sizing: border-box;
+
+		// Border
+		border: #{$silicon-stroke-var} solid currentColor;
+		border-radius: 50%;
 	}
 }

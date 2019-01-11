@@ -2,35 +2,36 @@
 
 @mixin silicon-go-right($selector: '.#{$silicon-prefix}go-right') {
 	#{$selector} {
-		/* position */
+		// Position
 		position: relative;
 
-		/* size */
+		// Box Model
 		display: block;
 		width: 0.5em;
 		height: 1em;
 
+		// Visibility
 		overflow: hidden;
 
-		&:before {
+		&::before {
 			content: '';
 
-			/* position */
+			// Position
 			position: absolute;
 			top: 50%;
 			right: 0;
 
-			/* size */
+			// Box Model
 			display: block;
 			width: calc(0.5em - (#{$silicon-stroke-var} / 2));
 			height: calc(0.5em - (#{$silicon-stroke-var} / 2));
 
-			/* border */
+			// Border
 			border: #{$silicon-stroke-var} solid currentColor;
 			border-bottom: none;
 			border-left: none;
 
-			/* transform */
+			// Transform
 			transform: rotate(45deg);
 			transform-origin: 100% 0;
 		}

@@ -1,21 +1,21 @@
 .silicon-volume-off {
   position: relative;
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 1em;
+  box-sizing: border-box;
   border-bottom: none;
   border-left: none;
   -webkit-transform: translateX(25%) rotate(45deg);
           transform: translateX(25%) rotate(45deg);
 }
-.silicon-volume-off:before, .silicon-volume-off:after {
+.silicon-volume-off::before, .silicon-volume-off::after {
   content: "";
   position: absolute;
   display: block;
   box-sizing: border-box;
 }
-.silicon-volume-off:before {
+.silicon-volume-off::before {
   bottom: calc(var(--stroke, 0.1em) * -1.5);
   left: calc(var(--stroke, 0.1em) * -1.5);
   width: 0;
@@ -25,7 +25,7 @@
   border-right-color: transparent;
   border-radius: var(--stroke, 0.1em);
 }
-.silicon-volume-off:after {
+.silicon-volume-off::after {
   bottom: calc(var(--stroke, 0.1em) * -2);
   left: calc(var(--stroke, 0.1em) * -2);
   width: calc(var(--stroke, 0.1em) * 4);
@@ -37,6 +37,6 @@
 .silicon-volume-off.colored {
   color: var(--gray,#7f7f7f);
 }
-.silicon-volume-off.colored:after, .silicon-volume-off.colored:before {
+.silicon-volume-off.colored::after, .silicon-volume-off.colored::before {
   color: var(--blue,#1eb3e0);
 }

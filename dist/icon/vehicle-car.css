@@ -1,58 +1,45 @@
 .silicon-vehicle-car {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 0.3em;
-  /* background */
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) * 0.5) solid currentColor;
+  border-radius: var(--stroke, 0.1em) var(--stroke, 0.1em) 0 0;
   background-image: radial-gradient(closest-side, currentColor 50%, transparent 50%), radial-gradient(closest-side, currentColor 50%, transparent 50%);
   background-repeat: no-repeat, no-repeat;
   background-position: left center, right center;
   background-size: 0.2em 0.2em, 0.2em 0.2em;
-  /* border */
-  border: calc(var(--stroke, 0.1em) * 0.5) solid currentColor;
-  border-radius: var(--stroke, 0.1em) var(--stroke, 0.1em) 0 0;
 }
-.silicon-vehicle-car:before, .silicon-vehicle-car:after {
+.silicon-vehicle-car::before, .silicon-vehicle-car::after {
   content: "";
-  /* position */
   position: absolute;
-  /* size */
   display: block;
   box-sizing: border-box;
 }
-.silicon-vehicle-car:before {
+.silicon-vehicle-car::before {
   /* position  */
   bottom: 100%;
   left: 50%;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 0.8em;
   height: 0.3em;
-  /* background */
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) * 0.5) solid currentColor;
+  border-radius: 0.2em 0.2em 0 0/0.5em 0.5em 0 0;
   background-image: radial-gradient(closest-side, transparent calc(100% - 0.025em), currentColor calc(100% - 0.025em), currentColor 100%, transparent);
   background-repeat: no-repeat;
   background-position: 90% 0.1em;
   background-size: 0.2em 0.2em;
-  /* border */
-  border: calc(var(--stroke, 0.1em) * 0.5) solid currentColor;
-  border-radius: 0.2em 0.2em 0 0/0.5em 0.5em 0 0;
-  /* transform */
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
-.silicon-vehicle-car:after {
+.silicon-vehicle-car::after {
   top: 100%;
   left: calc(calc(var(--stroke, 0.1em) * 0.5) * -1);
-  /* size */
   width: 0.15em;
   height: 0.2em;
-  /* background */
-  background-color: currentColor;
-  /* border */
-  border-radius: 0 0 0.05em 0.05em;
   box-shadow: 0.85em 0 0 0 currentColor;
+  border-radius: 0 0 0.05em 0.05em;
+  background-color: currentColor;
 }

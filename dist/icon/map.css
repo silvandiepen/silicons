@@ -1,70 +1,53 @@
 .silicon-map {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 0.33em;
   height: 1em;
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-right-width: calc(var(--stroke, 0.1em) / 4);
   border-left-width: calc(var(--stroke, 0.1em) / 4);
-  /* transform */
   -webkit-transform: skewY(-12deg);
           transform: skewY(-12deg);
 }
-.silicon-map:before, .silicon-map:after {
+.silicon-map::before, .silicon-map::after {
   content: "";
-  /* position */
   position: absolute;
   top: calc(var(--stroke, 0.1em) * -1);
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: 0.33em;
   height: 1em;
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
 }
-.silicon-map:before {
-  /* position */
+.silicon-map::before {
   left: calc(100% + (var(--stroke, 0.1em) / 4));
-  /* border */
   border-left-width: calc(var(--stroke, 0.1em) / 4);
   border-radius: 0 var(--stroke, 0.1em) var(--stroke, 0.1em) 0;
-  /* transform */
   -webkit-transform: skewY(24deg);
           transform: skewY(24deg);
   -webkit-transform-origin: 0 100%;
           transform-origin: 0 100%;
 }
-.silicon-map:after {
-  /* position */
+.silicon-map::after {
   right: calc(100% + (var(--stroke, 0.1em) / 4));
-  /* border */
   border-right-width: calc(var(--stroke, 0.1em) / 4);
   border-radius: var(--stroke, 0.1em) 0 0 var(--stroke, 0.1em);
-  /* transform */
   -webkit-transform: skewY(24deg);
           transform: skewY(24deg);
   -webkit-transform-origin: 100% 0;
           transform-origin: 100% 0;
 }
-.silicon-map.colored, .silicon-map.colored:after, .silicon-map.colored:before {
-  /* text */
-  color: var(--blue,#1eb3e0);
-  /* background */
+.silicon-map.colored, .silicon-map.colored::after, .silicon-map.colored::before {
   background-color: var(--light-blue,#61caea);
   background-image: radial-gradient(var(--green,#10c565) 40%, var(--beige,#cdb492) 50%, transparent 60%);
   background-position: center center;
   background-size: 1em 1em;
+  color: var(--blue,#1eb3e0);
 }
-.silicon-map.colored:before {
-  /* background */
+.silicon-map.colored::before {
   background-position: right center;
 }
-.silicon-map.colored:after {
-  /* background */
+.silicon-map.colored::after {
   background-position: left center;
 }

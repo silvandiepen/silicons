@@ -2,76 +2,78 @@
 
 @mixin silicon-suitcase($selector: '.#{$silicon-prefix}suitcase') {
 	#{$selector} {
-		/* position */
+		// Position
 		position: relative;
 
-		/* size */
+		// Box Model
 		display: inline-block;
-		box-sizing: border-box;
 		width: 1em;
 		height: 0.75em;
+		box-sizing: border-box;
 
-		/* border */
+		// Border
 		border: #{$silicon-stroke-var} solid currentColor;
 		border-radius: #{$silicon-stroke-var};
 
-		&:before,
-		&:after {
+		&::before,
+		&::after {
 			content: '';
 
-			/* position */
+			// Position
 			position: absolute;
 			left: 50%;
 
-			/* size */
+			// Box Model
 			display: block;
 			box-sizing: border-box;
 
-			/* border */
+			// Border
 			border: calc(#{$silicon-stroke-var} / 2) solid currentColor;
 		}
-		&:before {
-			/* position */
+		&::before {
+			// Position
 			top: calc(#{$silicon-stroke-var} * -1);
 
-			/* size */
+			// Box Model
 			width: 0.5em;
 			height: calc(100% + #{$silicon-stroke-var} * 2);
 
-			/* border */
+			// Border
 			border-top: none;
 			border-bottom: none;
 
-			/* transform */
+			// Transform
 			transform: translateX(-50%);
 		}
 
-		&:after {
-			/* position */
+		&::after {
+			// Position
 			bottom: calc(100% + #{$silicon-stroke-var});
 
-			/* size */
+			// Box Model
 			width: 0.3em;
 			height: 0.125em;
 
-			/* border */
+			// Border
 			border-bottom: none;
 			border-radius: 0.25em 0.25em 0 0;
 
-			/* transform */
+			// Transform
 			transform: translateX(-50%);
 		}
 		&.colored {
-			/* text */
-			color: $silicons-color-dark-brown;
-
-			/* background */
+			// Background
 			background-color: $silicons-color-brown;
 
-			&:before {
+			// Typography
+			color: $silicons-color-dark-brown;
+
+			&::before {
+				// Typography
 				color: $silicons-color-gray;
 			}
-			&:after {
+			&::after {
+				// Typography
 				color: $silicons-color-dark;
 			}
 		}

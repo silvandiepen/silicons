@@ -1,62 +1,46 @@
 .silicon-device-printer {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 0.5em;
   height: 0.5em;
-  /* border */
+  box-sizing: border-box;
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
 }
-.silicon-device-printer:before, .silicon-device-printer:after {
+.silicon-device-printer::before, .silicon-device-printer::after {
   content: "";
-  /* position */
   position: absolute;
   box-sizing: border-box;
 }
-.silicon-device-printer:after {
-  /* position */
+.silicon-device-printer::after {
   bottom: calc(100% + (var(--stroke, 0.1em) * 2.5));
   left: 50%;
-  /* size */
   display: block;
   width: 0.5em;
   height: 0.1em;
-  /* border */
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-bottom: none;
-  /* transform */
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
-.silicon-device-printer:before {
-  /* position */
+.silicon-device-printer::before {
   top: -0.25em;
   left: 50%;
   /* sisze */
   display: block;
   width: 1em;
   height: 0.5em;
-  /* border */
   border: var(--stroke, 0.1em) solid currentColor;
   border-radius: var(--stroke, 0.1em) var(--stroke, 0.1em) 0 0;
-  /* transform */
   -webkit-transform: translatex(-50%);
           transform: translatex(-50%);
-  /* paths */
   -webkit-clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 100%, 74% 100%, 74% 50%, 26% 50%, 26% 100%);
           clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 100%, 74% 100%, 74% 50%, 26% 50%, 26% 100%);
 }
-.silicon-device-printer.colored, .silicon-device-printer.colored:after {
-  /* text */
-  color: var(--gray,#7f7f7f);
-  /* background */
+.silicon-device-printer.colored, .silicon-device-printer.colored::after {
   background-color: var(--white,#ffffff);
+  color: var(--gray,#7f7f7f);
 }
-.silicon-device-printer.colored:before {
-  /* text */
-  color: var(--black,#101010);
-  /* background */
+.silicon-device-printer.colored::before {
   background-color: var(--dark,#303030);
+  color: var(--black,#101010);
 }

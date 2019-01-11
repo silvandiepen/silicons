@@ -2,48 +2,48 @@
 
 @mixin silicon-link($selector: '.#{$silicon-prefix}link') {
 	#{$selector} {
-		/* position */
+		// Position
 		position: relative;
 
-		/* size */
+		// Box Model
 		display: inline-block;
-		box-sizing: border-box;
 		width: 0.5em;
 		height: calc(#{$silicon-stroke-var} / 2);
+		box-sizing: border-box;
 
-		/* background */
+		// Background
 		background-color: currentColor;
 
-		/* transform */
+		// Transform
 		transform: rotate(-45deg);
 
-		&:before,
-		&:after {
+		&::before,
+		&::after {
 			content: '';
-			/* position */
+			// Position
 			position: absolute;
 			top: 50%;
 
-			/* size */
+			// Box Model
 			display: block;
 			width: 0.35em;
 			height: 0.2em;
 
-			/* border */
+			// Border
 			border: #{$silicon-stroke-var} solid currentColor;
 			border-radius: #{$silicon-stroke-var};
 
-			/* transform */
+			// Transform
 			transform: translateY(-50%);
 		}
 		
-		&:before {
-			/* position */
+		&::before {
+			// Position
 			right: calc(100% - (#{$silicon-stroke-var} * 2));
 		}
 		
-		&:after {
-			/* position */
+		&::after {
+			// Position
 			left: calc(100% - (#{$silicon-stroke-var} * 2));
 		}
 	}

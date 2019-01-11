@@ -1,27 +1,21 @@
 .silicon-go-down {
-  /* position */
   position: relative;
-  /* size */
   display: block;
   width: 0.5em;
   height: 1em;
   overflow: hidden;
 }
-.silicon-go-down:before {
+.silicon-go-down::before {
   content: "";
-  /* position */
   position: absolute;
   top: 50%;
   right: 0;
-  /* size */
   display: block;
   width: calc(0.5em - (var(--stroke, 0.1em) / 2));
   height: calc(0.5em - (var(--stroke, 0.1em) / 2));
-  /* border */
   border: var(--stroke, 0.1em) solid currentColor;
   border-bottom: none;
   border-left: none;
-  /* transform */
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   -webkit-transform-origin: 100% 0;
@@ -29,7 +23,6 @@
 }
 
 .silicon-go-down {
-  /* position */
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
 }

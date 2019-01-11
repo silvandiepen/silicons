@@ -2,51 +2,49 @@
 
 @mixin silicon-mail($selector: '.#{$silicon-prefix}mail') {
 	#{$selector} {
-		/* position */
+		// Position
 		position: relative;
 
-		/* size */
+		// Box Model
 		display: inline-block;
-		box-sizing: border-box;
 		width: 1em;
 		height: .75em;
-
-		/* overflow */
-		overflow: hidden;
+		box-sizing: border-box;
 		
-		/* border */
+		// Border
 		border: #{$silicon-stroke-var} solid currentColor;
 		border-radius: #{$silicon-stroke-var};
+
+		// Visual
+		overflow: hidden;
 		
-		
-		
-		&:after {
+		&::after {
 			content: '';
 
-			/* position */
+			// Position
 			position: absolute;
 			left: 50%;
 
-			/* display */
+			// Box Model
 			display: block;
 			width: .6em;
 			height: .6em;
 
-			/* border */
+			// Border
 			border: calc(#{$silicon-stroke-var} / 2) solid currentColor;
 			border-radius: #{$silicon-stroke-var};
 			
-			/* trasnform */
+			// Transform
 			transform: translate(-50%,-50%) rotate(45deg);
 			transform-origin: 50% 50%;
 		}
 		
 		&.colored{
-			/* text */
-			color: $silicons-color-dark-gray;
-			
-			/* background */
+			// Background
 			background-color: $silicons-color-white;
+			
+			// Typography
+			color: $silicons-color-dark-gray;
 		}
 	}
 }

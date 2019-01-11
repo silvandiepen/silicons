@@ -2,13 +2,20 @@
 
 @mixin silicon-file-import($selector: '.#{$silicon-prefix}file-import') {
 	#{$selector} {		
+		// Position
 		position: relative;
 
+		// Box Model
 		display: inline-block;
-		box-sizing: border-box;
 		width: 1em;
 		height: 0.75em;
+		box-sizing: border-box;
 
+		// Border
+		border: #{$silicon-stroke-var} solid currentColor;
+		border-top: 0;
+
+		// Background
 		background-image: linear-gradient(
 			to right,
 			currentColor 33.33%,
@@ -21,29 +28,32 @@
 		background-position: top left;
 		background-size: 100% #{$silicon-stroke-var};
 
-		border: #{$silicon-stroke-var} solid currentColor;
-		border-top: 0;
-
-		&:before,
-		&:after {
+		&::before,
+		&::after {
 			content: '';
-
+			
+			// Position
 			position: absolute;
 			box-sizing: border-box;
 		}
 		
-		&:before {
+		&::before {
+			// Position
 			bottom: 40%;
 			left: 50%;
 
+			// Box Model
 			display: block;
 			width: calc(#{$silicon-stroke-var} / 2);
 			height: 0.5em;
 
+			// Background
 			background-color: currentColor;
+			
+			// Transform
 			transform: translateX(-50%);
 		}
-		&:after {
+		&::after {
 			bottom: calc(40% - #{$silicon-stroke-var} / 2);
 			left: 50%;
 
@@ -60,7 +70,7 @@
 		}
 		&.colored{
 			color: $silicons-color-dark;
-			&:before,&:after{
+			&::before,&::after{
 				color: $silicons-color-green;
 			}
 		}

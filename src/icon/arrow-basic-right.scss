@@ -2,10 +2,10 @@
 
 @mixin silicon-arrow-basic-right($selector: '.#{$silicon-prefix}arrow-basic-right') {
 	#{$selector} {
-		/* position */
+		// Position
 		position: relative;
 
-		/* size */
+		// Box Model
 		display: block;
 		width: 1em;
 		height: #{$silicon-stroke-var};
@@ -13,25 +13,25 @@
 		/* background  */
 		background-color: currentColor;
 
-		&:before {
+		&::before {
 			content: '';
 
-			/* size */
+			// Box Model
 			position: absolute;
 			top: calc(#{$silicon-stroke-var} * 0.5);
 			right: calc(#{$silicon-stroke-var} * -0.5);
 
-			/* size */
+			// Box Model
 			display: block;
 			width: 0.3em;
 			height: 0.3em;
 
-			/* border */
+			// Border
 			border: #{$silicon-stroke-var} solid currentColor;
 			border-bottom: none;
 			border-left: none;
 
-			/* transform */
+			// Transform
 			transform: rotate(45deg);
 			transform-origin: 100% 0;
 		}

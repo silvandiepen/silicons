@@ -5,51 +5,51 @@
 		--time-hours: 2;
 		--time-minutes: 35;
 
-		/* position */
+		// Position
 		position: relative;
 
-		/* size */
+		// Box Model
 		display: inline-block;
-		box-sizing: border-box;
 		width: 1em;
 		height: 1em;
+		box-sizing: border-box;
 
-		/* border */
+		// Border
 		border: #{$silicon-stroke-var} solid currentColor;
 		border-radius: 50%;
 
-		&:before,
-		&:after {
+		&::before,
+		&::after {
 			content: '';
 
-			/* position */
+			// Position
 			position: absolute;
 			bottom: calc(50% - (#{$silicon-stroke-var} /2));
 			left: 50%;
 
-			/* size */
+			// Box Model
 			display: block;
 			width: calc(#{$silicon-stroke-var} / 2);
-			margin-left: calc(#{$silicon-stroke-var} * -0.25);
 
-			/* background */
+			// Background
 			background-color: currentColor;
 
-			/* transform */
+			// Transform
 			transform-origin: 50% calc(100% - (#{$silicon-stroke-var} / 2));
+			margin-left: calc(#{$silicon-stroke-var} * -0.25);
 		}
-		&:before {
-			/* size */
+		&::before {
+			// Box Model
 			height: 0.5em;
 
-			/* transform */
+			// Transform
 			transform: rotate(calc(360deg / 12 * var(--time-hours, 4)));
 		}
-		&:after {
-			/* size */
+		&::after {
+			// Box Model
 			height: 0.35em;
 			
-			/* transform */
+			// Transform
 			transform: rotate(calc(360deg / 60 * var(--time-minutes, 11)));
 		}
 	}

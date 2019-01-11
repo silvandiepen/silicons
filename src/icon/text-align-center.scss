@@ -2,15 +2,15 @@
 @import 'text-align-left';
 
 @mixin silicon-text-align-center(
-	$selector: '#{$silicon-prefix}text-align-center'
+	$selector: '.#{$silicon-prefix}text-align-center'
 ) {
 	@include silicon-text-align-left($selector);
 	#{$selector} {
-		/* background */
+		// Background
 		background-position: bottom center;
 		
-		&:before {
-			/* background */
+		&::before {
+			// Background
 			background-position: bottom center;
 		}
 	}

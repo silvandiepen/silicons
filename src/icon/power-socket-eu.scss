@@ -1,16 +1,20 @@
 @import '../default';
 @mixin silicon-power-socket-eu($selector: '.#{$silicon-prefix}power-socket-eu') {
 	#{$selector} {
-		/* position */
+		// Position
 		position: relative;
 
-		/* size */
+		// Box Model
 		display: inline-block;
-		box-sizing: border-box;
 		width: 1em;
 		height: 1em;
+		box-sizing: border-box;
 
-		/* background */
+		// Border
+		border: #{$silicon-stroke-var} solid currentColor;
+		border-radius: 50%;
+
+		// Background
 		background-image: radial-gradient(
 				closest-side,
 				currentColor 100%,
@@ -40,9 +44,5 @@
 		background-size: calc(#{$silicon-stroke-var} * 1.5)
 				calc(#{$silicon-stroke-var} * 1.5),
 			calc(#{$silicon-stroke-var} * 1.5) calc(#{$silicon-stroke-var} * 1.5), #{$silicon-stroke-half-var} 100%, #{$silicon-stroke-half-var} 100%;
-
-		/* border */
-		border: #{$silicon-stroke-var} solid currentColor;
-		border-radius: 50%;
 	}
 }

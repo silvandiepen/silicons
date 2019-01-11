@@ -1,18 +1,13 @@
 .silicon-shape-circle {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 0.9em;
   height: 0.9em;
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-radius: 50%;
 }
 .silicon-shape-circle.colored {
-  /* text */
-  color: var(--turquoise,#3feac3);
-  /* background */
   background-color: var(--turquoise,#3feac3);
+  color: var(--turquoise,#3feac3);
 }

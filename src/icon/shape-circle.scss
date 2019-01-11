@@ -2,25 +2,25 @@
 
 @mixin silicon-shape-circle($selector: '.#{$silicon-prefix}shape-circle') {
 	#{$selector} {
-		/* position */
+		// Position
 		position: relative;
 
-		/* size */
+		// Box Model
 		display: inline-block;
-    box-sizing: border-box;
 		width: .9em;
 		height: .9em;
+    box-sizing: border-box;
 		
-		/* border */
+		// Border
 		border: #{$silicon-stroke-var} solid currentColor;
 		border-radius: 50%;
 		
 		&.colored{
-			/* text */
-			color: $silicons-color-turquoise;
+			// Background
+			background-color: $silicons-color-turquoise;
 			
-			/* background */
-			background-color: $silicons-color-turquoise; 
+			// Typography
+			color: $silicons-color-turquoise; 
 		}
 	}
 }

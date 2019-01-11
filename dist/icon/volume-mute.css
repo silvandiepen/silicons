@@ -1,21 +1,21 @@
 .silicon-volume-mute {
   position: relative;
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 1em;
+  box-sizing: border-box;
   border-bottom: none;
   border-left: none;
   -webkit-transform: translateX(25%) rotate(45deg);
           transform: translateX(25%) rotate(45deg);
 }
-.silicon-volume-mute:before, .silicon-volume-mute:after {
+.silicon-volume-mute::before, .silicon-volume-mute::after {
   content: "";
   position: absolute;
   display: block;
   box-sizing: border-box;
 }
-.silicon-volume-mute:before {
+.silicon-volume-mute::before {
   bottom: calc(var(--stroke, 0.1em) * -1.5);
   left: calc(var(--stroke, 0.1em) * -1.5);
   width: 0;
@@ -25,7 +25,7 @@
   border-right-color: transparent;
   border-radius: var(--stroke, 0.1em);
 }
-.silicon-volume-mute:after {
+.silicon-volume-mute::after {
   bottom: calc(var(--stroke, 0.1em) * -2);
   left: calc(var(--stroke, 0.1em) * -2);
   width: calc(var(--stroke, 0.1em) * 4);
@@ -37,7 +37,7 @@
 .silicon-volume-mute.colored {
   color: var(--gray,#7f7f7f);
 }
-.silicon-volume-mute.colored:after, .silicon-volume-mute.colored:before {
+.silicon-volume-mute.colored::after, .silicon-volume-mute.colored::before {
   color: var(--blue,#1eb3e0);
 }
 

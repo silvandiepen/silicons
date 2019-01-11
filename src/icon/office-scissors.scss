@@ -2,57 +2,57 @@
 
 @mixin silicon-office-scissors($selector: '.#{$silicon-prefix}office-scissors') {
 	#{$selector} {
-		/* position */
+		// Position
 		position: relative;
 		width: 1em;
 		height: 1em;
 		
-		/* background */
+		// Background
 		background-image: radial-gradient(closest-side, transparent 50%, currentColor 50%, currentColor 100%, transparent),radial-gradient(closest-side, transparent 50%, currentColor 50%, currentColor 100%, transparent);
 		background-repeat: no-repeat,no-repeat; 
 		background-position: .65em bottom, .15em bottom ;
 		background-size: 0.2em 0.25em, 0.2em 0.25em;
 		
-		/* transform */
+		// Transform
 		transform: rotate(45deg);
 
-		&:before,
-		&:after {
+		&::before,
+		&::after {
 			content: '';
 
-		/* position */
+		// Position
 			position: absolute;
 			top: -.05em;
 
-		/* size */
+		// Box Model
 			display: block;
 			width: #{$silicon-stroke-var};
 			height: 1em;
 			
-			/* background */
+			// Background
 			background-color: currentColor;
 			
-			/* transform */
+			// Transform
 			transform-origin: 50% 50%;
 		}
-		&:before {
-			/* position */
+		&::before {
+			// Position
 			right: 50%;
 			
-			/* border */
+			// Border
 			border-radius:.2em 0 0 120%;
 			
-			/* transform */
+			// Transform
 			transform: rotate(-22.5deg);
 		}
-		&:after {
-			/* position */
+		&::after {
+			// Position
 			left: 50%;
 			
-			/* border */
+			// Border
 			border-radius:0 .2em 120% 0;
 			
-			/* transform */
+			// Transform
 			transform: rotate(22.5deg);
 		}
 	}

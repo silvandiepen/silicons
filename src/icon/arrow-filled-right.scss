@@ -1,40 +1,40 @@
 @import '../default';
 
 @mixin silicon-arrow-filled-right(
-	$selector: '#{$silicon-prefix}arrow-filled-right'
+	$selector: '.#{$silicon-prefix}arrow-filled-right'
 ) {
 	#{$selector} {
-		/* position */
+		// Position
 		position: relative;
 
-		/* size */
+		// Box Model
 		display: block;
 		width: 1em;
 		height: #{$silicon-stroke-var};
 
-		/* background */
+		// Background
 		background-color: currentColor;
 
-		&:before {
+		&::before {
 			content: '';
 
-			/* size */
+			// Box Model
 			position: absolute;
 			top: calc(#{$silicon-stroke-var} * 0.5);
 			right: calc(#{$silicon-stroke-var} * -0.5);
 
-			/* size */
+			// Box Model
 			display: block;
 			width: 0;
 			height: 0;
 
-			/* border */
+			// Border
 			border: 0.15em solid currentColor;
 			border-bottom-color: transparent;
 			border-left-color: transparent;
 			border-radius: 0.05em;
 
-			/* transform */
+			// Transform
 			transform: rotate(45deg);
 			transform-origin: 100% 0;
 		}

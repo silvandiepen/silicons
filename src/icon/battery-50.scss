@@ -4,29 +4,29 @@
 @mixin silicon-battery-50($selector: '.#{$silicon-prefix}battery-50') {
 	@include silicon-battery-empty(#{$selector});
 	#{$selector} {
-		&:after {
+		&::after {
 			content: '';
 
-			/* position */
+			// Position
 			position: absolute;
 			top: calc(#{$silicon-stroke-var} / 2);
 			left: calc(#{$silicon-stroke-var} / 2);
 
-			/* size */
+			// Box Model
 			display: block;
 			width: calc(50%);
 			height: calc(100% - #{$silicon-stroke-var});
 
-			/* background */
-			background-color: currentColor;
-
-			/* border */
+			// Border
 			border-radius: calc(#{$silicon-stroke-var} / 2);
+
+			// Background
+			background-color: currentColor;
 		}
 
 		&.colored {
-			&:after {
-				/* background */
+			&::after {
+				// Background
 				background-color: $silicons-color-orange;
 			}
 		}

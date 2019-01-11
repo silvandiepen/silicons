@@ -1,82 +1,62 @@
 .silicon-smiley-cry {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 1em;
-  /* background */
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) / 1) solid currentColor;
+  border-radius: 50%;
   background-image: radial-gradient(closest-side, currentColor 100%, transparent), radial-gradient(closest-side, currentColor 100%, transparent);
   background-repeat: no-repeat, no-repeat;
   background-position: left calc(50% + 0.15em) bottom calc(50% + 0.1em), right calc(50% + 0.15em) bottom calc(50% + 0.1em);
   background-size: 0.2em 0.2em, 0.2em 0.2em;
-  /* border */
-  border: calc(var(--stroke, 0.1em) / 1) solid currentColor;
-  border-radius: 50%;
 }
-.silicon-smiley-cry:before, .silicon-smiley-cry:after {
+.silicon-smiley-cry::before, .silicon-smiley-cry::after {
   content: "";
-  /* position */
   position: absolute;
   box-sizing: border-box;
 }
-.silicon-smiley-cry:after {
-  /* position */
+.silicon-smiley-cry::after {
   top: 50%;
   left: 50%;
-  /* size */
   width: 0.5em;
   height: 0.5em;
-  /* border */
   border: calc(var(--stroke, 0.1em) / 2) solid transparent;
   border-bottom-color: currentColor;
   border-radius: 50%;
-  /* transform */
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
 .silicon-smiley-cry.colored {
-  /* text */
-  color: var(--yellow,#f5c505);
-  /* background */
   background-color: var(--yellow,#f5c505);
   background-image: radial-gradient(closest-side, var(--black,#101010) 50%, var(--white,#ffffff) 50%, var(--white,#ffffff) 100%, transparent), radial-gradient(closest-side, var(--black,#101010) 50%, var(--white,#ffffff) 50%, var(--white,#ffffff) 100%, transparent);
+  color: var(--yellow,#f5c505);
 }
-.silicon-smiley-cry.colored:after {
-  /* text */
+.silicon-smiley-cry.colored::after {
   color: var(--black,#101010);
 }
 
-.silicon-smiley-cry:before {
+.silicon-smiley-cry::before {
   content: "";
-  /* position */
   position: absolute;
   top: 50%;
   right: calc(50% + 0.15em);
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: 0.2em;
   height: 0.2em;
-  /* border */
+  box-sizing: border-box;
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-radius: 0 50% 50% 50%;
-  /* transform */
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
-.silicon-smiley-cry:after {
-  /* border */
+.silicon-smiley-cry::after {
   border-top-color: currentColor;
   border-bottom-color: transparent;
-  /* transform */
   -webkit-transform: translate(-50%, 25%);
           transform: translate(-50%, 25%);
 }
-.silicon-smiley-cry.colored:before {
-  /* text */
-  color: #6666ff;
-  /* background */
+.silicon-smiley-cry.colored::before {
   background-color: #9999ff;
+  color: #6666ff;
 }

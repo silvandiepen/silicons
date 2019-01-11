@@ -1,58 +1,44 @@
 .silicon-file-download {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 0.5em;
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-top: 0;
 }
-.silicon-file-download:before, .silicon-file-download:after {
+.silicon-file-download::before, .silicon-file-download::after {
   content: "";
-  /* position */
   position: absolute;
   box-sizing: border-box;
 }
-.silicon-file-download:before {
-  /* position */
+.silicon-file-download::before {
   bottom: 75%;
   left: 50%;
-  /* size */
   display: block;
   width: calc(var(--stroke, 0.1em) / 2);
   height: 0.5em;
-  /* background */
   background-color: currentColor;
-  /* transform */
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
-.silicon-file-download:after {
-  /* position */
+.silicon-file-download::after {
   bottom: calc(75% - var(--stroke, 0.1em) / 2);
   left: 50%;
-  /* size */
   display: block;
   width: 0.33em;
   height: 0.33em;
-  /* border */
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-top: none;
   border-right: none;
-  /* transform */
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   -webkit-transform-origin: 0 100%;
           transform-origin: 0 100%;
 }
 .silicon-file-download.colored {
-  /* text */
   color: var(--dark,#303030);
 }
-.silicon-file-download.colored:before, .silicon-file-download.colored:after {
-  /* text */
+.silicon-file-download.colored::before, .silicon-file-download.colored::after {
   color: var(--blue,#1eb3e0);
 }

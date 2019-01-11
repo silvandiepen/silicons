@@ -2,55 +2,67 @@
 
 @mixin silicon-volume-off($selector: '.#{$silicon-prefix}volume-off') {
 	#{$selector} {
+		// Position
 		position: relative;
 
+		// Box Model
 		display: inline-block;
-		box-sizing: border-box;
 		width: 1em;
 		height: 1em;
+		box-sizing: border-box;
 
+		// Border
 		border-bottom: none;
 		border-left: none;
 
+		// Transform
 		transform: translateX(25%) rotate(45deg);
 
-		&:before,
-		&:after {
+		&::before,
+		&::after {
 			content: '';
 
+			// Position
 			position: absolute;
 
+			// Box Model
 			display: block;
 			box-sizing: border-box;
 		}
-		&:before {
+		&::before {
+			// Position
 			bottom: calc(#{$silicon-stroke-var} * -1.5);
 			left: calc(#{$silicon-stroke-var} * -1.5);
 
+			// Box Model
 			width: 0;
 			height: 0;
 
+			// Border
 			border: calc(#{$silicon-stroke-var} * 3) solid currentColor;
 			border-top-color: transparent;
 			border-right-color: transparent;
-
 			border-radius: #{$silicon-stroke-var};
 		}
-		&:after {
+		&::after {
+			// Position
 			bottom: calc(#{$silicon-stroke-var} * -2);
 			left: calc(#{$silicon-stroke-var} * -2);
 
+			// Box Model
 			width: calc(#{$silicon-stroke-var} * 4);
 			height: calc(#{$silicon-stroke-var} * 4);
 
+			// Background
 			background-color: currentColor;
 
+			// Transform
 			transform: rotate(-45deg);
 		}
 		&.colored {
 			color: $silicons-color-gray;
-			&:after,
-			&:before {
+			&::after,
+			&::before {
 				color: $silicons-color-blue;
 			}
 		}

@@ -1,49 +1,37 @@
 .silicon-ball-basketball {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 1em;
-  overflow: hidden;
-  /* background */
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 50%;
   background-image: linear-gradient(to right, currentColor, currentColor), linear-gradient(to right, currentColor, currentColor);
   background-repeat: no-repeat, no-repeat;
   background-position: center center, center, center;
   background-size: calc(var(--stroke, 0.1em) / 2) 100%, 100% calc(var(--stroke, 0.1em) / 2);
-  /* border */
-  border: var(--stroke, 0.1em) solid currentColor;
-  border-radius: 50%;
-  /* transform */
   -webkit-transform: rotate(22.5deg);
           transform: rotate(22.5deg);
+  overflow: hidden;
 }
-.silicon-ball-basketball:before, .silicon-ball-basketball:after {
+.silicon-ball-basketball::before, .silicon-ball-basketball::after {
   content: "";
-  /* position */
   position: absolute;
   top: 0;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: 100%;
   height: 100%;
-  /* border */
+  box-sizing: border-box;
   border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
   border-radius: 50%;
 }
-.silicon-ball-basketball:before {
-  /* position */
+.silicon-ball-basketball::before {
   left: 70%;
 }
-.silicon-ball-basketball:after {
-  /* position */
+.silicon-ball-basketball::after {
   right: 70%;
 }
 .silicon-ball-basketball.colored {
-  /* text */
-  color: var(--color-black, color(Black));
-  /* background */
   background-color: var(--color-orange, color(Orange));
+  color: var(--color-black, color(Black));
 }

@@ -2,55 +2,56 @@
 
 @mixin silicon-text-align-left($selector: '.#{$silicon-prefix}text-align-left') {
 	#{$selector} {
-		/* position */
+		// Position
 		position: relative;
 
-		/* size */
+		// Box Model
 		display: inline-block;
-		box-sizing: border-box;
 		width: 1em;
 		height: calc(#{$silicon-stroke-var} * 3);
+		box-sizing: border-box;
 
-		/* background */
+		// Border
+		border-top: #{$silicon-stroke-var} solid currentColor;
+		border-right: none;
+		border-left: none;
+
+		// Background
 		background-image: linear-gradient(to right, currentColor, currentColor);
 		background-repeat: no-repeat;
 		background-position: bottom left;
 		background-size: 0.75em #{$silicon-stroke-var};
 
-		/* border */
-		border-top: #{$silicon-stroke-var} solid currentColor;
-		border-right: none;
-		border-left: none;
-
-		/* transform */
+		// Transform
 		transform: translateY(calc(#{$silicon-stroke-var} * -2));
 
-		&:before {
+		&::before {
 			content: '';
 
-			/* position */
+			// Position
 			position: absolute;
 			top: calc(#{$silicon-stroke-var} * 3);
 			left: 0;
 
-			/* size */
+			// Box Model
 			display: block;
-			box-sizing: border-box;
 			width: 100%;
 			height: calc(#{$silicon-stroke-var} * 3);
+			box-sizing: border-box;
 
-			/* background */
+			// Border
+			border-top: #{$silicon-stroke-var} solid currentColor;
+			border-right: none;
+			border-left: none;
+
+			// Background
 			background-image: linear-gradient(to right, currentColor, currentColor);
 			background-repeat: no-repeat;
 			background-position: bottom left;
 			background-size: 0.5em #{$silicon-stroke-var};
-
-			/* border */
-			border-top: #{$silicon-stroke-var} solid currentColor;
-			border-right: none;
-			border-left: none;
 		}
 		&.colored {
+			// Typography
 			color: $silicons-color-dark;
 		}
 	}

@@ -1,14 +1,11 @@
 .silicon-ban {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 1em;
-  /* background  */
-  background-image: linear-gradient(to right bottom, transparent calc(50% - (var(--stroke, 0.1em) * 0.5)), currentColor calc(50% - (var(--stroke, 0.1em) * 0.5)), currentColor calc(50% + (var(--stroke, 0.1em) * 0.5)), transparent calc(50% - (var(--stroke, 0.1em) * 0.5)));
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-radius: 50%;
+  /* background  */
+  background-image: linear-gradient(to right bottom, transparent calc(50% - (var(--stroke, 0.1em) * 0.5)), currentColor calc(50% - (var(--stroke, 0.1em) * 0.5)), currentColor calc(50% + (var(--stroke, 0.1em) * 0.5)), transparent calc(50% - (var(--stroke, 0.1em) * 0.5)));
 }

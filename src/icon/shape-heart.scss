@@ -1,55 +1,74 @@
-@import "../default";
+@import '../default';
 
 @mixin silicon-shape-heart($selector: '.#{$silicon-prefix}shape-heart') {
-	#{$selector} {    
+	#{$selector} {
+		// Position
 		position: relative;
 
+		// Box Model
 		display: inline-block;
-    box-sizing: border-box;
 		width: 0.75em;
 		height: 0.75em;
+		box-sizing: border-box;
 
+		// Border
 		border-bottom: #{$silicon-stroke-var} solid currentColor;
 		border-left: #{$silicon-stroke-var} solid currentColor;
 
-    transform: translateY(0.25em) rotate(-45deg);
-    
-    &:before, &:after{
-      content: '';
-      
+		// Transform
+		transform: translateY(0.25em) rotate(-45deg);
+
+		&::before,
+		&::after {
+			content: '';
+
+			// Position
 			position: absolute;
-      box-sizing: border-box;
-    }
-    
-		&:before {
+
+			// Box Model
+			box-sizing: border-box;
+		}
+
+		&::before {
+			// Position
 			top: calc(-0.5em + #{$silicon-stroke-var});
 			left: calc(#{$silicon-stroke-var} * -1);
 
+			// Box Model
 			width: 0.75em;
 			height: 0.5em;
 
+			// Border
 			border-top: #{$silicon-stroke-var} solid currentColor;
 			border-right: #{$silicon-stroke-var} solid currentColor;
 			border-left: #{$silicon-stroke-var} solid currentColor;
 			border-radius: 0.5em 0.5em 0 0;
 		}
 
-		&:after {
+		&::after {
+			// Position
 			top: 0;
 			left: calc(0.5em + #{$silicon-stroke-var});
 
+			// Box Model
 			width: 0.5em;
 			height: 0.75em;
 
+			// Border
 			border-top: #{$silicon-stroke-var} solid currentColor;
 			border-right: #{$silicon-stroke-var} solid currentColor;
 			border-bottom: #{$silicon-stroke-var} solid currentColor;
 			border-radius: 0 0.5em 0.5em 0;
-    }
+		}
 		&.colored {
-			&,&:after,&:before{
-			color: $silicons-color-dark-red;
-			background-color: $silicons-color-red;
+			&,
+			&::after,
+			&::before {
+				// Background
+				background-color: $silicons-color-red;
+
+				// Typography
+				color: $silicons-color-dark-red;
 			}
 		}
 	}

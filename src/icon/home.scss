@@ -2,15 +2,20 @@
 
 @mixin silicon-home($selector: '.#{$silicon-prefix}home') {
 	#{$selector} {
-		/* position */
+		// Position
 		position: relative;
 
-		/* size */
+		// Box Model
 		display: inline-block;
-		box-sizing: border-box;
 		width: 0.9em;
 		height: 0.5em;
+		box-sizing: border-box;
 
+		// Border
+		border: #{$silicon-stroke-var} solid currentColor;
+		border-top: none;
+
+		// Background
 		background-image: linear-gradient(to bottom, currentColor, currentColor),
 			linear-gradient(to bottom, currentColor, currentColor),
 			linear-gradient(to bottom, currentColor, currentColor),
@@ -22,25 +27,26 @@
 		background-size: 0.2em 0.3em, 0.1em 0.1em, 0.1em 0.1em, 0.1em 0.1em,
 			0.1em 0.1em;
 
-		/* border */
-		border: #{$silicon-stroke-var} solid currentColor;
-		border-top: none;
-
-		&:before {
+		&::before {
 			content: '';
 
-			/* position */
+			// Position
 			position: absolute;
 			top: 0;
 			left: 50%;
 
-			/* size */
+			// Box Model
 			display: block;
-			box-sizing: border-box;
 			width: calc(0.8em - (#{$silicon-stroke-var} * 1));
 			height: calc(0.8em - (#{$silicon-stroke-var} * 1));
+			box-sizing: border-box;
 
-			/* background */
+			// Border
+			border: #{$silicon-stroke-var} solid currentColor;
+			border-right: none;
+			border-bottom: none;
+
+			// Background
 			background-image: radial-gradient(
 				closest-side,
 				currentColor 100%,
@@ -51,12 +57,7 @@
 			background-size: calc(#{$silicon-stroke-var} * 1.5)
 				calc(#{$silicon-stroke-var} * 1.5);
 
-			/* border */
-			border: #{$silicon-stroke-var} solid currentColor;
-			border-right: none;
-			border-bottom: none;
-
-			/* transform */
+			// Transform
 			transform: translate(-50%, -50%) rotate(45deg);
 		}
 	}

@@ -1,29 +1,22 @@
 .silicon-search {
-  /* position */
   position: relative;
-  /* size */
   display: inline-block;
-  box-sizing: border-box;
   width: 1em;
   height: 1em;
-  /* border */
+  box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   border-radius: 50%;
 }
-.silicon-search:before {
+.silicon-search::before {
   content: "";
-  /* position */
   position: absolute;
   top: 100%;
   left: 100%;
-  /* size */
   display: block;
-  box-sizing: border-box;
   width: 0.5em;
   height: var(--stroke, 0.1em);
-  /* background */
+  box-sizing: border-box;
   background-color: currentColor;
-  /* transform */
   -webkit-transform: translate(-0.1em, -0.1em) rotate(45deg);
           transform: translate(-0.1em, -0.1em) rotate(45deg);
   -webkit-transform-origin: 0 50%;
