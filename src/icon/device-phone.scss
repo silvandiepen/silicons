@@ -1,7 +1,7 @@
 @import '../default';
 
 @mixin silicon-device-phone($selector: '.#{$silicon-prefix}device-phone') {
-	.#{$selector} {
+	#{$selector} {
 		/* position */
 		position: relative;
 

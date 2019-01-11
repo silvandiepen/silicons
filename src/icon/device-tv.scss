@@ -1,7 +1,7 @@
 @import '../default';
 
 @mixin silicon-device-tv($selector: '.#{$silicon-prefix}device-tv') {
-	.#{$selector} {
+	#{$selector} {
 		/* position */
 		position: relative;
 

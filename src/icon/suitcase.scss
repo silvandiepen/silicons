@@ -1,7 +1,7 @@
 @import '../default';
 
 @mixin silicon-suitcase($selector: '.#{$silicon-prefix}suitcase') {
-	.#{$selector} {
+	#{$selector} {
 		/* position */
 		position: relative;
 

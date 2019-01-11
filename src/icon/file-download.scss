@@ -1,7 +1,7 @@
 @import "../default";
 
 @mixin silicon-file-download($selector: '.#{$silicon-prefix}file-download') {
-	.#{$selector} {		
+	#{$selector} {		
 		/* position */ 
 		position: relative;
 

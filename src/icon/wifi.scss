@@ -1,7 +1,7 @@
 @import '../default';
 
 @mixin silicon-wifi($selector: '.#{$silicon-prefix}wifi') {
-	.#{$selector} {
+	#{$selector} {
 		position: relative;
 
 		display: inline-block;

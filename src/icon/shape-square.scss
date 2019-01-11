@@ -1,7 +1,7 @@
 @import '../default';
 
 @mixin silicon-shape-square($selector: '.#{$silicon-prefix}shape-square') {
-	.#{$selector} {
+	#{$selector} {
 		/* position */
 		position: relative;
 

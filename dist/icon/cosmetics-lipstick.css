@@ -1,4 +1,4 @@
-.silicon-cosmetics-lipstick {
+silicon-cosmetics-lipstick {
   /* position */
   position: relative;
   /* size */
@@ -15,7 +15,7 @@
   border-top-color: transparent;
   border-radius: 0.2em 0.2em 0.5em 0.5em/0.2em 0.2em 0.3em 0.3em;
 }
-.silicon-cosmetics-lipstick:before {
+silicon-cosmetics-lipstick:before {
   content: "";
   /* position */
   position: absolute;
@@ -39,14 +39,14 @@
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
-.silicon-cosmetics-lipstick.colored {
+silicon-cosmetics-lipstick.colored {
   /* text */
   color: var(--gray,#444444);
   /* background */
   background-color: var(--gray,#7f7f7f);
   background-image: radial-gradient(closest-side, var(--red,#eb0f33) calc(100% - 0.05em), var(--black,#101010) calc(100% - 0.05em), var(--black,#101010) 100%, var(--gray,#7f7f7f)), radial-gradient(closest-side, transparent calc(100% - 0.05em), var(--gray,#444444) calc(100% - 0.05em), var(--gray,#444444) 100%, transparent);
 }
-.silicon-cosmetics-lipstick.colored:before {
+silicon-cosmetics-lipstick.colored:before {
   /* text */
   color: var(--dark-red,#bb0c29);
   /* background */

@@ -1,7 +1,7 @@
 @import '../default';
 
 @mixin silicon-burger($selector: '.#{$silicon-prefix}burger') {
-	.#{$selector} {
+	#{$selector} {
 		/* position */
 		position: relative;
 

@@ -1,7 +1,7 @@
 @import '../default';
 
 @mixin silicon-archive($selector: '.#{$silicon-prefix}archive') {
-	.#{$selector} {
+	#{$selector} {
 		/* position */
 		position: relative;
 

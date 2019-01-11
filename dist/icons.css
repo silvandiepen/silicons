@@ -224,7 +224,7 @@
   transform: rotate(90deg);
 }
 
-.silicon-arrow-filled-left {
+silicon-arrow-filled-left {
   /* position */
   position: relative;
   /* size */
@@ -234,7 +234,7 @@
   /* background */
   background-color: currentColor;
 }
-.silicon-arrow-filled-left:before {
+silicon-arrow-filled-left:before {
   content: "";
   /* size */
   position: absolute;
@@ -254,12 +254,12 @@
   transform-origin: 100% 0;
 }
 
-.silicon-arrow-filled-left {
+silicon-arrow-filled-left {
   /* position */
   transform: rotate(180deg);
 }
 
-.silicon-arrow-filled-right {
+silicon-arrow-filled-right {
   /* position */
   position: relative;
   /* size */
@@ -269,7 +269,7 @@
   /* background */
   background-color: currentColor;
 }
-.silicon-arrow-filled-right:before {
+silicon-arrow-filled-right:before {
   content: "";
   /* size */
   position: absolute;
@@ -1199,7 +1199,7 @@
   opacity: 0.5;
 }
 
-.silicon-cosmetics-lipstick {
+silicon-cosmetics-lipstick {
   /* position */
   position: relative;
   /* size */
@@ -1216,7 +1216,7 @@
   border-top-color: transparent;
   border-radius: 0.2em 0.2em 0.5em 0.5em/0.2em 0.2em 0.3em 0.3em;
 }
-.silicon-cosmetics-lipstick:before {
+silicon-cosmetics-lipstick:before {
   content: "";
   /* position */
   position: absolute;
@@ -1239,14 +1239,14 @@
   /* transform */
   transform: translateX(-50%);
 }
-.silicon-cosmetics-lipstick.colored {
+silicon-cosmetics-lipstick.colored {
   /* text */
   color: var(--gray,#444444);
   /* background */
   background-color: var(--gray,#7f7f7f);
   background-image: radial-gradient(closest-side, var(--red,#eb0f33) calc(100% - 0.05em), var(--black,#101010) calc(100% - 0.05em), var(--black,#101010) 100%, var(--gray,#7f7f7f)), radial-gradient(closest-side, transparent calc(100% - 0.05em), var(--gray,#444444) calc(100% - 0.05em), var(--gray,#444444) 100%, transparent);
 }
-.silicon-cosmetics-lipstick.colored:before {
+silicon-cosmetics-lipstick.colored:before {
   /* text */
   color: var(--dark-red,#bb0c29);
   /* background */
@@ -3525,7 +3525,7 @@
   color: var(--dark,#303030);
 }
 
-.silicon-text-align-center {
+silicon-text-align-center {
   /* position */
   position: relative;
   /* size */
@@ -3545,7 +3545,7 @@
   /* transform */
   transform: translateY(calc(var(--stroke, 0.1em) * -2));
 }
-.silicon-text-align-center:before {
+silicon-text-align-center:before {
   content: "";
   /* position */
   position: absolute;
@@ -3566,20 +3566,20 @@
   border-right: none;
   border-left: none;
 }
-.silicon-text-align-center.colored {
+silicon-text-align-center.colored {
   color: var(--dark,#303030);
 }
 
-.silicon-text-align-center {
+silicon-text-align-center {
   /* background */
   background-position: bottom center;
 }
-.silicon-text-align-center:before {
+silicon-text-align-center:before {
   /* background */
   background-position: bottom center;
 }
 
-.silicon-text-align-justify {
+silicon-text-align-justify {
   /* position */
   position: relative;
   /* size */
@@ -3599,7 +3599,7 @@
   /* transform */
   transform: translateY(calc(var(--stroke, 0.1em) * -2));
 }
-.silicon-text-align-justify:before {
+silicon-text-align-justify:before {
   content: "";
   /* position */
   position: absolute;
@@ -3620,11 +3620,11 @@
   border-right: none;
   border-left: none;
 }
-.silicon-text-align-justify.colored {
+silicon-text-align-justify.colored {
   color: var(--dark,#303030);
 }
 
-.silicon-text-align-justify {
+silicon-text-align-justify {
   /* background */
   background-size: 1em var(--stroke, 0.1em);
 }
@@ -3674,7 +3674,7 @@
   color: var(--dark,#303030);
 }
 
-.silicon-text-align-right {
+silicon-text-align-right {
   /* position */
   position: relative;
   /* size */
@@ -3694,7 +3694,7 @@
   /* transform */
   transform: translateY(calc(var(--stroke, 0.1em) * -2));
 }
-.silicon-text-align-right:before {
+silicon-text-align-right:before {
   content: "";
   /* position */
   position: absolute;
@@ -3715,14 +3715,14 @@
   border-right: none;
   border-left: none;
 }
-.silicon-text-align-right.colored {
+silicon-text-align-right.colored {
   color: var(--dark,#303030);
 }
 
-.silicon-text-align-right {
+silicon-text-align-right {
   background-position: bottom right;
 }
-.silicon-text-align-right:before {
+silicon-text-align-right:before {
   background-position: bottom right;
 }
 

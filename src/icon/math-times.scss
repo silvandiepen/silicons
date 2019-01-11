@@ -3,7 +3,7 @@
 
 @mixin silicon-math-times($selector: '.#{$silicon-prefix}math-times') {
 	@include silicon-plus($selector);
-	.#{$selector} {
+	#{$selector} {
 		/* transform */
 		transform: rotate(45deg);
 		&:after{

@@ -1,7 +1,7 @@
 @import '../default';
 
 @mixin silicon-lock($selector: '.#{$silicon-prefix}lock') {
-	.#{$selector} {
+	#{$selector} {
 		/* position */
 		position: relative;
 

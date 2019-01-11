@@ -3,7 +3,7 @@
 
 @mixin silicon-arrow-filled-up($selector: '.#{$silicon-prefix}arrow-filled-up') {
 	@include silicon-arrow-filled-right($selector);
-	.#{$selector} {
+	#{$selector} {
 		/* position */
 		transform: rotate(-90deg);
 	}

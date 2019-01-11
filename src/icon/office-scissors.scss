@@ -1,7 +1,7 @@
 @import '../default';
 
 @mixin silicon-office-scissors($selector: '.#{$silicon-prefix}office-scissors') {
-	.#{$selector} {
+	#{$selector} {
 		/* position */
 		position: relative;
 		width: 1em;

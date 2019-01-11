@@ -1,7 +1,7 @@
 @import '../default';
 
 @mixin silicon-math-plus($selector: '.#{$silicon-prefix}math-plus') {
-	.#{$selector} {
+	#{$selector} {
 		/* position */
 		position: relative;
 

@@ -1,4 +1,4 @@
-.silicon-text-align-justify {
+silicon-text-align-justify {
   /* position */
   position: relative;
   /* size */
@@ -19,7 +19,7 @@
   -webkit-transform: translateY(calc(var(--stroke, 0.1em) * -2));
           transform: translateY(calc(var(--stroke, 0.1em) * -2));
 }
-.silicon-text-align-justify:before {
+silicon-text-align-justify:before {
   content: "";
   /* position */
   position: absolute;
@@ -40,11 +40,11 @@
   border-right: none;
   border-left: none;
 }
-.silicon-text-align-justify.colored {
+silicon-text-align-justify.colored {
   color: var(--dark,#303030);
 }
 
-.silicon-text-align-justify {
+silicon-text-align-justify {
   /* background */
   background-size: 1em var(--stroke, 0.1em);
 }

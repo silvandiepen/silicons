@@ -1,7 +1,7 @@
 @import '../default';
 
 @mixin silicon-save($selector: '.#{$silicon-prefix}save') {
-	.#{$selector} {
+	#{$selector} {
 		/* position */
 		position: relative;
 	}

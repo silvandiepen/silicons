@@ -1,4 +1,4 @@
-.silicon-arrow-filled-left {
+silicon-arrow-filled-left {
   /* position */
   position: relative;
   /* size */
@@ -8,7 +8,7 @@
   /* background */
   background-color: currentColor;
 }
-.silicon-arrow-filled-left:before {
+silicon-arrow-filled-left:before {
   content: "";
   /* size */
   position: absolute;
@@ -30,7 +30,7 @@
           transform-origin: 100% 0;
 }
 
-.silicon-arrow-filled-left {
+silicon-arrow-filled-left {
   /* position */
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);

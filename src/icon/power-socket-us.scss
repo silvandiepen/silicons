@@ -1,6 +1,6 @@
 @import '../default';
 @mixin silicon-power-socket-us($selector: '.#{$silicon-prefix}power-socket-us') {
-	.#{$selector} {
+	#{$selector} {
 		/* position */
 		position: relative;
 

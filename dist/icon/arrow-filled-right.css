@@ -1,4 +1,4 @@
-.silicon-arrow-filled-right {
+silicon-arrow-filled-right {
   /* position */
   position: relative;
   /* size */
@@ -8,7 +8,7 @@
   /* background */
   background-color: currentColor;
 }
-.silicon-arrow-filled-right:before {
+silicon-arrow-filled-right:before {
   content: "";
   /* size */
   position: absolute;

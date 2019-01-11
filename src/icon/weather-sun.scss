@@ -1,7 +1,7 @@
 @import '../default';
 
 @mixin silicon-weather-sun($selector: '.#{$silicon-prefix}weather-sun') {
-	.#{$selector} {
+	#{$selector} {
 		position: relative;
 
 		display: inline-block;

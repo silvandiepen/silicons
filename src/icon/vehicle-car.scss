@@ -1,7 +1,7 @@
 @import '../default';
 
 @mixin silicon-vehicle-car($selector: '.#{$silicon-prefix}vehicle-car') {
-	.#{$selector} {
+	#{$selector} {
 		/* position */
 		position: relative;
 

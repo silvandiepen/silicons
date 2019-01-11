@@ -1,7 +1,7 @@
 @import '../default';
 
 @mixin silicon-globe($selector: '.#{$silicon-prefix}globe') {
-	.#{$selector} {
+	#{$selector} {
 		/* position */
 		position: relative;
 

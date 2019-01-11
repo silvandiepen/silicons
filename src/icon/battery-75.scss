@@ -3,7 +3,7 @@
 
 @mixin silicon-battery-75($selector: '.#{$silicon-prefix}battery-75') {
 	@include silicon-battery-empty(#{$selector});
-	.#{$selector} {
+	#{$selector} {
 		&:after {
 			content: '';
 

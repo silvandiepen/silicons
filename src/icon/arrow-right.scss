@@ -1,7 +1,7 @@
 @import '../default';
 
 @mixin silicon-arrow-right($selector: '.#{$silicon-prefix}arrow-right') {
-	.#{$selector} {
+	#{$selector} {
 		/* position */
 		position: relative;
 

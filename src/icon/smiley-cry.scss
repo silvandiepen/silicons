@@ -3,7 +3,7 @@
 
 @mixin silicon-smiley-cry($selector: '.#{$silicon-prefix}smiley-cry') {
 	@include silicon-smiley-happy($selector);
-	.#{$selector} {
+	#{$selector} {
 		&:before {
 			content: '';
 

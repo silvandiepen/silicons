@@ -1,7 +1,7 @@
 @import '../default';
 
 @mixin silicon-copy($selector: '.#{$silicon-prefix}copy') {
-	.#{$selector} {
+	#{$selector} {
 		/* position */
 		position: relative;
 		z-index: 1;

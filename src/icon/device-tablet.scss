@@ -3,7 +3,7 @@
 
 @mixin silicon-device-tablet($selector: '.#{$silicon-prefix}device-tablet') {
 	@include silicon-device-phone($selector);
-	.#{$selector} {
+	#{$selector} {
 		/* size */
 		width: 1em;
 		height: 0.6em;

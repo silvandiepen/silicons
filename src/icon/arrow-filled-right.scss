@@ -3,7 +3,7 @@
 @mixin silicon-arrow-filled-right(
 	$selector: '#{$silicon-prefix}arrow-filled-right'
 ) {
-	.#{$selector} {
+	#{$selector} {
 		/* position */
 		position: relative;
 

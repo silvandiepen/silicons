@@ -5,7 +5,7 @@
 	$selector: '#{$silicon-prefix}text-align-right'
 ) {
 	@include silicon-text-align-left($selector);
-	.#{$selector} {
+	#{$selector} {
 		background-position: bottom right;
 		
 		&:before {

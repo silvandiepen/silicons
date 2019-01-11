@@ -1,7 +1,7 @@
 @import '../default';
 
 @mixin silicon-go-right($selector: '.#{$silicon-prefix}go-right') {
-	.#{$selector} {
+	#{$selector} {
 		/* position */
 		position: relative;
 

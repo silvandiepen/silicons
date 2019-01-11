@@ -1,7 +1,7 @@
 @import '../default';
 
 @mixin silicon-art-spraycan($selector: '.#{$silicon-prefix}art-spraycan') {
-	.#{$selector} {
+	#{$selector} {
 		/* position */
 		position: relative;
 

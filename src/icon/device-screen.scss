@@ -1,7 +1,7 @@
 @import '../default';
 
 @mixin silicon-device-screen($selector: '.#{$silicon-prefix}device-screen') {
-	.#{$selector} {
+	#{$selector} {
 		/* position */
 		position: relative;
 

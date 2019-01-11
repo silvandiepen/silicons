@@ -1,7 +1,7 @@
 @import '../default';
 
 @mixin silicon-search($selector: '.#{$silicon-prefix}search') {
-	.#{$selector} {
+	#{$selector} {
 		/* position */
 		position: relative;
 

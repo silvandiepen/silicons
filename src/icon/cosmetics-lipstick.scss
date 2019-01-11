@@ -3,7 +3,7 @@
 @mixin silicon-cosmetics-lipstick(
 	$selector: '#{$silicon-prefix}cosmetics-lipstick'
 ) {
-	.#{$selector} {
+	#{$selector} {
 		/* position */
 		position: relative;
 

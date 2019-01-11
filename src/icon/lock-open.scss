@@ -3,7 +3,7 @@
 
 @mixin silicon-lock-open($selector: '.#{$silicon-prefix}lock-open') {
 	@include silicon-lock($selector);
-	.#{$selector} {
+	#{$selector} {
 		&:before{
 			/* border */
 			border-right-color: transparent;

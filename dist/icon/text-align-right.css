@@ -1,4 +1,4 @@
-.silicon-text-align-right {
+silicon-text-align-right {
   /* position */
   position: relative;
   /* size */
@@ -19,7 +19,7 @@
   -webkit-transform: translateY(calc(var(--stroke, 0.1em) * -2));
           transform: translateY(calc(var(--stroke, 0.1em) * -2));
 }
-.silicon-text-align-right:before {
+silicon-text-align-right:before {
   content: "";
   /* position */
   position: absolute;
@@ -40,13 +40,13 @@
   border-right: none;
   border-left: none;
 }
-.silicon-text-align-right.colored {
+silicon-text-align-right.colored {
   color: var(--dark,#303030);
 }
 
-.silicon-text-align-right {
+silicon-text-align-right {
   background-position: bottom right;
 }
-.silicon-text-align-right:before {
+silicon-text-align-right:before {
   background-position: bottom right;
 }

@@ -1,7 +1,7 @@
 @import '../default';
 
 @mixin silicon-trash($selector: '.#{$silicon-prefix}trash') {
-	.#{$selector} {
+	#{$selector} {
 		position: relative;
 
 		display: inline-block;

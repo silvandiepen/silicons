@@ -1,7 +1,7 @@
 @import '../default';
 
 @mixin silicon-creditcard($selector: '.#{$silicon-prefix}creditcard') {
-	.#{$selector} {
+	#{$selector} {
 		/* position */
 		position: relative;
 

@@ -3,7 +3,7 @@
 
 @mixin silicon-smiley-angry($selector: '.#{$silicon-prefix}smiley-angry') {
 	@include silicon-smiley-happy($selector);
-	.#{$selector} {
+	#{$selector} {
 		background-image: none;
 		&:before,
 		&:after {

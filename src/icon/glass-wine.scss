@@ -1,7 +1,7 @@
 @import '../default';
 
 @mixin silicon-glass-wine($selector: '.#{$silicon-prefix}glass-wine') {
-	.#{$selector} {
+	#{$selector} {
 		/* position */
 		position: relative;
 

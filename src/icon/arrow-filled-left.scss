@@ -5,7 +5,7 @@
 	$selector: '#{$silicon-prefix}arrow-filled-left'
 ) {
 	@include silicon-arrow-filled-right($selector);
-	.#{$selector} {
+	#{$selector} {
 		/* position */
 		transform: rotate(180deg);
 	}

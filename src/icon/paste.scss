@@ -1,7 +1,7 @@
 @import '../default';
 
 @mixin silicon-paste($selector: '.#{$silicon-prefix}paste') {
-	.#{$selector} {
+	#{$selector} {
 		/* position */
 		position: relative;
 

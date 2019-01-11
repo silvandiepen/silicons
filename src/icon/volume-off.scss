@@ -1,7 +1,7 @@
 @import '../default';
 
 @mixin silicon-volume-off($selector: '.#{$silicon-prefix}volume-off') {
-	.#{$selector} {
+	#{$selector} {
 		position: relative;
 
 		display: inline-block;
