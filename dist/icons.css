@@ -855,6 +855,28 @@
   transform: translateY(calc(var(--stroke, 0.1em) * -2));
 }
 
+.silicon-check {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  box-sizing: border-box;
+}
+.silicon-check::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 1em;
+  height: 75em;
+  box-sizing: border-box;
+  border-width: var(--stroke, 0.1em);
+  border-style: solid;
+  border-color: transparent transparent currentColor currentColor;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
 .silicon-code {
   position: relative;
   display: inline-block;

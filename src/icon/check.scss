@@ -1,0 +1,38 @@
+@import '../default';
+
+@mixin silicon-check($selector: '.#{$silicon-prefix}check') {
+	#{$selector} {
+		// Position
+		position: relative;
+
+		// Box Model
+		display: inline-block;
+		width: 1em;
+		height: 1em;
+		box-sizing: border-box;
+		
+	
+		&::before {
+			content: '';
+
+			// Position
+			position: absolute;
+			top: 50%;
+			left: 50%;
+
+			// Box Model
+			display: block;
+			width: 1em;
+			height: 75em;
+			box-sizing: border-box;
+
+			// Border
+			border-width: #{$silicon-stroke-var};
+			border-style: solid;
+			border-color: transparent transparent currentColor currentColor;
+
+			// Transform
+			transform: translate(-50%, -50%) rotate(45deg);
+		}
+	}
+}
