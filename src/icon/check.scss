@@ -23,7 +23,7 @@
 			// Box Model
 			display: block;
 			width: 1em;
-			height: 75em;
+			height: .75em;
 			box-sizing: border-box;
 
 			// Border
@@ -32,7 +32,7 @@
 			border-color: transparent transparent currentColor currentColor;
 
 			// Transform
-			transform: translate(-50%, -50%) rotate(45deg);
+			transform: translate(-50%, -50%) rotate(-45deg);
 		}
 	}
 }
