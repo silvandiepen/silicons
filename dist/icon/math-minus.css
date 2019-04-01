@@ -15,12 +15,6 @@
   height: var(--stroke, 0.1em);
   box-sizing: border-box;
   background-color: currentColor;
-}
-.silicon-math-minus::before {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-}
-.silicon-math-minus::after {
-  -webkit-transform: translate(-50%, -50%) rotate(90deg);
-          transform: translate(-50%, -50%) rotate(90deg);
 }

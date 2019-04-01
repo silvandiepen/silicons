@@ -871,7 +871,7 @@
   width: 1em;
   height: 0.75em;
   box-sizing: border-box;
-  border-width: var(--stroke, 0.1em);
+  border-width: 0 0 var(--stroke, 0.1em) var(--stroke, 0.1em);
   border-style: solid;
   border-color: transparent transparent currentColor currentColor;
   transform: translate(-50%, -50%) rotate(-45deg);
@@ -1866,12 +1866,7 @@
   height: var(--stroke, 0.1em);
   box-sizing: border-box;
   background-color: currentColor;
-}
-.silicon-math-minus::before {
   transform: translate(-50%, -50%);
-}
-.silicon-math-minus::after {
-  transform: translate(-50%, -50%) rotate(90deg);
 }
 
 .silicon-math-plus {
@@ -1891,7 +1886,12 @@
   height: var(--stroke, 0.1em);
   box-sizing: border-box;
   background-color: currentColor;
+}
+.silicon-math-plus::before {
   transform: translate(-50%, -50%);
+}
+.silicon-math-plus::after {
+  transform: translate(-50%, -50%) rotate(90deg);
 }
 
 .silicon-math-times {
@@ -1911,7 +1911,12 @@
   height: var(--stroke, 0.1em);
   box-sizing: border-box;
   background-color: currentColor;
+}
+.silicon-math-times::before {
   transform: translate(-50%, -50%);
+}
+.silicon-math-times::after {
+  transform: translate(-50%, -50%) rotate(90deg);
 }
 
 .silicon-math-times {
