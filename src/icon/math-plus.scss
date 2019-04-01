@@ -9,32 +9,36 @@
 		display: inline-block;
 		width: 1em;
 		height: 1em;
-		box-sizing: border-box;
+    box-sizing: border-box;
 
 		&::before,
 		&::after {
 			content: '';
 
-			// Position
+		// Position
 			position: absolute;
 			top: 50%;
 			left: 50%;
 
-			// Box Model
+		// Box Model
 			display: block;
 			width: 100%;
 			height: #{$silicon-stroke-var};
 			box-sizing: border-box;
-
+			
 			// Background
 			background-color: currentColor;
-
+		}
+		&::before {
 			// Transform
 			transform: translate(-50%, -50%);
 		}
+		&::after {
+			// Transform
+			transform: translate(-50%, -50%) rotate(90deg);
+		}
 	}
 }
-
-@mixin silicon-plus($selector: '.#{$silicon-prefix}math-plus') {
+@mixin silicon-plus($selector: '.#{$silicon-prefix}plus'){
 	@include silicon-math-plus($selector);
 }

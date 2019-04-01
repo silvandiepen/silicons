@@ -27,7 +27,7 @@
 			box-sizing: border-box;
 
 			// Border
-			border-width: #{$silicon-stroke-var};
+			border-width: 0 0 #{$silicon-stroke-var} #{$silicon-stroke-var};
 			border-style: solid;
 			border-color: transparent transparent currentColor currentColor;
 
