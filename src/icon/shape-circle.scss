@@ -2,10 +2,10 @@
 
 @mixin silicon-shape-circle($selector: '.#{$silicon-prefix}shape-circle') {
 	#{$selector} {
-		// Position
+
 		position: relative;
 
-		// Box Model
+
 		display: inline-block;
 		width: .9em;
 		height: .9em;
@@ -16,7 +16,7 @@
 		border-radius: 50%;
 		
 		&.colored{
-			// Background
+
 			background-color: $silicons-color-turquoise;
 			
 			// Typography

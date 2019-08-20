@@ -2,10 +2,10 @@
 
 @mixin silicon-creditcard($selector: '.#{$silicon-prefix}creditcard') {
 	#{$selector} {
-		// Position
+
 		position: relative;
 
-		// Box Model
+
 		display: inline-block;
 		width: 1em;
 		height: 0.75em;

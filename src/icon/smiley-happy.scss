@@ -2,10 +2,10 @@
 
 @mixin silicon-smiley-happy($selector: '.#{$silicon-prefix}smiley-happy') {
 	#{$selector} {
-		// Position
+
 		position: relative;
 
-		// Box Model
+
 		display: inline-block;
 		width: 1em;
 		height: 1em;
@@ -31,31 +31,31 @@
 		&::after {
 			content: '';
 
-			// Position
+
 			position: absolute;
 
-			// Box Model
+
 			box-sizing: border-box;
 		}
 		&::after {
-			// Position
+
 			top: 50%;
 			left: 50%;
 
-			// Box Model
+
 			width: 0.5em;
 			height: 0.5em;
 
-			// Border
+
 			border: calc(#{$silicon-stroke-var} / 2) solid transparent;
 			border-bottom-color: currentColor;
 			border-radius: 50%;
 
-			// Transform
+
 			transform: translate(-50%, -50%);
 		}
 		&.colored {
-			// Background
+
 			background-color: $silicons-color-yellow;
 			background-image: radial-gradient(
 					closest-side,

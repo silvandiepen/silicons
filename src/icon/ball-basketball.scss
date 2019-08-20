@@ -2,10 +2,10 @@
 
 @mixin silicon-ball-basketball($selector: '.#{$silicon-prefix}ball-basketball') {
 	#{$selector} {
-		// Position
+
 		position: relative;
 
-		// Box Model
+
 		display: inline-block;
 		width: 1em;
 		height: 1em;
@@ -32,31 +32,31 @@
 		&::after {
 			content: '';
 
-			// Position
+
 			position: absolute;
 			top: 0;
 
-			// Box Model
+
 			display: block;
 			width: 100%;
 			height: 100%;
 			box-sizing: border-box;
 
-			// Border
+
 			border: calc(#{$silicon-stroke-var} / 2) solid currentColor;
 			border-radius: 50%;
 		}
 		&::before {
-			// Position
+
 			left: 70%;
 		}
 		&::after {
-			// Position
+
 			right: 70%;
 		}
 		&.colored {
 
-			// Background
+
 			background-color: var(--color-orange, #{color(Orange)});
 			// Typography
 			color: var(--color-black, #{color(Black)});

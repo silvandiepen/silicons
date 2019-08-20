@@ -2,10 +2,10 @@
 
 @mixin silicon-art-spraycan($selector: '.#{$silicon-prefix}art-spraycan') {
 	#{$selector} {
-		// Position
+
 		position: relative;
 
-		// Box Model
+
 		display: inline-block;
 		width: 0.6em;
 		height: 1em;
@@ -40,45 +40,45 @@
 		&::before {
 			content: '';
 
-			// Position
+
 			position: absolute;
 			bottom: calc(100% - #{$silicon-stroke-var});
 			left: 50%;
 
-			// Box Model
+
 			display: block;
 			width: 0.6em;
 			height: 0.2em;
 			box-sizing: border-box;
 
-			// Border
+
 			border: #{$silicon-stroke-var} solid currentColor;
 			border-top-width: #{$silicon-stroke-half-var};
 			border-bottom: none;
 			border-radius: 50%;
 
-			// Transform
+
 			transform: translateX(-50%);
 		}
 		&::after {
 			content: '';
 
-			// Position
+
 			position: absolute;
 			bottom: calc(100% + 0.05em);
 			left: 50%;
 
-			// Box Model
+
 			display: block;
 			width: 0.3em;
 			height: 0.3em;
 			box-sizing: border-box;
 
-			// Border
+
 			border: #{$silicon-stroke-half-var} solid currentColor;
 			border-radius: 0.4em / 0.5em;
 
-			// Background
+
 			background-image: radial-gradient(
 				closest-side,
 				currentColor 100%,
@@ -88,7 +88,7 @@
 			background-position: center center;
 			background-size: 0.05em 0.05em;
 
-			// Transform
+
 			transform: translateX(-50%);
 		}
 	}

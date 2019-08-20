@@ -2,10 +2,10 @@
 
 @mixin silicon-adjust-color($selector: '.#{$silicon-prefix}adjust-color') {
 	#{$selector} {
-		// Position
+
 		position: relative;
 
-		// Box Model
+
 		display: inline-block;
 		width: 1em;
 		height: 1em;

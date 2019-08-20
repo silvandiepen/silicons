@@ -2,10 +2,10 @@
 
 @mixin silicon-file-download($selector: '.#{$silicon-prefix}file-download') {
 	#{$selector} {
-		// Position
+
 		position: relative;
 
-		// Box Model
+
 		display: inline-block;
 		width: 1em;
 		height: 0.5em;
@@ -19,44 +19,44 @@
 		&::after {
 			content: '';
 
-			// Position
+
 			position: absolute;
 			box-sizing: border-box;
 		}
 
 		&::before {
-			// Position
+
 			bottom: 75%;
 			left: 50%;
 
-			// Box Model
+
 			display: block;
 			width: calc(#{$silicon-stroke-var} / 2);
 			height: 0.5em;
 
-			// Background
+
 			background-color: currentColor;
 
-			// Transform
+
 			transform: translateX(-50%);
 		}
 
 		&::after {
-			// Position
+
 			bottom: calc(75% - #{$silicon-stroke-var} / 2);
 			left: 50%;
 
-			// Box Model
+
 			display: block;
 			width: 0.33em;
 			height: 0.33em;
 
-			// Border
+
 			border: calc(#{$silicon-stroke-var} / 2) solid currentColor;
 			border-top: none;
 			border-right: none;
 
-			// Transform
+
 			transform: rotate(-45deg);
 			transform-origin: 0 100%;
 		}

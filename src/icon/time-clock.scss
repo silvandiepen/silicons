@@ -5,10 +5,10 @@
 		--time-hours: 2;
 		--time-minutes: 35;
 
-		// Position
+
 		position: relative;
 
-		// Box Model
+
 		display: inline-block;
 		width: 1em;
 		height: 1em;
@@ -22,34 +22,34 @@
 		&::after {
 			content: '';
 
-			// Position
+
 			position: absolute;
 			bottom: calc(50% - (#{$silicon-stroke-var} /2));
 			left: 50%;
 
-			// Box Model
+
 			display: block;
 			width: calc(#{$silicon-stroke-var} / 2);
 
-			// Background
+
 			background-color: currentColor;
 
-			// Transform
+
 			transform-origin: 50% calc(100% - (#{$silicon-stroke-var} / 2));
 			margin-left: calc(#{$silicon-stroke-var} * -0.25);
 		}
 		&::before {
-			// Box Model
+
 			height: 0.5em;
 
-			// Transform
+
 			transform: rotate(calc(360deg / 12 * var(--time-hours, 4)));
 		}
 		&::after {
-			// Box Model
+
 			height: 0.35em;
 			
-			// Transform
+
 			transform: rotate(calc(360deg / 60 * var(--time-minutes, 11)));
 		}
 	}

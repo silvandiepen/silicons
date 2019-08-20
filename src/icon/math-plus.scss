@@ -2,10 +2,10 @@
 
 @mixin silicon-math-plus($selector: '.#{$silicon-prefix}math-plus') {
 	#{$selector} {
-		// Position
+
 		position: relative;
 
-		// Box Model
+
 		display: inline-block;
 		width: 1em;
 		height: 1em;
@@ -15,26 +15,26 @@
 		&::after {
 			content: '';
 
-		// Position
+
 			position: absolute;
 			top: 50%;
 			left: 50%;
 
-		// Box Model
+
 			display: block;
 			width: 100%;
 			height: #{$silicon-stroke-var};
 			box-sizing: border-box;
 			
-			// Background
+
 			background-color: currentColor;
 		}
 		&::before {
-			// Transform
+
 			transform: translate(-50%, -50%);
 		}
 		&::after {
-			// Transform
+
 			transform: translate(-50%, -50%) rotate(90deg);
 		}
 	}

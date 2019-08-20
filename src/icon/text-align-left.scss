@@ -2,10 +2,10 @@
 
 @mixin silicon-text-align-left($selector: '.#{$silicon-prefix}text-align-left') {
 	#{$selector} {
-		// Position
+
 		position: relative;
 
-		// Box Model
+
 		display: inline-block;
 		width: 1em;
 		height: calc(#{$silicon-stroke-var} * 3);
@@ -28,23 +28,23 @@
 		&::before {
 			content: '';
 
-			// Position
+
 			position: absolute;
 			top: calc(#{$silicon-stroke-var} * 3);
 			left: 0;
 
-			// Box Model
+
 			display: block;
 			width: 100%;
 			height: calc(#{$silicon-stroke-var} * 3);
 			box-sizing: border-box;
 
-			// Border
+
 			border-top: #{$silicon-stroke-var} solid currentColor;
 			border-right: none;
 			border-left: none;
 
-			// Background
+
 			background-image: linear-gradient(to right, currentColor, currentColor);
 			background-repeat: no-repeat;
 			background-position: bottom left;

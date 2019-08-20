@@ -2,11 +2,11 @@
 
 @mixin silicon-retweet($selector: '.#{$silicon-prefix}retweet') {
 	#{$selector} {
-		// Position
+
 		position: relative;
 
-		// Box Model
-		display: block;
+
+		display: inline-block;
 		width: 1em;
 		height: 1em;
 		box-sizing: border-box;
@@ -24,40 +24,40 @@
 		&::after {
 			content: '';
 
-			// Position
+
 			position: absolute;
 
-			// Box Model
+
 			display: block;
 			width: calc(#{$silicon-stroke-var} * 3);
 			height: calc(#{$silicon-stroke-var} * 3);
 			box-sizing: border-box;
 
-			// Border
+
 			border: #{$silicon-stroke-var} solid currentColor;
 		}
 		&::before {
-			// Position
+
 			top: 50%;
 			left: 50%;
 
-			// Border
+
 			border-bottom: none;
 			border-left: none;
 
-			// Transform
+
 			transform: translate(25%, 75%) rotate(22.5deg);
 		}
 		&::after {
-			// Position
+
 			right: 50%;
 			bottom: 50%;
 
-			// Border
+
 			border-top: none;
 			border-right: none;
 
-			// Transform
+
 			transform: translate(-25%, -75%) rotate(22.5deg);
 		}
 	}

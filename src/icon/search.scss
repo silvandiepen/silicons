@@ -2,39 +2,35 @@
 
 @mixin silicon-search($selector: '.#{$silicon-prefix}search') {
 	#{$selector} {
-		// Position
-		position: relative;
-
-		// Box Model
 		display: inline-block;
 		width: 1em;
 		height: 1em;
-		box-sizing: border-box;
-
-		// Border
-		border: #{$silicon-stroke-var} solid currentColor;
-		border-radius: 50%;
+		position: relative;
 
 		&::before {
 			content: '';
-
-			// Position
 			position: absolute;
-			top: 100%;
-			left: 100%;
-
-			// Box Model
-			display: block;
-			width: 0.5em;
-			height: #{$silicon-stroke-var};
-			box-sizing: border-box;
-
-			// Background
+			display: inline-block;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			border-radius: 50%;
+			width: 0.6em;
+			height: 0.6em;
+			border: #{$silicon-stroke-var} solid currentColor;
+		}
+		&::after {
+			content: '';
+			position: absolute;
+			display: inline-block;
+			top: 0.75em;
+			left: 0.75em;
+			margin-left: calc((#{$silicon-stroke-var} * 0.75) * -1);
 			background-color: currentColor;
-
-			// Transform
-			transform: translate(-0.1em, -0.1em) rotate(45deg);
-			transform-origin: 0 50%;
+			width: calc(#{$silicon-stroke-var} * 1.5);
+			transform-origin: 50% 0%;
+			transform: rotate(-45deg);
+			height: 0.3em;
 		}
 	}
 }

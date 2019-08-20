@@ -2,10 +2,10 @@
 
 @mixin silicon-birdhouse($selector: '.#{$silicon-prefix}birdhouse') {
 	#{$selector} {
-		// Position
+
 		position: relative;
 
-		// Box Model
+
 		display: inline-block;
 		width: 0.8em;
 		height: 0.65em;
@@ -18,23 +18,23 @@
 		&::before {
 			content: '';
 
-			// Position
+
 			position: absolute;
 			top: 0;
 			left: 50%;
 
-			// Box Model
+
 			display: block;
 			width: calc(0.8em - (#{$silicon-stroke-var} * 1.5));
 			height: calc(0.8em - (#{$silicon-stroke-var} * 1.5));
 			box-sizing: border-box;
 
-			// Border
+
 			border: #{$silicon-stroke-var} solid currentColor;
 			border-right: none;
 			border-bottom: none;
 
-			// Background
+
 			background-image: radial-gradient(
 				closest-side,
 				currentColor 100%,
@@ -45,18 +45,18 @@
 			background-size: calc(#{$silicon-stroke-var} * 1.5)
 				calc(#{$silicon-stroke-var} * 1.5);
 
-			// Transform
+
 			transform: translate(-50%, -50%) rotate(45deg);
 		}
 		&.colored {
-			// Border
+
 			border-width: 0;
 			
-			// Background
+
 			background-color: $silicons-color-brown;
 			
 			&::before {
-				// Background
+	
 				background-color: $silicons-color-brown;
 				background-image: radial-gradient(
 					closest-side,

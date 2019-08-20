@@ -2,11 +2,11 @@
 
 @mixin silicon-arrow-right($selector: '.#{$silicon-prefix}arrow-right') {
 	#{$selector} {
-		// Position
+
 		position: relative;
 
-		// Box Model
-		display: block;
+
+		display: inline-block;
 		width: 1em;
 		height: #{$silicon-stroke-var};
 
@@ -16,22 +16,22 @@
 		&::before {
 			content: '';
 
-			// Box Model
+
 			position: absolute;
 			top: calc(#{$silicon-stroke-var} * 0.5);
 			right: calc(#{$silicon-stroke-var} * -0.5);
 
-			// Box Model
+
 			display: block;
 			width: 0.3em;
 			height: 0.3em;
 
-			// Border
+
 			border: #{$silicon-stroke-var} solid currentColor;
 			border-bottom: none;
 			border-left: none;
 
-			// Transform
+
 			transform: rotate(45deg);
 			transform-origin: 100% 0;
 		}

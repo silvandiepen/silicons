@@ -2,10 +2,10 @@
 
 @mixin silicon-link($selector: '.#{$silicon-prefix}link') {
 	#{$selector} {
-		// Position
+
 		position: relative;
 
-		// Box Model
+
 		display: inline-block;
 		width: 0.5em;
 		height: calc(#{$silicon-stroke-var} / 2);
@@ -20,30 +20,30 @@
 		&::before,
 		&::after {
 			content: '';
-			// Position
+
 			position: absolute;
 			top: 50%;
 
-			// Box Model
+
 			display: block;
 			width: 0.35em;
 			height: 0.2em;
 
-			// Border
+
 			border: #{$silicon-stroke-var} solid currentColor;
 			border-radius: #{$silicon-stroke-var};
 
-			// Transform
+
 			transform: translateY(-50%);
 		}
 		
 		&::before {
-			// Position
+
 			right: calc(100% - (#{$silicon-stroke-var} * 2));
 		}
 		
 		&::after {
-			// Position
+
 			left: calc(100% - (#{$silicon-stroke-var} * 2));
 		}
 	}

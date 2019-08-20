@@ -2,10 +2,10 @@
 
 @mixin silicon-file-export($selector: '.#{$silicon-prefix}file-export') {
 	#{$selector} {
-		// Position
+
 		position: relative;
 
-		// Box Model
+
 		display: inline-block;
 		width: 1em;
 		height: 0.75em;
@@ -31,46 +31,46 @@
 		&::before,
 		&::after {
 			content: '';
-			// Position
+
 			position: absolute;
 
-			// Box Model
+
 			box-sizing: border-box;
 		}
 
 		&::before {
-			// Position
+
 			bottom: 75%;
 			left: 50%;
 
-			// Box Model
+
 			display: block;
 			width: calc(#{$silicon-stroke-var} / 2);
 			height: 0.5em;
 
-			// Background
+
 			background-color: currentColor;
 
-			// Transform
+
 			transform: translateX(-50%);
 		}
 
 		&::after {
-			// Position
+
 			bottom: calc(75% + 0.5em + (#{$silicon-stroke-var} / 2));
 			left: 50%;
 
-			// Box Model
+
 			display: block;
 			width: 0.33em;
 			height: 0.33em;
 
-			// Border
+
 			border: calc(#{$silicon-stroke-var} / 2) solid currentColor;
 			border-top: none;
 			border-right: none;
 
-			// Transform
+
 			transform: rotate(135deg);
 			transform-origin: 0 100%;
 		}

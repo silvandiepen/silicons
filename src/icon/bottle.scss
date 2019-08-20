@@ -2,10 +2,10 @@
 
 @mixin silicon-bottle($selector: '.#{$silicon-prefix}bottle') {
 	#{$selector} {
-		// Position
+
 		position: relative;
 
-		// Box Model
+
 		display: inline-block;
 		width: 0.45em;
 		height: 0.85em;
@@ -23,22 +23,22 @@
 
 		&::before {
 			content: '';
-			// Position
+
 			position: absolute;
 			bottom: 100%;
 			left: 50%;
 
-			// Box Model
+
 			display: block;
 			width: 0.25em;
 			height: 0.4em;
 			box-sizing: border-box;
 
-			// Border
+
 			border: #{$silicon-stroke-var} solid currentColor;
 			border-bottom: none;
 			
-			// Transform
+
 			transform: translateX(-50%);
 		}
 	}

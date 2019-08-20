@@ -2,10 +2,10 @@
 
 @mixin silicon-zoom-in($selector: '.#{$silicon-prefix}zoom-in') {
 	#{$selector} {
-		// Position
+
 		position: relative;
 
-		// Box Model
+
 		display: inline-block;
 		width: 1em;
 		height: 1em;
@@ -19,19 +19,19 @@
 		&::after {
 			content: '';
 
-		// Position
+
 			position: absolute;
 			
-			// Box Model
+
 			box-sizing: border-box;
 		}
 
 		&::before {
-			// Position
+
 			top: 100%;
 			left: 100%;
 
-		// Box Model
+
 			display: block;
 			width: 0.5em;
 			height: #{$silicon-stroke-var};
@@ -45,11 +45,11 @@
 		}
 
 		&::after {
-			// Position
+
 			top: 50%;
 			left: 50%;
 
-		// Box Model
+
 			display: block;
 			width: 0.4em;
 			height: 0.4em;

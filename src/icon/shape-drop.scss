@@ -2,10 +2,10 @@
 
 @mixin silicon-shape-drop($selector: '.#{$silicon-prefix}shape-drop') {
 	#{$selector} {
-		// Position
+
 		position: relative;
 
-		// Box Model
+
 		display: inline-block;
 		width: 1em;
 		height: 1em;
@@ -19,7 +19,7 @@
 		transform: rotate(-45deg);
 
 		&.colored {
-			// Background
+
 			background-color: $silicons-color-light-blue;
 			
 			// Typography

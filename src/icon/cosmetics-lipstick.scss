@@ -4,10 +4,10 @@
 	$selector: '.#{$silicon-prefix}cosmetics-lipstick'
 ) {
 	#{$selector} {
-		// Position
+
 		position: relative;
 
-		// Box Model
+
 		display: inline-block;
 		width: 0.6em;
 		height: 1em;
@@ -39,23 +39,23 @@
 		&::before {
 			content: '';
 
-			// Position
+
 			position: absolute;
 			bottom: calc(100% + #{$silicon-stroke-half-var});
 			left: 50%;
 
-			// Box Model
+
 			display: block;
 			width: 0.5em;
 			height: 0.5em;
 			box-sizing: border-box;
 
-			// Border
+
 			border: #{$silicon-stroke-half-var} solid currentColor;
 			border-bottom: none;
 			border-radius: 0.4em 0.4em 0 0 / 0.5em 0.5em 0 0;
 
-			// Background
+
 			background-image: radial-gradient(
 				closest-side,
 				transparent calc(100% - 0.05em),
@@ -67,12 +67,12 @@
 			background-position: center -0.15em;
 			background-size: 0.3em 0.5em;
 
-			// Transform
+
 			transform: translateX(-50%);
 		}
 		&.colored {
 			
-			// Background
+
 			background-color: $silicons-color-gray;
 			background-image: radial-gradient(
 					closest-side,
@@ -92,7 +92,7 @@
 			color: $silicons-color-dark-gray;
 			&::before {
 				
-				// Background
+	
 				background-color: $silicons-color-red;
 				background-image: radial-gradient(
 					closest-side,

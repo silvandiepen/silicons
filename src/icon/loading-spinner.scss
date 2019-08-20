@@ -2,10 +2,10 @@
 
 @mixin silicon-loading-spinner($selector: '.#{$silicon-prefix}loading-spinner') {
 	#{$selector} {
-		// Position
+
 		position: relative;
 
-		// Box Model
+
 		width: calc(#{$silicon-stroke-var} * 2.5);
 		height: calc(#{$silicon-stroke-var} * 2.5);
 		box-shadow: 0 -0.4em, -0.28em -0.28em 0 -0.01em, -0.4em 0 0 -0.02em,

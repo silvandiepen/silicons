@@ -2,10 +2,10 @@
 
 @mixin silicon-ball-rugby($selector: '.#{$silicon-prefix}ball-rugby') {
 	#{$selector} {
-		// Position
+
 		position: relative;
 
-		// Box Model
+
 		display: inline-block;
 		width: 1em;
 		height: 0.75em;
@@ -33,7 +33,7 @@
 
 		&.colored {
 
-			// Background
+
 			background-color: var(--color-orange, #{color(Orange)});
 			// Typography
 			color: var(--color-black, #{color(Black)});

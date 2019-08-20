@@ -2,10 +2,10 @@
 
 @mixin silicon-shape-square($selector: '.#{$silicon-prefix}shape-square') {
 	#{$selector} {
-		// Position
+
 		position: relative;
 
-		// Box Model
+
 		display: inline-block;
 		width: 0.8em;
 		height: 0.8em;
@@ -15,7 +15,7 @@
 		border: #{$silicon-stroke-var} solid currentColor;
 
 		&.colored {
-			// Background
+
 			background-color: $silicons-color-purple;
 			
 			// Typography

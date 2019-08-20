@@ -2,10 +2,10 @@
 
 @mixin silicon-code($selector: '.#{$silicon-prefix}code') {
 	#{$selector} {
-		// Position
+
 		position: relative;
 
-		// Box Model
+
 		display: inline-block;
 		width: 1.25em;
 		height: 0.5em;
@@ -17,21 +17,21 @@
 		&::before {
 			content: '';
 
-			// Position
+
 			position: absolute;
 			top: 50%;
 			left: 50%;
 
-			// Box Model
+
 			display: block;
 			width: 0.75em;
 			height: 0.75em;
 			box-sizing: border-box;
 
-			// Border
+
 			border: #{$silicon-stroke-var} solid currentColor;
 
-			// Transform
+
 			transform: translate(-50%, -50%) rotate(45deg);
 		}
 	}

@@ -43,7 +43,7 @@
 
 .silicon-arrow-basic-down {
   position: relative;
-  display: block;
+  display: inline-block;
   width: 1em;
   height: var(--stroke, 0.1em);
   /* background  */
@@ -70,7 +70,7 @@
 
 .silicon-arrow-basic-left {
   position: relative;
-  display: block;
+  display: inline-block;
   width: 1em;
   height: var(--stroke, 0.1em);
   /* background  */
@@ -97,7 +97,7 @@
 
 .silicon-arrow-basic-right {
   position: relative;
-  display: block;
+  display: inline-block;
   width: 1em;
   height: var(--stroke, 0.1em);
   /* background  */
@@ -120,7 +120,7 @@
 
 .silicon-arrow-basic-up {
   position: relative;
-  display: block;
+  display: inline-block;
   width: 1em;
   height: var(--stroke, 0.1em);
   /* background  */
@@ -147,7 +147,7 @@
 
 .silicon-arrow-filled-down {
   position: relative;
-  display: block;
+  display: inline-block;
   width: 1em;
   height: var(--stroke, 0.1em);
   background-color: currentColor;
@@ -174,7 +174,7 @@
 
 .silicon-arrow-filled-left {
   position: relative;
-  display: block;
+  display: inline-block;
   width: 1em;
   height: var(--stroke, 0.1em);
   background-color: currentColor;
@@ -201,7 +201,7 @@
 
 .silicon-arrow-filled-right {
   position: relative;
-  display: block;
+  display: inline-block;
   width: 1em;
   height: var(--stroke, 0.1em);
   background-color: currentColor;
@@ -224,7 +224,7 @@
 
 .silicon-arrow-filled-up {
   position: relative;
-  display: block;
+  display: inline-block;
   width: 1em;
   height: var(--stroke, 0.1em);
   background-color: currentColor;
@@ -251,7 +251,7 @@
 
 .silicon-arrow-right {
   position: relative;
-  display: block;
+  display: inline-block;
   width: 1em;
   height: var(--stroke, 0.1em);
   /* background  */
@@ -1089,6 +1089,41 @@
   color: var(--dark,#303030);
 }
 
+.silicon-device-phone2 {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  position: relative;
+}
+.silicon-device-phone2::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: "";
+  display: block;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  transform-origin: 50% 50%;
+  transform: translate(-30%, -70%) rotate(-45deg);
+  border: 0.2em solid currentColor;
+  border-color: transparent transparent transparent currentColor;
+}
+.silicon-device-phone2::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-27.5%, -60%) rotate(-45deg);
+  content: "";
+  display: block;
+  width: 0.5em;
+  height: 1em;
+  background-image: linear-gradient(currentColor 100%, transparent), linear-gradient(currentColor 100%, transparent);
+  background-size: 0.2em 0.25em, 0.2em 0.25em;
+  background-repeat: no-repeat, no-repeat;
+  background-position: top left, bottom left;
+}
+
 .silicon-device-printer {
   position: relative;
   display: inline-block;
@@ -1492,7 +1527,7 @@
 
 .silicon-go-down {
   position: relative;
-  display: block;
+  display: inline-block;
   width: 0.5em;
   height: 1em;
   overflow: hidden;
@@ -1518,7 +1553,7 @@
 
 .silicon-go-left {
   position: relative;
-  display: block;
+  display: inline-block;
   width: 0.5em;
   height: 1em;
   overflow: hidden;
@@ -1544,7 +1579,7 @@
 
 .silicon-go-right {
   position: relative;
-  display: block;
+  display: inline-block;
   width: 0.5em;
   height: 1em;
   overflow: hidden;
@@ -1566,7 +1601,7 @@
 
 .silicon-go-up {
   position: relative;
-  display: block;
+  display: inline-block;
   width: 0.5em;
   height: 1em;
   overflow: hidden;
@@ -2042,6 +2077,7 @@
   background-repeat: no-repeat;
   background-position: -0.15em -0.15em;
   background-size: 0.3em 0.3em;
+  -radius: var(--stroke, 0.1em) 0 0 0;
   transform: translate(-50%, -50%) scale(1, 1) rotate(45deg);
 }
 
@@ -2049,6 +2085,7 @@
   position: relative;
   width: 1em;
   height: 1em;
+  display: inline-block;
   background-image: radial-gradient(closest-side, transparent 50%, currentColor 50%, currentColor 100%, transparent), radial-gradient(closest-side, transparent 50%, currentColor 50%, currentColor 100%, transparent);
   background-repeat: no-repeat, no-repeat;
   background-position: 0.65em bottom, 0.15em bottom;
@@ -2198,7 +2235,7 @@
 
 .silicon-refresh {
   position: relative;
-  display: block;
+  display: inline-block;
   width: 1em;
   height: 1em;
   box-sizing: border-box;
@@ -2234,7 +2271,7 @@
 
 .silicon-reload {
   position: relative;
-  display: block;
+  display: inline-block;
   width: 1em;
   height: 1em;
   box-sizing: border-box;
@@ -2260,7 +2297,7 @@
 
 .silicon-retweet {
   position: relative;
-  display: block;
+  display: inline-block;
   width: 1em;
   height: 1em;
   box-sizing: border-box;
@@ -2299,26 +2336,35 @@
 }
 
 .silicon-search {
-  position: relative;
   display: inline-block;
   width: 1em;
   height: 1em;
-  box-sizing: border-box;
-  border: var(--stroke, 0.1em) solid currentColor;
-  border-radius: 50%;
+  position: relative;
 }
 .silicon-search::before {
   content: "";
   position: absolute;
-  top: 100%;
-  left: 100%;
-  display: block;
-  width: 0.5em;
-  height: var(--stroke, 0.1em);
-  box-sizing: border-box;
+  display: inline-block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 0.6em;
+  height: 0.6em;
+  border: var(--stroke, 0.1em) solid currentColor;
+}
+.silicon-search::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  top: 0.75em;
+  left: 0.75em;
+  margin-left: calc((var(--stroke, 0.1em) * 0.75) * -1);
   background-color: currentColor;
-  transform: translate(-0.1em, -0.1em) rotate(45deg);
-  transform-origin: 0 50%;
+  width: calc(var(--stroke, 0.1em) * 1.5);
+  transform-origin: 50% 0%;
+  transform: rotate(-45deg);
+  height: 0.3em;
 }
 
 .silicon-shape-circle {

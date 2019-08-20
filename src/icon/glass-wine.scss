@@ -2,10 +2,10 @@
 
 @mixin silicon-glass-wine($selector: '.#{$silicon-prefix}glass-wine') {
 	#{$selector} {
-		// Position
+
 		position: relative;
 
-		// Box Model
+
 		display: inline-block;
 		width: 0.5em;
 		height: 0.5em;
@@ -24,21 +24,21 @@
 		&::before {
 			content: '';
 			
-			// Position
+
 			position: absolute;
 			top: 100%;
 			left: calc(#{$silicon-stroke-var} * -1);
 
-			// Box Model
+
 			display: block;
 			width: 0.5em;
 			height: 0.4em;
 			box-sizing: border-box;
 
-			// Border
+
 			border-bottom: #{$silicon-stroke-var} solid currentColor;
 
-			// Background
+
 			background-image: linear-gradient(to bottom, currentColor, currentColor);
 			background-repeat: no-repeat;
 			background-position: center center;

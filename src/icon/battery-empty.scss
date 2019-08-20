@@ -2,10 +2,10 @@
 
 @mixin silicon-battery-empty($selector: '.#{$silicon-prefix}battery-empty') {
 	#{$selector} {
-		// Position
+
 		position: relative;
 
-		// Box Model
+
 		display: inline-block;
 		width: 1em;
 		height: 0.5em;
@@ -18,34 +18,34 @@
 		&::before {
 			content: '';
 
-			// Position
+
 			position: absolute;
 			top: 50%;
 			left: 100%;
 
-			// Box Model
+
 			display: block;
 			width: 0.2em;
 			height: 0.25em;
 			box-sizing: border-box;
 
-			// Border
+
 			border: calc(#{$silicon-stroke-var} / 2) solid currentColor;
 			border-radius: 0 calc(#{$silicon-stroke-var} * 0.5)
 				calc(#{$silicon-stroke-var} * 0.5) 0;
 
-			// Transform
+
 			transform: translateY(-50%);
 		}
 
 		&.colored {
 			
-			// Background
+
 			background-color: $silicons-color-white;
 			// Typography
 			color: black;
 			&::before {
-				// Background
+	
 				background-color: $silicons-color-white;
 			}
 		}

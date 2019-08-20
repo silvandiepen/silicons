@@ -2,10 +2,10 @@
 
 @mixin silicon-burger($selector: '.#{$silicon-prefix}burger') {
 	#{$selector} {
-		// Position
+
 		position: relative;
 
-		// Box Model
+
 		display: inline-block;
 		width: 1em;
 		height: #{$silicon-stroke-var};
@@ -18,30 +18,30 @@
 		&::after {
 			content: '';
 
-			// Position
+
 			position: absolute;
 
-			// Box Model
+
 			display: block;
 			width: 100%;
 			height: 100%;
 			box-sizing: border-box;
 
-			// Background
+
 			background-color: currentColor;
 		}
 		&::before {
-			// Position
+
 			top: 100%;
 
-			// Transform
+
 			transform: translateY(calc(#{$silicon-stroke-var} * 2));
 		}
 		&::after {
-			// Position
+
 			bottom: 100%;
 
-			// Transform
+
 			transform: translateY(calc(#{$silicon-stroke-var} * -2));
 		}
 	}

@@ -2,10 +2,10 @@
 
 @mixin silicon-wifi($selector: '.#{$silicon-prefix}wifi') {
 	#{$selector} {
-		// Position
+
 		position: relative;
 
-		// Box Model
+
 		display: inline-block;
 		width: calc(#{$silicon-stroke-var} * 7);
 		height: calc(#{$silicon-stroke-var} * 7);
@@ -24,17 +24,17 @@
 		&::after {
 			content: '';
 
-			// Position
+
 			position: absolute;
 			bottom: 0;
 			left: 0;
 
-			// Box Model
+
 			display: block;
 			box-sizing: border-box;
 		}
 		&::before {
-			// Box Model
+
 			width: calc(#{$silicon-stroke-var} * 4.25);
 			height: calc(#{$silicon-stroke-var} * 4.25);
 
@@ -45,7 +45,7 @@
 			border-radius: 0 calc(#{$silicon-stroke-var} * 4.25) 0 0;
 		}
 		&::after {
-			// Box Model
+
 			width: calc(#{$silicon-stroke-var} * 1.5);
 			height: calc(#{$silicon-stroke-var} * 1.5);
 

@@ -2,10 +2,10 @@
 
 @mixin silicon-ball-tennis($selector: '.#{$silicon-prefix}ball-tennis') {
 	#{$selector} {
-		// Position
+
 		position: relative;
 
-		// Box Model
+
 		display: inline-block;
 		width: 1em;
 		height: 1em;
@@ -23,18 +23,18 @@
 		&::before {
 			content: '';
 
-			// Position
+
 			position: absolute;
 			top: 0.2em;
 			left: 50%;
 
-			// Box Model
+
 			display: block;
 			width: 66.66%;
 			height: 100%;
 			box-sizing: border-box;
 
-			// Border
+
 			border: calc(#{$silicon-stroke-var} / 2) solid currentColor;
 			border-radius: 0.5em 0.5em 0 0;
 
@@ -42,7 +42,7 @@
 		}
 		&.colored {
 
-			// Background
+
 			background-color: $silicons-color-yellow;
 			// Typography
 			color: $silicons-color-black;

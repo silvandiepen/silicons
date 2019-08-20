@@ -2,10 +2,10 @@
 
 @mixin silicon-device-printer($selector: '.#{$silicon-prefix}device-printer') {
 	#{$selector} {
-		// Position
+
 		position: relative;
 
-		// Box Model
+
 		display: inline-block;
 		width: 0.5em;
 		height: 0.5em;
@@ -18,30 +18,30 @@
 		&::after {
 			content: '';
 
-			// Position
+
 			position: absolute;
 			box-sizing: border-box;
 		}
 
 		&::after {
-			// Position
+
 			bottom: calc(100% + (#{$silicon-stroke-var} * 2.5));
 			left: 50%;
 
-			// Box Model
+
 			display: block;
 			width: 0.5em;
 			height: 0.1em;
 
-			// Border
+
 			border: calc(#{$silicon-stroke-var} / 2) solid currentColor;
 			border-bottom: none;
 
-			// Transform
+
 			transform: translateX(-50%);
 		}
 		&::before {
-			// Position
+
 			top: -0.25em;
 			left: 50%;
 
@@ -50,12 +50,12 @@
 			width: 1em;
 			height: 0.5em;
 
-			// Border
+
 			border: #{$silicon-stroke-var} solid currentColor;
 			border-radius: #{$silicon-stroke-var}
 				#{$silicon-stroke-var} 0 0;
 
-			// Transform
+
 			transform: translatex(-50%);
 
 			// Visibility
@@ -73,14 +73,14 @@
 		&.colored {
 			&,
 			&::after {
-				// Background
+	
 				background-color: $silicons-color-white;
 				
 				// Typography
 				color: $silicons-color-gray;
 			}
 			&::before {
-				// Background
+	
 				background-color: $silicons-color-dark;
 				
 				// Typography

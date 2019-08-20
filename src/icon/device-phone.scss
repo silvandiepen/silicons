@@ -2,10 +2,10 @@
 
 @mixin silicon-device-phone($selector: '.#{$silicon-prefix}device-phone') {
 	#{$selector} {
-		// Position
+
 		position: relative;
 
-		// Position
+
 		display: inline-block;
 		width: 0.6em;
 		height: 1em;
@@ -18,29 +18,29 @@
 		&::before {
 			content: '';
 
-			// Position
+
 			position: absolute;
 			top: 0;
 			left: 50%;
 
-			// Box Model
+
 			display: block;
 			width: 0.2em;
 			height: 0.05em;
 			box-sizing: border-box;
 
-			// Border
+
 			border-radius: 0 0 0.05em 0.05em;
 
-			// Background
+
 			background-color: currentColor;
 
-			// Transform
+
 			transform: translateX(-50%);
 		}
 
 		&.colored {
-			// Background
+
 			background-color: $silicons-color-green;
 			background-image: linear-gradient(
 				-70deg,

@@ -2,10 +2,10 @@
 
 @mixin silicon-file-import($selector: '.#{$silicon-prefix}file-import') {
 	#{$selector} {		
-		// Position
+
 		position: relative;
 
-		// Box Model
+
 		display: inline-block;
 		width: 1em;
 		height: 0.75em;
@@ -32,25 +32,25 @@
 		&::after {
 			content: '';
 			
-			// Position
+
 			position: absolute;
 			box-sizing: border-box;
 		}
 		
 		&::before {
-			// Position
+
 			bottom: 40%;
 			left: 50%;
 
-			// Box Model
+
 			display: block;
 			width: calc(#{$silicon-stroke-var} / 2);
 			height: 0.5em;
 
-			// Background
+
 			background-color: currentColor;
 			
-			// Transform
+
 			transform: translateX(-50%);
 		}
 		&::after {

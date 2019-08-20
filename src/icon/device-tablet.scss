@@ -4,23 +4,23 @@
 @mixin silicon-device-tablet($selector: '.#{$silicon-prefix}device-tablet') {
 	@include silicon-device-phone($selector);
 	#{$selector} {
-		// Box Model
+
 		width: 1em;
 		height: 0.6em;
 
 		&::before {
-			// Position
+
 			top: 50%;
 			left: 0;
 
-			// Box Model
+
 			width: 0.05em;
 			height: 0.2em;
 
-			// Border
+
 			border-radius: 0 0.05em 0.05em 0;
 
-			// Transform
+
 			transform: translate(0, -50%);
 		}
 	}

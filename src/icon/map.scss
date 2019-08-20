@@ -2,10 +2,10 @@
 
 @mixin silicon-map($selector: '.#{$silicon-prefix}map') {
 	#{$selector} {
-		// Position
+
 		position: relative;
 
-		// Box Model
+
 		display: inline-block;
 		width: 0.33em;
 		height: 1em;
@@ -23,42 +23,42 @@
 		&::after {
 			content: '';
 
-			// Position
+
 			position: absolute;
 			top: calc(#{$silicon-stroke-var} * -1);
 
-			// Box Model
+
 			display: block;
 			width: 0.33em;
 			height: 1em;
 			box-sizing: border-box;
 
-			// Border
+
 			border: #{$silicon-stroke-var} solid currentColor;
 		}
 		&::before {
-			// Position
+
 			left: calc(100% + (#{$silicon-stroke-var} / 4));
 
-			// Border
+
 			border-left-width: calc(#{$silicon-stroke-var} / 4);
 			border-radius: 0 #{$silicon-stroke-var}
 				#{$silicon-stroke-var} 0;
 
-			// Transform
+
 			transform: skewY(24deg);
 			transform-origin: 0 100%;
 		}
 		&::after {
-			// Position
+
 			right: calc(100% + (#{$silicon-stroke-var} / 4));
 
-			// Border
+
 			border-right-width: calc(#{$silicon-stroke-var} / 4);
 			border-radius: #{$silicon-stroke-var} 0 0
 				#{$silicon-stroke-var};
 
-			// Transform
+
 			transform: skewY(24deg);
 			transform-origin: 100% 0;
 		}
@@ -66,7 +66,7 @@
 			&,
 			&::after,
 			&::before {
-				// Background
+	
 				background-color: $silicons-color-light-blue;
 				background-image: radial-gradient(
 					$silicons-color-green 40%,
@@ -80,11 +80,11 @@
 				color: $silicons-color-blue;
 			}
 			&::before {
-				// Background
+	
 				background-position: right center;
 			}
 			&::after {
-				// Background
+	
 				background-position: left center;
 			}
 		}

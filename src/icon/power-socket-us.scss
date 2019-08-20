@@ -1,10 +1,10 @@
 @import '../default';
 @mixin silicon-power-socket-us($selector: '.#{$silicon-prefix}power-socket-us') {
 	#{$selector} {
-		// Position
+
 		position: relative;
 
-		// Box Model
+
 		display: inline-block;
 		width: 1em;
 		height: 1em;
@@ -25,23 +25,23 @@
 		&::before {
 			content: '';
 			
-			// Position
+
 			position: absolute;
 			bottom: calc(#{$silicon-stroke-var});
 			left: 50%;
 			
-			// Box Model
+
 			display: block;
 			width: #{$silicon-stroke-var};
 			height: #{$silicon-stroke-var};
 			
-			// Border
+
 			border-radius: 50% 50% 0 0;
 			
-			// Background
+
 			background-color: currentColor;
 
-			// Transform
+
 			transform: translateX(-50%);
 		}
 	}

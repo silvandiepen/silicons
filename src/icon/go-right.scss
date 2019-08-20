@@ -2,11 +2,11 @@
 
 @mixin silicon-go-right($selector: '.#{$silicon-prefix}go-right') {
 	#{$selector} {
-		// Position
+
 		position: relative;
 
-		// Box Model
-		display: block;
+
+		display: inline-block;
 		width: 0.5em;
 		height: 1em;
 
@@ -16,22 +16,22 @@
 		&::before {
 			content: '';
 
-			// Position
+
 			position: absolute;
 			top: 50%;
 			right: 0;
 
-			// Box Model
+
 			display: block;
 			width: calc(0.5em - (#{$silicon-stroke-var} / 2));
 			height: calc(0.5em - (#{$silicon-stroke-var} / 2));
 
-			// Border
+
 			border: #{$silicon-stroke-var} solid currentColor;
 			border-bottom: none;
 			border-left: none;
 
-			// Transform
+
 			transform: rotate(45deg);
 			transform-origin: 100% 0;
 		}

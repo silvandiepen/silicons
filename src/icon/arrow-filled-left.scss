@@ -6,7 +6,7 @@
 ) {
 	@include silicon-arrow-filled-right($selector);
 	#{$selector} {
-		// Position
+
 		transform: rotate(180deg);
 	}
 }

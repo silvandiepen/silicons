@@ -2,10 +2,10 @@
 
 @mixin silicon-trash($selector: '.#{$silicon-prefix}trash') {
 	#{$selector} {
-		// Position
+
 		position: relative;
 
-		// Box Model
+
 		display: inline-block;
 		width: 0.75em;
 		height: 0.75em;
@@ -23,42 +23,42 @@
 		&::after {
 			content: '';
 
-			// Position
+
 			position: absolute;
 
-			// Box Model
+
 			display: block;
 			box-sizing: border-box;
 
-			// Transform
+
 			transform: translateX(-50%);
 		}
 
 		&::before {
-			// Position
+
 			bottom: calc(100% + #{$silicon-stroke-var});
 			left: 50%;
 
-			// Box Model
+
 			width: 1em;
 			height: #{$silicon-stroke-var};
 
-			// Border
+
 			border: none;
 
-			// Background
+
 			background-color: currentColor;
 		}
 		&::after {
-			// Position
+
 			bottom: calc(100% + (#{$silicon-stroke-var} * 2));
 			left: 50%;
 
-			// Box Model
+
 			width: 0.2em;
 			height: 0.1em;
 
-			// Border
+
 			border: calc(#{$silicon-stroke-var} / 2) solid currentColor;
 			border-bottom: none;
 			border-radius: 0.2em 0.2em 0 0;

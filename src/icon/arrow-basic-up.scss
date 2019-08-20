@@ -4,7 +4,7 @@
 @mixin silicon-arrow-basic-up($selector: '.#{$silicon-prefix}arrow-basic-up') {
 	@include silicon-arrow-basic-right($selector);
 	#{$selector} {
-		// Position
+
 		transform: rotate(-90deg);
 	}
 }

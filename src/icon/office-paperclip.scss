@@ -5,10 +5,10 @@
 		// Custom Properties
 		--height: calc(#{$silicon-stroke-var} * 5.5);
 		
-		// Position
+
 		position: relative;
 
-		// Box Model
+
 		display: inline-block;
 		width: 0.75em;
 		height: var(--height);
@@ -26,27 +26,27 @@
 		&::after {
 			content: '';
 
-			// Position
+
 			position: absolute;
 
-			// Box Model
+
 			display: block;
 			box-sizing: border-box;
 
-			// Border
+
 			border: #{$silicon-stroke-var} solid currentColor;
 		}
 
 		&::before {
-			// Position
+
 			top: calc(#{$silicon-stroke-var} * -1);
 			right: 100%;
 
-			// Box Model
+
 			width: 0.5em;
 			height: calc(var(--height) - (#{$silicon-stroke-var} * 1.5));
 
-			// Border
+
 			border-right: none;
 			border-radius: calc(
 					var(--height) - (#{$silicon-stroke-var} * 1.5) / 2
@@ -55,15 +55,15 @@
 		}
 
 		&::after {
-			// Position
+
 			bottom: calc(#{$silicon-stroke-var} / 2);
 			left: 0;
 
-			// Box Model
+
 			width: 0.5em;
 			height: calc(var(--height) - (#{$silicon-stroke-var} * 3));
 
-			// Border
+
 			border-left: none;
 			border-radius: 0
 				calc(var(--height) - (#{$silicon-stroke-var} * 3) / 2)

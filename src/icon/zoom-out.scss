@@ -2,10 +2,10 @@
 
 @mixin silicon-zoom-out($selector: '.#{$silicon-prefix}zoom-out') {
 	#{$selector} {
-		// Position
+
 		position: relative;
 
-		// Box Model
+
 		display: inline-block;
 		width: 1em;
 		height: 1em;
@@ -19,41 +19,41 @@
 		&::after {
 			content: '';
 
-			// Position
+
 			position: absolute;
 
-			// Box Model
+
 			box-sizing: border-box;
 		}
 
 		&::before {
-			// Position
+
 			top: 100%;
 			left: 100%;
 
-			// Box Model
+
 			display: block;
 			width: 0.5em;
 			height: #{$silicon-stroke-var};
 
-			// Background
+
 			background-color: currentColor;
 
-			// Transform
+
 			transform: translate(-0.1em, -0.1em) rotate(45deg);
 			transform-origin: 0 50%;
 		}
 		&::after {
-			// Position
+
 			top: 50%;
 			left: 50%;
 
-			// Box Model
+
 			display: block;
 			width: 0.4em;
 			height: 0.4em;
 
-			// Background
+
 			background-image: linear-gradient(
 				to bottom,
 				transparent calc(50% - #{$silicon-stroke-var} / 4),
@@ -62,7 +62,7 @@
 				transparent calc(50% + #{$silicon-stroke-var} / 4)
 			);
 
-			// Transform
+
 			transform: translate(-50%, -50%);
 		}
 	}

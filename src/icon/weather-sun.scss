@@ -2,15 +2,15 @@
 
 @mixin silicon-weather-sun($selector: '.#{$silicon-prefix}weather-sun') {
 	#{$selector} {
-		// Position
+
 		position: relative;
 
-		// Box Model
+
 		display: inline-block;
 		width: 0.5em;
 		height: 0.5em;
 
-		// Box Model
+
 		box-shadow: -0.55em 0 0
 				calc((#{$silicon-stroke-var} * 1.75) * -1) currentColor,
 			0.55em 0 0 calc((#{$silicon-stroke-var} * 1.75) * -1)

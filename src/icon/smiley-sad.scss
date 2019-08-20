@@ -5,11 +5,11 @@
 	@include silicon-smiley-happy($selector);
 	#{$selector} {
 		&::after {
-			// Border
+
 			border-top-color: currentColor;
 			border-bottom-color: transparent;
 
-			// Transform
+
 			transform: translate(-50%, 25%);
 		}
 	}

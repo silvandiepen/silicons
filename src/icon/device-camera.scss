@@ -2,10 +2,10 @@
 
 @mixin silicon-device-camera($selector: '.#{$silicon-prefix}device-camera') {
 	#{$selector} {
-		// Position
+
 		position: relative;
 
-		// Box Model
+
 		display: inline-block;
 		width: 1em;
 		height: 0.75em;
@@ -19,44 +19,44 @@
 		&::after {
 			content: '';
 
-			// Position
+
 			position: absolute;
 
-			// Box Model
+
 			display: block;
 			box-sizing: border-box;
 
-			// Border
+
 			border: calc(#{$silicon-stroke-var} / 2) solid currentColor;
 		}
 		&::before {
-			// Position
+
 			top: 50%;
 			left: 50%;
 
-			// Box Model
+
 			width: 0.5em;
 			height: 0.5em;
 
-			// Border
+
 			border-radius: 50%;
 
-			// Transform
+
 			transform: translate(-50%, -50%);
 		}
 		&::after {
-			// Position
+
 			bottom: calc(100% + #{$silicon-stroke-var});
 			left: 50%;
 
-			// Box Model
+
 			width: 0.3em;
 			height: 0.1em;
 			
-			// Border
+
 			border-radius: 0.1em 0.1em 0 0;
 
-			// Transform
+
 			transform: translateX(-50%);
 		}
 	}

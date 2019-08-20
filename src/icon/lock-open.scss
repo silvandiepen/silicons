@@ -5,7 +5,7 @@
 	@include silicon-lock($selector);
 	#{$selector} {
 		&::before{
-			// Border
+
 			border-right-color: transparent;
 		}
 	}

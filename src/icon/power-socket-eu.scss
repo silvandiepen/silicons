@@ -1,10 +1,10 @@
 @import '../default';
 @mixin silicon-power-socket-eu($selector: '.#{$silicon-prefix}power-socket-eu') {
 	#{$selector} {
-		// Position
+
 		position: relative;
 
-		// Box Model
+
 		display: inline-block;
 		width: 1em;
 		height: 1em;

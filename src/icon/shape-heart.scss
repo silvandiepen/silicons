@@ -2,10 +2,10 @@
 
 @mixin silicon-shape-heart($selector: '.#{$silicon-prefix}shape-heart') {
 	#{$selector} {
-		// Position
+
 		position: relative;
 
-		// Box Model
+
 		display: inline-block;
 		width: 0.75em;
 		height: 0.75em;
@@ -22,23 +22,23 @@
 		&::after {
 			content: '';
 
-			// Position
+
 			position: absolute;
 
-			// Box Model
+
 			box-sizing: border-box;
 		}
 
 		&::before {
-			// Position
+
 			top: calc(-0.5em + #{$silicon-stroke-var});
 			left: calc(#{$silicon-stroke-var} * -1);
 
-			// Box Model
+
 			width: 0.75em;
 			height: 0.5em;
 
-			// Border
+
 			border-top: #{$silicon-stroke-var} solid currentColor;
 			border-right: #{$silicon-stroke-var} solid currentColor;
 			border-left: #{$silicon-stroke-var} solid currentColor;
@@ -46,15 +46,15 @@
 		}
 
 		&::after {
-			// Position
+
 			top: 0;
 			left: calc(0.5em + #{$silicon-stroke-var});
 
-			// Box Model
+
 			width: 0.5em;
 			height: 0.75em;
 
-			// Border
+
 			border-top: #{$silicon-stroke-var} solid currentColor;
 			border-right: #{$silicon-stroke-var} solid currentColor;
 			border-bottom: #{$silicon-stroke-var} solid currentColor;
@@ -64,7 +64,7 @@
 			&,
 			&::after,
 			&::before {
-				// Background
+	
 				background-color: $silicons-color-red;
 
 				// Typography

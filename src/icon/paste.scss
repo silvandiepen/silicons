@@ -2,10 +2,10 @@
 
 @mixin silicon-paste($selector: '.#{$silicon-prefix}paste') {
 	#{$selector} {
-		// Position
+
 		position: relative;
 
-		// Box Model
+
 		display: inline-block;
 		width: 0.75em;
 		height: 1em;
@@ -31,38 +31,38 @@
 		&::before {
 			content: '';
 
-			// Position
+
 			position: absolute;
 			top: 0em;
 			left: 50%;
 
-			// Box Model
+
 			width: 0.3em;
 			height: 0.1em;
 
-			// Background
+
 			background-color: currentColor;
 
-			// Transform
+
 			transform: translateX(-50%);
 		}
 		&::after {
 			content: '';
 
-			// Position
+
 			position: absolute;
 			bottom: 100%;
 			left: 50%;
 
-			// Box Model
+
 			width: 0.2em;
 			height: 0.2em;
 
-			// Border
+
 			border: #{$silicon-stroke-half-var} solid currentColor;
 			border-radius: 50% 50% 0 0;
 
-			// Transform
+
 			transform: translateX(-50%);
 		}
 	}

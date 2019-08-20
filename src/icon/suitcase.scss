@@ -2,10 +2,10 @@
 
 @mixin silicon-suitcase($selector: '.#{$silicon-prefix}suitcase') {
 	#{$selector} {
-		// Position
+
 		position: relative;
 
-		// Box Model
+
 		display: inline-block;
 		width: 1em;
 		height: 0.75em;
@@ -19,50 +19,50 @@
 		&::after {
 			content: '';
 
-			// Position
+
 			position: absolute;
 			left: 50%;
 
-			// Box Model
+
 			display: block;
 			box-sizing: border-box;
 
-			// Border
+
 			border: calc(#{$silicon-stroke-var} / 2) solid currentColor;
 		}
 		&::before {
-			// Position
+
 			top: calc(#{$silicon-stroke-var} * -1);
 
-			// Box Model
+
 			width: 0.5em;
 			height: calc(100% + #{$silicon-stroke-var} * 2);
 
-			// Border
+
 			border-top: none;
 			border-bottom: none;
 
-			// Transform
+
 			transform: translateX(-50%);
 		}
 
 		&::after {
-			// Position
+
 			bottom: calc(100% + #{$silicon-stroke-var});
 
-			// Box Model
+
 			width: 0.3em;
 			height: 0.125em;
 
-			// Border
+
 			border-bottom: none;
 			border-radius: 0.25em 0.25em 0 0;
 
-			// Transform
+
 			transform: translateX(-50%);
 		}
 		&.colored {
-			// Background
+
 			background-color: $silicons-color-brown;
 
 			// Typography

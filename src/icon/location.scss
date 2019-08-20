@@ -2,10 +2,10 @@
 
 @mixin silicon-location($selector: '.#{$silicon-prefix}location') {
 	#{$selector} {
-		// Position
+
 		position: relative;
 
-		// Box Model
+
 		display: inline-block;
 		width: 1em;
 		height: 1em;
@@ -21,35 +21,35 @@
 		&::after {
 			content: '';
 
-			// Position
+
 			position: absolute;
 			top: 50%;
 			right: 50%;
 
-			// Box Model
+
 			display: block;
 			width: calc(#{$silicon-stroke-var} * 2);
 			height: calc(#{$silicon-stroke-var} * 2);
 			box-sizing: border-box;
 
-			// Border
+
 			border-radius: 50%;
 
-			// Background
+
 			background-color: currentColor;
 
-			// Transform
+
 			transform: translate(50%, -50%);
 		}
 		&.colored {
 
-			// Background
+
 			background-color: $silicons-color-red;
 			// Typography
 			color: $silicons-color-dark-red;
 
 			&::after {
-				// Box Model
+	
 				width: calc(#{$silicon-stroke-var} * 3);
 				height: calc(#{$silicon-stroke-var} * 3);
 

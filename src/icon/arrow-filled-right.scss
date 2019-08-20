@@ -4,11 +4,11 @@
 	$selector: '.#{$silicon-prefix}arrow-filled-right'
 ) {
 	#{$selector} {
-		// Position
+
 		position: relative;
 
-		// Box Model
-		display: block;
+
+		display: inline-block;
 		width: 1em;
 		height: #{$silicon-stroke-var};
 
@@ -18,23 +18,23 @@
 		&::before {
 			content: '';
 
-			// Box Model
+
 			position: absolute;
 			top: calc(#{$silicon-stroke-var} * 0.5);
 			right: calc(#{$silicon-stroke-var} * -0.5);
 
-			// Box Model
+
 			display: block;
 			width: 0;
 			height: 0;
 
-			// Border
+
 			border: 0.15em solid currentColor;
 			border-bottom-color: transparent;
 			border-left-color: transparent;
 			border-radius: 0.05em;
 
-			// Transform
+
 			transform: rotate(45deg);
 			transform-origin: 100% 0;
 		}

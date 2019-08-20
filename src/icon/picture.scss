@@ -1,10 +1,10 @@
 @import '../default';
 @mixin silicon-picture($selector: '.#{$silicon-prefix}picture') {
 	#{$selector} {
-		// Position
+
 		position: relative;
 
-		// Box Model
+
 		display: inline-block;
 		width: 1em;
 		height: 1em;
@@ -20,16 +20,16 @@
 		&::before {
 			content: '';
 
-			// Position
+
 			position: absolute;
 			top: 0.1em;
 			left: 0.1em;
 
-			// Box Model
+
 			width: 0.1em;
 			height: 0.1em;
 
-			// Border
+
 			border: calc(#{$silicon-stroke-var} / 2) solid currentColor;
 			border-radius: 50%;
 		}
@@ -37,42 +37,42 @@
 		&::after {
 			content: '';
 
-			// Position
+
 			position: absolute;
 			top: 0.5em;
 			left: 0.25em;
 
-			// Box Model
+
 			width: 0.6em;
 			height: 0.6em;
 
-			// Border
+
 			border: calc(#{$silicon-stroke-var} / 2) solid currentColor;
 			border-radius: #{$silicon-stroke-var} 0 0 0;
 
-			// Transform
+
 			transform: rotate(45deg);
 			transform-origin: 50% 50%;
 		}
 
 		&.colored {
-			// Background
+
 			background-color: $silicons-color-light-blue;
 			
 			// Typography
 			color: $silicons-color-dark-brown;
 			&::before {
-				// Box Model
+	
 				box-shadow: 0 0 0.2em 0 $silicons-color-white;
 
-				// Background
+	
 				background-color: $silicons-color-yellow;
 
 				// Typography
 				color: $silicons-color-yellow;
 			}
 			&::after {
-				// Background
+	
 				background-color: $silicons-color-green;
 
 				// Typography

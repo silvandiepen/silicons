@@ -2,10 +2,10 @@
 
 @mixin silicon-book($selector: '.#{$silicon-prefix}book') {
 	#{$selector} {
-		// Position
+
 		position: relative;
 
-		// Box Model
+
 		display: inline-block;
 		width: 0.75em;
 		height: 0.75em;
@@ -27,23 +27,23 @@
 		&::before {
 			content: '';
 
-			// Position
+
 			position: absolute;
 			top: 100%;
 			left: calc(#{$silicon-stroke-var} * -1);
 
-			// Box Model
+
 			display: block;
 			width: calc(100% + #{$silicon-stroke-var});
 			height: 0.4em;
 			box-sizing: border-box;
 
-			// Border
+
 			border: #{$silicon-stroke-var} solid currentColor;
 			border-right: none;
 			border-radius: 0.2em 0 0 0.2em;
 
-			// Background
+
 			background-image: radial-gradient(
 				closest-side,
 				transparent calc(100% - 0.05em),
@@ -55,7 +55,7 @@
 			background-position: top 50% right -0.31em;
 			background-size: 0.4em 0.4em;
 
-			// Transform
+
 			transform: translateY(-50%);
 		}
 	}

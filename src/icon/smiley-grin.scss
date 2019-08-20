@@ -7,21 +7,21 @@
 		&::after {
 			content: '';
 
-			// Box Model
+
 			width: 0.5em;
 			height: 0.25em;
 
-			// Border
+
 			border: calc(#{$silicon-stroke-var} / 2) solid currentColor;
 			border-radius: 0 0 0.5em 0.5em;
 
-			// Transform
+
 			transform: translate(-50%, 25%);
 		}
 
 		&.colored {
 			&::after {
-				// Background
+	
 				background-color: white;
 				
 				// Typography

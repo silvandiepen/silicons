@@ -2,11 +2,11 @@
 
 @mixin silicon-reload($selector: '.#{$silicon-prefix}reload') {
 	#{$selector} {
-		// Position
+
 		position: relative;
 
-		// Box Model
-		display: block;
+
+		display: inline-block;
 		width: 1em;
 		height: 1em;
 		box-sizing: border-box;
@@ -23,23 +23,23 @@
 		&::after {
 			content: '';
 
-			// Position
+
 			position: absolute;
 			top: 50%;
 			left: 50%;
 
-			// Box Model
+
 			display: block;
 			width: calc(#{$silicon-stroke-var} * 3);
 			height: calc(#{$silicon-stroke-var} * 3);
 			box-sizing: border-box;
 
-			// Border
+
 			border: #{$silicon-stroke-var} solid currentColor;
 			border-bottom: none;
 			border-left: none;
 
-			// Transform
+
 			transform: translate(25%, 75%) rotate(22.5deg);
 		}
 	}

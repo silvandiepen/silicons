@@ -2,10 +2,10 @@
 
 @mixin silicon-ban($selector: '.#{$silicon-prefix}ban') {
 	#{$selector} {
-		// Position
+
 		position: relative;
 
-		// Box Model
+
 		display: inline-block;
 		width: 1em;
 		height: 1em;

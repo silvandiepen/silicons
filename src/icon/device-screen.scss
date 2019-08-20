@@ -2,10 +2,10 @@
 
 @mixin silicon-device-screen($selector: '.#{$silicon-prefix}device-screen') {
 	#{$selector} {
-		// Position
+
 		position: relative;
 
-		// Box Model
+
 		display: inline-block;
 		width: 1em;
 		height: 0.75em;
@@ -18,22 +18,22 @@
 		&::before {
 			content: '';
 
-			// Position
+
 			position: absolute;
 			top: 100%;
 			left: 50%;
 
-			// Box Model
+
 			display: block;
 			width: 50%;
 			height: calc(#{$silicon-stroke-var} * 3);
 			box-sizing: border-box;
 
-			// Border
+
 			border-bottom: calc(#{$silicon-stroke-var} / 2) solid
 				currentColor;
 
-			// Background
+
 			background-image: linear-gradient(
 				to right,
 				transparent calc(50% - #{$silicon-stroke-var} / 4),
@@ -42,11 +42,11 @@
 				transparent calc(50% + #{$silicon-stroke-var} / 4)
 			);
 
-			// Transform
+
 			transform: translateX(-50%);
 		}
 		&.colored {
-			// Background
+
 			background-color: $silicons-color-blue;
 			background-image: linear-gradient(
 				-70deg,

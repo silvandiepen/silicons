@@ -2,10 +2,10 @@
 
 @mixin silicon-device-tv($selector: '.#{$silicon-prefix}device-tv') {
 	#{$selector} {
-		// Position
+
 		position: relative;
 
-		// Box Model
+
 		display: inline-block;
 		width: 1em;
 		height: 0.75em;
@@ -18,28 +18,28 @@
 		&::before {
 			content: '';
 
-			// Position
+
 			position: absolute;
 			bottom: 100%;
 			left: 50%;
 
-			// Box Model
+
 			display: block;
 			width: calc(#{$silicon-stroke-var} * 3);
 			height: calc(#{$silicon-stroke-var} * 3);
 			box-sizing: border-box;
 
-			// Border
+
 			border: calc(#{$silicon-stroke-var} / 2) solid currentColor;
 			border-top: 0;
 			border-right: 0;
 
-			// Transform
+
 			transform: translateX(-50%)
 				translateY(calc(#{$silicon-stroke-var} * -1)) rotate(-45deg);
 		}
 		.colored {
-			// Background
+
 			background-image: $silicons-color-purple;
 		}
 	}
