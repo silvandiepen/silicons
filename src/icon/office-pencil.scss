@@ -60,6 +60,7 @@
 			border: calc(#{$silicon-stroke-var} * 0.8) solid currentColor;
 			border-right-color: transparent;
 			border-bottom-color: transparent;
+			border-radius: #{$silicon-stroke-var} 0 0 0;
 
 
 			background-image: radial-gradient(
@@ -70,7 +71,6 @@
 			background-repeat: no-repeat;
 			background-position: -0.15em -0.15em;
 			background-size: 0.3em 0.3em;
--radius: #{$silicon-stroke-var} 0 0 0;
 
 
 			transform: translate(-50%, -50%) scale(1, 1) rotate(45deg);
