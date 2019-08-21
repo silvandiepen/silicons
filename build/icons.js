@@ -27,6 +27,7 @@ function cssJsImports(icons) {
 }
 
 function doSass(file) {
+	console.log(file);
 	sass.render(
 		{
 			data: '@import "src/mixins.scss"; @include silicon-' + file + '(); ',
