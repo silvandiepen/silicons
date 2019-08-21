@@ -3,22 +3,32 @@
   display: inline-block;
   width: 1em;
   height: 1em;
-  box-sizing: border-box;
-  border: var(--stroke, 0.1em) solid currentColor;
-  border-radius: 50%;
 }
 .silicon-search::before {
   content: "";
   position: absolute;
-  top: 100%;
-  left: 100%;
-  display: block;
-  width: 0.5em;
-  height: var(--stroke, 0.1em);
-  box-sizing: border-box;
+  top: 50%;
+  left: 50%;
+  display: inline-block;
+  width: 0.6em;
+  height: 0.6em;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.silicon-search::after {
+  content: "";
+  position: absolute;
+  top: 0.75em;
+  left: 0.75em;
+  display: inline-block;
+  width: calc(var(--stroke, 0.1em) * 1.5);
+  height: 0.3em;
   background-color: currentColor;
-  -webkit-transform: translate(-0.1em, -0.1em) rotate(45deg);
-          transform: translate(-0.1em, -0.1em) rotate(45deg);
-  -webkit-transform-origin: 0 50%;
-          transform-origin: 0 50%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transform-origin: 50% 0%;
+          transform-origin: 50% 0%;
+  margin-left: calc((var(--stroke, 0.1em) * 0.75) * -1);
 }

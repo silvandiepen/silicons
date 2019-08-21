@@ -1,5 +1,6 @@
 .silicon-office-scissors {
   position: relative;
+  display: inline-block;
   width: 1em;
   height: 1em;
   background-image: radial-gradient(closest-side, transparent 50%, currentColor 50%, currentColor 100%, transparent), radial-gradient(closest-side, transparent 50%, currentColor 50%, currentColor 100%, transparent);

@@ -1,6 +1,6 @@
 .silicon-arrow-filled-right {
   position: relative;
-  display: block;
+  display: inline-block;
   width: 1em;
   height: var(--stroke, 0.1em);
   background-color: currentColor;

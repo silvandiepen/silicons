@@ -1,6 +1,6 @@
 .silicon-go-left {
   position: relative;
-  display: block;
+  display: inline-block;
   width: 0.5em;
   height: 1em;
   overflow: hidden;

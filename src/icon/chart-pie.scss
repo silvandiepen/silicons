@@ -1,0 +1,29 @@
+@import '../default';
+
+@mixin silicon-chart-area($selector: '.#{$silicon-prefix}chart-area') {
+	#{$selector} {
+		width: 0;
+		height: 0;
+		border: 0.75em solid;
+		border-right-color: transparent;
+		border-radius: 50%;
+		-webkit-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+		margin: 2px;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: -0.8em;
+			left: -0.6em;
+			display: block;
+			width: 0;
+			height: 0;
+			border: 0.8em solid;
+			border-top-color: transparent;
+			border-bottom-color: transparent;
+			border-left-color: transparent;
+			border-radius: 50%;
+		}
+	}
+}

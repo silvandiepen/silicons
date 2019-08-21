@@ -26,6 +26,9 @@
 @include silicon-book();
 @include silicon-bottle();
 @include silicon-burger();
+@include silicon-chart-area();
+@include silicon-chart-bar();
+@include silicon-chart-pie();
 @include silicon-check();
 @include silicon-code();
 @include silicon-copy();
@@ -62,11 +65,13 @@
 @include silicon-math-minus();
 @include silicon-math-plus();
 @include silicon-math-times();
+@include silicon-music();
 @include silicon-office-marker();
 @include silicon-office-paperclip();
 @include silicon-office-pencil();
 @include silicon-office-scissors();
 @include silicon-paste();
+@include silicon-piano();
 @include silicon-picture();
 @include silicon-power-socket-eu();
 @include silicon-power-socket-us();
@@ -86,6 +91,7 @@
 @include silicon-smiley-sad();
 @include silicon-smiley-wink();
 @include silicon-suitcase();
+@include silicon-terminal();
 @include silicon-text-align-center();
 @include silicon-text-align-justify();
 @include silicon-text-align-left();
