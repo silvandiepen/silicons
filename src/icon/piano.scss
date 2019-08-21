@@ -1,6 +1,6 @@
 @import '../default';
 
-@mixin silicon-save($selector: '.#{$silicon-prefix}save') {
+@mixin silicon-piano($selector: '.#{$silicon-prefix}piano') {
 	#{$selector} {
 		position: relative;
 		display: inline-block;

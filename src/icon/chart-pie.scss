@@ -1,6 +1,6 @@
 @import '../default';
 
-@mixin silicon-chart-area($selector: '.#{$silicon-prefix}chart-area') {
+@mixin silicon-chart-pie($selector: '.#{$silicon-prefix}chart-pie') {
 	#{$selector} {
 		width: 0;
 		height: 0;

@@ -1,0 +1,2 @@
+const data = {"chart-bar":{"data":".silicon-chart-bar {\n  position: relative;\n  width: 1em;\n  height: 1em;\n  border-bottom: 0.1em solid currentColor;\n  border-left: 0.1em solid currentColor;\n}\n.silicon-chart-bar::before {\n  content: \"\";\n  position: absolute;\n  bottom: 0.1em;\n  left: 0.1em;\n  display: block;\n  width: 0.1em;\n  height: 0.45em;\n  box-shadow: inset 0 -0.2em 0 0, 0.2em 0, 0.4em -0.25em, 0.4em 0em, 0.6em 0em;\n}"}}
+	export default data;
