@@ -1,14 +1,14 @@
 .silicon-cloud {
-  display: inline-block;
   position: relative;
-  margin-left: -0.75em;
-  margin-top: 0.4em;
+  display: inline-block;
   width: 0.35em;
   height: 0.55em;
-  border-radius: 0.275em 0 0 0.275em;
-  border-left: 0.1em solid currentColor;
   border-top: 0.1em solid currentColor;
   border-bottom: 0.1em solid currentColor;
+  border-left: 0.1em solid currentColor;
+  border-radius: 0.275em 0 0 0.275em;
+  margin-left: -0.75em;
+  margin-top: 0.4em;
 }
 .silicon-cloud::before {
   content: "";
@@ -17,11 +17,11 @@
   left: 0.15em;
   width: 0.75em;
   height: 0.75em;
+  border: 0.1em solid currentColor;
+  border-left-color: transparent;
   border-radius: 50%;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
-  border: 0.1em solid currentColor;
-  border-left-color: transparent;
 }
 .silicon-cloud::after {
   content: "";

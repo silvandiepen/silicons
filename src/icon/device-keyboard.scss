@@ -3,20 +3,18 @@
 @mixin silicon-device-keyboard($selector: '.#{$silicon-prefix}device-keyboard') {
 	#{$selector} {
 		position: relative;
+		display: inline-block;
 		width: 1em;
 		height: 0.5em;
-		border-radius: 0;
 		border: solid 0.05em currentColor;
-		display: inline-block;
+		border-radius: 0;
 		&::before {
 			content: '';
 			position: absolute;
-			left: 0.075em;
 			top: 0.075em;
+			left: 0.075em;
 			width: 0.05em;
 			height: 0.05em;
-			background-color: currentColor;
-			border-radius: 10%;
 			box-shadow: 0.1em 0 currentColor, 0.2em 0 currentColor,
 				0.3em 0 currentColor, 0.4em 0 currentColor, 0.5em 0 currentColor,
 				0.6em 0 currentColor, 0.7em 0 currentColor, 0.05em 0.1em currentColor,
@@ -27,6 +25,8 @@
 				0.2em 0.2em currentColor, 0.3em 0.2em currentColor,
 				0.4em 0.2em currentColor, 0.5em 0.2em currentColor,
 				0.6em 0.2em currentColor, 0.7em 0.2em currentColor;
+			border-radius: 10%;
+			background-color: currentColor;
 		}
 	}
 }

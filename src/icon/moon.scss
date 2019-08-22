@@ -2,24 +2,24 @@
 
 @mixin silicon-moon($selector: '.#{$silicon-prefix}moon') {
 	#{$selector} {
-		display: inline-block;
 		position: relative;
+		display: inline-block;
 		width: 1em;
 		height: 1em;
-		border-radius: 50%;
 		border: 0.1em solid currentColor;
 		border-right-color: transparent;
+		border-radius: 50%;
 		&::before {
 			content: '';
 			position: absolute;
+			top: 0.05em;
+			left: 50%;
 			width: 0.5em;
 			height: 0.5em;
 			border: 0.1em solid currentColor;
 			border-right-color: transparent;
 			border-bottom-color: transparent;
 			border-radius: 50%;
-			top: 0.05em;
-			left: 50%;
 			transform: rotate(-45deg);
 		}
 	}

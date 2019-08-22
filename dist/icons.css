@@ -976,16 +976,16 @@
 }
 
 .silicon-cloud-rain {
-  display: inline-block;
   position: relative;
-  margin-left: -0.75em;
-  margin-top: 0.4em;
+  display: inline-block;
   width: 0.35em;
   height: 0.55em;
-  border-radius: 0.275em 0 0 0.275em;
-  border-left: 0.1em solid currentColor;
   border-top: 0.1em solid currentColor;
   border-bottom: 0.1em solid currentColor;
+  border-left: 0.1em solid currentColor;
+  border-radius: 0.275em 0 0 0.275em;
+  margin-left: -0.75em;
+  margin-top: 0.4em;
 }
 .silicon-cloud-rain::before {
   content: "";
@@ -994,37 +994,37 @@
   left: 0.15em;
   width: 0.75em;
   height: 0.75em;
-  border-radius: 50%;
-  transform: rotate(-45deg);
   border: 0.1em solid currentColor;
   border-bottom-color: transparent;
   border-left-color: transparent;
+  border-radius: 50%;
+  transform: rotate(-45deg);
 }
 .silicon-cloud-rain::after {
   content: "";
   position: absolute;
   top: 0em;
   left: 0.4em;
+  z-index: 2;
   width: 0.2em;
   height: 0.2em;
+  box-shadow: 0.65em 0.15em currentColor, 0.4em -0.1em currentColor, 0.25em 0.25em currentColor;
   border-radius: 0 50% 50% 50%;
   background-color: currentColor;
-  box-shadow: 0.65em 0.15em currentColor, 0.4em -0.1em currentColor, 0.25em 0.25em currentColor;
-  z-index: 2;
   transform: rotate(45deg);
 }
 
 .silicon-cloud-snow {
-  display: inline-block;
   position: relative;
-  margin-left: -0.75em;
-  margin-top: 0.4em;
+  display: inline-block;
   width: 0.35em;
   height: 0.55em;
-  border-radius: 0.275em 0 0 0.275em;
-  border-left: 0.1em solid currentColor;
   border-top: 0.1em solid currentColor;
   border-bottom: 0.1em solid currentColor;
+  border-left: 0.1em solid currentColor;
+  border-radius: 0.275em 0 0 0.275em;
+  margin-left: -0.75em;
+  margin-top: 0.4em;
 }
 .silicon-cloud-snow::before {
   content: "";
@@ -1033,36 +1033,36 @@
   left: 0.15em;
   width: 0.75em;
   height: 0.75em;
-  border-radius: 50%;
-  transform: rotate(-45deg);
   border: 0.1em solid currentColor;
   border-bottom-color: transparent;
   border-left-color: transparent;
+  border-radius: 50%;
+  transform: rotate(-45deg);
 }
 .silicon-cloud-snow::after {
   content: "";
   position: absolute;
   top: 0.3em;
   left: 0.4em;
+  z-index: 2;
   width: 0.2em;
   height: 0.2em;
+  box-shadow: 0.5em 0 currentColor, 0.25em -0.25em currentColor, 0.25em 0.25em currentColor;
   border-radius: 50%;
   background-color: currentColor;
-  box-shadow: 0.5em 0 currentColor, 0.25em -0.25em currentColor, 0.25em 0.25em currentColor;
-  z-index: 2;
 }
 
 .silicon-cloud {
-  display: inline-block;
   position: relative;
-  margin-left: -0.75em;
-  margin-top: 0.4em;
+  display: inline-block;
   width: 0.35em;
   height: 0.55em;
-  border-radius: 0.275em 0 0 0.275em;
-  border-left: 0.1em solid currentColor;
   border-top: 0.1em solid currentColor;
   border-bottom: 0.1em solid currentColor;
+  border-left: 0.1em solid currentColor;
+  border-radius: 0.275em 0 0 0.275em;
+  margin-left: -0.75em;
+  margin-top: 0.4em;
 }
 .silicon-cloud::before {
   content: "";
@@ -1071,10 +1071,10 @@
   left: 0.15em;
   width: 0.75em;
   height: 0.75em;
-  border-radius: 50%;
-  transform: rotate(-45deg);
   border: 0.1em solid currentColor;
   border-left-color: transparent;
+  border-radius: 50%;
+  transform: rotate(-45deg);
 }
 .silicon-cloud::after {
   content: "";
@@ -1130,7 +1130,7 @@
 }
 .silicon-comment::after {
   content: "";
-  box-model: border-box;
+  box-sizing: border-box;
   display: block;
   position: absolute;
   width: 0.3em;
@@ -1274,22 +1274,22 @@
 
 .silicon-device-keyboard {
   position: relative;
+  display: inline-block;
   width: 1em;
   height: 0.5em;
-  border-radius: 0;
   border: solid 0.05em currentColor;
-  display: inline-block;
+  border-radius: 0;
 }
 .silicon-device-keyboard::before {
   content: "";
   position: absolute;
-  left: 0.075em;
   top: 0.075em;
+  left: 0.075em;
   width: 0.05em;
   height: 0.05em;
-  background-color: currentColor;
-  border-radius: 10%;
   box-shadow: 0.1em 0 currentColor, 0.2em 0 currentColor, 0.3em 0 currentColor, 0.4em 0 currentColor, 0.5em 0 currentColor, 0.6em 0 currentColor, 0.7em 0 currentColor, 0.05em 0.1em currentColor, 0.15em 0.1em currentColor, 0.25em 0.1em currentColor, 0.35em 0.1em currentColor, 0.45em 0.1em currentColor, 0.55em 0.1em currentColor, 0.65em 0.1em currentColor, 0em 0.2em currentColor, 0.1em 0.2em currentColor, 0.2em 0.2em currentColor, 0.3em 0.2em currentColor, 0.4em 0.2em currentColor, 0.5em 0.2em currentColor, 0.6em 0.2em currentColor, 0.7em 0.2em currentColor;
+  border-radius: 10%;
+  background-color: currentColor;
 }
 
 .silicon-device-laptop {
@@ -1326,32 +1326,32 @@
 
 .silicon-device-mouse {
   position: relative;
+  display: inline-block;
   width: 0.75em;
   height: 1em;
   border: solid 0.1em currentColor;
   border-radius: 0.5em;
-  display: inline-block;
 }
 .silicon-device-mouse::before {
   content: "";
   position: absolute;
-  display: block;
   top: 0.33em;
   left: -0.1em;
+  display: block;
   width: 0.75em;
   height: 0.05em;
   background-color: currentColor;
 }
 .silicon-device-mouse::after {
-  display: block;
   content: "";
   position: absolute;
   top: 0em;
-  margin-left: -0.025em;
   left: 50%;
+  display: block;
   width: 0.05em;
   height: 0.33em;
   background-color: currentColor;
+  margin-left: -0.025em;
 }
 
 .silicon-device-phone {
@@ -2255,31 +2255,31 @@
 }
 .silicon-media-backward::before {
   content: "";
-  display: block;
   position: absolute;
-  background-color: transparent;
+  top: 50%;
+  left: 50%;
+  display: block;
+  height: 0;
   border: 0.5em solid currentColor;
   border-top: 0.5em solid transparent;
   border-bottom: 0.5em solid transparent;
   border-left-color: transparent;
+  background-color: transparent;
   transform: translate(-100%, -50%);
-  left: 50%;
-  top: 50%;
-  height: 0;
 }
 .silicon-media-backward::after {
   content: "";
-  display: block;
   position: absolute;
-  background-color: transparent;
+  top: 50%;
+  left: 50%;
+  display: block;
+  height: 0;
   border: 0.5em solid currentColor;
   border-top: 0.5em solid transparent;
   border-bottom: 0.5em solid transparent;
   border-left-color: transparent;
+  background-color: transparent;
   transform: translate(-50%, -50%);
-  left: 50%;
-  top: 50%;
-  height: 0;
 }
 
 .silicon-media-next {
@@ -2290,28 +2290,28 @@
 }
 .silicon-media-next::before {
   content: "";
-  display: block;
   position: absolute;
-  background-color: transparent;
+  top: 50%;
+  left: 50%;
+  display: block;
+  height: 0;
   border: 0.5em solid currentColor;
   border-top: 0.5em solid transparent;
-  border-bottom: 0.5em solid transparent;
   border-right-color: transparent;
+  border-bottom: 0.5em solid transparent;
+  background-color: transparent;
   transform: translate(-33.33%, -50%);
-  left: 50%;
-  top: 50%;
-  height: 0;
 }
 .silicon-media-next::after {
   content: "";
-  display: block;
   position: absolute;
-  background-color: currentColor;
+  top: 50%;
+  left: 50%;
+  display: block;
   width: 0.2em;
   height: 1em;
+  background-color: currentColor;
   transform: translate(33.33%, -50%);
-  left: 50%;
-  top: 50%;
 }
 
 .silicon-media-pause {
@@ -2322,17 +2322,17 @@
 }
 .silicon-media-pause::before {
   content: "";
-  display: block;
   position: absolute;
-  background-color: transparent;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 0.25em;
+  height: 0.75em;
   border: 0.25em solid currentColor;
   border-top: 0;
   border-bottom: 0;
+  background-color: transparent;
   transform: translate(-50%, -50%);
-  left: 50%;
-  top: 50%;
-  width: 0.25em;
-  height: 0.75em;
 }
 
 .silicon-media-play {
@@ -2343,17 +2343,17 @@
 }
 .silicon-media-play::before {
   content: "";
-  display: block;
   position: absolute;
-  background-color: transparent;
+  top: 50%;
+  left: 50%;
+  display: block;
+  height: 0;
   border: 0.75em solid currentColor;
   border-top: 0.5em solid transparent;
-  border-bottom: 0.5em solid transparent;
   border-right-color: transparent;
+  border-bottom: 0.5em solid transparent;
+  background-color: transparent;
   transform: translate(-25%, -50%);
-  left: 50%;
-  top: 50%;
-  height: 0;
 }
 
 .silicon-media-previous {
@@ -2364,28 +2364,28 @@
 }
 .silicon-media-previous::before {
   content: "";
-  display: block;
   position: absolute;
-  background-color: transparent;
+  top: 50%;
+  left: 50%;
+  display: block;
+  height: 0;
   border: 0.5em solid currentColor;
   border-top: 0.5em solid transparent;
   border-bottom: 0.5em solid transparent;
   border-left-color: transparent;
+  background-color: transparent;
   transform: translate(-66.66%, -50%);
-  left: 50%;
-  top: 50%;
-  height: 0;
 }
 .silicon-media-previous::after {
   content: "";
-  display: block;
   position: absolute;
-  background-color: currentColor;
+  top: 50%;
+  left: 50%;
+  display: block;
   width: 0.2em;
   height: 1em;
+  background-color: currentColor;
   transform: translate(-175%, -50%);
-  left: 50%;
-  top: 50%;
 }
 
 .silicon-media-stop {
@@ -2396,36 +2396,36 @@
 }
 .silicon-media-stop::before {
   content: "";
-  display: block;
   position: absolute;
-  background-color: currentColor;
-  transform: translate(-50%, -50%);
-  left: 50%;
   top: 50%;
+  left: 50%;
+  display: block;
   width: 0.75em;
   height: 0.75em;
+  background-color: currentColor;
+  transform: translate(-50%, -50%);
 }
 
 .silicon-moon {
-  display: inline-block;
   position: relative;
+  display: inline-block;
   width: 1em;
   height: 1em;
-  border-radius: 50%;
   border: 0.1em solid currentColor;
   border-right-color: transparent;
+  border-radius: 50%;
 }
 .silicon-moon::before {
   content: "";
   position: absolute;
+  top: 0.05em;
+  left: 50%;
   width: 0.5em;
   height: 0.5em;
   border: 0.1em solid currentColor;
   border-right-color: transparent;
   border-bottom-color: transparent;
   border-radius: 50%;
-  top: 0.05em;
-  left: 50%;
   transform: rotate(-45deg);
 }
 
@@ -2581,32 +2581,32 @@
 }
 
 .silicon-office-ruler {
-  display: inline-block;
   position: relative;
-  border: 0.05em solid currentColor;
+  display: inline-block;
   width: 1em;
   height: 0.33em;
+  border: 0.05em solid currentColor;
   margin: 11px 4px 11px 3px;
 }
 .silicon-office-ruler::before {
   content: "";
   position: absolute;
+  top: 0;
+  left: 0.125em;
   width: 0.03em;
   height: 0.15em;
-  background-color: currentColor;
   box-shadow: 0.2em 0em currentColor, 0.4em 0em currentColor, 0.6em 0em currentColor;
-  left: 0.125em;
-  top: 0;
+  background-color: currentColor;
 }
 .silicon-office-ruler::after {
   content: "";
   position: absolute;
+  top: 0;
+  left: 0.025em;
   width: 0.02em;
   height: 0.1em;
-  background-color: currentColor;
   box-shadow: 0.05em 0em currentColor, 0.1em 0em currentColor, 0.15em 0em currentColor, 0.2em 0em currentColor, 0.25em 0em currentColor, 0.3em 0em currentColor, 0.35em 0em currentColor, 0.4em 0em currentColor, 0.45em 0em currentColor, 0.5em 0em currentColor, 0.55em 0em currentColor, 0.6em 0em currentColor, 0.65em 0em currentColor, 0.7em 0em currentColor, 0.75em 0em currentColor, 0.8em 0em currentColor, 0.85em 0em currentColor;
-  left: 0.025em;
-  top: 0;
+  background-color: currentColor;
 }
 
 .silicon-office-scissors {

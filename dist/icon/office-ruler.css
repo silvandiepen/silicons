@@ -1,28 +1,28 @@
 .silicon-office-ruler {
-  display: inline-block;
   position: relative;
-  border: 0.05em solid currentColor;
+  display: inline-block;
   width: 1em;
   height: 0.33em;
+  border: 0.05em solid currentColor;
   margin: 11px 4px 11px 3px;
 }
 .silicon-office-ruler::before {
   content: "";
   position: absolute;
+  top: 0;
+  left: 0.125em;
   width: 0.03em;
   height: 0.15em;
-  background-color: currentColor;
   box-shadow: 0.2em 0em currentColor, 0.4em 0em currentColor, 0.6em 0em currentColor;
-  left: 0.125em;
-  top: 0;
+  background-color: currentColor;
 }
 .silicon-office-ruler::after {
   content: "";
   position: absolute;
+  top: 0;
+  left: 0.025em;
   width: 0.02em;
   height: 0.1em;
-  background-color: currentColor;
   box-shadow: 0.05em 0em currentColor, 0.1em 0em currentColor, 0.15em 0em currentColor, 0.2em 0em currentColor, 0.25em 0em currentColor, 0.3em 0em currentColor, 0.35em 0em currentColor, 0.4em 0em currentColor, 0.45em 0em currentColor, 0.5em 0em currentColor, 0.55em 0em currentColor, 0.6em 0em currentColor, 0.65em 0em currentColor, 0.7em 0em currentColor, 0.75em 0em currentColor, 0.8em 0em currentColor, 0.85em 0em currentColor;
-  left: 0.025em;
-  top: 0;
+  background-color: currentColor;
 }

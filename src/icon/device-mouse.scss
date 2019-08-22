@@ -3,32 +3,32 @@
 @mixin silicon-device-mouse($selector: '.#{$silicon-prefix}device-mouse') {
 	#{$selector} {
 		position: relative;
+		display: inline-block;
 		width: 0.75em;
 		height: 1em;
 		border: solid 0.1em currentColor;
 		border-radius: 0.5em;
-		display: inline-block;
 
 		&::before {
 			content: '';
 			position: absolute;
-			display: block;
 			top: 0.33em;
 			left: -0.1em;
+			display: block;
 			width: 0.75em;
 			height: 0.05em;
 			background-color: currentColor;
 		}
 		&::after {
-			display: block;
 			content: '';
 			position: absolute;
 			top: 0em;
-			margin-left: -0.025em;
 			left: 50%;
+			display: block;
 			width: 0.05em;
 			height: 0.33em;
 			background-color: currentColor;
+			margin-left: -0.025em;
 		}
 	}
 }

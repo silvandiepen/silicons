@@ -6,16 +6,16 @@
 }
 .silicon-media-play::before {
   content: "";
-  display: block;
   position: absolute;
-  background-color: transparent;
+  top: 50%;
+  left: 50%;
+  display: block;
+  height: 0;
   border: 0.75em solid currentColor;
   border-top: 0.5em solid transparent;
-  border-bottom: 0.5em solid transparent;
   border-right-color: transparent;
+  border-bottom: 0.5em solid transparent;
+  background-color: transparent;
   -webkit-transform: translate(-25%, -50%);
           transform: translate(-25%, -50%);
-  left: 50%;
-  top: 50%;
-  height: 0;
 }

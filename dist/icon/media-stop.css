@@ -6,13 +6,13 @@
 }
 .silicon-media-stop::before {
   content: "";
-  display: block;
   position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 0.75em;
+  height: 0.75em;
   background-color: currentColor;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  left: 50%;
-  top: 50%;
-  width: 0.75em;
-  height: 0.75em;
 }

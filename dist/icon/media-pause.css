@@ -6,16 +6,16 @@
 }
 .silicon-media-pause::before {
   content: "";
-  display: block;
   position: absolute;
-  background-color: transparent;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 0.25em;
+  height: 0.75em;
   border: 0.25em solid currentColor;
   border-top: 0;
   border-bottom: 0;
+  background-color: transparent;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  left: 50%;
-  top: 50%;
-  width: 0.25em;
-  height: 0.75em;
 }

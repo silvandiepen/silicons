@@ -1,14 +1,14 @@
 .silicon-cloud-rain {
-  display: inline-block;
   position: relative;
-  margin-left: -0.75em;
-  margin-top: 0.4em;
+  display: inline-block;
   width: 0.35em;
   height: 0.55em;
-  border-radius: 0.275em 0 0 0.275em;
-  border-left: 0.1em solid currentColor;
   border-top: 0.1em solid currentColor;
   border-bottom: 0.1em solid currentColor;
+  border-left: 0.1em solid currentColor;
+  border-radius: 0.275em 0 0 0.275em;
+  margin-left: -0.75em;
+  margin-top: 0.4em;
 }
 .silicon-cloud-rain::before {
   content: "";
@@ -17,24 +17,24 @@
   left: 0.15em;
   width: 0.75em;
   height: 0.75em;
-  border-radius: 50%;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
   border: 0.1em solid currentColor;
   border-bottom-color: transparent;
   border-left-color: transparent;
+  border-radius: 50%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 .silicon-cloud-rain::after {
   content: "";
   position: absolute;
   top: 0em;
   left: 0.4em;
+  z-index: 2;
   width: 0.2em;
   height: 0.2em;
+  box-shadow: 0.65em 0.15em currentColor, 0.4em -0.1em currentColor, 0.25em 0.25em currentColor;
   border-radius: 0 50% 50% 50%;
   background-color: currentColor;
-  box-shadow: 0.65em 0.15em currentColor, 0.4em -0.1em currentColor, 0.25em 0.25em currentColor;
-  z-index: 2;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
