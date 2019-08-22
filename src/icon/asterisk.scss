@@ -15,7 +15,7 @@
 		background-image: linear-gradient(to bottom, currentColor, currentColor);
 		background-repeat: no-repeat;
 		background-position: center center;
-		background-size: 100% #{$silicon-stroke-var};
+		background-size: 100% calc(#{$silicon-stroke-var} * 2);
 
 		&::before,
 		&::after {
@@ -29,7 +29,7 @@
 
 			display: block;
 			width: 100%;
-			height: #{$silicon-stroke-var};
+			height: calc(#{$silicon-stroke-var} * 2);
 			box-sizing: border-box;
 
 

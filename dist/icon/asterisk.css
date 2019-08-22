@@ -7,7 +7,7 @@
   background-image: linear-gradient(to bottom, currentColor, currentColor);
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 100% var(--stroke, 0.1em);
+  background-size: 100% calc(var(--stroke, 0.1em) * 2);
 }
 .silicon-asterisk::before, .silicon-asterisk::after {
   content: "";
@@ -16,7 +16,7 @@
   left: 50%;
   display: block;
   width: 100%;
-  height: var(--stroke, 0.1em);
+  height: calc(var(--stroke, 0.1em) * 2);
   box-sizing: border-box;
   background-color: currentColor;
   -webkit-transform: translate(-50%, -50%) rotate(60deg);

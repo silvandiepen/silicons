@@ -1,12 +1,40 @@
 @import '../default';
-@import 'arrow-filled-right';
 
 @mixin silicon-arrow-filled-left(
 	$selector: '.#{$silicon-prefix}arrow-filled-left'
 ) {
-	@include silicon-arrow-filled-right($selector);
 	#{$selector} {
+		position: relative;
+		display: inline-block;
+		width: 1em;
+		height: 1em;
 
-		transform: rotate(180deg);
+		&::before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 0%;
+
+			display: block;
+			width: 0em;
+			height: 0em;
+
+			border: 0.15em solid currentColor;
+			border-top-color: transparent;
+			border-left-color: transparent;
+
+			transform: translateY(-50%) rotate(-225deg);
+		}
+		&::after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 0;
+			display: block;
+			width: 1em;
+			height: 0.1em;
+			background-color: currentColor;
+			transform: translateY(-50%);
+		}
 	}
 }

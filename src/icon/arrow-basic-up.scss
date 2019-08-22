@@ -1,10 +1,38 @@
 @import '../default';
-@import 'arrow-basic-right';
 
 @mixin silicon-arrow-basic-up($selector: '.#{$silicon-prefix}arrow-basic-up') {
-	@include silicon-arrow-basic-right($selector);
 	#{$selector} {
+		position: relative;
+		display: inline-block;
+		width: 1em;
+		height: 1em;
 
-		transform: rotate(-90deg);
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0%;
+			left: 50%;
+
+			display: block;
+			width: 0.3em;
+			height: 0.3em;
+
+			border: 0.1em solid currentColor;
+			border-right: none;
+			border-bottom: none;
+
+			transform: translateX(-50%) rotate(45deg);
+		}
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 50%;
+			display: block;
+			width: 0.1em;
+			height: 1em;
+			background-color: currentColor;
+			transform: translateX(-50%);
+		}
 	}
 }

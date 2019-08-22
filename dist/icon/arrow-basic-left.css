@@ -2,28 +2,31 @@
   position: relative;
   display: inline-block;
   width: 1em;
-  height: var(--stroke, 0.1em);
-  /* background  */
-  background-color: currentColor;
+  height: 1em;
 }
 .silicon-arrow-basic-left::before {
   content: "";
   position: absolute;
-  top: calc(var(--stroke, 0.1em) * 0.5);
-  right: calc(var(--stroke, 0.1em) * -0.5);
+  top: 50%;
+  left: 0;
   display: block;
   width: 0.3em;
   height: 0.3em;
-  border: var(--stroke, 0.1em) solid currentColor;
-  border-bottom: none;
-  border-left: none;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  -webkit-transform-origin: 100% 0;
-          transform-origin: 100% 0;
+  border: 0.1em solid currentColor;
+  border-top: none;
+  border-right: none;
+  -webkit-transform: translateY(-50%) rotate(45deg);
+          transform: translateY(-50%) rotate(45deg);
 }
-
-.silicon-arrow-basic-left {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+.silicon-arrow-basic-left::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  width: 1em;
+  height: 0.1em;
+  background-color: currentColor;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }

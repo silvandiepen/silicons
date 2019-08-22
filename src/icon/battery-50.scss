@@ -9,18 +9,18 @@
 
 
 			position: absolute;
-			top: calc(#{$silicon-stroke-var} / 2);
-			left: calc(#{$silicon-stroke-var} / 2);
-
-
+			top: calc(0.1em / 2);
+			left: calc(0.1em / 2);
+			
+			
 			display: block;
 			width: calc(50%);
-			height: calc(100% - #{$silicon-stroke-var});
-
-
-			border-radius: calc(#{$silicon-stroke-var} / 2);
-
-
+			height: calc(100% - 0.1em);
+			
+			
+			border-radius: calc(0.1em / 2);
+			
+			
 			background-color: currentColor;
 		}
 

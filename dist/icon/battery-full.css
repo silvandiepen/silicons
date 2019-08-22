@@ -30,14 +30,14 @@
 }
 
 .silicon-battery-full::after {
-  content: "";
+  content: "\8";
   position: absolute;
-  top: calc(var(--stroke, 0.1em) / 2);
-  left: calc(var(--stroke, 0.1em) / 2);
+  top: calc(0.1em / 2);
+  left: calc(0.1em / 2);
   display: block;
-  width: calc(100% - var(--stroke, 0.1em));
-  height: calc(100% - var(--stroke, 0.1em));
-  border-radius: calc(var(--stroke, 0.1em) / 2);
+  width: calc(100% - 0.1em);
+  height: calc(100% - 0.1em);
+  border-radius: calc(0.1em / 2);
   background-color: currentColor;
 }
 .silicon-battery-full.colored::after {

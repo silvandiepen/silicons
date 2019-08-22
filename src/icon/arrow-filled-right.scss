@@ -4,39 +4,37 @@
 	$selector: '.#{$silicon-prefix}arrow-filled-right'
 ) {
 	#{$selector} {
-
 		position: relative;
-
-
 		display: inline-block;
 		width: 1em;
-		height: #{$silicon-stroke-var};
-
-		// Background
-		background-color: currentColor;
+		height: 1em;
 
 		&::before {
 			content: '';
-
-
 			position: absolute;
-			top: calc(#{$silicon-stroke-var} * 0.5);
-			right: calc(#{$silicon-stroke-var} * -0.5);
-
-
+			top: 50%;
+			right: 0%;
+			
 			display: block;
-			width: 0;
-			height: 0;
-
-
-			border: 0.15em solid currentColor;
-			border-bottom-color: transparent;
+			width: 0em;
+			height: 0em;
+			
+			border: .15em solid currentColor;
+			border-top-color: transparent;
 			border-left-color: transparent;
-			border-radius: 0.05em;
-
-
-			transform: rotate(45deg);
-			transform-origin: 100% 0;
+			
+			transform:  translateY(-50%) rotate(-45deg);
+		}
+		&::after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 0;
+			display: block;
+			width: 1em;
+			height: 0.1em;
+			background-color: currentColor;
+			transform: translateY(-50%);
 		}
 	}
 }

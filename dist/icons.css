@@ -45,208 +45,248 @@
   position: relative;
   display: inline-block;
   width: 1em;
-  height: var(--stroke, 0.1em);
-  /* background  */
-  background-color: currentColor;
+  height: 1em;
 }
 .silicon-arrow-basic-down::before {
   content: "";
   position: absolute;
-  top: calc(var(--stroke, 0.1em) * 0.5);
-  right: calc(var(--stroke, 0.1em) * -0.5);
+  bottom: 0%;
+  left: 50%;
   display: block;
   width: 0.3em;
   height: 0.3em;
-  border: var(--stroke, 0.1em) solid currentColor;
+  border: 0.1em solid currentColor;
+  border-right: none;
   border-bottom: none;
-  border-left: none;
-  transform: rotate(45deg);
-  transform-origin: 100% 0;
+  transform: translateX(-50%) rotate(225deg);
 }
-
-.silicon-arrow-basic-down {
-  transform: rotate(90deg);
+.silicon-arrow-basic-down::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: block;
+  width: 0.1em;
+  height: 1em;
+  background-color: currentColor;
+  transform: translateX(-50%);
 }
 
 .silicon-arrow-basic-left {
   position: relative;
   display: inline-block;
   width: 1em;
-  height: var(--stroke, 0.1em);
-  /* background  */
-  background-color: currentColor;
+  height: 1em;
 }
 .silicon-arrow-basic-left::before {
   content: "";
   position: absolute;
-  top: calc(var(--stroke, 0.1em) * 0.5);
-  right: calc(var(--stroke, 0.1em) * -0.5);
+  top: 50%;
+  left: 0;
   display: block;
   width: 0.3em;
   height: 0.3em;
-  border: var(--stroke, 0.1em) solid currentColor;
-  border-bottom: none;
-  border-left: none;
-  transform: rotate(45deg);
-  transform-origin: 100% 0;
+  border: 0.1em solid currentColor;
+  border-top: none;
+  border-right: none;
+  transform: translateY(-50%) rotate(45deg);
 }
-
-.silicon-arrow-basic-left {
-  transform: rotate(180deg);
+.silicon-arrow-basic-left::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  width: 1em;
+  height: 0.1em;
+  background-color: currentColor;
+  transform: translateY(-50%);
 }
 
 .silicon-arrow-basic-right {
   position: relative;
   display: inline-block;
   width: 1em;
-  height: var(--stroke, 0.1em);
-  /* background  */
-  background-color: currentColor;
+  height: 1em;
 }
 .silicon-arrow-basic-right::before {
   content: "";
   position: absolute;
-  top: calc(var(--stroke, 0.1em) * 0.5);
-  right: calc(var(--stroke, 0.1em) * -0.5);
+  top: 50%;
+  right: 0;
   display: block;
   width: 0.3em;
   height: 0.3em;
-  border: var(--stroke, 0.1em) solid currentColor;
+  border: 0.1em solid currentColor;
   border-bottom: none;
   border-left: none;
-  transform: rotate(45deg);
-  transform-origin: 100% 0;
+  transform: translateY(-50%) rotate(45deg);
+}
+.silicon-arrow-basic-right::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  width: 1em;
+  height: 0.1em;
+  background-color: currentColor;
+  transform: translateY(-50%);
 }
 
 .silicon-arrow-basic-up {
   position: relative;
   display: inline-block;
   width: 1em;
-  height: var(--stroke, 0.1em);
-  /* background  */
-  background-color: currentColor;
+  height: 1em;
 }
 .silicon-arrow-basic-up::before {
   content: "";
   position: absolute;
-  top: calc(var(--stroke, 0.1em) * 0.5);
-  right: calc(var(--stroke, 0.1em) * -0.5);
+  top: 0%;
+  left: 50%;
   display: block;
   width: 0.3em;
   height: 0.3em;
-  border: var(--stroke, 0.1em) solid currentColor;
+  border: 0.1em solid currentColor;
+  border-right: none;
   border-bottom: none;
-  border-left: none;
-  transform: rotate(45deg);
-  transform-origin: 100% 0;
+  transform: translateX(-50%) rotate(45deg);
 }
-
-.silicon-arrow-basic-up {
-  transform: rotate(-90deg);
+.silicon-arrow-basic-up::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: block;
+  width: 0.1em;
+  height: 1em;
+  background-color: currentColor;
+  transform: translateX(-50%);
 }
 
 .silicon-arrow-filled-down {
   position: relative;
   display: inline-block;
   width: 1em;
-  height: var(--stroke, 0.1em);
-  background-color: currentColor;
+  height: 1em;
 }
 .silicon-arrow-filled-down::before {
   content: "";
   position: absolute;
-  top: calc(var(--stroke, 0.1em) * 0.5);
-  right: calc(var(--stroke, 0.1em) * -0.5);
+  bottom: 0%;
+  left: 50%;
   display: block;
-  width: 0;
-  height: 0;
+  width: 0em;
+  height: 0em;
   border: 0.15em solid currentColor;
+  border-right-color: transparent;
   border-bottom-color: transparent;
-  border-left-color: transparent;
-  border-radius: 0.05em;
-  transform: rotate(45deg);
-  transform-origin: 100% 0;
+  transform: translateX(-50%) rotate(225deg);
 }
-
-.silicon-arrow-filled-down {
-  transform: rotate(90deg);
+.silicon-arrow-filled-down::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: block;
+  width: 0.1em;
+  height: 1em;
+  background-color: currentColor;
+  transform: translateX(-50%);
 }
 
 .silicon-arrow-filled-left {
   position: relative;
   display: inline-block;
   width: 1em;
-  height: var(--stroke, 0.1em);
-  background-color: currentColor;
+  height: 1em;
 }
 .silicon-arrow-filled-left::before {
   content: "";
   position: absolute;
-  top: calc(var(--stroke, 0.1em) * 0.5);
-  right: calc(var(--stroke, 0.1em) * -0.5);
+  top: 50%;
+  left: 0%;
   display: block;
-  width: 0;
-  height: 0;
+  width: 0em;
+  height: 0em;
   border: 0.15em solid currentColor;
-  border-bottom-color: transparent;
+  border-top-color: transparent;
   border-left-color: transparent;
-  border-radius: 0.05em;
-  transform: rotate(45deg);
-  transform-origin: 100% 0;
+  transform: translateY(-50%) rotate(-225deg);
 }
-
-.silicon-arrow-filled-left {
-  transform: rotate(180deg);
+.silicon-arrow-filled-left::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  width: 1em;
+  height: 0.1em;
+  background-color: currentColor;
+  transform: translateY(-50%);
 }
 
 .silicon-arrow-filled-right {
   position: relative;
   display: inline-block;
   width: 1em;
-  height: var(--stroke, 0.1em);
-  background-color: currentColor;
+  height: 1em;
 }
 .silicon-arrow-filled-right::before {
   content: "";
   position: absolute;
-  top: calc(var(--stroke, 0.1em) * 0.5);
-  right: calc(var(--stroke, 0.1em) * -0.5);
+  top: 50%;
+  right: 0%;
   display: block;
-  width: 0;
-  height: 0;
+  width: 0em;
+  height: 0em;
   border: 0.15em solid currentColor;
-  border-bottom-color: transparent;
+  border-top-color: transparent;
   border-left-color: transparent;
-  border-radius: 0.05em;
-  transform: rotate(45deg);
-  transform-origin: 100% 0;
+  transform: translateY(-50%) rotate(-45deg);
+}
+.silicon-arrow-filled-right::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  width: 1em;
+  height: 0.1em;
+  background-color: currentColor;
+  transform: translateY(-50%);
 }
 
 .silicon-arrow-filled-up {
   position: relative;
   display: inline-block;
   width: 1em;
-  height: var(--stroke, 0.1em);
-  background-color: currentColor;
+  height: 1em;
 }
 .silicon-arrow-filled-up::before {
   content: "";
   position: absolute;
-  top: calc(var(--stroke, 0.1em) * 0.5);
-  right: calc(var(--stroke, 0.1em) * -0.5);
+  top: 0%;
+  left: 50%;
   display: block;
-  width: 0;
-  height: 0;
+  width: 0em;
+  height: 0em;
   border: 0.15em solid currentColor;
-  border-bottom-color: transparent;
+  border-top-color: transparent;
   border-left-color: transparent;
-  border-radius: 0.05em;
-  transform: rotate(45deg);
-  transform-origin: 100% 0;
+  transform: translateX(-50%) rotate(225deg);
 }
-
-.silicon-arrow-filled-up {
-  transform: rotate(-90deg);
+.silicon-arrow-filled-up::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: block;
+  width: 0.1em;
+  height: 1em;
+  background-color: currentColor;
+  transform: translateX(-50%);
 }
 
 .silicon-arrow-right {
@@ -328,7 +368,7 @@
   background-image: linear-gradient(to bottom, currentColor, currentColor);
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 100% var(--stroke, 0.1em);
+  background-size: 100% calc(var(--stroke, 0.1em) * 2);
 }
 .silicon-asterisk::before, .silicon-asterisk::after {
   content: "";
@@ -337,7 +377,7 @@
   left: 50%;
   display: block;
   width: 100%;
-  height: var(--stroke, 0.1em);
+  height: calc(var(--stroke, 0.1em) * 2);
   box-sizing: border-box;
   background-color: currentColor;
   transform: translate(-50%, -50%) rotate(60deg);
@@ -527,12 +567,12 @@
 .silicon-battery-25::after {
   content: "\8";
   position: absolute;
-  top: calc(var(--stroke, 0.1em) / 2);
-  left: calc(var(--stroke, 0.1em) / 2);
+  top: calc(0.1em / 2);
+  left: calc(0.1em / 2);
   display: block;
   width: calc(25%);
-  height: calc(100% - var(--stroke, 0.1em));
-  border-radius: calc(var(--stroke, 0.1em) / 2);
+  height: calc(100% - 0.1em);
+  border-radius: calc(0.1em / 2);
   background-color: currentColor;
 }
 .silicon-battery-25.colored::after {
@@ -572,12 +612,12 @@
 .silicon-battery-50::after {
   content: "\8";
   position: absolute;
-  top: calc(var(--stroke, 0.1em) / 2);
-  left: calc(var(--stroke, 0.1em) / 2);
+  top: calc(0.1em / 2);
+  left: calc(0.1em / 2);
   display: block;
   width: calc(50%);
-  height: calc(100% - var(--stroke, 0.1em));
-  border-radius: calc(var(--stroke, 0.1em) / 2);
+  height: calc(100% - 0.1em);
+  border-radius: calc(0.1em / 2);
   background-color: currentColor;
 }
 .silicon-battery-50.colored::after {
@@ -617,12 +657,12 @@
 .silicon-battery-75::after {
   content: "\8";
   position: absolute;
-  top: calc(var(--stroke, 0.1em) / 2);
-  left: calc(var(--stroke, 0.1em) / 2);
+  top: calc(0.1em / 2);
+  left: calc(0.1em / 2);
   display: block;
   width: calc(75%);
-  height: calc(100% - var(--stroke, 0.1em));
-  border-radius: calc(var(--stroke, 0.1em) / 2);
+  height: calc(100% - 0.1em);
+  border-radius: calc(0.1em / 2);
   background-color: currentColor;
 }
 .silicon-battery-75.colored::after {
@@ -690,14 +730,14 @@
 }
 
 .silicon-battery-full::after {
-  content: "";
+  content: "\8";
   position: absolute;
-  top: calc(var(--stroke, 0.1em) / 2);
-  left: calc(var(--stroke, 0.1em) / 2);
+  top: calc(0.1em / 2);
+  left: calc(0.1em / 2);
   display: block;
-  width: calc(100% - var(--stroke, 0.1em));
-  height: calc(100% - var(--stroke, 0.1em));
-  border-radius: calc(var(--stroke, 0.1em) / 2);
+  width: calc(100% - 0.1em);
+  height: calc(100% - 0.1em);
+  border-radius: calc(0.1em / 2);
   background-color: currentColor;
 }
 .silicon-battery-full.colored::after {
@@ -857,6 +897,7 @@
 
 .silicon-chart-area {
   position: relative;
+  display: inline-block;
   width: 1em;
   height: 1em;
   border-bottom: 0.1em solid currentColor;
@@ -906,10 +947,10 @@
 
 .silicon-chart-pie {
   position: relative;
+  display: inline-block;
   width: 0;
   height: 0;
-  display: inline-block;
-  border: 0.75em solid;
+  border: 0.5em solid;
   border-right-color: transparent;
   border-radius: 50%;
   -webkit-transform: rotate(-45deg);
@@ -919,12 +960,12 @@
 .silicon-chart-pie::before {
   content: "";
   position: absolute;
-  top: -0.8em;
-  left: -0.6em;
+  top: -0.5em;
+  left: -0.4em;
   display: block;
   width: 0;
   height: 0;
-  border: 0.8em solid;
+  border: 0.5em solid;
   border-top-color: transparent;
   border-bottom-color: transparent;
   border-left-color: transparent;
@@ -1139,7 +1180,7 @@
   display: block;
   width: 0.3em;
   height: 0.1em;
-  box-sizing: border-box;
+  box-sizing: content-box;
   border-width: 0 0.35em 0 0.35em;
   border-style: solid;
 }
@@ -2294,31 +2335,31 @@
 }
 .silicon-media-forward::before {
   content: "";
-  display: block;
   position: absolute;
-  background-color: transparent;
+  top: 50%;
+  left: 50%;
+  display: block;
+  height: 0;
   border: 0.5em solid currentColor;
   border-top: 0.5em solid transparent;
-  border-bottom: 0.5em solid transparent;
   border-right-color: transparent;
+  border-bottom: 0.5em solid transparent;
+  background-color: transparent;
   transform: translate(-50%, -50%);
-  left: 50%;
-  top: 50%;
-  height: 0;
 }
 .silicon-media-forward::after {
   content: "";
-  display: block;
   position: absolute;
-  background-color: transparent;
+  top: 50%;
+  left: 50%;
+  display: block;
+  height: 0;
   border: 0.5em solid currentColor;
   border-top: 0.5em solid transparent;
-  border-bottom: 0.5em solid transparent;
   border-right-color: transparent;
+  border-bottom: 0.5em solid transparent;
+  background-color: transparent;
   transform: translate(0%, -50%);
-  left: 50%;
-  top: 50%;
-  height: 0;
 }
 
 .silicon-media-next {
@@ -2470,13 +2511,13 @@
 
 .silicon-music {
   position: relative;
+  top: -0.75em;
   display: inline-block;
   width: 1em;
   height: 0.3em;
   box-shadow: inset 0 0 0 1.5em currentColor;
   border-radius: 0.05em 0.05em 0 0;
   transform: skewY(-15deg);
-  top: -0.75em;
 }
 .silicon-music::before {
   content: "";
@@ -2751,7 +2792,6 @@
   height: 1em;
   box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
-  border-radius: var(--stroke, 0.1em);
   overflow: hidden;
 }
 .silicon-picture::before {
