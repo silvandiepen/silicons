@@ -23,8 +23,10 @@
 @include silicon-battery-full();
 @include silicon-bed();
 @include silicon-birdhouse();
+@include silicon-body-eye();
 @include silicon-book();
 @include silicon-bottle();
+@include silicon-brand-instagram();
 @include silicon-burger();
 @include silicon-chart-area();
 @include silicon-chart-bar();
@@ -54,6 +56,7 @@
 @include silicon-file-import();
 @include silicon-file-upload();
 @include silicon-float();
+@include silicon-game-controller();
 @include silicon-glass-wine();
 @include silicon-globe();
 @include silicon-go-down();
@@ -107,6 +110,11 @@
 @include silicon-smiley-sad();
 @include silicon-smiley-wink();
 @include silicon-suitcase();
+@include silicon-temperature-0();
+@include silicon-temperature-100();
+@include silicon-temperature-25();
+@include silicon-temperature-50();
+@include silicon-temperature-75();
 @include silicon-terminal();
 @include silicon-text-align-center();
 @include silicon-text-align-justify();
