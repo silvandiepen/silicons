@@ -1,0 +1,21 @@
+.silicon-media-play {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+}
+.silicon-media-play::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: transparent;
+  border: 0.75em solid currentColor;
+  border-top: 0.5em solid transparent;
+  border-bottom: 0.5em solid transparent;
+  border-right-color: transparent;
+  -webkit-transform: translate(-25%, -50%);
+          transform: translate(-25%, -50%);
+  left: 50%;
+  top: 50%;
+  height: 0;
+}

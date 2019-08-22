@@ -1,11 +1,11 @@
-.silicon-math-times {
+.silicon-close {
   position: relative;
   display: inline-block;
   width: 1em;
   height: 1em;
   box-sizing: border-box;
 }
-.silicon-math-times::before, .silicon-math-times::after {
+.silicon-close::before, .silicon-close::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -16,11 +16,11 @@
   box-sizing: border-box;
   background-color: currentColor;
 }
-.silicon-math-times::before {
+.silicon-close::before {
   -webkit-transform: translate(-50%, -50%) rotate(45deg);
           transform: translate(-50%, -50%) rotate(45deg);
 }
-.silicon-math-times::after {
+.silicon-close::after {
   -webkit-transform: translate(-50%, -50%) rotate(135deg);
           transform: translate(-50%, -50%) rotate(135deg);
 }

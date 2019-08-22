@@ -1,0 +1,13 @@
+@import '../default';
+
+@mixin silicon-media-forward($selector: '.#{$silicon-prefix}media-forward') {
+	#{$selector} {
+	
+		&::before {
+	
+		}
+		&::after {
+	
+		}
+	}
+}

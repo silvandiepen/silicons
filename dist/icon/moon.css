@@ -1,0 +1,23 @@
+.silicon-moon {
+  display: inline-block;
+  position: relative;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  border: 0.1em solid currentColor;
+  border-right-color: transparent;
+}
+.silicon-moon::before {
+  content: "";
+  position: absolute;
+  width: 0.5em;
+  height: 0.5em;
+  border: 0.1em solid currentColor;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  top: 0.05em;
+  left: 50%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}

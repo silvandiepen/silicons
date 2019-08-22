@@ -1,0 +1,29 @@
+.silicon-device-mouse {
+  position: relative;
+  width: 0.75em;
+  height: 1em;
+  border: solid 0.1em currentColor;
+  border-radius: 0.5em;
+  display: inline-block;
+}
+.silicon-device-mouse::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0.33em;
+  left: -0.1em;
+  width: 0.75em;
+  height: 0.05em;
+  background-color: currentColor;
+}
+.silicon-device-mouse::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0em;
+  margin-left: -0.025em;
+  left: 50%;
+  width: 0.05em;
+  height: 0.33em;
+  background-color: currentColor;
+}

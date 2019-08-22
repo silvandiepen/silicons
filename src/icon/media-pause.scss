@@ -1,0 +1,25 @@
+@import '../default';
+
+@mixin silicon-media-pause($selector: '.#{$silicon-prefix}media-pause') {
+	#{$selector} {
+		position: relative;
+		display: inline-block;
+		width: 1em;
+		height: 1em;
+
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			background-color: transparent;
+			border: .25em solid currentColor;
+			border-top: 0;
+			border-bottom: 0;
+			transform: translate(-50%,-50%);
+			left: 50%;
+			top: 50%;
+			width: 0.25em;
+			height: 0.75em;
+		}
+	}
+}

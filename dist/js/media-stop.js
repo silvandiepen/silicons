@@ -1,0 +1,2 @@
+const data = {"media-stop":{"data":".silicon-media-stop {\n  position: relative;\n  display: inline-block;\n  width: 1em;\n  height: 1em;\n}\n.silicon-media-stop::before {\n  content: \"\";\n  display: block;\n  position: absolute;\n  background-color: currentColor;\n  -webkit-transform: translate(-50%, -50%);\n          transform: translate(-50%, -50%);\n  left: 50%;\n  top: 50%;\n  width: 0.75em;\n  height: 0.75em;\n}"}}
+	export default data;

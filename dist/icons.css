@@ -950,6 +950,142 @@
   transform: translate(-50%, -50%) rotate(-45deg);
 }
 
+.silicon-close {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  box-sizing: border-box;
+}
+.silicon-close::before, .silicon-close::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 100%;
+  height: var(--stroke, 0.1em);
+  box-sizing: border-box;
+  background-color: currentColor;
+}
+.silicon-close::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.silicon-close::after {
+  transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.silicon-cloud-rain {
+  display: inline-block;
+  position: relative;
+  margin-left: -0.75em;
+  margin-top: 0.4em;
+  width: 0.35em;
+  height: 0.55em;
+  border-radius: 0.275em 0 0 0.275em;
+  border-left: 0.1em solid currentColor;
+  border-top: 0.1em solid currentColor;
+  border-bottom: 0.1em solid currentColor;
+}
+.silicon-cloud-rain::before {
+  content: "";
+  position: absolute;
+  top: -0.46em;
+  left: 0.15em;
+  width: 0.75em;
+  height: 0.75em;
+  border-radius: 50%;
+  transform: rotate(-45deg);
+  border: 0.1em solid currentColor;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+.silicon-cloud-rain::after {
+  content: "";
+  position: absolute;
+  top: 0em;
+  left: 0.4em;
+  width: 0.2em;
+  height: 0.2em;
+  border-radius: 0 50% 50% 50%;
+  background-color: currentColor;
+  box-shadow: 0.65em 0.15em currentColor, 0.4em -0.1em currentColor, 0.25em 0.25em currentColor;
+  z-index: 2;
+  transform: rotate(45deg);
+}
+
+.silicon-cloud-snow {
+  display: inline-block;
+  position: relative;
+  margin-left: -0.75em;
+  margin-top: 0.4em;
+  width: 0.35em;
+  height: 0.55em;
+  border-radius: 0.275em 0 0 0.275em;
+  border-left: 0.1em solid currentColor;
+  border-top: 0.1em solid currentColor;
+  border-bottom: 0.1em solid currentColor;
+}
+.silicon-cloud-snow::before {
+  content: "";
+  position: absolute;
+  top: -0.46em;
+  left: 0.15em;
+  width: 0.75em;
+  height: 0.75em;
+  border-radius: 50%;
+  transform: rotate(-45deg);
+  border: 0.1em solid currentColor;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+.silicon-cloud-snow::after {
+  content: "";
+  position: absolute;
+  top: 0.3em;
+  left: 0.4em;
+  width: 0.2em;
+  height: 0.2em;
+  border-radius: 50%;
+  background-color: currentColor;
+  box-shadow: 0.5em 0 currentColor, 0.25em -0.25em currentColor, 0.25em 0.25em currentColor;
+  z-index: 2;
+}
+
+.silicon-cloud {
+  display: inline-block;
+  position: relative;
+  margin-left: -0.75em;
+  margin-top: 0.4em;
+  width: 0.35em;
+  height: 0.55em;
+  border-radius: 0.275em 0 0 0.275em;
+  border-left: 0.1em solid currentColor;
+  border-top: 0.1em solid currentColor;
+  border-bottom: 0.1em solid currentColor;
+}
+.silicon-cloud::before {
+  content: "";
+  position: absolute;
+  top: -0.5em;
+  left: 0.15em;
+  width: 0.75em;
+  height: 0.75em;
+  border-radius: 50%;
+  transform: rotate(-45deg);
+  border: 0.1em solid currentColor;
+  border-left-color: transparent;
+}
+.silicon-cloud::after {
+  content: "";
+  position: absolute;
+  top: 0.25em;
+  left: 0.25em;
+  width: 0.44em;
+  height: 0.1em;
+  border-bottom: solid 0.1em currentColor;
+}
+
 .silicon-code {
   position: relative;
   display: inline-block;
@@ -969,6 +1105,40 @@
   box-sizing: border-box;
   border: var(--stroke, 0.1em) solid currentColor;
   transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.silicon-comment {
+  display: inline-block;
+  width: 1em;
+  position: relative;
+  height: 0.75em;
+  border: 0.1em solid;
+  border-bottom-color: transparent;
+}
+.silicon-comment::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0.2em;
+  height: 0.2em;
+  border-width: 0 0 0.1em 0.1em;
+  border-style: solid;
+  transform: rotate(-45deg);
+  top: 100%;
+  margin-top: -0.075em;
+  left: 0.25em;
+}
+.silicon-comment::after {
+  content: "";
+  box-model: border-box;
+  display: block;
+  position: absolute;
+  width: 0.3em;
+  height: 0.1em;
+  border-width: 0 0.35em 0 0.35em;
+  border-style: solid;
+  top: 100%;
+  left: -0.1em;
 }
 
 .silicon-copy {
@@ -1102,6 +1272,26 @@
   transform: translateX(-50%);
 }
 
+.silicon-device-keyboard {
+  position: relative;
+  width: 1em;
+  height: 0.5em;
+  border-radius: 0;
+  border: solid 0.05em currentColor;
+  display: inline-block;
+}
+.silicon-device-keyboard::before {
+  content: "";
+  position: absolute;
+  left: 0.075em;
+  top: 0.075em;
+  width: 0.05em;
+  height: 0.05em;
+  background-color: currentColor;
+  border-radius: 10%;
+  box-shadow: 0.1em 0 currentColor, 0.2em 0 currentColor, 0.3em 0 currentColor, 0.4em 0 currentColor, 0.5em 0 currentColor, 0.6em 0 currentColor, 0.7em 0 currentColor, 0.05em 0.1em currentColor, 0.15em 0.1em currentColor, 0.25em 0.1em currentColor, 0.35em 0.1em currentColor, 0.45em 0.1em currentColor, 0.55em 0.1em currentColor, 0.65em 0.1em currentColor, 0em 0.2em currentColor, 0.1em 0.2em currentColor, 0.2em 0.2em currentColor, 0.3em 0.2em currentColor, 0.4em 0.2em currentColor, 0.5em 0.2em currentColor, 0.6em 0.2em currentColor, 0.7em 0.2em currentColor;
+}
+
 .silicon-device-laptop {
   position: relative;
   display: inline-block;
@@ -1132,6 +1322,36 @@
 }
 .silicon-device-laptop.colored::before {
   background-color: var(--gray,#7f7f7f);
+}
+
+.silicon-device-mouse {
+  position: relative;
+  width: 0.75em;
+  height: 1em;
+  border: solid 0.1em currentColor;
+  border-radius: 0.5em;
+  display: inline-block;
+}
+.silicon-device-mouse::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0.33em;
+  left: -0.1em;
+  width: 0.75em;
+  height: 0.05em;
+  background-color: currentColor;
+}
+.silicon-device-mouse::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0em;
+  margin-left: -0.025em;
+  left: 50%;
+  width: 0.05em;
+  height: 0.33em;
+  background-color: currentColor;
 }
 
 .silicon-device-phone {
@@ -2021,17 +2241,192 @@
   background-color: currentColor;
 }
 .silicon-math-times::before {
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) rotate(45deg);
 }
 .silicon-math-times::after {
-  transform: translate(-50%, -50%) rotate(90deg);
+  transform: translate(-50%, -50%) rotate(135deg);
 }
 
-.silicon-math-times {
-  transform: rotate(45deg);
+.silicon-media-backward {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
 }
-.silicon-math-times::after {
-  transform: translate(-50%, -50%) rotate(90deg);
+.silicon-media-backward::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: transparent;
+  border: 0.5em solid currentColor;
+  border-top: 0.5em solid transparent;
+  border-bottom: 0.5em solid transparent;
+  border-left-color: transparent;
+  transform: translate(-100%, -50%);
+  left: 50%;
+  top: 50%;
+  height: 0;
+}
+.silicon-media-backward::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: transparent;
+  border: 0.5em solid currentColor;
+  border-top: 0.5em solid transparent;
+  border-bottom: 0.5em solid transparent;
+  border-left-color: transparent;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  height: 0;
+}
+
+.silicon-media-next {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+}
+.silicon-media-next::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: transparent;
+  border: 0.5em solid currentColor;
+  border-top: 0.5em solid transparent;
+  border-bottom: 0.5em solid transparent;
+  border-right-color: transparent;
+  transform: translate(-33.33%, -50%);
+  left: 50%;
+  top: 50%;
+  height: 0;
+}
+.silicon-media-next::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: currentColor;
+  width: 0.2em;
+  height: 1em;
+  transform: translate(33.33%, -50%);
+  left: 50%;
+  top: 50%;
+}
+
+.silicon-media-pause {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+}
+.silicon-media-pause::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: transparent;
+  border: 0.25em solid currentColor;
+  border-top: 0;
+  border-bottom: 0;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  width: 0.25em;
+  height: 0.75em;
+}
+
+.silicon-media-play {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+}
+.silicon-media-play::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: transparent;
+  border: 0.75em solid currentColor;
+  border-top: 0.5em solid transparent;
+  border-bottom: 0.5em solid transparent;
+  border-right-color: transparent;
+  transform: translate(-25%, -50%);
+  left: 50%;
+  top: 50%;
+  height: 0;
+}
+
+.silicon-media-previous {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+}
+.silicon-media-previous::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: transparent;
+  border: 0.5em solid currentColor;
+  border-top: 0.5em solid transparent;
+  border-bottom: 0.5em solid transparent;
+  border-left-color: transparent;
+  transform: translate(-66.66%, -50%);
+  left: 50%;
+  top: 50%;
+  height: 0;
+}
+.silicon-media-previous::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: currentColor;
+  width: 0.2em;
+  height: 1em;
+  transform: translate(-175%, -50%);
+  left: 50%;
+  top: 50%;
+}
+
+.silicon-media-stop {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+}
+.silicon-media-stop::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: currentColor;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  width: 0.75em;
+  height: 0.75em;
+}
+
+.silicon-moon {
+  display: inline-block;
+  position: relative;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  border: 0.1em solid currentColor;
+  border-right-color: transparent;
+}
+.silicon-moon::before {
+  content: "";
+  position: absolute;
+  width: 0.5em;
+  height: 0.5em;
+  border: 0.1em solid currentColor;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  top: 0.05em;
+  left: 50%;
+  transform: rotate(-45deg);
 }
 
 .silicon-music {
@@ -2183,6 +2578,35 @@
   background-position: -0.15em -0.15em;
   background-size: 0.3em 0.3em;
   transform: translate(-50%, -50%) scale(1, 1) rotate(45deg);
+}
+
+.silicon-office-ruler {
+  display: inline-block;
+  position: relative;
+  border: 0.05em solid currentColor;
+  width: 1em;
+  height: 0.33em;
+  margin: 11px 4px 11px 3px;
+}
+.silicon-office-ruler::before {
+  content: "";
+  position: absolute;
+  width: 0.03em;
+  height: 0.15em;
+  background-color: currentColor;
+  box-shadow: 0.2em 0em currentColor, 0.4em 0em currentColor, 0.6em 0em currentColor;
+  left: 0.125em;
+  top: 0;
+}
+.silicon-office-ruler::after {
+  content: "";
+  position: absolute;
+  width: 0.02em;
+  height: 0.1em;
+  background-color: currentColor;
+  box-shadow: 0.05em 0em currentColor, 0.1em 0em currentColor, 0.15em 0em currentColor, 0.2em 0em currentColor, 0.25em 0em currentColor, 0.3em 0em currentColor, 0.35em 0em currentColor, 0.4em 0em currentColor, 0.45em 0em currentColor, 0.5em 0em currentColor, 0.55em 0em currentColor, 0.6em 0em currentColor, 0.65em 0em currentColor, 0.7em 0em currentColor, 0.75em 0em currentColor, 0.8em 0em currentColor, 0.85em 0em currentColor;
+  left: 0.025em;
+  top: 0;
 }
 
 .silicon-office-scissors {

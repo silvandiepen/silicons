@@ -1,10 +1,8 @@
 @import '../default';
 
-@mixin silicon-math-times($selector: '.#{$silicon-prefix}math-times') {
+@mixin silicon-close($selector: '.#{$silicon-prefix}close') {
 	#{$selector} {
-
 		position: relative;
-
 
 		display: inline-block;
 		width: 1em;
@@ -15,29 +13,22 @@
 		&::after {
 			content: '';
 
-
 			position: absolute;
 			top: 50%;
 			left: 50%;
-
 
 			display: block;
 			width: 100%;
 			height: #{$silicon-stroke-var};
 			box-sizing: border-box;
 			
-
 			background-color: currentColor;
 		}
 		&::before {
-
 			transform: translate(-50%, -50%) rotate(45deg);
 		}
 		&::after {
 			transform: translate(-50%, -50%) rotate(135deg);
 		}
 	}
-}
-@mixin silicon-times($selector: '.#{$silicon-prefix}times'){
-	@include silicon-times($selector);
 }
