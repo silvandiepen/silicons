@@ -1,0 +1,42 @@
+.silicon-temperature-50 {
+  position: relative;
+  top: -0.15em;
+  display: inline-block;
+  width: 0.3em;
+  height: 0.75em;
+  border: 0.05em solid currentColor;
+  border-bottom-color: transparent;
+  border-radius: 0.15em 0.15em 0 0;
+  background-image: linear-gradient(to bottom, currentColor, currentColor), radial-gradient(closest-side, currentColor 100%, transparent);
+  background-repeat: no-repeat, no-repeat;
+  background-position: center bottom, top 0.275em left 0.04em;
+  background-size: 0.125em 0.3em, 0.125em 0.125em;
+}
+.silicon-temperature-50::before {
+  content: "";
+  position: absolute;
+  top: calc(100% - 0.075em);
+  left: 50%;
+  display: block;
+  width: 0.35em;
+  height: 0.35em;
+  border: 0.05em solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  background-image: radial-gradient(closest-side, currentColor 100%, transparent), linear-gradient(to bottom, currentColor, currentColor);
+  background-repeat: no-repeat, no-repeat;
+  background-position: center center, top center;
+  background-size: 0.3em 0.3em, 0.13em 0.15em;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.silicon-temperature-50::after {
+  content: "";
+  position: absolute;
+  top: 0.2em;
+  left: calc(100% + 0.1em);
+  width: 0.1em;
+  height: 0.05em;
+  box-shadow: 0 0.1em currentColor, 0 0.2em currentColor, 0 0.3em currentColor;
+  background-color: currentColor;
+}

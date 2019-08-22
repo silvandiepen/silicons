@@ -1,0 +1,34 @@
+.silicon-game-controller {
+  position: RELATIVE;
+  display: inline-block;
+  width: 1em;
+  height: 0.6em;
+  border: 0.085em solid currentColor;
+  border-radius: 0.3em;
+}
+.silicon-game-controller::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 0.425em;
+  height: 0.425em;
+  background-image: linear-gradient(to bottom, currentColor, currentColor), linear-gradient(to bottom, currentColor, currentColor);
+  background-repeat: no-repeat, no-repeat;
+  background-position: center center, center center;
+  background-size: 0.05em 0.2em, 0.2em 0.05em;
+}
+.silicon-game-controller::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: calc(50% + 0.05em);
+  width: 0.1em;
+  height: 0.1em;
+  box-shadow: 0.1em 0.1em currentColor, 0.2em 0em currentColor, 0.1em -0.1em currentColor;
+  border-radius: 50%;
+  background-color: currentColor;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}

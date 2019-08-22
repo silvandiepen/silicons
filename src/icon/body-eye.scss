@@ -1,0 +1,42 @@
+@import '../default';
+
+@mixin silicon-body-eye($selector: '.#{$silicon-prefix}body-eye') {
+	#{$selector} {
+		position: relative;
+		display: inline-block;
+		width: 1em;
+		height: 1em;
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: block;
+			width: 1em;
+			height: 1em;
+			box-sizing: border-box;
+			border: 0.1em solid;
+			border-radius: 0 50%;
+			background-image: radial-gradient(
+					closest-side,
+					currentColor 0.1em,
+					transparent 0.1em,
+					transparent calc(100% - 0.05em),
+					currentColor calc(100% - 0.05em),
+					currentColor 100%,
+					transparent
+				),
+				radial-gradient(
+					closest-side,
+					transparent calc(100% - 0.05em),
+					currentColor calc(100% - 0.05em),
+					currentColor 100%,
+					transparent 100%
+				);
+			background-repeat: no-repeat;
+			background-position: center center, top -0.05em left -0.65em;
+			background-size: 0.5em 0.5em, 1.5em 1.5em;
+			transform: scale(1, 0.9) rotate(-45deg);
+		}
+	}
+}
