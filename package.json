@@ -1,6 +1,6 @@
 {
 	"name": "silicons",
-	"version": "0.1.16",
+	"version": "0.1.17",
 	"description": "css only responsive icons",
 	"main": "index.scss",
 	"scripts": {
