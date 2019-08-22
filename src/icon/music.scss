@@ -3,12 +3,13 @@
 @mixin silicon-music($selector: '.#{$silicon-prefix}music') {
 	#{$selector} {
 		position: relative;
+		top: -0.75em;
+		display: inline-block;
 		width: 1em;
 		height: 0.3em;
 		box-shadow: inset 0 0 0 1.5em currentColor;
 		border-radius: 0.05em 0.05em 0 0;
 		transform: skewY(-15deg);
-		margin-top: -1.2em;
 		&::before {
 			content: '';
 			position: absolute;

@@ -2,12 +2,42 @@
 
 @mixin silicon-media-forward($selector: '.#{$silicon-prefix}media-forward') {
 	#{$selector} {
-	
+		position: relative;
+		display: inline-block;
+		width: 1em;
+		height: 1em;
+		
 		&::before {
-	
+			
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			display: block;
+			height: 0;
+			border: .5em solid currentColor;
+			border-top: .5em solid transparent;
+			border-right-color: transparent;
+			border-bottom: .5em solid transparent;
+			background-color: transparent;
+			transform: translate(-50%,-50%);
+			
 		}
 		&::after {
-	
+			
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			display: block;
+			height: 0;
+			border: .5em solid currentColor;
+			border-top: .5em solid transparent;
+			border-right-color: transparent;
+			border-bottom: .5em solid transparent;
+			background-color: transparent;
+			transform: translate(0%,-50%);
+			
 		}
 	}
 }

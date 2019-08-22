@@ -3,6 +3,7 @@
 @mixin silicon-chart-bar($selector: '.#{$silicon-prefix}chart-bar') {
 	#{$selector} {
 		position: relative;
+		display: inline-block;
 		width: 1em;
 		height: 1em;
 		border-bottom: 0.1em solid currentColor;

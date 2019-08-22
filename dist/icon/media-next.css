@@ -28,6 +28,6 @@
   width: 0.2em;
   height: 1em;
   background-color: currentColor;
-  -webkit-transform: translate(33.33%, -50%);
-          transform: translate(33.33%, -50%);
+  -webkit-transform: translate(66.66%, -50%);
+          transform: translate(66.66%, -50%);
 }
