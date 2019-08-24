@@ -1,36 +1,35 @@
 @import '../default';
 
-@mixin silicon-temperature-75(
-	$selector: '.#{$silicon-prefix}temperature-75'
-) {
+@mixin silicon-temperature-75($selector: '.#{$silicon-prefix}temperature-75') {
 	#{$selector} {
 		position: relative;
 		top: -0.15em;
 		display: inline-block;
 		width: 0.3em;
-
 		height: 0.75em;
-
 		border: 0.05em solid currentColor;
 		border-bottom-color: transparent;
 		border-radius: 0.15em 0.15em 0 0;
-		background-image: linear-gradient(to bottom, currentColor, currentColor),
-			radial-gradient(closest-side, currentColor 100%, transparent);
+		background-image: linear-gradient(to bottom, currentColor, currentColor);
 		background-repeat: no-repeat, no-repeat;
-		background-position: center bottom, top 0.175em left 0.04em;
-		background-size: 0.125em 0.4em, 0.125em 0.125em;
-		&::before {
+		background-position: center bottom;
+		background-size: 0.1em 0.4em;
+
+		&::before,
+		&::after {
 			content: '';
 			position: absolute;
-			top: calc(100% - 0.075em);
-			left: 50%;
 			display: block;
-			width: 0.35em;
-			height: 0.35em;
+		}
+
+		&::before {
+			top: calc(100% - 0.08em);
+			left: 50%;
+			width: 0.325em;
+			height: 0.325em;
 			border: 0.05em solid currentColor;
 			border-top-color: transparent;
 			border-radius: 50%;
-
 			background-image: radial-gradient(
 					closest-side,
 					currentColor 100%,
@@ -39,12 +38,10 @@
 				linear-gradient(to bottom, currentColor, currentColor);
 			background-repeat: no-repeat, no-repeat;
 			background-position: center center, top center;
-			background-size: 0.3em 0.3em, 0.13em 0.15em;
+			background-size: 0.2em 0.2em, 0.1em 0.15em;
 			transform: translateX(-50%);
 		}
 		&::after {
-			content: '';
-			position: absolute;
 			top: 0.2em;
 			left: calc(100% + 0.1em);
 			width: 0.1em;
