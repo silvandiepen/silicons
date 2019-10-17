@@ -1,46 +1,39 @@
-@import '../default';
-@import 'smiley-happy';
+@import "../default";
+@import "smiley-happy";
 
-@mixin silicon-smiley-cry($selector: '.#{$silicon-prefix}smiley-cry') {
-	@include silicon-smiley-happy($selector);
-	#{$selector} {
-		&::before {
-			content: '';
+@mixin silicon-smiley-cry($selector: ".#{$silicon-prefix}smiley-cry") {
+  @include silicon-smiley-happy($selector);
+  #{$selector} {
+    &::before {
+      content: "";
 
+      position: absolute;
+      top: 50%;
+      right: calc(50% + 0.15em);
 
-			position: absolute;
-			top: 50%;
-			right: calc(50% + 0.15em);
+      display: block;
+      width: 0.2em;
+      height: 0.2em;
+      box-sizing: border-box;
 
+      border: calc(#{$silicon-stroke-var} / 2) solid currentColor;
+      border-radius: 0 50% 50% 50%;
 
-			display: block;
-			width: 0.2em;
-			height: 0.2em;
-			box-sizing: border-box;
+      transform: rotate(45deg);
+    }
+    &::after {
+      border-top-color: currentColor;
+      border-bottom-color: transparent;
 
+      transform: translate(-50%, 25%);
+    }
+    &.colored {
+      &::before {
+        background-color: lightblue;
 
-			border: calc(#{$silicon-stroke-var} / 2) solid currentColor;
-			border-radius: 0 50% 50% 50%;
-
-
-			transform: rotate(45deg);
-		}
-		&::after {
-
-			border-top-color: currentColor;
-			border-bottom-color: transparent;
-
-
-			transform: translate(-50%, 25%);
-		}
-		&.colored {
-			&::before {
-	
-				background-color: lighten(blue, 30%);
-				
-				// Typography
-				color: lighten(blue, 20%);
-			}
-		}
-	}
+        // Typography
+        color: lightblue;
+      }
+    }
+  }
 }
